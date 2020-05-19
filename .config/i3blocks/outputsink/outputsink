@@ -1,0 +1,31 @@
+#!/bin/bash
+#(mój skrypt)
+#Choose a new default sink with dmenu and move all inputs to it
+
+print_sink() {
+	CURRENT_SINK=`pacmd list-sinks | grep \* | awk -F ":" '{print $2}'`
+	#example: CURRENT_SINK=2
+
+	pacmd list-sinks | grep alsa.card_name | awk -v cs="$CURRENT_SINK" -F "[=\"]" '{if (i == cs)print $3;i++;}'
+	#example: HDA Intel PCH (prints the default sink)
+}
+
+change_sink() {
+	CURRENT_SINK=`pacmd list-sinks | grep \* | awk -F ":" '{print $2}'`
+	CHOICE=`pacmd list-sinks | grep alsa.card_name | awk -v cs="$CURRENT_SINK" -F "[=\"]" '{if (i == cs) print "*" i++ "." $3; else print i++ "." $3;}' | dmenu`
+	CHOICE=`echo $CHOICE | awk -F "[.*]" '{if(length($1)==1)print $1; else print $2;}'` 
+	pacmd set-default-sink $CHOICE
+
+	LIST=`pacmd list-sink-inputs | awk -F ":" '/index/{print $2;}'`
+	for sink in $LIST; do
+		pacmd move-sink-input $sink $CHOICE || break
+	done
+	print_sink
+}
+
+case $BLOCK_BUTTON in
+	1) print_sink ;;
+	2) change_sink && print_sink ;;
+esac
+
+print_sink
