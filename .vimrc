@@ -10,6 +10,8 @@ let mapleader=" "
 let maplocalleader=" "
 set scrolloff=4
 set nowrap
+set splitright
+set splitbelow
 
 "********************MISCELLANEOUS********************
 command Wq wq
@@ -192,6 +194,8 @@ let g:ycm_key_list_stop_completion = ['<Enter>', '<C-y>']
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_enable_diagnostic_signs = 0 
 let g:ycm_enable_diagnostic_highlighting = 0
+
+let g:CoolTotalMatches = 1
 
 call plug#end()
 "********************END PLUGINS********************
