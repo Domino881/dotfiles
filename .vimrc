@@ -112,6 +112,9 @@ imap <C-e> <C-o><C-e>
 imap <C-y> <C-o><C-y>
 imap <C-d> <C-o><C-d>
 imap <C-u> <C-o><C-u>
+
+vnoremap < <gv
+vnoremap > >gv
 "********************END MOVEMENT MAPPINGS********************
 
 "********************PYTHON********************
@@ -196,6 +199,12 @@ let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 0
 
 let g:CoolTotalMatches = 1
+
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+highlight QuickScopePrimary ctermfg=lightblue cterm=underline
+highlight QuickScopeSecondary ctermfg=blue cterm=underline
+let g:qs_max_chars=80
+let g:qs_buftype_blacklist = ['terminal', 'nofile']
 
 call plug#end()
 "********************END PLUGINS********************

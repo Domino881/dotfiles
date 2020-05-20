@@ -23,6 +23,7 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'morhetz/gruvbox'
 Plug 'romainl/vim-cool'
+Plug 'unblevable/quick-scope'
 
 call plug#end()
 
