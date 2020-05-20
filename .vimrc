@@ -202,9 +202,11 @@ let g:CoolTotalMatches = 1
 
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 highlight QuickScopePrimary ctermfg=lightblue cterm=underline
-highlight QuickScopeSecondary ctermfg=blue cterm=underline
+highlight QuickScopeSecondary ctermfg=darkblue cterm=underline
 let g:qs_max_chars=80
 let g:qs_buftype_blacklist = ['terminal', 'nofile']
+
+let g:mkdp_auto_start = 1
 
 call plug#end()
 "********************END PLUGINS********************

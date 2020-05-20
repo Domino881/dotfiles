@@ -12,7 +12,7 @@ Plug 'lervag/vimtex'
 Plug 'python-mode/python-mode'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'iamcco/markdown-preview.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'yuttie/comfortable-motion.vim'

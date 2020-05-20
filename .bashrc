@@ -134,7 +134,7 @@ esac
 
 alias compandrun='cd ~/Documents && PS1=\>'
 alias latex='latex -output-format=pdf'
-alias cpmf='cp ~/makefile .'
+alias cpmf='cp ~/Documents/makefile .'
 
 PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
 bind 'set show-all-if-ambiguous on'
