@@ -1,4 +1,5 @@
 # TODO LIST
 
-* make a __TODO.md__
+* stwórz __TODO.md__
+* zmień nazwę na __README.md__
 
