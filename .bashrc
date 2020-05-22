@@ -4,7 +4,6 @@ source /etc/skel/.bashrc
 
 ####    aliases    ####
 alias ls='ls -A --color=auto --group-directories-first'
-alias compandrun='cd ~/Documents && PS1=\>'
 alias latex='latex -output-format=pdf'
 alias cpmf='cp ~/Documents/makefile .'
 alias vimrc='vim ~/.vimrc'

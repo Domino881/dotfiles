@@ -68,6 +68,10 @@ if !isdirectory("/tmp/.vim-undo-dir")
 endif
 set undodir=/tmp/.vim-undo-dir
 set undofile
+
+if has('python3')
+  silent! python3 1
+endif
 "********************END MISCELLANEOUS********************
 
 "********************MOVEMENT MAPPINGS********************
@@ -208,6 +212,8 @@ let g:qs_buftype_blacklist = ['terminal', 'nofile']
 
 let g:mkdp_auto_start = 1
 
+let g:pymode_python = 'python3'
+let g:pymode_lint = 0
 call plug#end()
 "********************END PLUGINS********************
 
