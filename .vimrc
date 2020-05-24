@@ -49,6 +49,7 @@ nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>e :pclose<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>s :so %<CR>
 
 autocmd Filetype cpp inoremap <Bslash>f for(int i=0;i<n;i++){}<Left>
 autocmd Filetype cpp inoremap <Bslash>i if(){}<Left><Left><Left>
