@@ -11,6 +11,7 @@ alias i3config='vim ~/.config/i3/config'
 alias bashrc='vim ~/.bashrc'
 #make ranger change the shell directory
 alias ranger='ranger --choosedir=$HOME/rangerdir;cd "$(cat $HOME/rangerdir)"'
+alias colors='chromium https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg'
 
 ####    enviroment variables    ####
 COLOR1='\e[38;5;223m'

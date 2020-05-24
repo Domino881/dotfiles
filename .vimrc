@@ -23,16 +23,19 @@ set timeoutlen=400
 set laststatus=2
 set noshowmode
 set background=dark
-colorscheme ron
+colorscheme kuczy
 
 "folding
 set foldmethod=syntax
 set foldlevel=9999 
-highlight Folded ctermbg=NONE
-highlight LineNr ctermfg=darkgrey
-highlight CursorLineNr ctermfg=grey
-highlight Search ctermbg=darkblue
-highlight SignColumn ctermbg=black
+set list lcs=tab:\|\ 
+"highlight Folded ctermbg=NONE
+"highlight LineNr ctermfg=darkgrey
+"highlight CursorLineNr ctermfg=grey
+"highlight Search ctermbg=darkblue
+"highlight SignColumn ctermbg=black
+"highlight Comment ctermfg=darkgrey
+"highlight SpecialKey ctermfg=238
 
 set pastetoggle=<Leader>p
 :command Keywordll syn keyword Type ll
