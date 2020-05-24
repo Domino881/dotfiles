@@ -7,7 +7,6 @@ if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name = "kuczy"
-"hi  NonText       
 hi  comment ctermfg=darkgrey cterm=italic 
 
 hi  constant ctermfg=147
@@ -17,7 +16,7 @@ hi  character ctermfg=098
 hi  identifier ctermfg=044 cterm=bold
 hi  statement ctermfg=yellow
 hi  preproc ctermfg=darkblue 
-hi  type ctermfg=078
+hi  type ctermfg=079
 hi  special ctermfg=111 
 
 hi  LineNr ctermfg=darkgrey
