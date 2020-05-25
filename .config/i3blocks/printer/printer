@@ -1,0 +1,18 @@
+#!/bin/bash
+#(mój skrypt)
+#print only when there are jobs in 
+#the default printer queue
+
+PRINTJOBS=`lpq`
+_PRINTJOBS=`lpq | tail -n 1`
+
+if [[ "$_PRINTJOBS" != "no entries" ]]; then
+	echo $_PRINTJOBS
+	if [[ `lpq | wc -l` -gt 2 ]]; then
+		echo "…"
+	fi
+fi
+
+case $BLOCK_BUTTON in
+	1) chromium http://localhost:631/jobs/
+esac
