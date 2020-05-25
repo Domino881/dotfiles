@@ -33,6 +33,11 @@ markup=none
 #full_text=calc
 #command=gnome-calculator
 
+[printer]
+color=#FFEEAA
+interval=5
+label=🖨
+
 #diy media output device
 [outputsink]
 color=#A6A6A6
