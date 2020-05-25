@@ -1,3 +1,0 @@
-pulseaudio -k
-pulseaudio --start
-pacmd list-sinks | awk '/* index:/{nr[NR+36];}; NR in nr' | awk  '{print substr(substr(substr($0, index($0,$3)),2),1, length(substr(substr($0, index($0,$3)),2))-1)}'
