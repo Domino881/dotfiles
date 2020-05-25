@@ -56,5 +56,7 @@ if [ -n "$DISPLAY" ]; then
 	xset b off
 fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+alias xcwd=`cat ~/.rangerdir`
 ranger
+cd `cat ~/.rangerdir`
 exit
