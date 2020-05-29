@@ -26,7 +26,7 @@ font pango: Droid Sans Mono 10
 	set $ws1 "1: Main"
 	set $ws2 "2: Browser"
 	set $ws3 "3: Communication"
-	set $ws4 "4"
+	set $ws4 "4: Games"
 	set $ws5 "5"
 	set $ws6 "6"
 	set $ws7 "7"
@@ -64,6 +64,7 @@ font pango: Droid Sans Mono 10
 	assign [class="Chromium"] $ws2
 	assign [class="discord"] $ws3
 	assign [class="Microsoft Teams"] $ws3
+	assign [class="Minecraft"] $ws4
 
 	bindsym $mod+Ctrl+h move workspace to output left
 	bindsym $mod+Ctrl+l move workspace to output right

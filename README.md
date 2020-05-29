@@ -12,3 +12,4 @@
 	* outputsink - pokaż obecny sink, śpm → wybierz (przez dmenu) spośród możliwych
 	* printer - gdy domyślna kol. drukowania nie jest pusta, pokaż ikonę; lpm otwiera localhost Cups
 	* volume - śpm otwiera pływające pavucontrol do miksowania głośności
+	* ramusage - rysuje używaną obecnie pamięć RAM

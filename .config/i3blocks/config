@@ -28,10 +28,12 @@
 command=~/.config/i3blocks/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
+color=#EECCAA
 
 #[calc]
 #full_text=calc
 #command=gnome-calculator
+
 
 [printer]
 color=#FFEEAA
@@ -129,8 +131,13 @@ color=#EECCAA
 label=CPU
 interval=10
 min_width=CPU 100.00%
+separator=false
+
 #separator=false
 
+[ramusage]
+min_width=iiiii 8.1G/8.1G
+interval=2
 #[load_average]
 #label=LOAD
 #interval=10
