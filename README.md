@@ -1,6 +1,6 @@
 # README
 
-![screenshot](screenshot.png)
+![screenshot2](screenshot.png)
 
 
 ## TODO LIST
