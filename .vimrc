@@ -23,7 +23,7 @@ set timeoutlen=400
 set laststatus=2
 set noshowmode
 set background=dark
-colorscheme kuczy
+colorscheme kuczy2
 
 "folding
 augroup vimrc

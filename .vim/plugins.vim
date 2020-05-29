@@ -21,5 +21,6 @@ Plug 'SirVer/ultisnips'
 Plug 'romainl/vim-cool' "auto :nohl
 Plug 'unblevable/quick-scope' "highlight first unique letter for f,t,F,T
 Plug 'preservim/nerdcommenter'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
