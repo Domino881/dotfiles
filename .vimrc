@@ -1,8 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax on
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set hlsearch
 set incsearch
 set number relativenumber
@@ -137,6 +137,8 @@ imap <C-u> <C-o><C-u>
 
 vnoremap < <gv
 vnoremap > >gv
+
+nnoremap <m-o> o<Esc>k
 "********************END MOVEMENT MAPPINGS********************
 
 "********************PYTHON********************
