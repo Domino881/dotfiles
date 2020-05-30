@@ -155,7 +155,8 @@ font pango: Droid Sans Mono 10
 	bindsym $mod+Shift+Return exec urxvt
 	
 	# start dmenu (a program launcher)
-	bindsym $mod+d exec dmenu_run
+	bindsym $mod+d exec i3-dmenu-desktop --entry-type=command #dmenu_run
+	bindsym $mod+Shift+d exec dmenu_run
 	
 	bindsym $mod+c exec chromium
 	

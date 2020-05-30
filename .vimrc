@@ -3,6 +3,12 @@ filetype off                  " required
 syntax on
 set tabstop=4
 set shiftwidth=4
+
+"********************MISCELLANEOUS********************
+command Wq wq
+command W w
+command Q q
+
 set hlsearch
 set incsearch
 set number relativenumber
@@ -13,17 +19,13 @@ set nowrap
 set splitright
 set splitbelow
 
-"********************MISCELLANEOUS********************
-command Wq wq
-command W w
-command Q q
-
 set ttimeoutlen=10
 set timeoutlen=400
 set laststatus=2
 set noshowmode
-set background=dark
-colorscheme kuczy2
+set backspace=indent,eol,start
+set termencoding=utf8
+set encoding=utf8
 
 "folding
 augroup vimrc
@@ -31,39 +33,8 @@ augroup vimrc
   au BufWinEnter * if &fdm == 'syntax' | setlocal foldmethod=manual | endif
 augroup END
 set foldlevel=9999 
+
 set list lcs=tab:\|\ 
-"highlight Folded ctermbg=NONE
-"highlight LineNr ctermfg=darkgrey
-"highlight CursorLineNr ctermfg=grey
-"highlight Search ctermbg=darkblue
-"highlight SignColumn ctermbg=black
-"highlight Comment ctermfg=darkgrey
-"highlight SpecialKey ctermfg=238
-
-set pastetoggle=<Leader>p
-:command Keywordll syn keyword Type ll
-
-nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
-nnoremap <silent><expr> <Leader>m (&mouse == "a" ? ':set mouse=<CR>:echo "mouse off"<CR>' : ':set mouse=a<CR>:echo "mouse on"<CR>')
-nnoremap <Leader>n :set nu!<CR>:set rnu!<CR>
-
-
-nnoremap <Leader>wq :wq<CR>
-nnoremap <Leader>e :pclose<CR>
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>s :so %<CR>
-nnoremap <Leader>v :vspl 
-nnoremap <Leader>b :spl 
-
-autocmd Filetype cpp inoremap <Bslash>f for(int i=0;i<n;i++){}<Left>
-autocmd Filetype cpp inoremap <Bslash>i if(){}<Left><Left><Left>
-
-nnoremap <Leader>t :bot term ++rows=12<CR>
-tnoremap <Leader>t <C-d>
-
-nnoremap <Leader>p "*p
-nnoremap <Leader>P "*P
 
 set nobackup
 set nowritebackup
@@ -81,12 +52,39 @@ set undofile
 if has('python3')
   silent! python3 1
 endif
+
+vnoremap < <gv
+vnoremap > >gv
+
+nnoremap <m-o> o<Esc>k
+
+"use an interactive shell for :! (respect .bashrc)
+set shellcmdflag=-ic
 "********************END MISCELLANEOUS********************
+
+"********************LEADER MAPPINGS********************
+nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
+nnoremap <silent><expr> <Leader>m (&mouse == "a" ? ':set mouse=<CR>:echo "mouse off"<CR>' : ':set mouse=a<CR>:echo "mouse on"<CR>')
+nnoremap <Leader>n :set nu!<CR>:set rnu!<CR>
+
+
+nnoremap <Leader>wq :wq<CR>
+nnoremap <Leader>e :pclose<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>s :so %<CR>
+nnoremap <Leader>v :vspl 
+nnoremap <Leader>b :spl 
+
+nnoremap <Leader>t :bot term ++rows=12<CR>
+tnoremap <Leader>t <C-d>
+
+nnoremap <Leader>p "*p
+nnoremap <Leader>P "*P
+"********************LEADER MAPPINGS********************
 
 "********************MOVEMENT MAPPINGS********************
 "alt + hjkl
-set termencoding=utf8
-set encoding=utf8
 inoremap <m-h> <Left>
 inoremap <m-j> <Down>
 inoremap <m-k> <Up>
@@ -101,19 +99,6 @@ cnoremap <m-h> <Left>
 cnoremap <m-j> <Down>
 cnoremap <m-k> <Up>
 cnoremap <m-l> <Right>
-
-"delete whole words
-nnoremap <m-x> "_dib
-inoremap <m-x> <Esc>"_dibi
-
-"skip words in insert
-inoremap <m-w> <C-o>w
-inoremap <m-q> <C-o>b
-set backspace=indent,eol,start
-
-"alt+<> -> home, end
-inoremap <m-,> <C-o>0
-inoremap <m-.> <C-o>$
 
 nnoremap <Leader>j 30j
 nnoremap <Leader>k 30k
@@ -134,11 +119,6 @@ imap <C-e> <C-o><C-e>
 imap <C-y> <C-o><C-y>
 imap <C-d> <C-o><C-d>
 imap <C-u> <C-o><C-u>
-
-vnoremap < <gv
-vnoremap > >gv
-
-nnoremap <m-o> o<Esc>k
 "********************END MOVEMENT MAPPINGS********************
 
 "********************PYTHON********************
@@ -147,3 +127,4 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match SpellBad /\s\+$/
 
 "********************PLUGINS***********************
 source ~/.vim/plugged/pluginconf.vim
+colorscheme kuczy
