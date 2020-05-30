@@ -28,13 +28,14 @@ set termencoding=utf8
 set encoding=utf8
 
 "folding
-augroup vimrc
+augroup folding
   au BufReadPre * setlocal foldmethod=syntax
   au BufWinEnter * if &fdm == 'syntax' | setlocal foldmethod=manual | endif
 augroup END
 set foldlevel=9999 
 
 set list lcs=tab:\|\ 
+set fillchars+=vert:│
 
 set nobackup
 set nowritebackup
@@ -60,6 +61,12 @@ nnoremap <m-o> o<Esc>k
 
 "use an interactive shell for :! (respect .bashrc)
 set shellcmdflag=-ic
+
+augroup inactivewin
+	autocmd!
+	autocmd WinEnter * set nu rnu
+	autocmd WinLeave * set norelativenumber
+augroup END
 "********************END MISCELLANEOUS********************
 
 "********************LEADER MAPPINGS********************
