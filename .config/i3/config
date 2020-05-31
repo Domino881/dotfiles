@@ -185,7 +185,7 @@ font pango: Droid Sans Mono 10
 	exec --no-startup-id compton -b --backend glx
 
 	# alternating layout - v/h
-	exec --no-startup-id ~/.config/i3/i3-alternating-layout/alternating_layouts.py
+	exec --no-startup-id ~/.config/i3/i3-alternating-layout/alternating_layouts.py #https://github.com/olemartinorg/i3-alternating-layout
 	
 #######################
 ####    I3-GAPS    ####
