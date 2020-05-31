@@ -67,6 +67,18 @@ augroup inactivewin
 	autocmd WinEnter * set nu rnu
 	autocmd WinLeave * set norelativenumber
 augroup END
+
+function _gd()
+	try
+		:YcmCompleter GoTo
+	finally
+		echo "Ycm failed"
+		normal gD
+endtry
+endfunction
+
+nnoremap gd :call _gd()<CR>
+nnoremap K :YcmCompleter GetDoc<CR>
 "********************END MISCELLANEOUS********************
 
 "********************LEADER MAPPINGS********************

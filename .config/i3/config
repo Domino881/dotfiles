@@ -177,12 +177,15 @@ font pango: Droid Sans Mono 10
 	exec /home/dominik/.screenlayout/default.sh
 
 	#desktop bg
-	exec feh --bg-fill ~/Pictures/hlalyx.jpg --bg-fill --geometry +0+0 ~/Pictures/hlalyx.jpg
+	exec /home/dominik/Pictures/.fehbg_iss
 	exec-always xrdb /home/dominik/.Xresources
 	exec xrdb /home/dominik/.Xresources && urxvt
 	
 	# transparent windows
 	exec --no-startup-id compton -b
+
+	# alternating layout - v/h
+	exec --no-startup-id ~/.config/i3/i3-alternating-layout/alternating_layouts.py
 	
 #######################
 ####    I3-GAPS    ####
@@ -190,7 +193,8 @@ font pango: Droid Sans Mono 10
 	for_window [class="^.*"] border pixel 0
 	smart_gaps on
 	smart_borders on
-	gaps inner 10
+	gaps inner 20
+	gaps outer 5
 
 #####################
 ####    OTHER    ####
