@@ -2,7 +2,7 @@
 URxvt.imLocale:	pl_PL.UTF-8
 URxvt*meta8:		true
 URxvt*termName: rxvt-unicode-256color
-URxvt*background: rgba:2CCC/2BAA/2CCC/d000
+URxvt*background: rgba:2CCC/2BAA/2CCC/b000
 !!f400
 !! Colorscheme
 

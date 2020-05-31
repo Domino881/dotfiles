@@ -79,6 +79,8 @@ endfunction
 
 nnoremap gd :call _gd()<CR>
 nnoremap K :YcmCompleter GetDoc<CR>
+
+cnoremap <C-t> \| Files
 "********************END MISCELLANEOUS********************
 
 "********************LEADER MAPPINGS********************
