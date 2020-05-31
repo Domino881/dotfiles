@@ -1,6 +1,6 @@
 # README
 
-![screenshot2](screenshot.png)
+![screenshot](https://user-images.githubusercontent.com/26608084/83359846-4dd0f200-a37d-11ea-92be-03226a5e16b0.png)
 
 
 ## TODO LIST
