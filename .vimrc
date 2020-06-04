@@ -26,6 +26,7 @@ set noshowmode
 set backspace=indent,eol,start
 set termencoding=utf8
 set encoding=utf8
+set conceallevel=2
 
 "folding
 augroup folding
@@ -81,6 +82,15 @@ nnoremap gd :call _gd()<CR>
 nnoremap K :YcmCompleter GetDoc<CR>
 
 cnoremap <C-t> \| Files
+
+" check highlight group of word under cursor
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+autocmd Filetype markdown inoremap <silent><F9> ![]()<Left><C-o>
+					\:!chromium  https://www.codecogs.com/latex/eqneditor.php &<CR>
+autocmd Filetype markdown nnoremap <silent><F9> :r !chromium https://www.codecogs.com/latex/eqneditor.php<CR><CR>
 "********************END MISCELLANEOUS********************
 
 "********************LEADER MAPPINGS********************

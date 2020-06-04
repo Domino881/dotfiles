@@ -106,6 +106,9 @@ font pango: Droid Sans Mono 10
 	bindsym $mod+space focus mode_toggle
 	for_window [instance="floating"] floating enable resize set 1200 800 
 	for_window [instance="floating"] move position center 
+	for_window [instance="cal"] floating enable 
+	for_window [instance="cal"] resize set 220px 300px 
+	for_window [instance="cal"] move absolute position 3000px 12px
 
 	for_window [class="Pavucontrol"] floating enable
 	for_window [class="Nautilus"] floating enable
@@ -172,6 +175,8 @@ font pango: Droid Sans Mono 10
 	bindsym XF86AudioPause exec playerctl pause
 	bindsym XF86AudioNext exec playerctl next
 	bindsym XF86AudioPrev exec playerctl previous
+	# screenshot
+	bindsym $mod+F2 exec gnome-screenshot -i
 	
 	#monitor config (made via arandr)
 	exec /home/dominik/.screenlayout/default.sh

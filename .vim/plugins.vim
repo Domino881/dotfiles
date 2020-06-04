@@ -12,10 +12,9 @@ Plug 'python-mode/python-mode'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'plasticboy/vim-markdown'
 Plug 'yuttie/comfortable-motion.vim' "smooth scrolling
 Plug 'junegunn/goyo.vim' "distraction-free writing 
-Plug 'xolox/vim-misc' "notetaking (?)
-Plug 'xolox/vim-notes'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'romainl/vim-cool' "auto :nohl

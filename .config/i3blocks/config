@@ -152,9 +152,9 @@ interval=2
 
 # Date Time
 #
-[time]
+[cal]
 color=#CCBB99
-command=date '+%d.%m.%Y %H:%M:%S'
+#command=date '+%a  %d.%m.%Y %H:%M:%S'
 interval=1
 
 

@@ -14,6 +14,7 @@ alias ranger='ranger --choosedir=$HOME/.rangerdir;cd "$(cat $HOME/.rangerdir)"'
 alias colors='chromium https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg'
 alias date='date +%d.%m.%Y\ %H:%M:%S\ %Z'
 alias gnome-screenshot='gnome-screenshot -i'
+alias droidcam-bg='droidcam-cli 192.168.90.124 4747 &'
 
 ####    enviroment variables    ####
 COLOR1='\e[38;5;223m'

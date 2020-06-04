@@ -68,10 +68,11 @@ highlight QuickScopeSecondary ctermfg=darkblue cterm=underline
 let g:qs_max_chars=80
 let g:qs_buftype_blacklist = ['terminal', 'nofile']
 
-let g:mkdp_auto_start = 1
-
 let g:pymode_python = 'python3'
 let g:pymode_lint = 0
+let g:pymode_rope = 0
+
+let g:vim_markdown_math = 1
 call plug#end()
 "********************END PLUGINS********************
 
