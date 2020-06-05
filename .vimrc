@@ -35,7 +35,7 @@ augroup folding
 augroup END
 set foldlevel=9999 
 
-set list lcs=tab:\|\ 
+set list lcs=tab:\│\ 
 set fillchars+=vert:│
 
 set nobackup
