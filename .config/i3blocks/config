@@ -30,11 +30,6 @@ separator_block_width=15
 markup=none
 color=#EECCAA
 
-#[calc]
-#full_text=calc
-#command=gnome-calculator
-
-
 [printer]
 color=#FFEEAA
 interval=5
@@ -58,10 +53,6 @@ label=♪
 instance=spotify
 interval=5
 signal=10
-#[spotify-python]
-#full_text=dziala
-#interval=5
-#label=@
 
 # Volume indicator
 #
@@ -72,51 +63,21 @@ signal=10
 [volume]
 color=#EECCAA
 #label=♪
-#full_text=volume
 label=volume
 interval=1
 signal=10
-#STEP=5%
-
-# Memory usage
-#
-# The type defaults to "mem" if the instance is not specified.
-#[memory]
-#label=MEM
-#separator=false
-#interval=30
-#
-#[memory]
-#label=SWAP
-#instance=swap
-#separator=false
-#interval=30
-
-# Disk usage
-#
-# The directory defaults to $HOME if the instance is not specified.
-# The script may be called with a optional argument to set the alert
-# (defaults to 10 for 10%).
-#[disk]
-#label=HOME
-#DIR=/mnt/data
-#interval=30
 
 # Network interface monitoring
 #
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
-#IFACE=wlan0
 color=#FFEEAA
 interval=15
-#separator=false
 
 [wifi]
-#INTERFACE=wlp3s0
 label=wifi:
 interval=10
-#separator=false
 
 #[bandwidth]
 #INTERFACE=eth0
@@ -133,62 +94,16 @@ interval=10
 min_width=CPU 100.00%
 separator=false
 
-#separator=false
-
 [ramusage]
 min_width=iiiii 8.1G/8.1G
 interval=2
-#[load_average]
-#label=LOAD
-#interval=10
 
-# Battery indicator
-#
-# The battery instance defaults to 0.
-#[battery]
-#label=BAT
-#label=⚡
-#interval=30
-
-# Date Time
-#
 [cal]
 color=#CCBB99
-#command=date '+%a  %d.%m.%Y %H:%M:%S'
+interval=30
+separator=false
+
+[mytime]
+command=date '+%H:%M:%S'
+color=#CCBB99
 interval=1
-
-
-# OpenVPN support
-#
-# Support multiple VPN, with colors.
-#[openvpn]
-#interval=20
-
-# Temperature
-#
-# Support multiple chips, though lm-sensors.
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-#[temperature]
-#label=TEMP
-#interval=10
-
-# Key indicators
-#
-# Add the following bindings to i3 config file:
-#
-# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-#[keyindicator]
-#KEY=CAPS
-#markup=pango
-#interval=once
-#signal=11
-
-#[keyindicator]
-#KEY=NUM
-#markup=pango
-#interval=once
-#signal=11
-
-
