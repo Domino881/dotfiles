@@ -75,7 +75,7 @@ format() {
 #------------------------------------------------------------------------
 
 case $BLOCK_BUTTON in
-	2) pavucontrol -t 1;;
+  2) i3-msg exec "urxvt -name mixer -e bash --init-file ~/.config/i3/.bashrc_pulsemixer" 2>&1 > /dev/null ;;
   3) amixer -q -D $MIXER sset $SCONTROL $(capability) toggle ;;  # right click, mute/unmute
   4) amixer -q -D $MIXER sset $SCONTROL $(capability) ${STEP}+ unmute ;; # scroll up, increase
   5) amixer -q -D $MIXER sset $SCONTROL $(capability) ${STEP}- unmute ;; # scroll down, decrease

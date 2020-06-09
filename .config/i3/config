@@ -65,6 +65,8 @@ font pango: Droid Sans Mono 10
 	assign [class="discord"] $ws3
 	assign [class="Microsoft Teams"] $ws3
 	assign [class="Minecraft"] $ws4
+	assign [class="Lutris"] $ws4
+	assign [class="osu!"] $ws4
 
 	bindsym $mod+Ctrl+h move workspace to output left
 	bindsym $mod+Ctrl+l move workspace to output right
@@ -109,11 +111,14 @@ font pango: Droid Sans Mono 10
 	for_window [instance="cal"] floating enable 
 	for_window [instance="cal"] resize set 220px 300px 
 	for_window [instance="cal"] move absolute position 3000px 12px
+	for_window [instance="mixer"] floating enable resize set 800 400 
+	for_window [instance="mixer"] move position center 
 
 	for_window [class="Pavucontrol"] floating enable
 	for_window [class="Nautilus"] floating enable
 	for_window [title="Microsoft Teams Notification"] floating enable
 	for_window [class="Spotify"] floating enable
+	for_window [class="Lutris"] floating enable
 	
 	# layouts
 	bindsym $mod+b split h
@@ -164,7 +169,7 @@ font pango: Droid Sans Mono 10
 	bindsym $mod+c exec chromium
 	
 	# Ranger
-	bindsym $mod+n exec urxvt -name floating -cd "`xcwd`" -e bash -rcfile ~/.config/i3/.bashrc.1 
+	bindsym $mod+n exec urxvt -name floating -cd "`xcwd`" -e bash -rcfile ~/.config/i3/.bashrc_ranger 
 	
 	# Pulse Audio controls
 	bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
