@@ -3,7 +3,7 @@ source /etc/skel/.bashrc
 ####    USER    ####
 
 ####    aliases    ####
-alias ls='ls -A --color=auto --group-directories-first'
+alias ls='ls -h -A --color=auto --group-directories-first'
 alias latex='latex -output-format=pdf'
 alias cpmf='cp ~/Documents/makefile .'
 alias vimrc='vim ~/.vimrc'
@@ -21,7 +21,18 @@ COLOR1='\e[38;5;223m'
 COLOR2='\e[38;5;102m'
 ENDCOLOR='\e[00m'
 export PROMPT_DIRTRIM=2
-PS1="\[$COLOR1\]\u\[$ENDCOLOR\]:\[$COLOR2\]\w\[$ENDCOLOR\]\$"
+
+_pwd() {
+	_PWD=${PWD/#$HOME/\~}
+	charlimit=20
+	if [[ `echo -n $_PWD | wc -c` -gt $charlimit ]]; then
+		prefix="…/"
+		_PWD=`echo -n $_PWD | awk -F "/" '{print $NF}'`
+		_PWD="${prefix}${_PWD}"
+	fi
+	echo $_PWD
+}
+PS1="\[$COLOR1\]\u\[$ENDCOLOR\]:\[$COLOR2\]\$(_pwd)\[$ENDCOLOR\]\$"
 unset color_prompt force_color_prompt
 
 PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
