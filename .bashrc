@@ -10,7 +10,7 @@ alias vimrc='vim ~/.vimrc'
 alias i3config='vim ~/.config/i3/config'
 alias bashrc='vim ~/.bashrc'
 #make ranger change the shell directory
-alias ranger='ranger --choosedir=$HOME/.rangerdir;cd "$(cat $HOME/.rangerdir)"'
+alias ranger='ranger --choosedir=$HOME/.rangerdir'
 alias colors='chromium https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg'
 alias date='date +%d.%m.%Y\ %H:%M:%S\ %Z'
 alias gnome-screenshot='gnome-screenshot -i'
@@ -20,19 +20,23 @@ alias droidcam-bg='droidcam-cli 192.168.90.124 4747 &'
 COLOR1='\e[38;5;223m'
 COLOR2='\e[38;5;102m'
 ENDCOLOR='\e[00m'
-export PROMPT_DIRTRIM=2
 
 _pwd() {
 	_PWD=${PWD/#$HOME/\~}
-	charlimit=20
+	charlimit=`tput cols`
+	charlimit=$((charlimit / 10 + 10))
 	if [[ `echo -n $_PWD | wc -c` -gt $charlimit ]]; then
 		prefix="…/"
-		_PWD=`echo -n $_PWD | awk -F "/" '{print $(NF-1) "/" $NF}'`
+		if [[ $charlimit -lt 15 ]]; then
+			_PWD=`echo -n $_PWD | awk -F "/" '{print $NF}'`
+		else
+			_PWD=`echo -n $_PWD | awk -F "/" '{print $(NF-1) "/" $NF}'`
+		fi
 		_PWD="${prefix}${_PWD}"
 	fi
 	echo $_PWD
 }
-PS1="\[$COLOR1\]\u\[$ENDCOLOR\]:\[$COLOR2\]\$(_pwd)\[$ENDCOLOR\]\$"
+export PS1="\[$COLOR1\]\u\[$ENDCOLOR\]:\[$COLOR2\]\$(_pwd)\[$ENDCOLOR\]\$"
 unset color_prompt force_color_prompt
 
 PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH

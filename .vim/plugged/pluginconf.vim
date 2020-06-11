@@ -13,8 +13,11 @@ let g:AutoPairsMapBS = 0
 let g:AutoPairsMultilineClose = 0
 
 let g:lightline = {
-	\ 'colorscheme': 'kuczy',
-	\}
+	\ 'enable': {
+	\	'tabline': 0
+	\ },
+	\ 'colorscheme': 'kuczy'
+	\ }
 let g:vimtex_view_method = 'zathura'
 
 packadd termdebug
@@ -73,6 +76,7 @@ let g:pymode_lint = 0
 let g:pymode_rope = 0
 
 let g:vim_markdown_math = 1
+
 call plug#end()
 "********************END PLUGINS********************
 

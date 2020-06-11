@@ -91,6 +91,8 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 autocmd Filetype markdown inoremap <silent><F9> ![]()<Left><C-o>
 					\:!chromium  https://www.codecogs.com/latex/eqneditor.php &<CR>
 autocmd Filetype markdown nnoremap <silent><F9> :r !chromium https://www.codecogs.com/latex/eqneditor.php<CR><CR>
+
+nnoremap ,t :tab sball<CR>
 "********************END MISCELLANEOUS********************
 
 "********************LEADER MAPPINGS********************
