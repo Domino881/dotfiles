@@ -15,6 +15,7 @@ alias colors='chromium https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm
 alias date='date +%d.%m.%Y\ %H:%M:%S\ %Z'
 alias gnome-screenshot='gnome-screenshot -i'
 alias droidcam-bg='droidcam-cli 192.168.90.124 4747 &'
+alias gitall='git add --update && git commit && git push origin master'
 
 ####    enviroment variables    ####
 COLOR1='\e[38;5;223m'
