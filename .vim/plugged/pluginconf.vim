@@ -76,7 +76,9 @@ let g:pymode_lint = 0
 let g:pymode_rope = 0
 
 let g:vim_markdown_math = 1
+let g:mkdp_auto_close = 0
 
+let g:kuczyfold = 1
 call plug#end()
 "********************END PLUGINS********************
 

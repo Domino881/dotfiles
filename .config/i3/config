@@ -88,10 +88,10 @@ font pango: Droid Sans Mono 10
 	bindsym $mod+Up focus up
 	bindsym $mod+Right focus right
 	
-	bindsym $mod+Shift+h move left
-	bindsym $mod+Shift+j move down
-	bindsym $mod+Shift+k move up
-	bindsym $mod+Shift+l move right
+	bindsym $mod+Shift+h move left 100px
+	bindsym $mod+Shift+j move down 100px
+	bindsym $mod+Shift+k move up 100px
+	bindsym $mod+Shift+l move right 100px
 	
 	bindsym $mod+Shift+Left move left
 	bindsym $mod+Shift+Down move down
@@ -113,6 +113,7 @@ font pango: Droid Sans Mono 10
 	for_window [instance="cal"] move absolute position 3000px 12px
 	for_window [instance="mixer"] floating enable resize set 800 400 
 	for_window [instance="mixer"] move position center 
+	for_window [instance="scratch"] floating enable resize set 1000 600 move position center 
 
 	for_window [class="Pavucontrol"] floating enable
 	for_window [class="Nautilus"] floating enable
@@ -160,7 +161,8 @@ font pango: Droid Sans Mono 10
 
 	# terminal
 	bindsym $mod+Return exec urxvt -cd "`xcwd`"
-	bindsym $mod+Shift+Return exec urxvt
+	bindsym $mod+Shift+Return exec urxvt -name scratch; exec "sleep .2 && i3-msg move scratchpad && i3-msg scratchpad show && i3-msg resize set 1000px 600px"
+	#bindsym $mod+Shift+Return exec urxvt -name scratch
 	
 	# start dmenu (a program launcher)
 	bindsym $mod+d exec i3-dmenu-desktop --entry-type=command #dmenu_run

@@ -29,14 +29,14 @@ set encoding=utf8
 set conceallevel=2
 
 "folding
-augroup folding
-  au BufReadPre * setlocal foldmethod=syntax
-  au BufWinEnter * if &fdm == 'syntax' | setlocal foldmethod=manual | endif
-augroup END
+"augroup folding
+  "au BufReadPre * setlocal foldmethod=syntax
+  "au BufWinEnter * if &fdm == 'syntax' | setlocal foldmethod=manual | endif
+"augroup END
+set foldmethod=syntax
+nnoremap zf :setlocal foldmethod=manual<CR>zf
 set foldlevel=9999 
 
-set list lcs=tab:\│\ 
-set fillchars+=vert:│
 
 set nobackup
 set nowritebackup
@@ -161,3 +161,5 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match SpellBad /\s\+$/
 "********************PLUGINS***********************
 source ~/.vim/plugged/pluginconf.vim
 colorscheme kuczy
+set list lcs=tab:\│\ 
+set fillchars+=vert:│
