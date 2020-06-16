@@ -236,7 +236,7 @@ font pango: Droid Sans Mono 10
 	# Type					  border      bg        text     indicator   child_border
 	client.focused           #ffeeaa    #ffde82    #404040    #ffde82    #a18027 
 	client.focused_inactive  #444444    #444444    #dddddd    #444444    #444444
-	client.unfocused		 #0d0b0dc9  #0d0b0dc9  #777777    #2c2b2c    #2c2b2c
+	client.unfocused		 #0d0b0dc9  #0d0b0dc9  #777777    #2c2b2c    #303030
 
 	for_window [class=".*"] title_format "<b>%title</b>"
 
