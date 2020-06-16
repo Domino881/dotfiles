@@ -202,7 +202,7 @@ font pango: Droid Sans Mono 10
 #######################
 ####    I3-GAPS    ####
 #######################
-	for_window [class="^.*"] border pixel 0
+	for_window [class="^.*"] border pixel 1
 	smart_gaps on
 	smart_borders on
 	gaps inner 20
@@ -214,7 +214,7 @@ font pango: Droid Sans Mono 10
 
 	bindsym $mod+Shift+c reload
 	bindsym $mod+Shift+r restart
-	bindsym $mod+Shift+e exec i3-msg exit
+	bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 	set $transparent #0d0b0dC9
 	bar {
@@ -230,12 +230,18 @@ font pango: Droid Sans Mono 10
 			active_workspace          #303030      #303030    #777777
 			inactive_workspace        #303030      #303030    #bbbbaa
 			urgent_workspace          #191919      #191919    #ff9988
-		}				
+		}
 	}
 	
+	# Type					  border      bg        text     indicator   child_border
+	client.focused           #ffeeaa    #ffde82    #404040    #ffde82    #a18027 
+	client.focused_inactive  #444444    #444444    #dddddd    #444444    #444444
+	client.unfocused		 #0d0b0dc9  #0d0b0dc9  #777777    #2c2b2c    #2c2b2c
+
+	for_window [class=".*"] title_format "<b>%title</b>"
+
 	exec xrdb ~/.Xresources
-	client.focused #3d688d #3d688d #ffffff #2e9ef4 #285577 
-	
+
 	#shutdown modes
 	set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 	mode "$mode_system" {
