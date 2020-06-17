@@ -4,13 +4,8 @@
 
 
 ## TODO LIST
+* [ ] obczaić: tabnine, show-marks
 * [ ] dodać .fehbg_dragon + dragon.jpg
-* [x] dodać .fzf.bash do repo
-* [x] dodać .bashrc.*
-* [x] dodać .fehbg
-* [x] dodać i3b/cal
-* [x] dodać makefile
-* [x] dodać ramusage
 
 ## BAJERY:
 * Moduły do i3blocks:
