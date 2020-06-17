@@ -4,6 +4,7 @@
 
 
 ## TODO LIST
+* [ ] dodać .fehbg_dragon + dragon.jpg
 * [x] dodać .fzf.bash do repo
 * [x] dodać .bashrc.*
 * [x] dodać .fehbg
