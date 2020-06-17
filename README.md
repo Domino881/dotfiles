@@ -4,8 +4,12 @@
 
 
 ## TODO LIST
-* stworzyć __TODO.md__
-* zmienić nazwę na __README.md__
+* dodać .fzf.bash do repo
+* dodać .bashrc.*
+* dodać .fehbg
+* dodać i3b/cal
+* dodać makefile
+* dodać ramusage
 
 ## BAJERY:
 * Moduły do i3blocks:
