@@ -1,0 +1,9 @@
+#!/bin/bash
+date '+%d.%m.%Y'
+
+case $BLOCK_BUTTON in
+	1) i3-msg [instance="cal"] kill &&
+	   \i3-msg exec 'urxvt -name cal -e bash --init-file ~/.config/i3/.bashrc_cal' ;;
+	   2) i3-msg [instance="cal"] kill ;;
+	   3) i3-msg [instance="cal"] kill ;;
+esac
