@@ -14,8 +14,8 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 10
-#font pango:System San Francisco Display 10
-font pango: Droid Sans Mono 10
+font pango:System San Francisco Display 10
+#font pango: Droid Sans Mono 10
 
 ##########################
 ####    WORKSPACES    ####
@@ -197,7 +197,7 @@ font pango: Droid Sans Mono 10
 	exec --no-startup-id compton -b --backend glx
 
 	# alternating layout - v/h
-	exec --no-startup-id ~/.config/i3/i3-alternating-layout/alternating_layouts.py #https://github.com/olemartinorg/i3-alternating-layout
+	exec-always --no-startup-id ~/.config/i3/i3-alternating-layout/alternating_layouts.py #https://github.com/olemartinorg/i3-alternating-layout
 	
 #######################
 ####    I3-GAPS    ####
@@ -238,7 +238,7 @@ font pango: Droid Sans Mono 10
 	client.focused_inactive  #444444    #444444    #dddddd    #444444    #444444
 	client.unfocused		 #0d0b0dc9  #0d0b0dc9  #777777    #2c2b2c    #303030
 
-	for_window [class=".*"] title_format "<b>%title</b>"
+	for_window [class=".*"] title_format "<span weight='normal' font_desc='System San Francisco 11'>%title</span>"
 
 	exec xrdb ~/.Xresources
 

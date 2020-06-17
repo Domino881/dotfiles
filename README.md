@@ -4,12 +4,12 @@
 
 
 ## TODO LIST
-* dodać .fzf.bash do repo
-* dodać .bashrc.*
-* dodać .fehbg
-* dodać i3b/cal
-* dodać makefile
-* dodać ramusage
+* [x] dodać .fzf.bash do repo
+* [x] dodać .bashrc.*
+* [x] dodać .fehbg
+* [x] dodać i3b/cal
+* [x] dodać makefile
+* [x] dodać ramusage
 
 ## BAJERY:
 * Moduły do i3blocks:
