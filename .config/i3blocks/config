@@ -48,7 +48,7 @@ interval=10
 # Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
 [mediaplayer]
 align=left
-color=#ADD3FF
+color=#7289da
 label=♪
 instance=spotify
 interval=5

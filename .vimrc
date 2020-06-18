@@ -41,7 +41,7 @@ set foldlevel=9999
 set nobackup
 set nowritebackup
 set cmdheight=2
-set updatetime=300
+set updatetime=100
 set shortmess+=c
 set signcolumn=yes
 
@@ -71,14 +71,14 @@ augroup END
 
 function _gd()
 	try
-		:YcmCompleter GoTo
+		call CocAction('jumpDefinition')
 	finally
-		echo "Ycm failed"
+		echo "coc failed"
 		normal gD
 endtry
 endfunction
 
-nnoremap gd :call _gd()<CR>
+nmap gd :call _gd()<CR>
 nnoremap K :YcmCompleter GetDoc<CR>
 
 cnoremap <C-t> \| Files
@@ -93,6 +93,11 @@ autocmd Filetype markdown inoremap <silent><F9> ![]()<Left><C-o>
 autocmd Filetype markdown nnoremap <silent><F9> :r !chromium https://www.codecogs.com/latex/eqneditor.php<CR><CR>
 
 nnoremap ,t :tab sball<CR>
+set t_ut=
+
+if has("autocmd")
+	  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
 "********************END MISCELLANEOUS********************
 
 "********************LEADER MAPPINGS********************
@@ -160,6 +165,6 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match SpellBad /\s\+$/
 
 "********************PLUGINS***********************
 source ~/.vim/plugged/pluginconf.vim
-colorscheme kuczy
 set list lcs=tab:\│\ 
 set fillchars+=vert:│
+colorscheme kuczy

@@ -46,7 +46,7 @@ PATH=/home/dominik/.local/bin/:$PATH
 
 export BROWSER=/usr/bin/chromium
 export TERMINAL=/usr/bin/urxvt
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/bin/vim
 
 export FZF_DEFAULT_COMMAND='find .'
 export FZF_DEFAULT_OPTS='

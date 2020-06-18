@@ -4,7 +4,7 @@
 
 
 ## TODO LIST
-* [ ] obczaić: tabnine, show-marks
+* [x] obczaić: tabnine, show-marks
 * [ ] dodać .fehbg_dragon + dragon.jpg
 
 ## BAJERY:

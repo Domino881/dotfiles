@@ -51,9 +51,11 @@ endfunction
 let g:goyo_width = 120
 let g:goyo_height = "100%"
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:coc_snippet_next='<Tab>'
+let g:coc_snippet_prev='<S-Tab>'
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_key_list_select_completion = ['<Down>']
@@ -79,6 +81,12 @@ let g:vim_markdown_math = 1
 let g:mkdp_auto_close = 0
 
 let g:kuczyfold = 1
+
+if v:version >= 802
+	let g:fzf_layout = {'window': {'width':0.9, 'height':0.6}}
+endif
+
+highlight link hlShowMarks PreProc
 call plug#end()
 "********************END PLUGINS********************
 
