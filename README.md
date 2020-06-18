@@ -4,8 +4,9 @@
 
 
 ## TODO LIST
-* [x] obczaić: tabnine, show-marks
 * [ ] dodać .fehbg_dragon + dragon.jpg
+* [ ] ustawić built in autocomplete
+* [x] obczaić: tabnine, show-marks
 
 ## BAJERY:
 * Moduły do i3blocks:
