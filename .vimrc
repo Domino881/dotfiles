@@ -98,6 +98,9 @@ set t_ut=
 if has("autocmd")
 	  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
+
+command Vimrc e! ~/.vimrc
+set completeopt=menu,menuone,popup
 "********************END MISCELLANEOUS********************
 
 "********************LEADER MAPPINGS********************
