@@ -4,6 +4,7 @@
 
 
 ## TODO LIST
+* [ ] schema.json -> coc default language source priority 
 * [x] dodać .fehbg_dragon + dragon.jpg
 * [x] ustawić built in autocomplete
 * [x] obczaić: tabnine, show-marks
