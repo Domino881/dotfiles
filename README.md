@@ -4,8 +4,8 @@
 
 
 ## TODO LIST
-* [ ] dodać .fehbg_dragon + dragon.jpg
-* [ ] ustawić built in autocomplete
+* [x] dodać .fehbg_dragon + dragon.jpg
+* [x] ustawić built in autocomplete
 * [x] obczaić: tabnine, show-marks
 
 ## BAJERY:
