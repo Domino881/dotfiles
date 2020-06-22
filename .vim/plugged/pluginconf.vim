@@ -9,7 +9,7 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_insert_leave = 0
 
-let g:AutoPairsMapBS = 0
+let g:AutoPairsMapBS = 1
 let g:AutoPairsMultilineClose = 0
 
 let g:lightline = {
@@ -87,6 +87,7 @@ if v:version >= 802
 endif
 
 highlight link hlShowMarks PreProc
+highlight CocWarningSign ctermfg=yellow
 call plug#end()
 "********************END PLUGINS********************
 

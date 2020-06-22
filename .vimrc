@@ -27,15 +27,11 @@ set backspace=indent,eol,start
 set termencoding=utf8
 set encoding=utf8
 set conceallevel=2
+set mouse=a
 
-"folding
-"augroup folding
-  "au BufReadPre * setlocal foldmethod=syntax
-  "au BufWinEnter * if &fdm == 'syntax' | setlocal foldmethod=manual | endif
-"augroup END
 set foldmethod=syntax
 nnoremap zf :setlocal foldmethod=manual<CR>zf
-set foldlevel=9999 
+set foldlevel=9999
 
 
 set nobackup
@@ -102,6 +98,14 @@ endif
 command Vimrc e! ~/.vimrc
 set completeopt=menu,menuone,popup
 "********************END MISCELLANEOUS********************
+"
+"********************PLUGINS & AFTER***********************
+source ~/.vim/plugged/pluginconf.vim
+
+set list lcs=tab:\│\ 
+set fillchars+=vert:│
+colorscheme kuczy
+"********************END PLUGINS*******************
 
 "********************LEADER MAPPINGS********************
 nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
@@ -114,8 +118,8 @@ nnoremap <Leader>e :pclose<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>s :so %<CR>
-nnoremap <Leader>v :vspl 
-nnoremap <Leader>b :spl 
+nnoremap <Leader>v :vspl
+nnoremap <Leader>b :spl
 
 nnoremap <Leader>t :bot term ++rows=12<CR>
 tnoremap <Leader>t <C-d>
@@ -165,9 +169,3 @@ imap <C-u> <C-o><C-u>
 "********************PYTHON********************
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match SpellBad /\s\+$/
 "********************END PYTHON********************
-
-"********************PLUGINS***********************
-source ~/.vim/plugged/pluginconf.vim
-set list lcs=tab:\│\ 
-set fillchars+=vert:│
-colorscheme kuczy

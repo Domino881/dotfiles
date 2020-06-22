@@ -14,6 +14,8 @@ change_sink() {
 	CURRENT_SINK=`pacmd list-sinks | grep \* | awk -F ":" '{print $2}'`
 	CHOICE=`pacmd list-sinks | grep alsa.card_name | awk -v cs="$CURRENT_SINK" -F "[=\"]" '{if (i == cs) print "*" i++ "." $3; else print i++ "." $3;}' | dmenu`
 	CHOICE=`echo $CHOICE | awk -F "[.*]" '{if(length($1)==1)print $1; else print $2;}'` 
+	[ $CHOICE -eq "" ] && (print_sink; return;)
+
 	pacmd set-default-sink $CHOICE
 
 	LIST=`pacmd list-sink-inputs | awk -F ":" '/index/{print $2;}'`
