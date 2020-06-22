@@ -88,6 +88,7 @@ endif
 
 highlight link hlShowMarks PreProc
 highlight CocWarningSign ctermfg=yellow
+cnoremap <C-t> \| Files
 call plug#end()
 "********************END PLUGINS********************
 
@@ -112,7 +113,8 @@ autocmd! User GoyoEnter call <SID>goyo_enter()
 autocmd User GoyoLeave source ~/.vimrc | call lightline#colorscheme()
 nnoremap <Leader>G :Goyo <CR>
 
-nnoremap <Leader>N :Note <C-d>
+"nnoremap <Leader>N :Note <C-d>
 let g:NERDCreateDefaultMappings=0
 map <Leader>cc <plug>NERDCommenterToggle
+nmap <C-g> :CocAction quickfix<CR>
 "********************END PLUGIN MAPPINGS********************

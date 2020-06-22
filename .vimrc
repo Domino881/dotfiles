@@ -4,11 +4,7 @@ syntax on
 set tabstop=4
 set shiftwidth=4
 
-"********************MISCELLANEOUS********************
-command Wq wq
-command W w
-command Q q
-
+"********************MISCELLANEOUS************************{{{
 set hlsearch
 set incsearch
 set number relativenumber
@@ -29,10 +25,9 @@ set encoding=utf8
 set conceallevel=2
 set mouse=a
 
-set foldmethod=syntax
-nnoremap zf :setlocal foldmethod=manual<CR>zf
+set foldmethod=marker
 set foldlevel=9999
-
+"nnoremap zf :setlocal foldmethod=manual<CR>zf
 
 set nobackup
 set nowritebackup
@@ -41,73 +36,37 @@ set updatetime=100
 set shortmess+=c
 set signcolumn=yes
 
-if !isdirectory("/tmp/.vim-undo-dir")
-	call mkdir("/tmp/.vim-undo-dir", "", 0700)
-endif
 set undodir=/tmp/.vim-undo-dir
 set undofile
 
-if has('python3')
-  silent! python3 1
-endif
+set t_ut=
+set shellcmdflag=-ic "use an interactive shell for :! (respect .bashrc)
+set completeopt=menu,menuone,popup
 
 vnoremap < <gv
 vnoremap > >gv
-
+command Wq wq
+command W w
+command Q q
 nnoremap <m-o> o<Esc>k
-
-"use an interactive shell for :! (respect .bashrc)
-set shellcmdflag=-ic
-
-augroup inactivewin
-	autocmd!
-	autocmd WinEnter * set nu rnu
-	autocmd WinLeave * set norelativenumber
-augroup END
-
-function _gd()
-	try
-		call CocAction('jumpDefinition')
-	finally
-		echo "coc failed"
-		normal gD
-endtry
-endfunction
-
+nnoremap <S-y> y$
 nmap gd :call _gd()<CR>
-nnoremap K :YcmCompleter GetDoc<CR>
 
-cnoremap <C-t> \| Files
-
-" check highlight group of word under cursor
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
-autocmd Filetype markdown inoremap <silent><F9> ![]()<Left><C-o>
-					\:!chromium  https://www.codecogs.com/latex/eqneditor.php &<CR>
-autocmd Filetype markdown nnoremap <silent><F9> :r !chromium https://www.codecogs.com/latex/eqneditor.php<CR><CR>
+map <F10> :call ShowSyntaxGroup()<CR>
 
 nnoremap ,t :tab sball<CR>
-set t_ut=
+command Vimrc e! ~/.vimrc | set rnu
+"********************END MISCELLANEOUS********************}}}
 
-if has("autocmd")
-	  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-endif
-
-command Vimrc e! ~/.vimrc
-set completeopt=menu,menuone,popup
-"********************END MISCELLANEOUS********************
-"
-"********************PLUGINS & AFTER***********************
+"********************PLUGINS & AFTER**********************{{{
 source ~/.vim/plugged/pluginconf.vim
 
 set list lcs=tab:\│\ 
 set fillchars+=vert:│
 colorscheme kuczy
-"********************END PLUGINS*******************
+"********************END PLUGINS**************************}}}
 
-"********************LEADER MAPPINGS********************
+"********************LEADER MAPPINGS**********************{{{
 nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
 nnoremap <silent><expr> <Leader>m (&mouse == "a" ? ':set mouse=<CR>:echo "mouse off"<CR>' : ':set mouse=a<CR>:echo "mouse on"<CR>')
 nnoremap <Leader>n :set nu!<CR>:set rnu!<CR>
@@ -126,10 +85,14 @@ tnoremap <Leader>t <C-d>
 
 nnoremap <Leader>p "*p
 nnoremap <Leader>P "*P
-"********************LEADER MAPPINGS********************
 
-"********************MOVEMENT MAPPINGS********************
+nnoremap <Leader>j 30j
+nnoremap <Leader>k 30k
+"********************END LEADER MAPPINGS*********************}}}
+
+"********************MOVEMENT MAPPINGS********************{{{
 "alt + hjkl
+"jajco
 inoremap <m-h> <Left>
 inoremap <m-j> <Down>
 inoremap <m-k> <Up>
@@ -144,9 +107,6 @@ cnoremap <m-h> <Left>
 cnoremap <m-j> <Down>
 cnoremap <m-k> <Up>
 cnoremap <m-l> <Right>
-
-nnoremap <Leader>j 30j
-nnoremap <Leader>k 30k
 
 nnoremap <C-h> <C-w><Left>
 nnoremap <C-j> <C-w><Down>
@@ -164,8 +124,45 @@ imap <C-e> <C-o><C-e>
 imap <C-y> <C-o><C-y>
 imap <C-d> <C-o><C-d>
 imap <C-u> <C-o><C-u>
-"********************END MOVEMENT MAPPINGS********************
+"********************END MOVEMENT MAPPINGS********************}}}
 
-"********************PYTHON********************
+"********************FUNCTIONS / AUTOCOMMANDS / etc.******{{{
+function _gd()
+	try
+		call CocAction('jumpDefinition')
+	finally
+		echo "coc failed"
+		normal gD
+endtry
+endfunction
+
+if has("autocmd")
+	  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
+
+augroup inactivewin
+	autocmd!
+	autocmd WinEnter * set nu rnu
+	autocmd WinLeave * set norelativenumber
+augroup END
+
+if has('python3')
+  silent! python3 1
+endif
+
+if !isdirectory("/tmp/.vim-undo-dir")
+	call mkdir("/tmp/.vim-undo-dir", "", 0700)
+endif
+
+function ShowSyntaxGroup()
+	echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"
+endfunction
+
+autocmd Filetype markdown inoremap <silent><F9> ![]()<Left><C-o>
+					\:!chromium  https://www.codecogs.com/latex/eqneditor.php &<CR>
+autocmd Filetype markdown nnoremap <silent><F9> :r !chromium https://www.codecogs.com/latex/eqneditor.php<CR><CR>
+
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match SpellBad /\s\+$/
-"********************END PYTHON********************
+"********************END FUNCTIONS*********************}}}
