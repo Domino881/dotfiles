@@ -26,7 +26,7 @@ set conceallevel=2
 set mouse=a
 
 set foldmethod=marker
-set foldlevel=9999
+set foldlevel=0
 "nnoremap zf :setlocal foldmethod=manual<CR>zf
 
 set nobackup
@@ -51,6 +51,8 @@ command Q q
 nnoremap <m-o> o<Esc>k
 nnoremap <S-y> y$
 nmap gd :call _gd()<CR>
+nnoremap <c-w> :w<CR>
+nnoremap <c-q> :call Close()<CR>
 
 map <F10> :call ShowSyntaxGroup()<CR>
 
@@ -74,8 +76,8 @@ nnoremap <Leader>n :set nu!<CR>:set rnu!<CR>
 
 nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>e :pclose<CR>
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :echo "the new mapping is \<c-q\>!"<CR>
+nnoremap <Leader>w :echo "the new mapping is \<c-w\>!"<CR>
 nnoremap <Leader>s :so %<CR>
 nnoremap <Leader>v :vspl
 nnoremap <Leader>b :spl
@@ -133,7 +135,7 @@ function _gd()
 	finally
 		echo "coc failed"
 		normal gD
-endtry
+	endtry
 endfunction
 
 if has("autocmd")
@@ -165,4 +167,18 @@ autocmd Filetype markdown inoremap <silent><F9> ![]()<Left><C-o>
 autocmd Filetype markdown nnoremap <silent><F9> :r !chromium https://www.codecogs.com/latex/eqneditor.php<CR><CR>
 
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match SpellBad /\s\+$/
+function Close()
+	try
+		silent! exec 'q'
+	catch
+		noop
+	finally
+		let s:confirm = input('There are unsaved changes! Are you sure? (y/N)')
+		if s:confirm == "y"
+			q!
+		else
+			echo ""
+		endif
+	endtry
+endfunction
 "********************END FUNCTIONS*********************}}}

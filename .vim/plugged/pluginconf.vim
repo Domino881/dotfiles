@@ -88,7 +88,8 @@ endif
 
 highlight link hlShowMarks PreProc
 highlight CocWarningSign ctermfg=yellow
-cnoremap <C-t> \| Files
+
+let g:echodoc_enable_at_startup=1
 call plug#end()
 "********************END PLUGINS********************
 
@@ -117,4 +118,5 @@ nnoremap <Leader>G :Goyo <CR>
 let g:NERDCreateDefaultMappings=0
 map <Leader>cc <plug>NERDCommenterToggle
 nmap <C-g> :CocAction quickfix<CR>
+cnoremap <C-t> \| Files
 "********************END PLUGIN MAPPINGS********************
