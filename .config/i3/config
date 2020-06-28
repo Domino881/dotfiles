@@ -120,6 +120,9 @@ font pango:System San Francisco Display 10
 	for_window [title="Microsoft Teams Notification"] floating enable
 	for_window [class="Spotify"] floating enable
 	for_window [class="Lutris"] floating enable
+	for_window [title="(?i).*PlayOnLinux.*"] floating enable move workspace $ws4
+	for_window [class="melonDS"] move workspace $ws4
+	for_window [class="Wine"] floating enable
 	
 	# layouts
 	bindsym $mod+b split h

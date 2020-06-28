@@ -61,6 +61,10 @@ command Vimrc e! ~/.vimrc | set rnu
 "********************END MISCELLANEOUS********************}}}
 
 "********************PLUGINS & AFTER**********************{{{
+if has('python3') && !has('patch-8.1.201')
+  silent! python3 1
+endif
+
 source ~/.vim/plugged/pluginconf.vim
 
 set list lcs=tab:\│\ 
@@ -147,10 +151,6 @@ augroup inactivewin
 	autocmd WinEnter * set nu rnu
 	autocmd WinLeave * set norelativenumber
 augroup END
-
-if has('python3')
-  silent! python3 1
-endif
 
 if !isdirectory("/tmp/.vim-undo-dir")
 	call mkdir("/tmp/.vim-undo-dir", "", 0700)
