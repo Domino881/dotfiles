@@ -19,3 +19,4 @@
 ## Co zmieniłem:
 * myszka : https://wiki.archlinux.org/index.php/Mouse_acceleration ,  
 sekcja __Disabling mouse acceleration: with libinput__
+* KDEConnect - połączenie z telefonem
