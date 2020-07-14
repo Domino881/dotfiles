@@ -27,12 +27,12 @@
 # Change $SCRIPT_DIR to the location of your scripts!
 command=~/.config/i3blocks/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
-markup=none
+markup=pango
 color=#EECCAA
 
 [printer]
 color=#FFEEAA
-interval=5
+interval=1
 label=🖨
 
 #diy media output device
@@ -79,10 +79,6 @@ interval=15
 label=wifi:
 interval=10
 
-#[bandwidth]
-#INTERFACE=eth0
-#interval=5
-
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,
@@ -105,5 +101,6 @@ separator=false
 
 [mytime]
 command=date '+%H:%M:%S'
-color=#CCBB99
+color=#999999
+#CCBB99
 interval=1
