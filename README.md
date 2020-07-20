@@ -20,3 +20,17 @@
 * myszka : https://wiki.archlinux.org/index.php/Mouse_acceleration ,  
 sekcja __Disabling mouse acceleration: with libinput__
 * KDEConnect - połączenie z telefonem
+* RESOLVE DZIAŁA!!11 purge wszystkich nvidia-* i cuda*, potem https://linuxgamecast.com/2019/08/install-davinci-resolve-16-on-debian-10-nvidia/
+
+## Czego wciąż nie umiem:
+* PlayMemories
+* Lightroom + Photoshop
+* Gry:
+	- osu
+	- simsy
+	- nitw
+	- witcher
+	- deltarune
+	- skyrim
+	- terraria
+	- lol

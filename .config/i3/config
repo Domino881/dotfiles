@@ -27,7 +27,7 @@ font pango:System San Francisco Display 10
 	set $ws2 "2: Browser"
 	set $ws3 "3: Communication"
 	set $ws4 "4: Games"
-	set $ws5 "5"
+	set $ws5 "5: Editing"
 	set $ws6 "6"
 	set $ws7 "7"
 	set $ws8 "8"
@@ -67,6 +67,7 @@ font pango:System San Francisco Display 10
 	assign [class="Minecraft"] $ws4
 	assign [class="Lutris"] $ws4
 	assign [class="osu!"] $ws4
+	assign [class="resolve"] $ws5
 
 	bindsym $mod+Ctrl+h move workspace to output left
 	bindsym $mod+Ctrl+l move workspace to output right

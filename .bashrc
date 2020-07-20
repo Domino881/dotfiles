@@ -17,6 +17,7 @@ alias gnome-screenshot='gnome-screenshot -i'
 alias droidcam-bg='droidcam-cli 192.168.90.124 4747 &'
 alias gitall='git add --update && git commit && git push origin master'
 alias grep='grep --color'
+alias fzfapt='bash /home/dominik/.config/i3/fzfapt.sh'
 
 ####    enviroment variables    ####
 COLOR1='\e[38;5;223m'
