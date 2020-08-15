@@ -13,7 +13,7 @@ for((i=0; i<6-_MEM_RATIO; i++)); do
 	echo -n "▱"
 done
 
-_MEM_CRIT=2000000
+_MEM_CRIT=20000000
 printf "<span"; [[ $_MEM_AVAIL < $_MEM_CRIT ]] && printf " foreground='#FF9988'"
 printf "> %.1fG/%.1fG" $((_MEM_TOTAL-_MEM_AVAIL))e-6 $((_MEM_TOTAL))e-6
 printf "</span>"

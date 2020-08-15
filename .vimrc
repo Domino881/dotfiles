@@ -26,7 +26,7 @@ set conceallevel=2
 set mouse=a
 
 set foldmethod=marker
-set foldlevel=0
+set foldlevel=999
 "nnoremap zf :setlocal foldmethod=manual<CR>zf
 
 set nobackup

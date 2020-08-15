@@ -25,5 +25,6 @@ Plug 'preservim/nerdcommenter'
 Plug 'morhetz/gruvbox'
 Plug 'Domino881/kuczy'
 Plug 'jacquesbh/vim-showmarks'
+Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()

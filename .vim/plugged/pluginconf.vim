@@ -78,7 +78,11 @@ let g:pymode_lint = 0
 let g:pymode_rope = 0
 
 let g:vim_markdown_math = 1
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal_code_blocks = 0
 let g:mkdp_auto_close = 0
+hi link mkdCodeStart Comment
+hi link mkdCodeEnd   Comment
 
 let g:kuczyfold = 1
 
