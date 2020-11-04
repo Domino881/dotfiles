@@ -21,6 +21,10 @@
 sekcja __Disabling mouse acceleration: with libinput__
 * KDEConnect - połączenie z telefonem
 * RESOLVE DZIAŁA!!11 purge wszystkich nvidia-* i cuda*, potem https://linuxgamecast.com/2019/08/install-davinci-resolve-16-on-debian-10-nvidia/
+* żeby steam działał:https://www.unordnung.net/2019/09/debian-testing-steam-glxchoosevisual-failed/ 
+* stałe local IP
+* compton z kawase blur
+* vim ze źródła
 
 ## Czego wciąż nie umiem:
 * PlayMemories

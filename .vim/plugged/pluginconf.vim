@@ -19,6 +19,7 @@ let g:lightline = {
 	\ 'colorscheme': 'kuczy'
 	\ }
 let g:vimtex_view_method = 'zathura'
+let g:tex_flavor = 'latex'
 
 packadd termdebug
 let g:termdebug_wide = 1
@@ -48,7 +49,7 @@ function! s:goyo_enter()
   cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
 endfunction
 
-let g:goyo_width = 120
+let g:goyo_width = 140
 let g:goyo_height = "100%"
 
 let g:UltiSnipsExpandTrigger="<Tab>"

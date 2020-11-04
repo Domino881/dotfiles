@@ -115,6 +115,7 @@ font pango:System San Francisco Display 10
 	for_window [instance="mixer"] floating enable resize set 800 400 
 	for_window [instance="mixer"] move position center 
 	for_window [instance="scratch"] floating enable resize set 1000 600 move position center 
+	for_window [instance="prompt"] floating enable resize set 1000 10 
 
 	for_window [class="Pavucontrol"] floating enable
 	for_window [class="Nautilus"] floating enable
@@ -176,6 +177,9 @@ font pango:System San Francisco Display 10
 	
 	# Ranger
 	bindsym $mod+n exec urxvt -name floating -cd "`xcwd`" -e bash -rcfile ~/.config/i3/.bashrc_ranger 
+
+	# Fastexec
+	bindsym $mod+i exec urxvt -name prompt -e bash -rcfile ~/.config/i3/.bashrc_fastexec
 	
 	# Pulse Audio controls
 	bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume

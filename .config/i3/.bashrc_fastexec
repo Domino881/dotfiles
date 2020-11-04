@@ -79,3 +79,9 @@ if [ -n "$DISPLAY" ]; then
 	xset b off
 fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+read -e -p "execute: " fastexec_command
+fastexec_command=${fastexec_command/\~//home/dominik}
+nohup $fastexec_command &>/dev/null &
+sleep .1
+exit
