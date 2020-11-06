@@ -1,2 +1,0 @@
-#!/bin/sh
-feh --bg-fill --no-xinerama --geometry +0+1400 '/home/dominik/Pictures/dragon.jpg' 

@@ -9,6 +9,9 @@
 * [x] ustawić built in autocomplete
 * [x] obczaić: tabnine, show-marks
 * [ ] zobaczyć polybar zamiast i3status
+* [ ] registax
+* [ ] melonds
+* [ ] stellarium
 
 ## BAJERY:
 * Moduły do i3blocks:

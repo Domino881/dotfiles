@@ -1,2 +1,0 @@
-#!/bin/bash
-feh --bg-fill ~/Pictures/hlalyx.jpg --bg-fill --geometry +0+0 ~/Pictures/hlalyx.jpg
