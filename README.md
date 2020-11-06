@@ -12,6 +12,7 @@
 * [ ] registax
 * [ ] melonds
 * [ ] stellarium
+* [ ] arandr
 
 ## BAJERY:
 * Moduły do i3blocks:
