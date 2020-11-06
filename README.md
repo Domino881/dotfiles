@@ -8,6 +8,7 @@
 * [x] dodać .fehbg_dragon + dragon.jpg
 * [x] ustawić built in autocomplete
 * [x] obczaić: tabnine, show-marks
+* [ ] zobaczyć polybar zamiast i3status
 
 ## BAJERY:
 * Moduły do i3blocks:
