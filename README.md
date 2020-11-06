@@ -33,9 +33,4 @@ sekcja __Disabling mouse acceleration: with libinput__
 * Gry:
 	- osu
 	- simsy
-	- nitw
-	- witcher
-	- deltarune
-	- skyrim
-	- terraria
 	- lol
