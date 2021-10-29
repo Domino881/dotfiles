@@ -40,7 +40,7 @@ set undodir=/tmp/.vim-undo-dir
 set undofile
 
 set t_ut=
-set shellcmdflag=-ic "use an interactive shell for :! (respect .bashrc)
+"set shellcmdflag=-ic "use an interactive shell for :! (respect .bashrc)
 set completeopt=menu,menuone,popup
 
 vnoremap < <gv
@@ -87,7 +87,6 @@ nnoremap <Leader>v :vspl
 nnoremap <Leader>b :spl
 
 nnoremap <Leader>t :bot term ++rows=12<CR>
-tnoremap <Leader>t <C-d>
 
 nnoremap <Leader>p "*p
 nnoremap <Leader>P "*P
@@ -166,6 +165,11 @@ autocmd Filetype markdown inoremap <silent><F9> ![]()<Left><C-o>
 					\:!chromium  https://www.codecogs.com/latex/eqneditor.php &<CR>
 autocmd Filetype markdown nnoremap <silent><F9> :r !chromium https://www.codecogs.com/latex/eqneditor.php<CR><CR>
 
+augroup texcompile
+	au!
+	autocmd BufWritePost *.tex call TexCompile(expand('%:p'),expand('%:p:h'))
+augroup END
+
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match SpellBad /\s\+$/
 function Close()
 	try
@@ -180,5 +184,17 @@ function Close()
 			echo ""
 		endif
 	endtry
+endfunction
+
+function TexCompile(name, path)
+	exec 'w'
+	silent execute "!" . $HOME . "/.vim/texcompile " . a:name . " " . a:path
+	set background=dark
+	redraw
+	let s:BufferFile = $HOME . "/.vim/texcompile.out"
+	sleep 1000m
+	if getfsize(s:BufferFile)!=0
+		execute "pedit" s:BufferFile
+	endif
 endfunction
 "********************END FUNCTIONS*********************}}}

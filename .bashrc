@@ -18,11 +18,13 @@ alias gitall='git add --update && git commit && git push origin master'
 alias grep='grep --color'
 alias fzfapt='bash /home/dominik/.config/i3/fzfapt.sh'
 alias dragon='dragon -x'
+alias registax6='wine "C:\Program Files (x86)\RegiStax 6\RegiStax6.exe"'
 
 ####    enviroment variables    ####
 COLOR1='\e[38;5;223m'
 COLOR2='\e[38;5;102m'
 ENDCOLOR='\e[00m'
+
 
 _pwd() {
 	_PWD=${PWD/#$HOME/\~}
@@ -42,9 +44,15 @@ _pwd() {
 export PS1="\[$COLOR1\]\u\[$ENDCOLOR\]:\[$COLOR2\]\$(_pwd)\[$ENDCOLOR\]\$"
 unset color_prompt force_color_prompt
 
+__fzf_cd2__() {
+	DIR=`find -type d -not -iname ".git" | fzf`
+	[[ -z $DIR ]] || cd $DIR
+}
+
 PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
 PATH=/home/dominik/.local/bin/:$PATH
 PATH=/opt/stellarium/bin/:$PATH
+PATH=/home/dominik/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin:$PATH
 
 export BROWSER=/usr/bin/chromium
 export TERMINAL=/usr/bin/urxvt
@@ -63,6 +71,8 @@ setxkbmap -option caps:escape
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 bind -x '"\C-p": fe'
+bind -x '"\343": __fzf_cd2__'
+bind -x '"ã": __fzf_cd2__'
 git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
