@@ -49,8 +49,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 alias ls='ls --color'
 #alias vim='nvim'
 #alias c='clear'
-
-PS1="%m %F{green}%~%f: "
+PROMPT=$'%m %F{green}%~%f: '
 export VISUAL=vim
 export EDITOR="$VISUAL"
 TERM=xterm-256color
