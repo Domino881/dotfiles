@@ -47,16 +47,11 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Aliases
 alias ls='ls --color'
-#alias vim='nvim'
-#alias c='clear'
 PROMPT=$'%m %F{green}%~%f: '
 export VISUAL=vim
 export EDITOR="$VISUAL"
 TERM=xterm-256color
 
+fzf --version || ( git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install)
 # Shell integrations
-source ~/.fzf.zsh
-# eval "$(fzf)"
-#eval "$(zoxide init --cmd cd zsh)"
-### End of Zinit's installer chunk
-
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
