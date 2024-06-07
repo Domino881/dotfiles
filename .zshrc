@@ -51,7 +51,8 @@ alias ls='ls --color'
 #alias c='clear'
 
 PS1="%m %F{green}%~%f: "
-EDITOR=/usr/bin/vim
+export VISUAL=vim
+export EDITOR="$VISUAL"
 TERM=xterm-256color
 
 # Shell integrations
