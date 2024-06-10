@@ -73,6 +73,8 @@ noremap <silent> <ScrollWheelUp>   <C-y>
 map [[ :TagbarJumpPrev<CR>
 map ]] :TagbarJumpNext<CR>
 
+vnoremap <C-C> :w !xclip -i -sel c<CR><CR>
+
 " leader mappings
 let mapleader = " "
 nnoremap <Leader>o o<Esc>0"_Dk
