@@ -84,13 +84,13 @@ nnoremap <Leader>f :Files<Return>
 nnoremap <Leader>r :Rg<Return>
 vnoremap <Leader>r "ry:Rg <C-r>r<Return>
 
-let NERDCreateDefaultMappings=0
-nmap <Leader>v <plug>NERDCommenterToggle
-vmap <Leader>v <plug>NERDCommenterToggle
+"let NERDCreateDefaultMappings=0
+"nmap <Leader>v <plug>NERDCommenterToggle
+"vmap <Leader>v <plug>NERDCommenterToggle
 
 nnoremap <Leader>t :TagbarToggle<CR>
 
-nnoremap <silent> <Leader>cg :call CscopeFZF("g", 0, "<C-R>=expand('<cword>')<CR>")<CR>
+nnoremap <Leader><Leader>k :echo "a: Find assignments to this symbol\nc: Find functions calling this function\nd: Find functions called by this function\ne: Find this egrep pattern\nf: Find this file\ng: Find this definition\ni: Find files #including this file\ns: Find this C symbol\nt: Find this text string\n"<CR>
 
 " -------------- plugin options ---------------
 

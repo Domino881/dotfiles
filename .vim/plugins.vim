@@ -29,7 +29,7 @@ Plug 'jacquesbh/vim-showmarks'
 "Plug 'dhruvasagar/vim-table-mode'
 Plug 'preservim/tagbar'
 Plug 'dense-analysis/ale'
-Plug 'r08ertliu/cscope-fzf'
+Plug 'nmaiti/fzf_cscope.vim'
 Plug 'Yggdroot/indentLine'
 
 call plug#end()
