@@ -133,6 +133,7 @@ function! Tagbar_cur_tag()
 endfunction
 
 let g:ale_cpp_cc_options = '-std=c++20 -Wall'
+let g:ale_python_mypy_options = '--disable-error-code import-untyped'
 function! SmartInsertCompletion() abort
  " Use the default CTRL-N in completion menus
  if pumvisible()
