@@ -92,6 +92,8 @@ nnoremap <Leader>t :TagbarToggle<CR>
 
 nnoremap <Leader><Leader>k :echo "a: Find assignments to this symbol\nc: Find functions calling this function\nd: Find functions called by this function\ne: Find this egrep pattern\nf: Find this file\ng: Find this definition\ni: Find files #including this file\ns: Find this C symbol\nt: Find this text string\n"<CR>
 
+nnoremap <Leader>n :NERDTreeToggle<CR>
+
 " -------------- plugin options ---------------
 
 
