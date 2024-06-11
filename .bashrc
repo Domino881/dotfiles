@@ -118,4 +118,5 @@ fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export SHELL=/bin/zsh
+export SHELL=/usr/bin/zsh
+[ -n "$PS1" ] && $SHELL
