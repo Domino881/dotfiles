@@ -160,3 +160,22 @@ let g:indentLine_char = '￨'
 
 let g:NERDTreeWinSize = 42
 "let g:NERDTreeWinPos = 'right'
+
+let g:copy_mode = 0
+function Copy_mode_toggle()
+   if !g:copy_mode 
+      set nolist
+      set nonumber
+      set norelativenumber
+      set signcolumn=no
+      IndentLinesDisable
+      let g:copy_mode = 1
+   else
+      set list
+      set number
+      set relativenumber
+      set signcolumn=yes
+      IndentLinesEnable
+      let g:copy_mode = 0
+   endif
+endfunction
