@@ -83,6 +83,7 @@ nnoremap <Leader>O O<Esc>0"_Dj
 nnoremap <Leader>f :Files<Return>
 nnoremap <Leader>r :Rg<Return>
 vnoremap <Leader>r "ry:Rg "<C-r>r<Return>
+nnoremap <Leader>b :Buffers<Return>
 
 "let NERDCreateDefaultMappings=0
 "nmap <Leader>v <plug>NERDCommenterToggle
