@@ -148,7 +148,7 @@ endfunction
 
 let g:fzf_vim = {}
 " [Buffers] Jump to the existing window if possible
-let g:fzf_vim.buffers_jump = 1
+let g:fzf_vim.buffers_jump = 0
 
 " [Tags] Command to generate tags file
 let g:fzf_vim.tags_command = 'ctags -R'
@@ -157,5 +157,5 @@ let g:fzf_vim.tags_command = 'ctags -R'
 let g:indentLine_color_term = 238
 let g:indentLine_char = '￨'
 
-let g:NERDTreeWinSize = 65
-let g:NERDTreeWinPos = 'right'
+let g:NERDTreeWinSize = 42
+"let g:NERDTreeWinPos = 'right'
