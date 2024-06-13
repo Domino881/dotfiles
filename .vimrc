@@ -82,7 +82,7 @@ nnoremap <Leader>O O<Esc>0"_Dj
 
 nnoremap <Leader>f :Files<Return>
 nnoremap <Leader>r :Rg<Return>
-vnoremap <Leader>r "ry:Rg <C-r>r<Return>
+vnoremap <Leader>r "ry:Rg "<C-r>r<Return>
 
 "let NERDCreateDefaultMappings=0
 "nmap <Leader>v <plug>NERDCommenterToggle
@@ -156,3 +156,6 @@ let g:fzf_vim.tags_command = 'ctags -R'
 
 let g:indentLine_color_term = 238
 let g:indentLine_char = '￨'
+
+let g:NERDTreeWinSize = 65
+let g:NERDTreeWinPos = 'right'
