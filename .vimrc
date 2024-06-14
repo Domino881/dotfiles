@@ -107,7 +107,7 @@ let g:gruvbox_sign_column = 'bg0'
 colorscheme gruvbox
 
 hi MarkologyHLo ctermfg=0
-highlight ColorColumn guibg=#111111
+highlight ColorColumn ctermbg=233 guibg=#111111
 
 let g:comfortable_motion_friction=500.0
 let g:comfortable_motion_air_drag=0.0
