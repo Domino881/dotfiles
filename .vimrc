@@ -122,7 +122,7 @@ let g:lightline = {
       \ 'active': {
       \ 'right': [ [ 'lineinfo' ],
       \            [ 'percent' ],
-      \            [ 'tagbar', 'fileencoding', 'filetype' ] ]
+      \            [ 'tagbar', 'filetype' ] ]
       \            },
       \ 'component': {
       \         'tagbar': '%{Tagbar_cur_tag()}',
