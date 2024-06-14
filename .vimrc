@@ -136,8 +136,11 @@ let g:lightline = {
 "endfunction
 
 function! Tagbar_cur_tag()
-   let g:str =  tagbar#currenttag("%s", "", "f")
-   return g:str[-winwidth('%')+65:]
+   let str =  tagbar#currenttag("%s", "", "f")
+   if len(str) > winwidth('%')-65
+      let str = "…" .. str[-winwidth('%')+65:]
+   endif
+   return str
 endfunction
 
 let g:ale_cpp_cc_options = '-std=c++20 -Wall'
