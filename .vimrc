@@ -38,13 +38,17 @@ set cino=p2s,(0,:1,g1,h2
 " color column
 set cc=86
 set signcolumn=yes
-highlight ColorColumn ctermbg=233
 
 " autocompletion based only on current buffer
 set complete=.
 
 set list
 set listchars=space:·
+
+if has("termguicolors")
+   set termguicolors
+endif
+set t_ut=
 
 """""""""""""""""Plugins"""""""""""""""""
 call plug#begin()
@@ -103,6 +107,7 @@ let g:gruvbox_sign_column = 'bg0'
 colorscheme gruvbox
 
 hi MarkologyHLo ctermfg=0
+highlight ColorColumn guibg=#111111
 
 let g:comfortable_motion_friction=500.0
 let g:comfortable_motion_air_drag=0.0
