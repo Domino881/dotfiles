@@ -104,12 +104,15 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_sign_column = 'bg0'
+let g:gruvbox_italic = 1
 colorscheme gruvbox
+
+let g:markology_enable = 0
 
 hi MarkologyHLo ctermfg=0
 highlight ColorColumn ctermbg=233 guibg=#111111
 highlight ColorColumn guibg=#111111
-hi Comment cterm=bold
+"hi Comment cterm=bold
 
 let g:comfortable_motion_friction=500.0
 let g:comfortable_motion_air_drag=0.0
