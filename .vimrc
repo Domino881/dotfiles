@@ -50,6 +50,8 @@ if has("termguicolors")
 endif
 set t_ut=
 
+set mouse=n
+
 """""""""""""""""Plugins"""""""""""""""""
 call plug#begin()
 
@@ -191,3 +193,4 @@ function Copy_mode_toggle()
       let g:copy_mode = 0
    endif
 endfunction
+let g:svndiff_autoupdate = 1
