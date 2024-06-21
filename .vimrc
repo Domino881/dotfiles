@@ -112,6 +112,9 @@ let g:markology_enable = 0
 hi MarkologyHLo ctermfg=0
 highlight ColorColumn ctermbg=233 guibg=#111111
 highlight ColorColumn guibg=#111111
+hi DiffAdd cterm=NONE guibg=NONE
+hi DiffDelete cterm=NONE guibg=NONE
+hi DiffChange cterm=NONE guibg=NONE
 "hi Comment cterm=bold
 
 let g:comfortable_motion_friction=500.0
@@ -192,3 +195,5 @@ function Copy_mode_toggle()
       let g:copy_mode = 0
    endif
 endfunction
+
+let g:svndiff_autoupdate = 1
