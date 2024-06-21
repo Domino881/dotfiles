@@ -50,6 +50,8 @@ if has("termguicolors")
 endif
 set t_ut=
 
+set mouse=n
+
 """""""""""""""""Plugins"""""""""""""""""
 call plug#begin()
 
