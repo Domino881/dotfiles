@@ -50,6 +50,7 @@ alias ls='ls --color'
 PROMPT=$'%m %F{green}%~%f: '
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export P4EDITOR="$VISUAL"
 TERM=xterm-256color
 
 fzf --version || ( git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install)
