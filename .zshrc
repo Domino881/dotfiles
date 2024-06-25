@@ -47,13 +47,17 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Aliases
 alias ls='ls --color'
-nvim --version > /dev/null && alias vim=nvim
-[ -f ~/nvim-linux64/bin/nvim ] && alias vim=~/nvim-linux64/bin/nvim
+TERM=xterm-256color
+
+if nvim --version > /dev/null; then
+   export VISUAL=nvim
+elif [ -f ~/nvim-linux64/bin/nvim ]; then
+   export VISUAL=~/nvim-linux64/bin/nvim
+fi
 PROMPT=$'%m %F{green}%~%f: '
-export VISUAL=nvim
+alias vim="$VISUAL"
 export EDITOR="$VISUAL"
 export P4EDITOR="$VISUAL"
-TERM=xterm-256color
 
 fzf --version || ( git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install)
 # Shell integrations
