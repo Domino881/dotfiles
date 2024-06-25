@@ -48,6 +48,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # Aliases
 alias ls='ls --color'
 nvim --version > /dev/null && alias vim=nvim
+[ -f ~/nvim-linux64/bin/nvim ] && alias vim=~/nvim-linux64/bin/nvim
 PROMPT=$'%m %F{green}%~%f: '
 export VISUAL=nvim
 export EDITOR="$VISUAL"
