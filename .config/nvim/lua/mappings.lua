@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 vim.keymap.set("i", "<C-e>", "<C-o><C-e>")
 vim.keymap.set("i", "<C-y>", "<C-o><C-y>")
 
@@ -28,6 +30,6 @@ vim.keymap.set("n", "<Leader>b", ":Buffers<Return>")
 
 vim.keymap.set("n", "<Leader>t",         ":TagbarToggle<CR>")
 vim.keymap.set("n", "<Leader><Leader>k", [[:echo "a: Find assignments to this symbol\nc: Find functions calling this function\nd: Find functions called by this function\ne: Find this egrep pattern\nf: Find this file\ng: Find this definition\ni: Find files #including this file\ns: Find this C symbol\nt: Find this text string\n"<CR>]])
-vim.keymap.set("n", "<Leader>n",         ":NERDTreeToggle<CR")
+vim.keymap.set("n", "<Leader>n",         ":NERDTreeToggle<CR>")
 
 vim.keymap.set("n", "Q", "<nop>")
