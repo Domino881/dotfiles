@@ -18,7 +18,7 @@ require("lazy").setup({
    require 'plugins.which-key',
    require 'plugins.cmp',
    require 'plugins.lsp',
-   --'scrooloose/nerdtree',
+   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
    'jiangmiao/auto-pairs',
    'tpope/vim-surround',
    'romainl/vim-cool', --auto :nohl
@@ -26,6 +26,6 @@ require("lazy").setup({
    'jacquesbh/vim-showmarks',
    'preservim/tagbar',
    'lukas-reineke/indent-blankline.nvim',
-    --automatically check for plugin updates
-   --checker = { enabled = true },
+   'Domino881/svndiff',
+   'mbbill/undotree',
 })

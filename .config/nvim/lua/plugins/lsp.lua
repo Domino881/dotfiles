@@ -70,7 +70,7 @@ config = function()
          --    See `:help CursorHold` for information about when this is executed
          --
          -- When you move your cursor, the highlights will be cleared (the second autocommand).
---         local client = vim.lsp.get_client_by_id(event.data.client_id)
+         local client = vim.lsp.get_client_by_id(event.data.client_id)
 --         if client and client.server_capabilities.documentHighlightProvider then
 --            local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
 --            vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
@@ -124,9 +124,9 @@ config = function()
    --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
    local servers = {
       clangd = {},
-      pylint = {},
+      -- pylint = {},
       -- gopls = {},
-      -- pyright = {},
+      pyright = {},
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
