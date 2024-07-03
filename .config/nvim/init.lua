@@ -2,7 +2,7 @@ vim.cmd('source $VIM/vimfiles/arista.vim')
 
 require('options')
 require('mappings')
-require('config.lazy') -- has to be after mappings
+require('lazy-config') -- has to be after mappings
 --require('plugins')
 
 require('ibl').setup({scope = { show_end = false } })
@@ -24,3 +24,8 @@ require('lualine').setup{
 
 vim.g.undotree_WindowLayout = 3
 vim.g.undotree_SplitWidth = 50
+
+--require("cscope_maps").setup()
+
+vim.cmd("source ~/.config/nvim/lua/plugins/arista/lib.vim")
+vim.cmd("source ~/.config/nvim/lua/plugins/arista/a4gid.vim")

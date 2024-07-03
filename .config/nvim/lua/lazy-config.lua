@@ -18,7 +18,7 @@ require("lazy").setup({
    require 'plugins.which-key',
    require 'plugins.cmp',
    require 'plugins.lsp',
-   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+   --{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
    'jiangmiao/auto-pairs',
    'tpope/vim-surround',
    'romainl/vim-cool', --auto :nohl
@@ -28,4 +28,6 @@ require("lazy").setup({
    'lukas-reineke/indent-blankline.nvim',
    'Domino881/svndiff',
    'mbbill/undotree',
+   --require 'plugins.cscope_maps',
+   --'rbmarliere/telescope-cscope.nvim',
 })
