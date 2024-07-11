@@ -12,12 +12,13 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
-   'morhetz/gruvbox',
-   'nvim-lualine/lualine.nvim',
+   { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
+   require 'plugins.lualine',
    require 'plugins.telescope',
    require 'plugins.which-key',
    require 'plugins.cmp',
    require 'plugins.lsp',
+   require 'plugins.conform',
    --{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
    'jiangmiao/auto-pairs',
    'tpope/vim-surround',

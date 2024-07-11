@@ -35,7 +35,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.complete = '.'
 
 vim.opt.list = true
-vim.opt.listchars = { space = '.', trail = '⬗' }
+vim.opt.listchars = { space = '·', trail = '⬗' }
 
 vim.opt.termguicolors = true
 

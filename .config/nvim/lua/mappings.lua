@@ -24,6 +24,9 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<Leader>o", [[o<Esc>0\"_Dk]])
 vim.keymap.set("n", "<Leader>O", [[O<Esc>0"_Dj]])
 
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
-vim.keymap.set('n', '<leader>sa', vim.cmd.AGidVerbose)
+vim.keymap.set("n", "<leader>sa", vim.cmd.AGid)
+vim.keymap.set("n", "<leader>sA", vim.cmd.AGidVerbose)
+
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)

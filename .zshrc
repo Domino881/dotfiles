@@ -51,9 +51,12 @@ TERM=xterm-256color
 PROMPT=$'%m %F{green}%~%f: '
 
 export PATH=/home/dkuczynski/nvim-linux64/bin:$PATH
+export PATH=~/.npm-global/bin:$PATH
+export VISUAL=nvim
 alias vim=nvim
 export EDITOR="$VISUAL"
 export P4EDITOR="$VISUAL"
+export P4MERGE="amergeVim"
 
 fzf --version || ( git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install)
 # Shell integrations

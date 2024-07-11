@@ -16,8 +16,8 @@ filetype off                  " required
 set number
 set relativenumber
 
+set noundofile
 set undodir=~/.vim/undodir
-set undofile
 set undolevels=1000
 set undoreload=10000
 

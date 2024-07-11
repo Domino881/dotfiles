@@ -29,7 +29,9 @@ Plug 'jacquesbh/vim-showmarks'
 "Plug 'dhruvasagar/vim-table-mode'
 Plug 'preservim/tagbar'
 Plug 'dense-analysis/ale'
+Plug 'dhananjaylatkar/cscope_maps.nvim'
 Plug 'nmaiti/fzf_cscope.vim'
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 call plug#end()
