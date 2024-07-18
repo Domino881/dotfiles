@@ -12,6 +12,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
+   'nvim-lua/plenary.nvim',
    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
    require 'plugins.lualine',
    require 'plugins.telescope',
@@ -19,8 +20,9 @@ require("lazy").setup({
    require 'plugins.cmp',
    require 'plugins.lsp',
    require 'plugins.conform',
+   require 'plugins.autopairs',
+   require 'plugins.harpoon',
    --{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-   'jiangmiao/auto-pairs',
    'tpope/vim-surround',
    'romainl/vim-cool', --auto :nohl
    'preservim/nerdcommenter',
@@ -29,6 +31,7 @@ require("lazy").setup({
    'lukas-reineke/indent-blankline.nvim',
    'Domino881/svndiff',
    'mbbill/undotree',
+   'farmergreg/vim-lastplace',
    --require 'plugins.cscope_maps',
    --'rbmarliere/telescope-cscope.nvim',
 })
