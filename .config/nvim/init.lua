@@ -1,4 +1,6 @@
-vim.cmd("source $VIM/vimfiles/arista.vim")
+if vim.fn.filereadable("$VIM/vimfiles/arista.vim") then
+   vim.cmd("source $VIM/vimfiles/arista.vim")
+end
 
 require("options")
 require("mappings")
