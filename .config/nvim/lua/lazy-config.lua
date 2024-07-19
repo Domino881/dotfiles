@@ -32,6 +32,7 @@ require("lazy").setup({
    'Domino881/svndiff',
    'mbbill/undotree',
    'farmergreg/vim-lastplace',
+   'tpope/vim-fugitive',
    --require 'plugins.cscope_maps',
    --'rbmarliere/telescope-cscope.nvim',
 })

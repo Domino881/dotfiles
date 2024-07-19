@@ -23,10 +23,10 @@ vim.cmd("source ~/.config/nvim/lua/plugins/arista/lib.vim")
 vim.cmd("source ~/.config/nvim/lua/plugins/arista/a4gid.vim")
 
 local wk = require("which-key")
-wk.register({ s = {
-   a = { "[S]earch [A]4 gid" },
-   A = { "[S]earch [A]4 gid (verbose)" },
-} }, { prefix = "<leader>" })
+wk.add {
+   { "<leader>sA", desc = "[S]earch [A]4 gid (verbose)" },
+   { "<leader>sa", desc = "[S]earch [A]4 gid" },
+}
 
 require("conform").setup()
 --require("conform").formatters.ruff_format = {
@@ -64,9 +64,9 @@ require("gruvbox").setup({
    transparent_mode = false,
 })
 vim.cmd("colorscheme gruvbox")
-vim.cmd.highlight({ "DiffAdd", "gui=NONE guibg=NONE" })
-vim.cmd.highlight({ "DiffDelete", "gui=NONE guibg=NONE" })
-vim.cmd.highlight({ "DiffChange", "gui=NONE guibg=NONE" })
+vim.cmd.highlight({ "DiffAdd", "gui=NONE guifg=#8ec07c guibg=NONE" })
+vim.cmd.highlight({ "DiffDelete", "gui=NONE guifg=#fb4934 guibg=NONE" })
+vim.cmd.highlight({ "DiffChange", "gui=NONE guifg=#83a598 guibg=NONE" })
 
 local npairs = require'nvim-autopairs'
 local Rule = require'nvim-autopairs.rule'
