@@ -33,6 +33,7 @@ require("lazy").setup({
    'mbbill/undotree',
    'farmergreg/vim-lastplace',
    'tpope/vim-fugitive',
+   'aymericbeaumet/vim-symlink',
    --require 'plugins.cscope_maps',
    --'rbmarliere/telescope-cscope.nvim',
 })
