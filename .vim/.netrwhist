@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/dkuczynski/.vim'
+let g:netrw_dirhist_9='/home/dkuczynski/.vim/autoload'
+let g:netrw_dirhist_8='/home/dkuczynski/.vim'
+let g:netrw_dirhist_7='/home/dkuczynski/.vim/plugged'
+let g:netrw_dirhist_6='/home/dkuczynski/.vim'
+let g:netrw_dirhist_5='/src/SandL3Unicast'
+let g:netrw_dirhist_4='/src'
+let g:netrw_dirhist_3='/src/Demo/CliDynamicPlugin'
+let g:netrw_dirhist_2='/src/Demo'
+let g:netrw_dirhist_1='/src/Demo/CliSavePlugin'

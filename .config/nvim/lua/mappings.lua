@@ -50,3 +50,20 @@ vim.api.nvim_create_autocmd ('LspAttach', {
       map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
    end,
 })
+
+-- Git signs Navigation
+vim.keymap.set('n', ']c', function()
+   if vim.wo.diff then
+      vim.cmd.normal({']c', bang = true})
+   else
+      require"gitsigns".nav_hunk('next')
+   end
+end)
+
+vim.keymap.set('n', '[c', function()
+   if vim.wo.diff then
+      vim.cmd.normal({'[c', bang = true})
+   else
+      require"gitsigns".nav_hunk('prev')
+   end
+end)

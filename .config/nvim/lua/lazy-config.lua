@@ -34,7 +34,7 @@ require("lazy").setup({
    'mbbill/undotree',
    'farmergreg/vim-lastplace',
    'tpope/vim-fugitive',
-   {'lewis6991/gitsigns.nvim', opts={}},
+   'lewis6991/gitsigns.nvim',
    --'aymericbeaumet/vim-symlink',
    --require 'plugins.cscope_maps',
    --'rbmarliere/telescope-cscope.nvim',

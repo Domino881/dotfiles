@@ -141,3 +141,4 @@ vim.api.nvim_create_autocmd( { 'BufNewFile', 'BufReadPost' },
 vim.keymap.set( 'n', '<leader>lf', function()
    vim.lsp.buf.format( { timeout_ms=5000 } ) end )
 
+require('gitsigns').setup()
