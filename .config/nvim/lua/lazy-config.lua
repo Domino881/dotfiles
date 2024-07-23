@@ -22,6 +22,7 @@ require("lazy").setup({
    require 'plugins.conform',
    require 'plugins.autopairs',
    require 'plugins.harpoon',
+   require 'plugins.alpha',
    --{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
    'tpope/vim-surround',
    'romainl/vim-cool', --auto :nohl
@@ -29,11 +30,12 @@ require("lazy").setup({
    'jacquesbh/vim-showmarks',
    'preservim/tagbar',
    'lukas-reineke/indent-blankline.nvim',
-   'Domino881/svndiff',
+   --'Domino881/svndiff',
    'mbbill/undotree',
    'farmergreg/vim-lastplace',
    'tpope/vim-fugitive',
-   'aymericbeaumet/vim-symlink',
+   {'lewis6991/gitsigns.nvim', opts={}},
+   --'aymericbeaumet/vim-symlink',
    --require 'plugins.cscope_maps',
    --'rbmarliere/telescope-cscope.nvim',
 })
