@@ -21,15 +21,15 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- leader mappings
 vim.g.mapleader = " "
-vim.keymap.set("n", "<Leader>o", [[o<Esc>0\"_Dk]])
-vim.keymap.set("n", "<Leader>O", [[O<Esc>0"_Dj]])
+vim.keymap.set("n", "<Leader>o", [[o<Esc>0\"_Dk]], { desc = "Add empty line below" })
+vim.keymap.set("n", "<Leader>O", [[O<Esc>0"_Dj]], { desc = "Add empty line above" })
 
-vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Open [U]ndotree" })
 
-vim.keymap.set("n", "<leader>sa", vim.cmd.AGid)
-vim.keymap.set("n", "<leader>sA", vim.cmd.AGidVerbose)
+vim.keymap.set("n", "<leader>sa", vim.cmd.AGid, { desc = "[S]earch [A]Gid" })
+vim.keymap.set("n", "<leader>sA", vim.cmd.AGidVerbose, { desc = "[S]earch [A]Gid Verbose" })
 
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show [D]iagnostic under cursor" })
 
 vim.api.nvim_create_autocmd ('LspAttach', {
    group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
@@ -42,8 +42,6 @@ vim.api.nvim_create_autocmd ('LspAttach', {
       map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
       map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
       map('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
-      --map('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-      --map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
       map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
       map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
       map('K', vim.lsp.buf.hover, 'Hover Documentation')
@@ -58,7 +56,7 @@ vim.keymap.set('n', ']c', function()
    else
       require"gitsigns".nav_hunk('next')
    end
-end)
+end, {desc = "Next Git Hunk"})
 
 vim.keymap.set('n', '[c', function()
    if vim.wo.diff then
@@ -66,4 +64,4 @@ vim.keymap.set('n', '[c', function()
    else
       require"gitsigns".nav_hunk('prev')
    end
-end)
+end, {desc = "Previous Git Hunk"})

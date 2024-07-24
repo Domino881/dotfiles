@@ -52,8 +52,9 @@ PROMPT=$'%m %F{green}%~%f: '
 
 export PATH=/home/dkuczynski/nvim-linux64/bin:$PATH
 export PATH=~/.npm-global/bin:$PATH
-nvim --version &> /dev/null && export VISUAL=nvim; alias vim=nvim
-nvim --version &> /dev/null || export VISUAL=vim; unalias vim
+nvim --version &> /dev/null && export VISUAL=nvim
+nvim --version &> /dev/null || export VISUAL=vim
+alias vim="$VISUAL"
 export EDITOR="$VISUAL"
 export P4EDITOR="$VISUAL"
 export P4MERGE="amergeVim"

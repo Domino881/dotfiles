@@ -21,6 +21,7 @@ vim.opt.wrap = false
 vim.opt.cino = 'p2s,(1,:1,g1,h2' -- indents
 vim.opt.showmode = false -- don't show "--insert--"
 
+vim.g.python_recommended_style = false
 vim.g.python_indent = {
    open_paren = 'shiftwidth()',
    nested_paren = 'shiftwidth()',
