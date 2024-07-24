@@ -1,38 +1,17 @@
-if vim.fn.filereadable("$VIM/vimfiles/arista.vim") then
-   vim.cmd("source $VIM/vimfiles/arista.vim")
-end
-
 require("options")
 require("mappings")
 require("lazy-config") -- has to be after mappings
---require('plugins')
+require("arista")
 
 require("ibl").setup({ scope = { show_end = false } })
---require('cscope_maps').setup()
-
 require("lualine").setup({
 	sections = { lualine_b = {}, lualine_x = { "filetype" } },
 })
+require("conform").setup()
+require('gitsigns').setup()
 
 vim.g.undotree_WindowLayout = 3
 vim.g.undotree_SplitWidth = 50
-
---require("cscope_maps").setup()
-
-vim.cmd("source ~/.config/nvim/lua/plugins/arista/lib.vim")
-vim.cmd("source ~/.config/nvim/lua/plugins/arista/a4gid.vim")
-
-local wk = require("which-key")
-wk.add {
-   { "<leader>sA", desc = "[S]earch [A]4 gid (verbose)" },
-   { "<leader>sa", desc = "[S]earch [A]4 gid" },
-}
-
-require("conform").setup()
---require("conform").formatters.ruff_format = {
-   --command = "/home/dkuczynski/.local/share/nvim/mason/bin/ruff",
-   --args = { "format", "$FILENAME", "--config", 'indent-width=3'},
---}
 
 -- Default options:
 require("gruvbox").setup({
@@ -68,6 +47,10 @@ vim.cmd.highlight({ "DiffAdd", "gui=NONE guifg=#8ec07c guibg=NONE" })
 vim.cmd.highlight({ "DiffDelete", "gui=NONE guifg=#fb4934 guibg=NONE" })
 vim.cmd.highlight({ "DiffChange", "gui=NONE guifg=#83a598 guibg=NONE" })
 
+vim.diagnostic.config({
+   float = { source = true, },
+})
+
 local npairs = require'nvim-autopairs'
 local Rule = require'nvim-autopairs.rule'
 local cond = require 'nvim-autopairs.conds'
@@ -76,9 +59,7 @@ local brackets = { { '(', ')' }, { '[', ']' }, { '{', '}' } }
 npairs.add_rules {
    -- Rule for a pair with left-side ' ' and right side ' '
    Rule(' ', ' ')
-      -- Pair will only occur if the conditional function returns true
       :with_pair(function(opts)
-         -- We are checking if we are inserting a space in (), [], or {}
          local pair = opts.line:sub(opts.col - 1, opts.col)
          return vim.tbl_contains({
             brackets[1][1] .. brackets[1][2],
@@ -102,43 +83,11 @@ npairs.add_rules {
 -- For each pair of brackets we will add another rule
 for _, bracket in pairs(brackets) do
    npairs.add_rules {
-      -- Each of these rules is for a pair with left-side '( ' and right-side ' )' for each bracket type
       Rule(bracket[1] .. ' ', ' ' .. bracket[2])
         :with_pair(cond.none())
         :with_move(function(opts) return opts.char == bracket[2] end)
         :with_del(cond.none())
         :use_key(bracket[2])
-        -- Removes the trailing whitespace that can occur without this
         :replace_map_cr(function(_) return '<C-c>2xi<CR><C-c>O' end)
    }
 end
-
-vim.api.nvim_create_autocmd({ "FileType" }, {
-   group = vim.api.nvim_create_augroup('config', { clear = true }),
-   pattern = "python",
-   callback = function()
-      vim.lsp.start({
-         name = "ar-pylint-ls",
-         cmd = { "ar-pylint-ls" },
-         root_dir = "/src",
-         settings = { debug = false },
-      })
-   end,
-})
-
-vim.api.nvim_create_autocmd( { 'BufNewFile', 'BufReadPost' },
-   { group = 'config',
-     pattern = '/src/**',
-     callback = function()
-        vim.lsp.start( {
-           name = 'ar-formatdiff-ls',
-           cmd = { 'ar-formatdiff-ls' },
-           root_dir = '/src',
-           settings = { debug = false },
-        } )
-     end, } )
-
-vim.keymap.set( 'n', '<leader>lf', function()
-   vim.lsp.buf.format( { timeout_ms=5000 } ) end )
-
-require('gitsigns').setup()
