@@ -1,7 +1,6 @@
 vim.opt.number = true
-vim.opt.relativenumber = true
 
-vim.opt.undodir = '/home/dkuczynski/.vim/undodir'
+vim.opt.undodir = os.getenv( "HOME" ) .. '/.vim/undodir'
 vim.opt.undofile = true
 vim.opt.undolevels = 1000
 vim.opt.undoreload = 10000
@@ -43,5 +42,3 @@ vim.opt.termguicolors = true
 vim.opt.mouse = 'n'
 
 vim.opt.updatetime = 50
-
-vim.g.svndiff_autoupdate = 1

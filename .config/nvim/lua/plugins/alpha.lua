@@ -1,50 +1,3 @@
-local graeme = {
-   {
-      type = "text",
-      val = "▄████  ██▀███   ▄▄▄      ▓█████  ███▄ ▄███▓▓█████   ██████           ",
-      -- opts = { hl = "GraemeLogo1", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "██▒ ▀█▒▓██ ▒ ██▒▒████▄    ▓█   ▀ ▓██▒▀█▀ ██▒▓█   ▀ ▒██    ▒           ",
-      -- opts = { hl = "GraemeLogo2", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "▒██░▄▄▄░▓██ ░▄█ ▒▒██  ▀█▄  ▒███   ▓██    ▓██░▒███   ░ ▓██▄             ",
-      -- opts = { hl = "GraemeLogo3", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "░▓█  ██▓▒██▀▀█▄  ░██▄▄▄▄██ ▒▓█  ▄ ▒██    ▒██ ▒▓█  ▄   ▒   ██▒          ",
-      -- opts = { hl = "GraemeLogo4", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "░▒▓███▀▒░██▓ ▒██▒ ▓█   ▓██▒░▒████▒▒██▒   ░██▒░▒████▒▒██████▒▒          ",
-      -- opts = { hl = "GraemeLogo5", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "░▒   ▒ ░ ▒▓ ░▒▓░ ▒▒   ▓▒█░░░ ▒░ ░░ ▒░   ░  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░          ",
-      -- opts = { hl = "GraemeLogo6", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "░   ░   ░▒ ░ ▒░  ▒   ▒▒ ░ ░ ░  ░░  ░      ░ ░ ░  ░░ ░▒  ░ ░          ",
-      -- opts = { hl = "GraemeLogo7", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "░ ░   ░   ░░   ░   ░   ▒      ░   ░      ░      ░   ░  ░  ░            ",
-      -- opts = { hl = "GraemeLogo8", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "░    ░           ░  ░   ░  ░       ░      ░  ░      ░            ",
-      -- opts = { hl = "GraemeLogo9", shrink_margin = false, position = "center" },
-   },
-}
 return {
    "goolord/alpha-nvim",
    config = function ()
@@ -68,6 +21,41 @@ return {
       vim.api.nvim_set_hl(0, "NeovimDashboardUsername", { fg = "#436d70" })
       theta.header.type = "group"
       theta.header.val = {
+         {
+            type = "text",
+            val = "▄████  ██▀███   ▄▄▄      ▓█████  ███▄ ▄███▓▓█████ ▀ ██████ ",
+            opts = { hl = "GraemeLogo1", shrink_margin = false, position = "center" },
+         },
+         {
+            type = "text",
+            val = "██▒ ▀█▒▓██ ▒ ██▒▒████▄    ▓█   ▀ ▓██▒▀█▀ ██▒▓█   ▀ ▒██    ▒ ",
+            opts = { hl = "GraemeLogo2", shrink_margin = false, position = "center" },
+         },
+         {
+            type = "text",
+            val = "▒██░▄▄▄░▓██ ░▄█ ▒▒██  ▀█▄  ▒███   ▓██ ▀  ▓██░▒███   ░ ▓██▄   ",
+            opts = { hl = "GraemeLogo3", shrink_margin = false, position = "center" },
+         },
+         {
+            type = "text",
+            val = "░▓█  ██▓▒██▀▀█▄  ░██▄▄▄▄██ ▒▓█  ▄ ▒██    ▒██ ▒▓█  ▄   ▒   ██▒",
+            opts = { hl = "GraemeLogo4", shrink_margin = false, position = "center" },
+         },
+         {
+            type = "text",
+            val = "░▒▓███▀▒░██▓ ▒██▒ ▓█   ▓██▒░▒████▒▒██▒   ░██▒░▒████▒▒██████▒▒",
+            opts = { hl = "GraemeLogo5", shrink_margin = false, position = "center" },
+         },
+         {
+            type = "text",
+            val = "░▒   ▒ ░ ▒▓ ░▒▓░ ▒▒   ▓▒█░░░ ▒░ ░░ ▒░   ░  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░",
+            opts = { hl = "GraemeLogo6", shrink_margin = false, position = "center" },
+         },
+         {
+            type = "text",
+            val = "░   ░   ░▒ ░ ▒░  ▒   ▒▒ ░ ░ ░  ░░  ░      ░ ░ ░  ░░ ░▒  ░ ░",
+            opts = { hl = "GraemeLogo7", shrink_margin = false, position = "center" },
+         },
          {
             type = "text",
             val = "   ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
