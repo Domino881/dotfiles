@@ -28,12 +28,12 @@ return {
          },
          {
             type = "text",
-            val = "██▒ ▀█▒▓██ ▒ ██▒▒████▄    ▓█   ▀ ▓██▒▀█▀ ██▒▓█   ▀ ▒██    ▒ ",
+            val = "██▒ ▀█▒▓██ ▒ ██▒▒████▄    ▓█   ▀ ▓███▄██ ██▒▓█   ▀ ▒██    ▒ ",
             opts = { hl = "GraemeLogo2", shrink_margin = false, position = "center" },
          },
          {
             type = "text",
-            val = "▒██░▄▄▄░▓██ ░▄█ ▒▒██  ▀█▄  ▒███   ▓██ ▀  ▓██░▒███   ░ ▓██▄   ",
+            val = "▒██░▄▄▄░▓██ ░▄█ ▒▒██  ▀█▄  ▒███   ▓██ █▀ ▓██░▒███   ░ ▓██▄   ",
             opts = { hl = "GraemeLogo3", shrink_margin = false, position = "center" },
          },
          {
