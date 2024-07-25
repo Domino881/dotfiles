@@ -1,4 +1,4 @@
-vim.opt.number = true
+vim.opt.number = false
 
 vim.opt.undodir = os.getenv( "HOME" ) .. '/.vim/undodir'
 vim.opt.undofile = true
@@ -35,10 +35,14 @@ vim.opt.signcolumn = "yes"
 vim.opt.complete = '.'
 
 vim.opt.list = true
-vim.opt.listchars = { space = '·', trail = '⬗' }
+vim.opt.listchars = { trail = '⬗' }
 
 vim.opt.termguicolors = true
 
 vim.opt.mouse = 'n'
 
 vim.opt.updatetime = 50
+
+vim.diagnostic.config({
+   float = { source = true, },
+})

@@ -9,7 +9,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
    'nvim-lua/plenary.nvim',
-   { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
+   require 'plugins.gruvbox',
    require 'plugins.lualine',
    require 'plugins.telescope',
    require 'plugins.which-key',
