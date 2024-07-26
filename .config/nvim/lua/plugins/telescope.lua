@@ -19,11 +19,19 @@ dependencies = {
     config = function()
        require('telescope').setup {
           defaults = {
+             layout_config = {
+                vertical = { width = 0.5, }
+             },
              mappings = {
                 i = {
                    ["<esc>"] = require('telescope.actions').close,
                 },
              },
+          },
+          pickers = {
+             find_files = { theme = "dropdown" },
+             grep_string = { theme = "dropdown" },
+             live_grep = { theme = "dropdown" },
           },
        }
     end,

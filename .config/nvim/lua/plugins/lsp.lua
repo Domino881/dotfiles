@@ -76,6 +76,7 @@ return { -- LSP Configuration & Plugins
                                  'E261', -- two spaces before comment
                                  'E302', 'E305', 'E306', -- two spaces before functions
                                  'E265', -- block comment should start with #
+                                 'E133', -- closing bracket indent
                               },
                            }
                         },

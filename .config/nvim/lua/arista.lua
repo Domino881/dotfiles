@@ -25,6 +25,16 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
    pattern = {'*.tac', '*.tin'},
    callback = function(ev)
       vim.cmd("set syntax=cpp")
+      local ext = vim.fn.expand("%:e")
+      if ext == "tac" then
+         vim.keymap.set("n", "<leader>t", function()
+            vim.cmd("edit %:r.tin")
+         end)
+      else
+         vim.keymap.set("n", "<leader>t", function()
+            vim.cmd("edit %:r.tac")
+         end)
+      end
    end
 })
 
