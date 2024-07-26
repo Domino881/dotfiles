@@ -15,13 +15,11 @@ require("lazy").setup({
    require 'plugins.which-key',
    require 'plugins.cmp',
    require 'plugins.lsp',
-   require 'plugins.conform',
-   require 'plugins.harpoon',
    require 'plugins.alpha',
+   require 'plugins.gitsigns',
    'tpope/vim-surround',
    'romainl/vim-cool', --auto :nohl
    'numToStr/Comment.nvim',
    'farmergreg/vim-lastplace',
    'tpope/vim-fugitive',
-   'lewis6991/gitsigns.nvim',
 })
