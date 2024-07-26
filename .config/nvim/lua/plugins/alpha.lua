@@ -1,52 +1,8 @@
-local graeme = {
-   {
-      type = "text",
-      val = "▄████  ██▀███   ▄▄▄      ▓█████  ███▄ ▄███▓▓█████   ██████           ",
-      -- opts = { hl = "GraemeLogo1", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "██▒ ▀█▒▓██ ▒ ██▒▒████▄    ▓█   ▀ ▓██▒▀█▀ ██▒▓█   ▀ ▒██    ▒           ",
-      -- opts = { hl = "GraemeLogo2", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "▒██░▄▄▄░▓██ ░▄█ ▒▒██  ▀█▄  ▒███   ▓██    ▓██░▒███   ░ ▓██▄             ",
-      -- opts = { hl = "GraemeLogo3", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "░▓█  ██▓▒██▀▀█▄  ░██▄▄▄▄██ ▒▓█  ▄ ▒██    ▒██ ▒▓█  ▄   ▒   ██▒          ",
-      -- opts = { hl = "GraemeLogo4", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "░▒▓███▀▒░██▓ ▒██▒ ▓█   ▓██▒░▒████▒▒██▒   ░██▒░▒████▒▒██████▒▒          ",
-      -- opts = { hl = "GraemeLogo5", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "░▒   ▒ ░ ▒▓ ░▒▓░ ▒▒   ▓▒█░░░ ▒░ ░░ ▒░   ░  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░          ",
-      -- opts = { hl = "GraemeLogo6", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "░   ░   ░▒ ░ ▒░  ▒   ▒▒ ░ ░ ░  ░░  ░      ░ ░ ░  ░░ ░▒  ░ ░          ",
-      -- opts = { hl = "GraemeLogo7", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "░ ░   ░   ░░   ░   ░   ▒      ░   ░      ░      ░   ░  ░  ░            ",
-      -- opts = { hl = "GraemeLogo8", shrink_margin = false, position = "center" },
-   },
-   {
-      type = "text",
-      val = "░    ░           ░  ░   ░  ░       ░      ░  ░      ░            ",
-      -- opts = { hl = "GraemeLogo9", shrink_margin = false, position = "center" },
-   },
-}
 return {
    "goolord/alpha-nvim",
+   dependencies = {
+      "nvim-tree/nvim-web-devicons",
+   },
    config = function ()
       local alpha = require'alpha'
       local theta = require'alpha.themes.theta'

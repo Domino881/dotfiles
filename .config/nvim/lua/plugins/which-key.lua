@@ -6,6 +6,15 @@ return { -- Useful plugin to show you pending keybinds.
          icons = {
             mappings = false,
             rules = false,
+            keys = {
+               C = "Ctrl",
+               M = "Alt",
+               CR = "↩",
+               Esc = "<Esc>",
+               BS = "<BS>",
+               Space = "␣",
+               Tab = "<Tab>",
+            },
          },
       })
 

@@ -1,23 +1,11 @@
-vim.g.mapleader = " "
-
-vim.keymap.set("i", "<C-e>", "<C-o><C-e>")
-vim.keymap.set("i", "<C-y>", "<C-o><C-y>")
-
 --  window movement
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
--- scroll mappings
---vim.keymap.set("n", "<C-d>", "<C-e>:sleep 50m <CR>15<C-e>:sleep 10m <CR><C-e>:sleep 10m <CR><C-e>:sleep 10m <CR><C-e>", { silent = true })
---vim.keymap.set("n", "<C-u>", "<C-y>:sleep 50m <CR>15<C-y>:sleep 10m <CR><C-y>:sleep 10m <CR><C-y>:sleep 10m <CR><C-y>", { silent = true })
-vim.keymap.set("n", "<C-d>", "15jzz")
-vim.keymap.set("n", "<C-u>", "15kzz")
-vim.keymap.set("n", "<ScrollWheelDown>", "<C-e>", { silent = true })
-vim.keymap.set("n", "<ScrollWheelUp>", "<C-y>", { silent = true })
-
 vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "q:", "<nop>")
 
 -- leader mappings
 vim.g.mapleader = " "
@@ -31,6 +19,7 @@ vim.keymap.set("n", "<leader>sA", vim.cmd.AGidVerbose, { desc = "[S]earch [A]Gid
 
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show [D]iagnostic under cursor" })
 
+------------- LSP Mappings
 vim.api.nvim_create_autocmd ('LspAttach', {
    group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
    callback = function(event)
@@ -49,7 +38,7 @@ vim.api.nvim_create_autocmd ('LspAttach', {
    end,
 })
 
--- Git signs Navigation
+------------- Git signs Navigation
 vim.keymap.set('n', ']c', function()
    if vim.wo.diff then
       vim.cmd.normal({']c', bang = true})
@@ -65,3 +54,30 @@ vim.keymap.set('n', '[c', function()
       require"gitsigns".nav_hunk('prev')
    end
 end, {desc = "Previous Git Hunk"})
+
+------------- Telescope mappings
+local builtin = require 'telescope.builtin'
+vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
+vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
+vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
+vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
+vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
+vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
+vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
+vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Find existing buffers' })
+
+-- Slightly advanced example of overriding default behavior and theme
+vim.keymap.set('n', '<leader>/', function()
+   -- You can pass additional configuration to Telescope to change the theme, layout, etc.
+   builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+      winblend = 10,
+      previewer = false,
+   })
+end, { desc = 'Fuzzily search in current buffer' })
+
+-- Shortcut for searching your Neovim configuration files
+vim.keymap.set('n', '<leader>sn', function()
+   builtin.find_files { cwd = vim.fn.stdpath 'config' }
+end, { desc = '[S]earch [N]eovim files' })

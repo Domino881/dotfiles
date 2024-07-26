@@ -6,7 +6,31 @@ return { -- LSP Configuration & Plugins
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       -- Useful status updates for LSP.
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
+      {
+         'j-hui/fidget.nvim',
+         opts = {
+            progress = {
+               poll_rate = 5,
+               suppress_on_insert = true,   -- Suppress new messages while in insert mode
+               ignore_done_already = true,  -- Ignore new tasks that are already complete
+               ignore_empty_message = false, -- Ignore new tasks that don't contain a message
+               display = {
+                  render_limit = 1,
+                  done_ttl = 0.8,
+                  format_message = function(msg)
+                     if string.find(msg.title, "Indexing") then
+                        return nil -- Ignore "Indexing..." progress messages
+                     end
+                     if msg.message then
+                        return msg.message
+                     else
+                        return msg.done and "✔" or "..."
+                     end
+                  end
+               }
+            },
+         }
+      },
       -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
       -- used for completion, annotations and signatures of Neovim apis
       { 'folke/neodev.nvim', opts = {} },
@@ -18,7 +42,7 @@ return { -- LSP Configuration & Plugins
       require("mason-lspconfig").setup {
          ensure_installed = {
             "lua_ls",
-            "pyright",
+            -- "pyright",
             "clangd",
          },
          handlers = {
@@ -33,6 +57,31 @@ return { -- LSP Configuration & Plugins
                   settings = {
                      python = { analysis = { autoSearchPaths = false } },
                   },
+               })
+            end,
+            ["pylsp"] = function()
+               require("lspconfig")["pylsp"].setup({
+                  capabilities = capabilities,
+                  settings = {
+                     pylsp = {
+                        plugins = {
+                           mccabe = { enabled = false },
+                           pycodestyle = {
+                              maxLineLength = 85,
+                              indentSize = 3,
+                              hangClosing = true,
+                              ignore = {
+                                 'E201', 'E202',  -- whitespace around ()
+                                 'E402', -- import not at the top
+                                 'E261', -- two spaces before comment
+                                 'E302', 'E305', 'E306', -- two spaces before functions
+                                 'E265', -- block comment should start with #
+                                 'E133', -- closing bracket indent
+                              },
+                           }
+                        },
+                  }
+                  }
                })
             end,
          },
