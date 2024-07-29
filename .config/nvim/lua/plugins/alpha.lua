@@ -22,6 +22,7 @@ return {
       vim.api.nvim_set_hl(0, "NeovimDashboardLogo5", { fg = "#2b6f73" })
       vim.api.nvim_set_hl(0, "NeovimDashboardLogo6", { fg = "#37787b" })
       vim.api.nvim_set_hl(0, "NeovimDashboardUsername", { fg = "#436d70" })
+      theta.nvim_web_devicons.enabled = false
       theta.header.type = "group"
       theta.header.val = {
          {

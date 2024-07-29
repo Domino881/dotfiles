@@ -1,4 +1,5 @@
-vim.opt.number = false
+vim.opt.number = true
+vim.opt.relativenumber = true
 vim.g.mapleader = " "
 
 vim.opt.undodir = os.getenv( "HOME" ) .. '/.vim/undodir'

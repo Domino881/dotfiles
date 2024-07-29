@@ -27,11 +27,22 @@ dependencies = {
                    ["<esc>"] = require('telescope.actions').close,
                 },
              },
+             file_ignore_patterns = {
+                "/tmp/nvim.dkuczynski/",
+             },
           },
           pickers = {
-             find_files = { theme = "dropdown" },
-             grep_string = { theme = "dropdown" },
-             live_grep = { theme = "dropdown" },
+             find_files = {
+                disable_devicons = true,
+             },
+             grep_string = {
+                theme = "dropdown",
+                disable_devicons = true,
+             },
+             live_grep = {
+                theme = "dropdown",
+                disable_devicons = true,
+             },
           },
        }
     end,

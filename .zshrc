@@ -45,6 +45,11 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 #zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 #zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# Ctrl-z to fg a suspended process
+_zsh_cli_fg() { fg; }
+zle -N _zsh_cli_fg
+bindkey '^Z' _zsh_cli_fg
+
 # Aliases
 alias ls='ls --color'
 TERM=xterm-256color

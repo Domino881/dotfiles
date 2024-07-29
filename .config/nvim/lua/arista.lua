@@ -67,6 +67,7 @@ end
 if not configs.arformatdiffls then
    configs.arformatdiffls = {
       default_config = {
+         filetypes = { "python", "tac", "tin" },
          name = "ar-formatdiff-ls",
          cmd = { "ar-formatdiff-ls" },
          root_dir = function(fname)
