@@ -21,11 +21,11 @@ return{
       overrides = {
          ColorColumn = {bg = "#171717"},
          SignColumn = {bg = "#111111"},
-         NonText = {fg = "#171717"},
-         Normal = {bg = "#111111"},
-         GruvboxRedSign = {fg = "#fb4934", bg = "#111111", bold=true},
-         GruvboxYellowSign = {fg = "#fabd2f", bg = "#111111", bold=true},
-         GruvboxBlueSign = {fg = "#83a598", bg = "#111111", bold=true},
+         NonText = {fg = "#413b35"},
+         Normal = {bg = "#000000"},
+         GruvboxYellowSign = {bg = "#000000"},
+         GruvboxRedSign = {bg = "#000000"},
+         GruvboxBlueSign = {bg = "#000000"},
      }
    }
 }
