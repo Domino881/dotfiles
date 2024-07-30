@@ -51,6 +51,7 @@ zle -N _zsh_cli_fg
 bindkey '^Z' _zsh_cli_fg
 
 # Aliases
+alias tmux='tmux -u'
 alias ls='ls --color'
 TERM=xterm-256color
 PROMPT=$'%m %F{green}%~%f: '

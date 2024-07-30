@@ -39,7 +39,7 @@ vim.opt.complete = '.'
 vim.opt.list = true
 vim.opt.listchars = { trail = '⬗' }
 
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
 
 vim.opt.mouse = 'n'
 

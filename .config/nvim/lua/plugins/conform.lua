@@ -4,7 +4,7 @@ return { -- Autoformat
    event = "VeryLazy",
    keys = {
       {
-         "==",
+         "gf",
          function()
             require("conform").format({ async = true, lsp_fallback = true })
          end,

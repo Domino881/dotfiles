@@ -43,6 +43,9 @@ dependencies = {
                 theme = "dropdown",
                 disable_devicons = true,
              },
+             oldfiles = {
+                disable_devicons = true,
+             },
           },
        }
     end,

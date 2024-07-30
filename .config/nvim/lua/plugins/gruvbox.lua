@@ -3,10 +3,10 @@ return{
    priority = 1000,
    config = true,
    opts = {
-      terminal_colors = true, -- add neovim terminal colors
+      terminal_colors = false, -- add neovim terminal colors
       undercurl = false,
-      underline = false,
-      bold = false,
+      underline = true,
+      bold = true,
       italic = {
          strings = false,
          emphasis = false,
