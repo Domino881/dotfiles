@@ -18,6 +18,7 @@ require("lazy").setup({
    require 'plugins.alpha',
    require 'plugins.gitsigns',
    require 'plugins.harpoon',
+   require 'plugins.treesitter',
    'tpope/vim-surround',
    'romainl/vim-cool', --auto :nohl
    'numToStr/Comment.nvim',

@@ -43,8 +43,14 @@ return { -- Autocompletion
          mapping = cmp.mapping.preset.cmdline(),
          sources = cmp.config.sources({
             { name = 'path', },
-            { name = 'cmdline', }
-         })
+            {
+               name = 'cmdline',
+               option = {
+                  ignore_cmds = { 'w', 'wq', 'q', '!' }
+               },
+               keyword_length = 3,
+            },
       })
-   end,
+   })
+end,
 }

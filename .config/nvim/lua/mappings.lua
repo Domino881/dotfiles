@@ -9,6 +9,9 @@ vim.keymap.set("n", "q:", "<nop>")
 
 vim.keymap.set("v", "p", [["_dP]])
 
+vim.keymap.set("n", "t", "gt")
+vim.keymap.set("n", "T", "gT")
+
 -- leader mappings
 vim.g.mapleader = " "
 vim.keymap.set("n", "<Leader>o", [[o<Esc>0\"_Dk]], { desc = "Add empty line below" })

@@ -48,3 +48,11 @@ vim.opt.updatetime = 50
 vim.diagnostic.config({
    float = { source = true, },
 })
+
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.wo.foldlevel = 999
+vim.wo.foldnestmax = 1
+
+vim.g.undotree_WindowLayout = 3
+vim.g.undotree_SplitWidth = 58

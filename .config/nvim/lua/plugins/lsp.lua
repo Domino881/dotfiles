@@ -39,6 +39,7 @@ return { -- LSP Configuration & Plugins
       require('mason').setup()
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+
       require("mason-lspconfig").setup {
          ensure_installed = {
             "lua_ls",
@@ -60,32 +61,36 @@ return { -- LSP Configuration & Plugins
                   },
                })
             end,
+
             ["pylsp"] = function()
                require("lspconfig")["pylsp"].setup({
                   capabilities = capabilities,
-                  settings = {
-                     pylsp = {
-                        plugins = {
-                           mccabe = { enabled = false },
-                           pycodestyle = {
-                              maxLineLength = 85,
-                              indentSize = 3,
-                              hangClosing = true,
-                              ignore = {
-                                 'E201', 'E202',  -- whitespace around ()
-                                 'E402', -- import not at the top
-                                 'E261', -- two spaces before comment
-                                 'E302', 'E305', 'E306', -- two spaces before functions
-                                 'E265', -- block comment should start with #
-                                 'E133', -- closing bracket indent
-                              },
-                           }
+                  settings = { pylsp = { plugins = {
+                     mccabe = { enabled = false },
+                     pycodestyle = {
+                        maxLineLength = 85,
+                        indentSize = 3,
+                        hangClosing = true,
+                        ignore = {
+                           'E201', 'E202',  -- whitespace around ()
+                           'E402', -- import not at the top
+                           'E261', -- two spaces before comment
+                           'E302', 'E305', 'E306', -- two spaces before functions
+                           'E265', -- block comment should start with #
+                           'E133', -- closing bracket indent
                         },
-                  }
-                  }
+                     }
+                  }}}
                })
             end,
          },
       }
+      vim.api.nvim_create_autocmd('LspDetach', {
+         group = vim.api.nvim_create_augroup('kickstart-lsp-detach', { clear = true }),
+         callback = function(event2)
+            vim.lsp.buf.clear_references()
+            vim.api.nvim_clear_autocmds { group = 'kickstart-lsp-highlight', buffer = event2.buf }
+         end,
+      })
    end,
-  }
+}
