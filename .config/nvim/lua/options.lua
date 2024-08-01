@@ -56,3 +56,6 @@ vim.wo.foldnestmax = 1
 
 vim.g.undotree_WindowLayout = 3
 vim.g.undotree_SplitWidth = 58
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true

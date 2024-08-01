@@ -1,4 +1,5 @@
 vim.api.nvim_create_autocmd({"BufFilePost"}, {
+   pattern = {'.tac', '.tin', '.py'},
    callback = function(ev)
       vim.cmd("source ~/.config/nvim/lua/plugins/arista/lib.vim")
       vim.cmd("source ~/.config/nvim/lua/plugins/arista/a4gid.vim")

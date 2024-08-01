@@ -1,3 +1,6 @@
+case $- in
+   (*i*) test -z "$ARTEST_RANDSEED" -a -f /bin/zsh && exec /bin/zsh;;
+esac
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -117,6 +120,3 @@ if ! shopt -oq posix; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-export SHELL=/usr/bin/zsh
-[ -n "$PS1" ] && $SHELL

@@ -48,7 +48,7 @@ return { -- Autocompletion
                option = {
                   ignore_cmds = { 'w', 'wq', 'q', '!' }
                },
-               keyword_length = 3,
+               keyword_length = 999,
             },
       })
    })
