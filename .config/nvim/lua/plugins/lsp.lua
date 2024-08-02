@@ -73,6 +73,7 @@ return { -- LSP Configuration & Plugins
                         hangClosing = true,
                         ignore = {
                            'E201', 'E202',  -- whitespace around ()
+                           'E203', -- space before :
                            'E402', -- import not at the top
                            'E261', -- two spaces before comment
                            'E302', 'E305', 'E306', -- two spaces before functions

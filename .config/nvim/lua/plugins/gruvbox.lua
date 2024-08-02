@@ -8,9 +8,9 @@ return{
       underline = true,
       bold = true,
       italic = {
-         strings = false,
-         emphasis = false,
-         comments = false,
+         strings = true,
+         emphasis = true,
+         comments = true,
          operators = false,
          folds = false,
       },
@@ -23,6 +23,9 @@ return{
          SignColumn = {bg = "#000000"},
          NonText = {fg = "#413b35"},
          Normal = {bg = "#000000"},
+         GruvboxYellowSign = {bg = "#000000"},
+         GruvboxRedSign = {bg = "#000000"},
+         GruvboxBlueSign = {bg = "#000000"},
      }
    }
 }

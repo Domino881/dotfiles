@@ -9,6 +9,15 @@ return {
          section_separators = { left = '', right = '' },
       },
       sections = {
+         lualine_a = {
+            {
+               'mode',
+               color = {gui='bold'},
+               fmt = function(str, _)
+                  return string.lower(str)
+               end,
+            }
+         },
          lualine_b = {
             {'branch', icon = ''},
             'diff',

@@ -37,7 +37,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.complete = '.'
 
 vim.opt.list = true
-vim.opt.listchars = { trail = '⬗' }
+vim.opt.listchars = { space = '·', trail = '⬗' }
 
 vim.opt.termguicolors = false
 
@@ -46,7 +46,36 @@ vim.opt.mouse = 'n'
 vim.opt.updatetime = 50
 
 vim.diagnostic.config({
-   float = { source = true, },
+   severity_sort = true,
+   float = {
+      source = true,
+   },
+   signs = {
+      text = {
+         [vim.diagnostic.severity.WARN] = '●',
+         [vim.diagnostic.severity.ERROR] = '●',
+         [vim.diagnostic.severity.INFO] = '●',
+      },
+   },
+   virtual_text = {
+      virt_text_pos = 'eol',
+      format = function(diagnostic)
+         local mes = diagnostic.message
+         if diagnostic.source == 'pylint' then
+            local colon = string.find(mes, ':') or 0
+            return string.sub(mes, colon+1)
+         elseif diagnostic.source == 'pyflakes' then
+            local colon = string.find(mes, ':') or 0
+            return string.sub(mes, colon+1)
+         elseif diagnostic.source == 'pycodestyle' then
+            local colon = string.find(mes, ':') or 0
+            return string.sub(mes, colon+1+4)
+         elseif diagnostic.source == 'formatdiff' then
+            return "formatdiff"
+         end
+         return mes
+      end,
+   }
 })
 
 vim.wo.foldmethod = 'expr'
