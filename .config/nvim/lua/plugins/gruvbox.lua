@@ -20,7 +20,7 @@ return{
       contrast = "hard", -- can be "hard", "soft" or empty string
       overrides = {
          ColorColumn = {bg = "#171717"},
-         SignColumn = {bg = "#111111"},
+         SignColumn = {bg = "#000000"},
          NonText = {fg = "#413b35"},
          Normal = {bg = "#000000"},
          GruvboxYellowSign = {bg = "#000000"},
