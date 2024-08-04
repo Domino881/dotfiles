@@ -23,12 +23,12 @@ require("lazy").setup({
    require 'plugins.ufo-fold',
    require 'plugins.treesitter-context',
    require 'plugins.ult-autopair',
+   require 'plugins.undotree',
    {'numToStr/Comment.nvim', config=true},
    {"nvim-treesitter/nvim-treesitter-textobjects", event="VeryLazy"},
    {'lukas-reineke/indent-blankline.nvim', main='ibl', config=true},
    'tpope/vim-surround',
    'romainl/vim-cool', --auto :nohl
-   'mbbill/undotree',
    'farmergreg/vim-lastplace',
    'tpope/vim-fugitive',
 })

@@ -38,5 +38,22 @@ return {
          row = 0,
          col = 1
       },
-   }
+   },
+   init = function()
+      vim.keymap.set('n', ']c', function()
+         if vim.wo.diff then
+            vim.cmd.normal({']c', bang = true})
+         else
+            require"gitsigns".nav_hunk('next')
+         end
+      end, {desc = "Next Git Hunk"})
+
+      vim.keymap.set('n', '[c', function()
+         if vim.wo.diff then
+            vim.cmd.normal({'[c', bang = true})
+         else
+            require"gitsigns".nav_hunk('prev')
+         end
+      end, {desc = "Previous Git Hunk"})
+   end,
 }

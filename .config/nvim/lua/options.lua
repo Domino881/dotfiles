@@ -30,7 +30,7 @@ vim.g.python_indent = {
 }
 
 -- color column
-vim.opt.cc = "86"
+vim.opt.cc = "80"
 vim.opt.signcolumn = "yes"
 
 -- autocompletion based only on current buffer
@@ -82,9 +82,6 @@ vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.wo.foldlevel = 999
 vim.wo.foldnestmax = 1
-
-vim.g.undotree_WindowLayout = 3
-vim.g.undotree_SplitWidth = 58
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true

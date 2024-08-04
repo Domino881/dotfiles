@@ -1,6 +1,7 @@
 return {
    'nvim-treesitter/nvim-treesitter-context',
    init = function()
-      vim.cmd("hi TreesitterContext guibg=#000000")
+      local bg = require"gruvbox".palette.dark1 or "#111111"
+      vim.cmd("hi TreesitterContext guibg=" .. bg)
    end,
 }
