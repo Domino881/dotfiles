@@ -32,9 +32,7 @@ dependencies = {
              },
           },
           pickers = {
-             find_files = {
-                disable_devicons = true,
-             },
+             find_files = { disable_devicons = true },
              grep_string = {
                 theme = "dropdown",
                 disable_devicons = true,
@@ -43,9 +41,8 @@ dependencies = {
                 theme = "dropdown",
                 disable_devicons = true,
              },
-             oldfiles = {
-                disable_devicons = true,
-             },
+             oldfiles = { disable_devicons = true },
+             highlights = { theme = "dropdown" },
           },
        }
     end,
