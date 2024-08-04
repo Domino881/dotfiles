@@ -68,8 +68,8 @@ return { -- LSP Configuration & Plugins
                   settings = { pylsp = { plugins = {
                      mccabe = { enabled = false },
                      pycodestyle = {
-                        maxLineLength = 85,
-                        indentSize = 3,
+                        maxLineLength = 80,
+                        indentSize = 4,
                         hangClosing = true,
                         ignore = {
                            'E201', 'E202',  -- whitespace around ()

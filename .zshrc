@@ -52,7 +52,7 @@ bindkey '^Z' _zsh_cli_fg
 
 # Aliases
 alias tmux='tmux -u'
-alias ls='ls --color'
+alias ls='ls --color -ah'
 PROMPT=$'%m %F{green}%~%f: '
 
 export PATH=/home/dkuczynski/nvim-linux64/bin:$PATH
@@ -62,8 +62,6 @@ nvim --version &> /dev/null && export VISUAL=nvim
 nvim --version &> /dev/null || export VISUAL=vim
 alias vim="$VISUAL"
 export EDITOR="$VISUAL"
-export P4EDITOR="$VISUAL"
-export P4MERGE="amergeVim"
 
 fzf --version || ( git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install)
 # Shell integrations

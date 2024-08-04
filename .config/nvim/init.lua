@@ -1,6 +1,5 @@
 require("options")
-require("lazy-config")
+require("lazy-plugins")
 require("mappings")
-require("arista")
 
 vim.cmd("colorscheme gruvbox")
