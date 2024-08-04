@@ -19,8 +19,8 @@ return{
       inverse = true, -- invert background for search, diffs, statuslines and errors
       contrast = "hard", -- can be "hard", "soft" or empty string
       palette_overrides = {
-         dark0_hard = "#0e1010", -- background
-         dark1 = "#2b2827", -- color column, popup
+         dark0_hard = "#000000", -- background
+         dark1 = "#171717", -- color column, popup
          dark2 = "#1d2021", -- listchars
       },
       overrides = {
