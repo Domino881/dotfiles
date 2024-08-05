@@ -38,7 +38,11 @@ return { -- LSP Configuration & Plugins
    config = function()
       require('mason').setup()
       local capabilities = vim.lsp.protocol.make_client_capabilities()
-      capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+      capabilities = vim.tbl_deep_extend(
+         'force',
+         capabilities,
+         require('cmp_nvim_lsp').default_capabilities()
+      )
 
       require("mason-lspconfig").setup {
          ensure_installed = {
@@ -87,6 +91,9 @@ return { -- LSP Configuration & Plugins
             end,
          },
       }
+   end,
+
+   init = function()
       vim.api.nvim_create_autocmd('LspDetach', {
          group = vim.api.nvim_create_augroup('kickstart-lsp-detach', { clear = true }),
          callback = function(event2)
@@ -94,9 +101,6 @@ return { -- LSP Configuration & Plugins
             vim.api.nvim_clear_autocmds { group = 'kickstart-lsp-highlight', buffer = event2.buf }
          end,
       })
-   end,
-
-   init = function()
       vim.api.nvim_create_autocmd ('LspAttach', {
          group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
          callback = function(event)

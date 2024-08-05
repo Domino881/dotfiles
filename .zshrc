@@ -55,8 +55,8 @@ alias tmux='tmux -u'
 alias ls='ls --color -ah'
 PROMPT=$'%m %F{green}%~%f: '
 
-export PATH="${HOME}/nvim-linux64/bin:${PATH}"
-export PATH="~/.fzf/bin:${PATH}"
+export PATH="${HOME}/nvim-linux64/bin/:${PATH}"
+export PATH="${HOME}/.fzf/bin/:${PATH}"
 
 export VISUAL=vim
 nvim --version &> /dev/null && export VISUAL=nvim
@@ -65,4 +65,4 @@ export EDITOR="$VISUAL"
 
 fzf --version || ( git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install)
 # Shell integrations
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)

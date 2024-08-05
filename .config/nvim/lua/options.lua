@@ -37,7 +37,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.complete = '.'
 
 vim.opt.list = true
-vim.opt.listchars = { space = '·', trail = '⬗' }
+vim.opt.listchars = { space = '·', tab = '>-', trail = '⎵' }
 
 vim.opt.termguicolors = true
 
@@ -49,6 +49,9 @@ vim.diagnostic.config({
    severity_sort = true,
    float = {
       source = true,
+      style = "minimal",
+      header = "",
+      prefix = "",
    },
    signs = {
       text = {
