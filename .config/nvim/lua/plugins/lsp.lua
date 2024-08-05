@@ -38,7 +38,11 @@ return { -- LSP Configuration & Plugins
    config = function()
       require('mason').setup()
       local capabilities = vim.lsp.protocol.make_client_capabilities()
-      capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+      capabilities = vim.tbl_deep_extend(
+         'force',
+         capabilities,
+         require('cmp_nvim_lsp').default_capabilities()
+      )
 
       require("mason-lspconfig").setup {
          ensure_installed = {
@@ -87,6 +91,9 @@ return { -- LSP Configuration & Plugins
             end,
          },
       }
+   end,
+
+   init = function()
       vim.api.nvim_create_autocmd('LspDetach', {
          group = vim.api.nvim_create_augroup('kickstart-lsp-detach', { clear = true }),
          callback = function(event2)
@@ -94,9 +101,6 @@ return { -- LSP Configuration & Plugins
             vim.api.nvim_clear_autocmds { group = 'kickstart-lsp-highlight', buffer = event2.buf }
          end,
       })
-   end,
-
-   init = function()
       vim.api.nvim_create_autocmd ('LspAttach', {
          group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
          callback = function(event)
@@ -113,6 +117,23 @@ return { -- LSP Configuration & Plugins
             map('K', vim.lsp.buf.hover, 'Hover Documentation')
             map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
          end,
+      })
+      vim.api.nvim_create_autocmd("BufWritePre", {
+         pattern = "*.go",
+         callback = function()
+            local params = vim.lsp.util.make_range_params()
+            params.context = {only = {"source.organizeImports"}}
+            local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params)
+            for cid, res in pairs(result or {}) do
+               for _, r in pairs(res.result or {}) do
+                  if r.edit then
+                     local enc = (vim.lsp.get_client_by_id(cid) or {}).offset_encoding or "utf-16"
+                     vim.lsp.util.apply_workspace_edit(r.edit, enc)
+                  end
+               end
+            end
+            vim.lsp.buf.format({async = false})
+         end
       })
    end,
 }

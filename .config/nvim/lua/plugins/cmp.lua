@@ -11,13 +11,9 @@ return { -- Autocompletion
       local cmp = require 'cmp'
 
       cmp.setup {
-         snippet = {
-            expand = function(args)
-            end,
-         },
+         snippet = {},
          completion = { completeopt = 'menu,menuone,noinsert' },
-
-         mapping = cmp.mapping.preset.insert {
+         mapping = {
             ['<C-n>'] = cmp.mapping.select_next_item(),
             ['<C-p>'] = cmp.mapping.select_prev_item(),
             -- Scroll the documentation window [b]ack / [f]orward
