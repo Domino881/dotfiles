@@ -3,6 +3,7 @@ return {
    enabled = true,
    version = false, -- last release is way too old and doesn't work on Windows
    build = ":TSUpdate",
+   event = "VeryLazy",
    keys = {
       { "<c-space>", desc = "Increment Selection" },
       { "<bs>", desc = "Decrement Selection", mode = "x" },
@@ -42,13 +43,6 @@ return {
          },
       },
       textobjects = {
-         move = {
-            enable = true,
-            goto_next_start = { ["]f"] = "@function.outer" },
-            goto_next_end = { ["]F"] = "@function.outer" },
-            goto_previous_start = { ["[f"] = "@function.outer", ["[c"] = "@class.outer", ["[a"] = "@parameter.inner" },
-            goto_previous_end = { ["[F"] = "@function.outer", ["[C"] = "@class.outer", ["[A"] = "@parameter.inner" },
-         },
          select = {
             enable = true,
             -- Automatically jump forward to textobj, similar to targets.vim
@@ -57,7 +51,13 @@ return {
                ["af"] = "@function.outer",
                ["if"] = "@function.inner",
             },
-         }
-      }
+            selection_modes = {
+               ['@parameter.outer'] = 'v', -- charwise
+               ['@function.outer'] = 'V', -- linewise
+               ['@class.outer'] = '<c-v>', -- blockwise
+            },
+            include_surrounding_whitespace = false,
+         },
+      },
    },
 }
