@@ -30,7 +30,7 @@ vim.g.python_indent = {
 }
 
 -- color column
-vim.opt.cc = "80"
+vim.opt.cc = "85"
 vim.opt.signcolumn = "yes"
 
 -- autocompletion based only on current buffer
