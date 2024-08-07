@@ -20,11 +20,11 @@ return{
       contrast = "hard", -- can be "hard", "soft" or empty string
       palette_overrides = {
          dark0_hard = "#000000", -- background
-         dark1 = "#171717", -- color column, popup
          dark2 = "#1d2021", -- listchars
       },
       overrides = {
          SignColumn = {bg = ""},
+         ColorColumn = {bg = "#171717"},
          GruvboxRedSign = {bg = ""},
          GruvboxYellowSign = {bg = ""},
          GruvboxBlueSign = {bg = ""},
