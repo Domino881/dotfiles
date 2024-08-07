@@ -24,9 +24,9 @@ require("lazy").setup({
    require 'plugins.treesitter-context',
    require 'plugins.ult-autopair',
    require 'plugins.undotree',
+   require 'plugins.indentbl',
    {'numToStr/Comment.nvim', config=true},
    {"nvim-treesitter/nvim-treesitter-textobjects", event="VeryLazy"},
-   {'lukas-reineke/indent-blankline.nvim', main='ibl', config=true},
    'tpope/vim-surround',
    'romainl/vim-cool', --auto :nohl
    'farmergreg/vim-lastplace',
