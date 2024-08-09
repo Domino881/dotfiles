@@ -70,7 +70,8 @@ return { -- LSP Configuration & Plugins
                require("lspconfig")["pylsp"].setup({
                   capabilities = capabilities,
                   settings = { pylsp = { plugins = {
-                     mccabe = { enabled = true },
+                     -- Linters
+                     mccabe = { enabled = false },
                      pycodestyle = {
                         maxLineLength = 85,
                         indentSize = 3,
@@ -83,10 +84,14 @@ return { -- LSP Configuration & Plugins
                            'E302', 'E305', 'E306', -- two spaces before functions
                            'E265', -- block comment should start with #
                            'E133', -- closing bracket indent
-                           'W504', -- line break after binary operator
+                           'W504', 'W503', -- line break before/after binary operator
                         },
-                     }
-                  }}}
+                     },
+                     -- Formatters
+                     autopep8 = { enabled = false },
+                     black = { enabled = false },
+                     yapf = { enabled = true },
+                  }}},
                })
             end,
          },

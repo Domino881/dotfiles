@@ -20,7 +20,7 @@ return{
       contrast = "hard", -- can be "hard", "soft" or empty string
       palette_overrides = {
          dark0_hard = "#000000", -- background
-         dark2 = "#1d2021", -- listchars
+         dark2 = "#2d3533", -- listchars 
       },
       overrides = {
          SignColumn = {bg = ""},

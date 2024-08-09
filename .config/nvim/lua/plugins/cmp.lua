@@ -11,22 +11,11 @@ return { -- Autocompletion
       local cmp = require 'cmp'
 
       cmp.setup {
-         snippet = {},
-         completion = { completeopt = 'menu,menuone,noinsert' },
          mapping = {
             ['<C-n>'] = cmp.mapping.select_next_item(),
             ['<C-p>'] = cmp.mapping.select_prev_item(),
-            -- Scroll the documentation window [b]ack / [f]orward
-            ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-            ['<C-f>'] = cmp.mapping.scroll_docs(4),
             ['<C-y>'] = cmp.mapping.confirm { select = true },
             ['<C-Space>'] = cmp.mapping.complete {},
-
-            ['<C-l>'] = cmp.mapping(function()
-            end, { 'i', 's' }),
-
-            ['<C-h>'] = cmp.mapping(function()
-            end, { 'i', 's' }),
          },
          sources = {
             { name = 'nvim_lsp' },

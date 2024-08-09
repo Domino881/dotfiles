@@ -34,7 +34,7 @@ vim.opt.cc = "85"
 vim.opt.signcolumn = "yes"
 
 -- autocompletion based only on current buffer
-vim.opt.complete = '.'
+-- vim.opt.complete = '.'
 
 vim.opt.list = true
 vim.opt.listchars = { space = '·', tab = '>-', trail = '⎵' }

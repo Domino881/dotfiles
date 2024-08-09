@@ -25,6 +25,7 @@ require("lazy").setup({
    require 'plugins.ult-autopair',
    require 'plugins.undotree',
    require 'plugins.indentbl',
+   require 'plugins.osc52-clipboard',
    {'numToStr/Comment.nvim', config=true},
    {"nvim-treesitter/nvim-treesitter-textobjects", event="VeryLazy"},
    'tpope/vim-surround',
