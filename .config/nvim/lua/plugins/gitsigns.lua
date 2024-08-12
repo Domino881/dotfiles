@@ -38,6 +38,7 @@ return {
          row = 0,
          col = 1
       },
+      base = 'HEAD~1',
    },
    init = function()
       vim.keymap.set('n', ']c', function()
