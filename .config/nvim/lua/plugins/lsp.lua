@@ -70,7 +70,7 @@ return { -- LSP Configuration & Plugins
                require("lspconfig")["pylsp"].setup({
                   capabilities = capabilities,
                   settings = { pylsp = { plugins = {
-                     mccabe = { enabled = false },
+                     mccabe = { enabled = true },
                      pycodestyle = {
                         maxLineLength = 80,
                         indentSize = 4,

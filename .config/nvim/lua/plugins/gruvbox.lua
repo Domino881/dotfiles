@@ -18,16 +18,14 @@ return{
       invert_selection = false,
       inverse = true, -- invert background for search, diffs, statuslines and errors
       contrast = "hard", -- can be "hard", "soft" or empty string
-      palette_overrides = {
-         dark0_hard = "#000000", -- background
-         dark1 = "#171717", -- color column, popup
-         dark2 = "#1d2021", -- listchars
-      },
       overrides = {
-         SignColumn = {bg = ""},
-         GruvboxRedSign = {bg = ""},
-         GruvboxYellowSign = {bg = ""},
-         GruvboxBlueSign = {bg = ""},
+         ColorColumn = {bg = "#171717"},
+         SignColumn = {bg = "#070505"},
+         NonText = {fg = "#413b35"},
+         Normal = {bg = "#070505"},
+         GruvboxYellowSign = {bg = "#070505"},
+         GruvboxRedSign = {bg = "#070505"},
+         GruvboxBlueSign = {bg = "#070505"},
      }
    }
 }
