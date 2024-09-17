@@ -14,8 +14,8 @@ vim.opt.laststatus = 2
 
 vim.opt.background = 'dark'
 
-vim.opt.tabstop = 3
-vim.opt.shiftwidth = 3
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.wrap = false
@@ -37,7 +37,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.complete = '.'
 
 vim.opt.list = true
-vim.opt.listchars = { space = '·', tab = '>-', trail = '⎵' }
+vim.opt.listchars = { space = '·', tab = '>-', trail = '$' }
 
 vim.opt.termguicolors = true
 
