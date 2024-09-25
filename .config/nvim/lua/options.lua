@@ -24,9 +24,9 @@ vim.opt.showmode = false -- don't show "--insert--"
 
 vim.g.python_recommended_style = false
 vim.g.python_indent = {
-   open_paren = 'shiftwidth()',
-   nested_paren = 'shiftwidth()',
-   continue = 'shiftwidth()'
+    open_paren = 'shiftwidth()',
+    nested_paren = 'shiftwidth()',
+    continue = 'shiftwidth()'
 }
 
 -- color column
@@ -46,39 +46,39 @@ vim.opt.mouse = 'n'
 vim.opt.updatetime = 50
 
 vim.diagnostic.config({
-   severity_sort = true,
-   float = {
-      source = true,
-      style = "minimal",
-      header = "",
-      prefix = "",
-   },
-   signs = {
-      text = {
-         [vim.diagnostic.severity.WARN] = '●',
-         [vim.diagnostic.severity.ERROR] = '●',
-         [vim.diagnostic.severity.INFO] = '●',
-      },
-   },
-   virtual_text = {
-      virt_text_pos = 'eol',
-      format = function(diagnostic)
-         local mes = diagnostic.message
-         if diagnostic.source == 'pylint' then
-            local colon = string.find(mes, ':') or 0
-            return string.sub(mes, colon+1)
-         elseif diagnostic.source == 'pyflakes' then
-            local colon = string.find(mes, ':') or 0
-            return string.sub(mes, colon+1)
-         elseif diagnostic.source == 'pycodestyle' then
-            local colon = string.find(mes, ':') or 0
-            return string.sub(mes, colon+1+4)
-         elseif diagnostic.source == 'formatdiff' then
-            return "formatdiff"
-         end
-         return mes
-      end,
-   }
+    severity_sort = true,
+    float = {
+        source = true,
+        style = "minimal",
+        header = "",
+        prefix = "",
+    },
+    signs = {
+        text = {
+            [vim.diagnostic.severity.WARN] = '●',
+            [vim.diagnostic.severity.ERROR] = '●',
+            [vim.diagnostic.severity.INFO] = '●',
+        },
+    },
+    virtual_text = {
+        virt_text_pos = 'eol',
+        format = function(diagnostic)
+            local mes = diagnostic.message
+            if diagnostic.source == 'pylint' then
+                local colon = string.find(mes, ':') or 0
+                return string.sub(mes, colon+1)
+            elseif diagnostic.source == 'pyflakes' then
+                local colon = string.find(mes, ':') or 0
+                return string.sub(mes, colon+1)
+            elseif diagnostic.source == 'pycodestyle' then
+                local colon = string.find(mes, ':') or 0
+                return string.sub(mes, colon+1+4)
+            elseif diagnostic.source == 'formatdiff' then
+                return "formatdiff"
+            end
+            return mes
+        end,
+    }
 })
 
 vim.wo.foldmethod = 'expr'
