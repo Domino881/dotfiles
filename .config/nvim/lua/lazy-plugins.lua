@@ -26,6 +26,7 @@ require("lazy").setup({
     require 'plugins.undotree',
     require 'plugins.luasnip',
     require 'plugins.molten-ipython',
+    require 'plugins.image',
     'lervag/vimtex',
     {'numToStr/Comment.nvim', config=true},
     {"nvim-treesitter/nvim-treesitter-textobjects", event="VeryLazy"},
