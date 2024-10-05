@@ -4,22 +4,21 @@ return {
     opts = {
         options = {
             theme = 'gruvbox-material',
-            icons_enabled = true,
+            icons_enabled = false,
             component_separators = '',
-            section_separators = { left = '', right = '' },
+            section_separators = { left = '', right = '' },
         },
         sections = {
             lualine_a = {
                 {
                     'mode',
-                    color = { gui = 'bold' },
                     fmt = function(str, _)
                         return string.lower(str)
                     end,
                 }
             },
             lualine_b = {
-                { 'branch', icon = '' },
+                { 'branch', icon = nil },
                 'diff',
             },
             lualine_x = {
