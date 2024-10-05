@@ -25,9 +25,20 @@ require("lazy").setup{
     require 'plugins.ult-autopair',       -- automatic brackets
 
     -- Plugins below are imported with little/no extra options
+    require 'plugins.gitsigns',           -- git diff lines in signcolumn
+    require 'plugins.ufo-fold',           -- nicer looking folds
+    require 'plugins.treesitter-context', -- context line for long functions
+    require 'plugins.ult-autopair',       -- automatic brackets
+    require 'plugins.molten-ipython',     -- jupyter-like python execution
+
+    -- Plugins below are imported with little/no extra options
     {
         'numToStr/Comment.nvim',          -- commenting of lines
         config = true
+    },
+    {
+        "nvim-treesitter/nvim-treesitter-textobjects", -- vim motions for functions/classes
+        event = "VeryLazy"
     },
     {
         'lukas-reineke/indent-blankline.nvim', -- scope indicators
