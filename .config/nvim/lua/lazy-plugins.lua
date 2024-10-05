@@ -37,10 +37,6 @@ require("lazy").setup{
         config = true
     },
     {
-        "nvim-treesitter/nvim-treesitter-textobjects", -- vim motions for functions/classes
-        event = "VeryLazy"
-    },
-    {
         'lukas-reineke/indent-blankline.nvim', -- scope indicators
         main = 'ibl', config = true
     },
