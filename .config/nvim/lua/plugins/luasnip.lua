@@ -15,6 +15,13 @@ return {
         opts = {
             history = true,
             delete_check_events = "TextChanged",
+            update_events = 'TextChanged,TextChangedI',
+            enable_autosnippets = true,
         },
+        init = function()
+            require("luasnip.loaders.from_lua").load{
+                paths ={"~/.config/nvim/LuaSnip/"},
+            }
+        end,
     }
 }

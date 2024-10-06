@@ -30,9 +30,9 @@ require("lazy").setup{
     require 'plugins.luasnip',            -- snippets
     require 'plugins.molten-ipython',     -- jupyter-like python execution
     require 'plugins.image',              -- drawing images inside the terminal
+    require 'plugins.vimtex',             -- LaTeX integration
 
     -- Plugins below are imported with little/no extra options
-    'lervag/vimtex',                      -- LaTeX integration
     {
         'numToStr/Comment.nvim',          -- commenting of lines
         config = true

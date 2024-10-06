@@ -93,6 +93,20 @@ return { -- LSP Configuration & Plugins
                         }
                     })
                 end,
+
+                ["texlab"] = function()
+                    require("lspconfig")["texlab"].setup({
+                        settings = {
+                            texlab = {
+                                formatterLineLength = 40,
+                                latexFormatter = "latexindent",
+                                latexindent = {
+                                    modifyLineBreaks = true,
+                                }
+                            }
+                        },
+                    })
+                end,
             },
         }
     end,
