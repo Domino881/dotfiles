@@ -23,12 +23,6 @@ require("lazy").setup{
     require 'plugins.ufo-fold',           -- nicer looking folds
     require 'plugins.treesitter-context', -- context line for long functions
     require 'plugins.ult-autopair',       -- automatic brackets
-
-    -- Plugins below are imported with little/no extra options
-    require 'plugins.gitsigns',           -- git diff lines in signcolumn
-    require 'plugins.ufo-fold',           -- nicer looking folds
-    require 'plugins.treesitter-context', -- context line for long functions
-    require 'plugins.ult-autopair',       -- automatic brackets
     require 'plugins.molten-ipython',     -- jupyter-like python execution
 
     -- Plugins below are imported with little/no extra options

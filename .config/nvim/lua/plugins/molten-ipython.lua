@@ -8,6 +8,7 @@ return {
         vim.keymap.set("v", "<leader>r", ":<C-u>MoltenEvaluateVisual<CR>",
             { silent = true, desc = "Evaluate visual selection" })
 
+        vim.g.molten_auto_image_popup = true
         vim.g.molten_output_win_max_height = 20
     end,
 }
