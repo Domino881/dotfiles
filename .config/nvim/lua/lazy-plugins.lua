@@ -14,6 +14,7 @@ require("lazy").setup{
     -- Options for these plugins are located in .config/nvim/lua/plugins/
     require 'plugins.gruvbox',            -- colorscheme
     require 'plugins.lualine',            -- bottom status line
+    require 'plugins.notify',             -- nice notifications
     require 'plugins.treesitter',         -- for better syntax highlighting etc.
     require 'plugins.telescope',          -- search utility
     require 'plugins.which-key',          -- shows hints for keymaps
@@ -31,6 +32,8 @@ require("lazy").setup{
     require 'plugins.molten-ipython',     -- jupyter-like python execution
     require 'plugins.image',              -- drawing images inside the terminal
     require 'plugins.vimtex',             -- LaTeX integration
+    require 'plugins.dressing',           -- improved neovim ui
+    require 'plugins.overseer',           -- build tasks
 
     -- Plugins below are imported with little/no extra options
     {

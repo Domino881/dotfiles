@@ -23,7 +23,7 @@ return {
                 'diff',
             },
             lualine_x = {
-                'encoding',
+                'overseer',
                 { 'filetype', icon = nil },
             },
         },
