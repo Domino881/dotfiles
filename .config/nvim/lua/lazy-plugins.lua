@@ -7,9 +7,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Setup the plugin manager
-require("lazy").setup{
+require("lazy").setup {
 
-    'nvim-lua/plenary.nvim',               -- utilities used by other plugins
+    'nvim-lua/plenary.nvim', -- utilities used by other plugins
 
     -- Options for these plugins are located in .config/nvim/lua/plugins/
     require 'plugins.gruvbox',            -- colorscheme
@@ -32,12 +32,15 @@ require("lazy").setup{
     require 'plugins.molten-ipython',     -- jupyter-like python execution
     require 'plugins.image',              -- drawing images inside the terminal
     require 'plugins.vimtex',             -- LaTeX integration
-    require 'plugins.dressing',           -- improved neovim ui
     require 'plugins.overseer',           -- build tasks
+    require 'plugins.dap',                -- debug adapter protocol
+    require 'plugins.dap-ui',             -- nice ui for DAP
+    require 'plugins.render-markdown',    -- markdown rendered inside neovim
+    require 'plugins.git',                -- Git integrations
 
     -- Plugins below are imported with little/no extra options
     {
-        'numToStr/Comment.nvim',          -- commenting of lines
+        'numToStr/Comment.nvim',     -- commenting of lines
         config = true
     },
     {
@@ -48,8 +51,8 @@ require("lazy").setup{
         'lukas-reineke/indent-blankline.nvim', -- scope indicators
         main = 'ibl', config = true
     },
-    'tpope/vim-surround',                 -- bracket / quote vim motions
-    'romainl/vim-cool',                   -- auto :nohl
-    'farmergreg/vim-lastplace',           -- opens files at the last place
-    'tpope/vim-fugitive',                 -- git utilities
+    'tpope/vim-surround',       -- bracket / quote vim motions
+    'romainl/vim-cool',         -- auto :nohl
+    'farmergreg/vim-lastplace', -- opens files at the last place
+    'stevearc/dressing.nvim',   -- improved neovim ui
 }

@@ -29,7 +29,7 @@ return {
           [[
             \begin{equation*}
                 <>
-            \end{equation}
+            \end{equation*}
           ]],
           -- The insert node is placed in the <> angle brackets
           { i(1) },
@@ -42,7 +42,7 @@ return {
           [[
             \begin{align*}
                 <>
-            \end{align}
+            \end{align*}
           ]],
           -- The insert node is placed in the <> angle brackets
           { i(1) },
@@ -56,6 +56,19 @@ return {
             \begin{figure}
                 <>
             \end{figure}
+          ]],
+          -- The insert node is placed in the <> angle brackets
+          { i(1) },
+          { delimiters = "<>" })
+    ),
+
+    ls.snippet(
+        { trig = "BIT", dscr = "A LaTeX itemize environment", snippetType = "autosnippet" },
+        fmt(
+          [[
+            \begin{itemize}
+                \item <>
+            \end{itemize}
           ]],
           -- The insert node is placed in the <> angle brackets
           { i(1) },

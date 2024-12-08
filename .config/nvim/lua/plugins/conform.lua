@@ -10,13 +10,12 @@ return { -- Autoformat
                 local this_buf = vim.fn.bufnr()
                 local result = require("conform").format{
                     bufnr = this_buf,
-                    async = false,
-                    lsp_fallback = false,
+                    async = true,
+                    lsp_fallback = true,
                 }
                 if result then
                     require("fidget").notify(
-                        "Formatted with " ..
-                        require "conform".list_formatters_to_run(this_buf)[1].name
+                        "Formatted."
                     )
                 else
                     require("fidget").notify("Formatting failed.")
@@ -36,7 +35,7 @@ return { -- Autoformat
         formatters_by_ft = {
             lua = { "stylua" },
             python = { "ruff_format" },
-            tex = { "prettier" },
+            tex = { "typos", "prettier" },
         },
 
         formatters = {

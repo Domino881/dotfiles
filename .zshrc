@@ -58,14 +58,17 @@ bindkey '^Z' _zsh_cli_fg
 # Aliases
 alias tmux='tmux -u'
 alias ls='ls --color -ah'
+alias icat='kitten icat'
 
 export PATH="${HOME}/.local/nvim-linux64/bin/:${PATH}"
 export PATH="${HOME}/.fzf/bin/:${PATH}"
+export PATH="${HOME}/.local/tectonic/:${PATH}"
 
 export VISUAL=vim
 nvim --version &> /dev/null && export VISUAL=nvim
 alias vim="$VISUAL"
 export EDITOR="$VISUAL"
+export BIBINPUTS="$HOME/Library/texmf/bibtex/bib"
 
 fzf --version &> /dev/null || ( git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install)
 # Shell integrations

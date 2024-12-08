@@ -28,6 +28,13 @@ return {
             GruvboxYellowSign = { bg = "#070505" },
             GruvboxRedSign = { bg = "#070505" },
             GruvboxBlueSign = { bg = "#070505" },
+            -- DapUIStop = { bg = "#070505" },
+            -- DapUIStepInto = { bg = "#070505" },
+            -- DapUIStepOver = { bg = "#070505" },
+            -- DapUIStepOut = { bg = "#070505" },
+            -- DapUIRestart = { bg = "#070505" },
+            -- DapUIStepBack = { bg = "#070505" },
+            -- DapUIPlayPause = { bg = "#070505" },
         }
     }
 }

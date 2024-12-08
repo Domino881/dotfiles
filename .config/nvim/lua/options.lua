@@ -2,7 +2,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.g.mapleader = " "
 
-vim.opt.undodir = os.getenv( "HOME" ) .. '/.vim/undodir'
+vim.opt.undodir = os.getenv("HOME") .. '/.vim/undodir'
 vim.opt.undofile = true
 vim.opt.undolevels = 1000
 vim.opt.undoreload = 10000
@@ -20,7 +20,7 @@ vim.opt.expandtab = true
 
 vim.opt.wrap = false
 vim.opt.cino = 'p2s,(1,:1,g1,h2' -- indents
-vim.opt.showmode = false -- don't show "--insert--"
+vim.opt.showmode = false         -- don't show "--insert--"
 
 vim.g.python_recommended_style = false
 vim.g.python_indent = {
@@ -66,13 +66,13 @@ vim.diagnostic.config({
             local mes = diagnostic.message
             if diagnostic.source == 'pylint' then
                 local colon = string.find(mes, ':') or 0
-                return string.sub(mes, colon+1)
+                return string.sub(mes, colon + 1)
             elseif diagnostic.source == 'pyflakes' then
                 local colon = string.find(mes, ':') or 0
-                return string.sub(mes, colon+1)
+                return string.sub(mes, colon + 1)
             elseif diagnostic.source == 'pycodestyle' then
                 local colon = string.find(mes, ':') or 0
-                return string.sub(mes, colon+1+4)
+                return string.sub(mes, colon + 1 + 4)
             elseif diagnostic.source == 'formatdiff' then
                 return "formatdiff"
             end
@@ -88,3 +88,13 @@ vim.wo.foldnestmax = 1
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+vim.opt.spelllang = "en_gb"
+
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+    pattern = { "*.tex", "*.md" },
+    callback = function(ev)
+        vim.cmd([[setlocal spell]])
+        vim.cmd([[hi SpellBad gui=undercurl guisp=red]])
+    end
+})

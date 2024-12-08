@@ -78,14 +78,14 @@ return { -- LSP Configuration & Plugins
                                         indentSize = 4,
                                         hangClosing = true,
                                         ignore = {
-                                            'E201', 'E202', -- whitespace around ()
-                                            'E203',         -- space before :
-                                            'E402',         -- import not at the top
-                                            'E261',         -- two spaces before comment
+                                            'E201', 'E202',         -- whitespace around ()
+                                            'E203',                 -- space before :
+                                            'E402',                 -- import not at the top
+                                            'E261',                 -- two spaces before comment
                                             'E302', 'E305', 'E306', -- two spaces before functions
-                                            'E265',         -- block comment should start with #
-                                            'E133',         -- closing bracket indent
-                                            'W504',         -- line break after binary operator
+                                            'E265',                 -- block comment should start with #
+                                            'E133',                 -- closing bracket indent
+                                            'W504',                 -- line break after binary operator
                                         },
                                     }
                                 }
@@ -99,12 +99,21 @@ return { -- LSP Configuration & Plugins
                         settings = {
                             texlab = {
                                 formatterLineLength = 40,
+                                build = {
+                                    executable = "latexrun",
+                                },
                                 latexFormatter = "latexindent",
                                 latexindent = {
-                                    modifyLineBreaks = true,
+                                    modifyLineBreaks = false,
                                 }
                             }
                         },
+                    })
+                end,
+
+                ["grammarly"] = function()
+                    require("lspconfig")["grammarly"].setup({
+                        filetypes = { 'txt', 'md', 'tex' },
                     })
                 end,
             },
