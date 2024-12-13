@@ -1,5 +1,6 @@
 return {
     'rcarriga/nvim-dap-ui',
+    lazy = true,
     opts = {
         force_buffers = true,
         layouts = {

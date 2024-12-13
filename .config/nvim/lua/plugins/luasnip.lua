@@ -1,5 +1,6 @@
 return {
     'lervag/vimtex',
+    lazy = true,
     {
         'L3MON4D3/LuaSnip',
         dependencies = {

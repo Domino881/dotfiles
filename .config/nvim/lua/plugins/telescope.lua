@@ -1,6 +1,7 @@
 return { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
+    lazy = true,
     branch = '0.1.x',
     dependencies = {
         'nvim-lua/plenary.nvim',
@@ -11,8 +12,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
                 return vim.fn.executable 'make' == 1
             end,
         },
-        'nvim-telescope/telescope-ui-select.nvim' ,
-        'nvim-tree/nvim-web-devicons' ,
+        'nvim-telescope/telescope-ui-select.nvim',
+        'nvim-tree/nvim-web-devicons',
         'nvim-telescope/telescope-bibtex.nvim',
     },
     init = function()
@@ -25,7 +26,9 @@ return { -- Fuzzy Finder (files, lsp, etc)
         vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
         vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
         vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Find existing buffers' })
-        vim.keymap.set('n', '<leader>sb', '<cmd>Telescope bibtex<CR>', { desc = '[S]earch [B]ibtex' })
+        vim.keymap.set('n', '<leader>sb',
+            '<cmd> lua require("telescope").extensions.bibtex.bibtex(require("telescope.themes").get_dropdown{ previewer = false })<CR>',
+            { desc = '[S]earch [B]ibtex' })
 
         vim.keymap.set('n', '<leader>/',
             function()

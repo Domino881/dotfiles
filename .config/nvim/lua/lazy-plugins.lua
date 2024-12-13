@@ -41,18 +41,21 @@ require("lazy").setup {
     -- Plugins below are imported with little/no extra options
     {
         'numToStr/Comment.nvim',     -- commenting of lines
-        config = true
+        config = true,
+        lazy = true
     },
     {
-        "nvim-treesitter/nvim-treesitter-textobjects", -- vim motions for functions/classes
-        event = "VeryLazy"
+        'nvim-treesitter/nvim-treesitter-textobjects', -- vim motions for functions/classes
+        lazy = true,
+        event = 'VeryLazy'
     },
     {
         'lukas-reineke/indent-blankline.nvim', -- scope indicators
         main = 'ibl', config = true
     },
-    'tpope/vim-surround',       -- bracket / quote vim motions
-    'romainl/vim-cool',         -- auto :nohl
-    'farmergreg/vim-lastplace', -- opens files at the last place
-    'stevearc/dressing.nvim',   -- improved neovim ui
+    'LunarVim/bigfile.nvim',                   -- disable features in big files
+    'romainl/vim-cool',                        -- auto :nohl
+    'farmergreg/vim-lastplace',                -- opens files at the last place
+    'tpope/vim-surround',                      -- bracket / quote vim motions
+    'stevearc/dressing.nvim',                  -- improved neovim ui
 }

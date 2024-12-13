@@ -1,5 +1,6 @@
 return {
     'tpope/vim-fugitive',
+    lazy = true,
     {
         'rbong/vim-flog',
         lazy = true,

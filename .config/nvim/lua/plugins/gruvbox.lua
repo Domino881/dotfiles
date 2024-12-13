@@ -28,6 +28,7 @@ return {
             GruvboxYellowSign = { bg = "#070505" },
             GruvboxRedSign = { bg = "#070505" },
             GruvboxBlueSign = { bg = "#070505" },
+            RenderMarkdownCode = { bg = "#312e2c" },
             -- DapUIStop = { bg = "#070505" },
             -- DapUIStepInto = { bg = "#070505" },
             -- DapUIStepOver = { bg = "#070505" },

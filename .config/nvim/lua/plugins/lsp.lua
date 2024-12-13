@@ -47,7 +47,9 @@ return { -- LSP Configuration & Plugins
         require("mason-lspconfig").setup {
             ensure_installed = {
                 "lua_ls",
-                "pylsp",
+                -- "pylsp",
+                "jedi_language_server",
+                "ruff",
                 -- "pyright",
                 "clangd",
             },
@@ -66,33 +68,49 @@ return { -- LSP Configuration & Plugins
                     })
                 end,
 
-                ["pylsp"] = function()
-                    require("lspconfig")["pylsp"].setup({
-                        capabilities = capabilities,
-                        settings = {
-                            pylsp = {
-                                plugins = {
-                                    mccabe = { enabled = true },
-                                    pycodestyle = {
-                                        maxLineLength = 80,
-                                        indentSize = 4,
-                                        hangClosing = true,
-                                        ignore = {
-                                            'E201', 'E202',         -- whitespace around ()
-                                            'E203',                 -- space before :
-                                            'E402',                 -- import not at the top
-                                            'E261',                 -- two spaces before comment
-                                            'E302', 'E305', 'E306', -- two spaces before functions
-                                            'E265',                 -- block comment should start with #
-                                            'E133',                 -- closing bracket indent
-                                            'W504',                 -- line break after binary operator
-                                        },
-                                    }
-                                }
-                            }
-                        }
+                ["ruff"] = function()
+                    require("lspconfig")["ruff"].setup({})
+                end,
+
+                ["jedi_language_server"] = function()
+                    require("lspconfig").jedi_language_server.setup({
+                        init_options = {
+                            codeAction = {
+                                nameExtractVariable = "Extract variable",
+                                nameExtractFunction = "Extract function",
+                            },
+                            markupKindPreferred = "markdown",
+                        },
                     })
                 end,
+
+                -- ["pylsp"] = function()
+                --     require("lspconfig")["pylsp"].setup({
+                --         capabilities = capabilities,
+                --         settings = {
+                --             pylsp = {
+                --                 plugins = {
+                --                     mccabe = { enabled = true },
+                --                     pycodestyle = {
+                --                         maxLineLength = 80,
+                --                         indentSize = 4,
+                --                         hangClosing = true,
+                --                         ignore = {
+                --                             'E201', 'E202',         -- whitespace around ()
+                --                             'E203',                 -- space before :
+                --                             'E402',                 -- import not at the top
+                --                             'E261',                 -- two spaces before comment
+                --                             'E302', 'E305', 'E306', -- two spaces before functions
+                --                             'E265',                 -- block comment should start with #
+                --                             'E133',                 -- closing bracket indent
+                --                             'W504',                 -- line break after binary operator
+                --                         },
+                --                     }
+                --                 }
+                --             }
+                --         }
+                --     })
+                -- end,
 
                 ["texlab"] = function()
                     require("lspconfig")["texlab"].setup({

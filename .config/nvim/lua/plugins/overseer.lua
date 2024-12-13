@@ -1,6 +1,7 @@
 return {
     'stevearc/overseer.nvim',
     dependencies = { 'stevearc/dressing.nvim' },
+    lazy = true,
     init = function()
         vim.api.nvim_create_user_command("OverseerRestartLast", function()
             local overseer = require("overseer")
