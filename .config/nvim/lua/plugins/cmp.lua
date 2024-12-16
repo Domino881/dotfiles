@@ -8,6 +8,7 @@ return { -- Autocompletion
         'hrsh7th/cmp-buffer',
         { 'hrsh7th/cmp-cmdline', event = "CmdlineEnter" },
         'saadparwaiz1/cmp_luasnip',
+        'kdheepak/cmp-latex-symbols',
     },
     opts = function(_, opts)
         local cmp = require 'cmp'
@@ -40,6 +41,15 @@ return { -- Autocompletion
             { name = 'path' },
             { name = 'buffer' },
             { name = 'luasnip' },
+            {
+                name = 'latex_symbols',
+                option = {
+                    strategy = 2,
+                    -- 0 - mixed Show the command and insert the symbol
+                    -- 1 - julia Show and insert the symbol
+                    -- 2 - latex Show and insert the command
+                }
+            },
         }
 
         -- `:` cmdline setup.
