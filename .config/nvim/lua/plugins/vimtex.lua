@@ -5,6 +5,7 @@ return {
     init = function()
         vim.g.vimtex_view_method = 'zathura'
         vim.g.vimtex_mappings_enabled = false
+        vim.g.vimtex_syntax_enabled = false
         vim.keymap.set('n',
             '<leader>tc', vim.cmd.VimtexCompile,
             { desc = 'Vim[T]ex [C]ompile' })

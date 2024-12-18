@@ -1,5 +1,5 @@
 return {
-    'Thiago4532/mdmath.nvim',
+    'Domino881/texmath.nvim',
     dependencies = {
         'nvim-treesitter/nvim-treesitter',
     },
@@ -12,11 +12,11 @@ return {
         -- Hide the text when the equation is under the cursor.
         anticonceal = true,
         -- Hide the text when in the Insert Mode.
-        hide_on_insert = true,
+        hide_on_insert = false,
         -- Enable dynamic size for non-inline equations.
         dynamic = true,
         -- Configure the scale of dynamic-rendered equations.
-        dynamic_scale = 1.0,
+        dynamic_scale = 0.65,
         -- Interval between updates (milliseconds).
         update_interval = 400,
 

@@ -37,7 +37,7 @@ require("lazy").setup {
     require 'plugins.dap-ui',             -- nice ui for DAP
     require 'plugins.render-markdown',    -- markdown rendered inside neovim
     require 'plugins.git',                -- Git integrations
-    require 'plugins.mdmath',             -- Image previews of markdown math
+    require 'plugins.texmath',            -- my clone of mdmath.nvim - previews of tex math
 
     -- Plugins below are imported with little/no extra options
     {
