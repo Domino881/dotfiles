@@ -1,3 +1,5 @@
+vim.g.default_colorscheme = "gruvbox"
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.g.mapleader = " "

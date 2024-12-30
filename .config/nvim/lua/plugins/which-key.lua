@@ -33,6 +33,8 @@ return {                -- Useful plugin to show you pending keybinds.
             { "<leader>t_", hidden = true },
             { "<leader>w",  group = "[W]orkspace" },
             { "<leader>w_", hidden = true },
+            { "<leader>m",  group = "[M]olten" },
+            { "<leader>m_", hidden = true },
         }
         -- visual mode
         require('which-key').add {
@@ -41,6 +43,7 @@ return {                -- Useful plugin to show you pending keybinds.
             { "<leader>gcb", desc = "[C]omment lines in block mode" },
             { "<leader>h",   group = "[H]arpoon" },
             { "<leader>lf",  desc = "Py[L]int [F]ormat Buffer" },
+            { "<leader>m",  group = "[M]olten" },
         }
     end,
 }

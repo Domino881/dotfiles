@@ -8,6 +8,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup the plugin manager
 require("lazy").setup {
+    defaults = { lazy = true },
+    lockfile = vim.fn.stdpath("cache") .. "/lazy-lock.json",
 
     'nvim-lua/plenary.nvim', -- utilities used by other plugins
 
@@ -40,23 +42,16 @@ require("lazy").setup {
     require 'plugins.texmath',            -- my clone of mdmath.nvim - previews of tex math
 
     -- Plugins below are imported with little/no extra options
-    {
-        'numToStr/Comment.nvim',     -- commenting of lines
-        config = true,
-        lazy = true
-    },
-    {
-        'nvim-treesitter/nvim-treesitter-textobjects', -- vim motions for functions/classes
-        lazy = true,
-        event = 'VeryLazy'
-    },
-    {
-        'lukas-reineke/indent-blankline.nvim', -- scope indicators
-        main = 'ibl', config = true
-    },
-    'LunarVim/bigfile.nvim',                   -- disable features in big files
-    'romainl/vim-cool',                        -- auto :nohl
-    'farmergreg/vim-lastplace',                -- opens files at the last place
-    'tpope/vim-surround',                      -- bracket / quote vim motions
-    'stevearc/dressing.nvim',                  -- improved neovim ui
+
+    { 'numToStr/Comment.nvim',
+        config = true, },                            -- commenting of lines
+    { 'nvim-treesitter/nvim-treesitter-textobjects', -- vim motions for functions/classes
+        event = 'VeryLazy' },
+    { 'lukas-reineke/indent-blankline.nvim',         -- scope indicators
+        main = 'ibl' },
+    'LunarVim/bigfile.nvim',                         -- disable features in big files
+    'romainl/vim-cool',                              -- auto :nohl
+    'farmergreg/vim-lastplace',                      -- opens files at the last place
+    'tpope/vim-surround',                            -- bracket / quote vim motions
+    'stevearc/dressing.nvim',                        -- improved neovim ui
 }

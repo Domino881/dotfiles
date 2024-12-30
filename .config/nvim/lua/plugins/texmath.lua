@@ -16,7 +16,7 @@ return {
         -- Enable dynamic size for non-inline equations.
         dynamic = true,
         -- Configure the scale of dynamic-rendered equations.
-        dynamic_scale = 0.65,
+        dynamic_scale = 1.0,
         -- Interval between updates (milliseconds).
         update_interval = 400,
 
