@@ -124,17 +124,17 @@ return { -- LSP Configuration & Plugins
                     vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
                 end
 
-                map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
-                map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-                map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-                map('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
-                map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+                map('gd', require('telescope.builtin').lsp_definitions, 'Goto Definition')
+                map('gr', require('telescope.builtin').lsp_references, 'Goto References')
+                map('gI', require('telescope.builtin').lsp_implementations, 'Goto Implementation')
+                map('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type Definition')
+                map('<leader>rn', vim.lsp.buf.rename, 'Rename')
                 map('<leader>ca',
                     function()
                         vim.lsp.buf.code_action({ apply = true })
-                    end, '[C]ode [A]ction')
+                    end, 'Code Action')
                 map('K', vim.lsp.buf.hover, 'Hover Documentation')
-                map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+                map('gD', vim.lsp.buf.declaration, 'Goto Declaration')
             end,
         })
         vim.api.nvim_create_autocmd("BufWritePre", {

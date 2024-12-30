@@ -49,6 +49,8 @@ require("lazy").setup {
         event = 'VeryLazy' },
     { 'lukas-reineke/indent-blankline.nvim',         -- scope indicators
         main = 'ibl' },
+    { 'stevearc/stickybuf.nvim',                     -- don't open files in quickfix windows
+        config = true },
     'LunarVim/bigfile.nvim',                         -- disable features in big files
     'romainl/vim-cool',                              -- auto :nohl
     'farmergreg/vim-lastplace',                      -- opens files at the last place

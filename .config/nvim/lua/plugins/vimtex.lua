@@ -8,6 +8,6 @@ return {
         vim.g.vimtex_syntax_enabled = false
         vim.keymap.set('n',
             '<leader>tc', vim.cmd.VimtexCompile,
-            { desc = 'Vim[T]ex [C]ompile' })
+            { desc = 'VimTex Compile' })
     end,
 }

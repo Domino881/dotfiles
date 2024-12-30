@@ -7,11 +7,11 @@ return {
     dependencies = { "3rd/image.nvim" },
     init = function()
         vim.keymap.set("n", "<leader>me", ":MoltenReevaluateCell<CR>",
-            { silent = true, desc = "[M]olten [E]valuate Cell" })
+            { silent = true, desc = "Molten Evaluate Cell" })
         vim.keymap.set("v", "<leader>me", ":<C-u>MoltenEvaluateVisual<CR>",
-            { silent = true, desc = "[M]olten [E]valuate Cell" })
+            { silent = true, desc = "Molten Evaluate Cell" })
         vim.keymap.set("n", "<leader>ms", ":noautocmd MoltenEnterOutput<CR>",
-            { silent = true, desc = "[M]olten [S]how/enter Output" })
+            { silent = true, desc = "Molten Show/enter Output" })
 
         vim.g.molten_image_provider = "image.nvim"
         vim.g.molten_image_location = "float"
@@ -23,5 +23,7 @@ return {
         vim.g.molten_output_win_max_height = 20
         vim.g.molten_output_win_max_width = 78
         vim.g.molten_output_win_cover_gutter = false
+
+        require("which-key").add({ "<leader>m", group = "Molten" })
     end,
 }

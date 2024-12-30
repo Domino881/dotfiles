@@ -22,7 +22,7 @@ return { -- Autoformat
                 end
             end,
             mode = "n",
-            desc = "[F]ormat buffer",
+            desc = "Format buffer",
         },
     },
     opts = {
