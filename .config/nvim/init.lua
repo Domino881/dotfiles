@@ -26,10 +26,7 @@ local function load_colorscheme_async(colorscheme)
   vim.defer_fn(function()
     if vim.g.default_colorscheme then
       if not pcall(vim.cmd.colorscheme, colorscheme) then
-        require("base.utils").notify(
-          "Error setting up colorscheme: " .. colorscheme,
-          vim.log.levels.ERROR
-        )
+          vim.notify("Error setting up colorscheme: " .. colorscheme, vim.log.levels.ERROR)
       end
     end
   end, 0)
