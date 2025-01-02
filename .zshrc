@@ -71,10 +71,11 @@ export EDITOR="$VISUAL"
 export BIBINPUTS="$HOME/Library/texmf/bibtex/bib"
 
 fzf --version &> /dev/null || ( git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install)
+# Disable showing hidden dirs on alt-c
+export FZF_ALT_C_OPTS="--walker dir --walker-skip .git,node_modules,target
+  --preview 'tree -C {}'"
 # Shell integrations
-source <(fzf --zsh)
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.fzf.zsh 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source ~/powerlevel10k/powerlevel10k.zsh-theme

@@ -1,5 +1,5 @@
 local keybindAdd = '<leader>ha'
-local keybindOpen = '='
+local keybindOpen = '\\'
 
 return {
     'ThePrimeagen/harpoon',
