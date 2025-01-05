@@ -9,5 +9,11 @@ return {
         vim.keymap.set('n',
             '<leader>tc', vim.cmd.VimtexCompile,
             { desc = 'VimTex Compile' })
-    end,
+        vim.keymap.set('n',
+            '<leader>ti', ":terminal texliveonfly %<CR>",
+            { desc = 'Install Tex Dependencies for File' })
+        vim.keymap.set('n',
+            '<leader>tv', vim.cmd.VimtexView,
+            { desc = 'VimTex View' })
+    end
 }

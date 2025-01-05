@@ -12,14 +12,17 @@ return {
             { silent = true, desc = "Molten Evaluate Cell" })
         vim.keymap.set("n", "<leader>ms", ":noautocmd MoltenEnterOutput<CR>",
             { silent = true, desc = "Molten Show/enter Output" })
+        vim.keymap.set("n", "<leader>mi", ":MoltenImagePopup<CR>",
+            { silent = true, desc = "Molten Image Popup" })
 
         vim.g.molten_image_provider = "image.nvim"
         vim.g.molten_image_location = "float"
         vim.g.molten_output_win_style = "minimal"
         vim.g.molten_output_win_border = "rounded"
         vim.g.molten_auto_open_output = false
-        vim.g.molten_output_virt_lines = true
+        vim.g.molten_output_virt_lines = false
         vim.g.molten_virt_text_output = true
+        vim.g.molten_virt_text_max_lines = 2
         vim.g.molten_output_win_max_height = 20
         vim.g.molten_output_win_max_width = 78
         vim.g.molten_output_win_cover_gutter = false
