@@ -75,19 +75,11 @@ return {
           { delimiters = "<>" })
     ),
 
-    s({ trig = ";a", dscr = "Greek letter alpha", snippetType = "autosnippet" },
-        { t("\\alpha") }
-    ),
-    s({ trig = ";b", dscr = "Greek letter beta", snippetType = "autosnippet" },
-        { t("\\beta") }
-    ),
-    s({ trig = ";g", dscr = "Greek letter gamma", snippetType = "autosnippet" },
-        { t("\\gamma") }
-    ),
-    s({ trig = ";d", dscr = "Greek letter delta", snippetType = "autosnippet" },
-        { t("\\delta") }
-    ),
-    s({ trig = ";y", dscr = "Greek letter psi", snippetType = "autosnippet" },
-        { t("\\psi") }
+    ls.snippet(
+        { trig = "IMG", dscr = "LaTeX include graphics", snippetType = "autosnippet" },
+        fmt( [[\includegraphics[width=<>\linewidth]{<>}]],
+          -- The insert node is placed in the <> angle brackets
+          { i(1), i(0) },
+          { delimiters = "<>" })
     ),
 }

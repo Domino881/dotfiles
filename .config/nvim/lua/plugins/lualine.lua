@@ -1,17 +1,31 @@
 local virtual_env = function()
-  local conda_env = os.getenv('CONDA_DEFAULT_ENV')
-  local venv_path = os.getenv('VIRTUAL_ENV')
+    local conda_env = os.getenv('CONDA_DEFAULT_ENV')
+    local venv_path = os.getenv('VIRTUAL_ENV')
 
-  if venv_path == nil then
-    if conda_env == nil then
-      return ""
+    if venv_path == nil then
+        if conda_env == nil then
+            return ""
+        else
+            return string.format("  %s (conda)", conda_env)
+        end
     else
-      return string.format("  %s (conda)", conda_env)
+        local venv_name = vim.fn.fnamemodify(venv_path, ':h:t')
+        return string.format("  %s (venv)", venv_name)
     end
-  else
-    local venv_name = vim.fn.fnamemodify(venv_path, ':h:t')
-    return string.format("  %s (venv)", venv_name)
-  end
+end
+
+local vimtex_status = function()
+    local icon = "-"
+    if vim.g.vimtex_compiler_status == 0 then
+        icon = "⭘"
+    elseif vim.g.vimtex_compiler_status == -1 then
+        icon = "󰅚"
+    elseif vim.g.vimtex_compiler_status == 1 then
+        icon = "󰑮"
+    elseif vim.g.vimtex_compiler_status == 2 then
+        icon = "󰄴"
+    end
+    return string.format("%s VimTex", icon)
 end
 
 return {
@@ -43,9 +57,15 @@ return {
                 { 'filetype', icon = nil },
             },
             lualine_y = {
-                virtual_env,
-                { cond = function() return vim.bo.filetype == "python" end, }
-            }
+                {
+                    virtual_env,
+                    cond = function() return vim.bo.filetype == "python" end, 
+                },
+                {
+                    vimtex_status,
+                    cond = function() return vim.bo.filetype == "tex" end,
+                },
+            },
         },
     }
 }

@@ -35,7 +35,7 @@ return { -- Autoformat
         formatters_by_ft = {
             lua = { "stylua" },
             python = { "ruff_format" },
-            tex = { "latexindent" },
+            tex = { "tex-fmt" },
         },
 
         formatters = {
@@ -52,11 +52,12 @@ return { -- Autoformat
                     "-l",
                     "/home/dominik/Documents/latexindent.yaml",
                 }
-                -- args = {
-                --     "-m",
-                --     "-y",
-                --     [[defaultIndent:'   ', modifyLineBreaks:textWrapOptions:colums:40]],
-                -- }
+            },
+            ["tex-fmt"] = {
+                prepend_args = {
+                    "--tabsize", "4",
+                    "--wraplen", "85",
+                }
             }
         }
     },
