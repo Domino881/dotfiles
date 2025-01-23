@@ -15,12 +15,20 @@ return { -- Fuzzy Finder (files, lsp, etc)
         'nvim-telescope/telescope-ui-select.nvim',
         'nvim-tree/nvim-web-devicons',
         'nvim-telescope/telescope-bibtex.nvim',
+        'benfowler/telescope-luasnip.nvim',
     },
     init = function()
         local builtin = require 'telescope.builtin'
-        local extensions = require 'telescope'.extensions
         vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search Help' })
         vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Search Files' })
+        vim.keymap.set('n', '<leader>sF', function()
+            builtin.find_files(require "telescope.themes".get_cursor({
+                cwd = "~",
+                layout_config = { width = 0.9, preview_width = 0.4, },
+                find_command = { "fdfind", "-t=f", "-a" },
+                path_display = { "absolute" },
+            }))
+        end, { desc = 'Search Files' })
         vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = 'Search current Word' })
         vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Search by Grep' })
         vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = 'Resume Previous Search' })
@@ -52,6 +60,11 @@ return { -- Fuzzy Finder (files, lsp, etc)
         )
     end,
     config = function()
+        local entry_append = function(prompt_bufnr)
+            local entry = require('telescope.actions.state').get_selected_entry()[1]
+            require('telescope.actions').close(prompt_bufnr)
+            vim.api.nvim_put({ entry }, 'c', false, true)
+        end
         require('telescope').setup {
             defaults = {
                 layout_config = {
@@ -59,7 +72,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
                 },
                 mappings = {
                     i = {
-                        ["<esc>"] = require('telescope.actions').close,
+                        ["<esc>"] = 'close',
+                        ["<C-i>"] = entry_append,
                     },
                 },
                 file_ignore_patterns = {
@@ -81,8 +95,12 @@ return { -- Fuzzy Finder (files, lsp, etc)
             },
             load_extension = {
                 "bibtex",
+                "luasnip",
             },
             extensions = {
+                luasnip = {
+                    previewer = false,
+                },
                 bibtex = {
                     depth = 1,
                     -- Depth for the *.bib file

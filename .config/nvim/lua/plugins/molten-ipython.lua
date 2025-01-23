@@ -6,13 +6,13 @@ return {
     build = ":UpdateRemotePlugins",
     dependencies = { "3rd/image.nvim" },
     init = function()
-        vim.keymap.set("n", "<leader>me", ":MoltenReevaluateCell<CR>",
+        vim.keymap.set("n", "me", ":MoltenReevaluateCell<CR>",
             { silent = true, desc = "Molten Evaluate Cell" })
-        vim.keymap.set("v", "<leader>me", ":<C-u>MoltenEvaluateVisual<CR>",
+        vim.keymap.set("v", "me", ":<C-u>MoltenEvaluateVisual<CR>",
             { silent = true, desc = "Molten Evaluate Cell" })
-        vim.keymap.set("n", "<leader>ms", ":noautocmd MoltenEnterOutput<CR>",
+        vim.keymap.set("n", "ms", ":noautocmd MoltenEnterOutput<CR>",
             { silent = true, desc = "Molten Show/enter Output" })
-        vim.keymap.set("n", "<leader>mi", ":MoltenImagePopup<CR>",
+        vim.keymap.set("n", "mi", ":MoltenImagePopup<CR>",
             { silent = true, desc = "Molten Image Popup" })
 
         vim.g.molten_image_provider = "image.nvim"
@@ -27,6 +27,7 @@ return {
         vim.g.molten_output_win_max_width = 78
         vim.g.molten_output_win_cover_gutter = false
 
-        require("which-key").add({ "<leader>m", group = "Molten" })
+        require("which-key").add({ "m", group = "Molten" })
+        vim.cmd([[highlight link MoltenCell ColorColumn]])
     end,
 }
