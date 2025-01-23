@@ -4,6 +4,7 @@ local function load_source(source)
   local status_ok, error = pcall(require, source)
   if not status_ok then
     vim.api.nvim_err_writeln("Failed to load " .. source .. "\n\n" .. error)
+    vim.cmd([[e ~/.config/nvim]])
   end
 end
 

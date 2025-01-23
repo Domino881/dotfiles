@@ -41,7 +41,7 @@ require("lazy").setup {
     require 'plugins.git',                -- Git integrations
     require 'plugins.texmath',            -- my clone of mdmath.nvim - previews of tex math
 
-    -- Plugins below are imported with little/no extra options
+   -- Plugins below are imported with little/no extra options
 
     { 'numToStr/Comment.nvim',
         config = true, },                            -- commenting of lines

@@ -26,3 +26,6 @@ vim.keymap.set("n", "<Leader>O", [[O<Esc>0"_Dj]], { desc = "Add empty line above
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show Diagnostic under cursor" })
 
 vim.keymap.set("n", "-", "<cmd>e %:h<CR>")
+
+vim.keymap.set("i", "<C-t>", "<Nop>")
+vim.keymap.set("n", "<C-t>", "<Nop>")

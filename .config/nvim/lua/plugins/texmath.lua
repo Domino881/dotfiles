@@ -12,7 +12,7 @@ return {
         -- Hide the text when the equation is under the cursor.
         anticonceal = true,
         -- Hide the text when in the Insert Mode.
-        hide_on_insert = false,
+        hide_on_insert = true,
         -- Enable dynamic size for non-inline equations.
         dynamic = true,
         -- Configure the scale of dynamic-rendered equations.
