@@ -41,7 +41,7 @@ require("lazy").setup {
     require 'plugins.git',                -- Git integrations
     require 'plugins.texmath',            -- my clone of mdmath.nvim - previews of tex math
 
-   -- Plugins below are imported with little/no extra options
+    -- Plugins below are imported with little/no extra options
 
     { 'numToStr/Comment.nvim',
         config = true, },                            -- commenting of lines
@@ -51,9 +51,11 @@ require("lazy").setup {
         main = 'ibl' },
     { 'stevearc/stickybuf.nvim',                     -- don't open files in quickfix windows
         config = true },
-    'LunarVim/bigfile.nvim',                         -- disable features in big files
-    'romainl/vim-cool',                              -- auto :nohl
-    'farmergreg/vim-lastplace',                      -- opens files at the last place
-    'tpope/vim-surround',                            -- bracket / quote vim motions
-    'stevearc/dressing.nvim',                        -- improved neovim ui
+    { 'iberianpig/ranger-explorer.vim',
+        dependencies = { 'rbgrouleff/bclose.vim' } },
+    'LunarVim/bigfile.nvim',    -- disable features in big files
+    'romainl/vim-cool',         -- auto :nohl
+    'farmergreg/vim-lastplace', -- opens files at the last place
+    'tpope/vim-surround',       -- bracket / quote vim motions
+    'stevearc/dressing.nvim',   -- improved neovim ui
 }

@@ -51,6 +51,7 @@ return {
             group = augroup,
             callback = function()
                 vim.g.vimtex_compiler_status = nil
+                vim.cmd([[ call vimtex#compiler#clean(0) ]])
             end,
         })
     end

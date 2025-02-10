@@ -55,14 +55,14 @@ _zsh_cli_fg() { fg; }
 zle -N _zsh_cli_fg
 bindkey '^Z' _zsh_cli_fg
 
+#PATH is appended in zprofile
+source "${HOME}/.zprofile"
+
 # Aliases
 alias tmux='tmux -u'
 alias ls='ls --color -ah'
 alias icat='kitten icat'
-
-export PATH="${HOME}/.local/nvim-linux64/bin/:${PATH}"
-export PATH="${HOME}/.fzf/bin/:${PATH}"
-export PATH="${HOME}/.local/tectonic/:${PATH}"
+alias pdf2htmlEX='docker run -ti --rm -v "`pwd`":/pdf -w /pdf pdf2htmlex/pdf2htmlex:0.18.8.rc2-master-20200820-ubuntu-20.04-x86_64'
 
 export VISUAL=vim
 nvim --version &> /dev/null && export VISUAL=nvim
@@ -74,11 +74,10 @@ fzf --version &> /dev/null || ( git clone --depth 1 https://github.com/junegunn/
 # Disable showing hidden dirs on alt-c
 export FZF_ALT_C_OPTS="--walker dir --walker-skip .git,node_modules,target
   --preview 'tree -C {}'"
+export FZF_CTRL_T_OPTS="--walker-skip timeshift,.wine,.steam,.git,node_modules,target"
 # Shell integrations
 source ~/.fzf.zsh 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
