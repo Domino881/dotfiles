@@ -55,19 +55,13 @@ _zsh_cli_fg() { fg; }
 zle -N _zsh_cli_fg
 bindkey '^Z' _zsh_cli_fg
 
-#PATH is appended in zprofile
-source "${HOME}/.zprofile"
-
 # Aliases
 alias tmux='tmux -u'
 alias ls='ls --color -ah'
 alias icat='kitten icat'
 alias pdf2htmlEX='docker run -ti --rm -v "`pwd`":/pdf -w /pdf pdf2htmlex/pdf2htmlex:0.18.8.rc2-master-20200820-ubuntu-20.04-x86_64'
-
-export VISUAL=vim
-nvim --version &> /dev/null && export VISUAL=nvim
 alias vim="$VISUAL"
-export EDITOR="$VISUAL"
+
 export BIBINPUTS="$HOME/Library/texmf/bibtex/bib"
 
 fzf --version &> /dev/null || ( git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install)

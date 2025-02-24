@@ -8,7 +8,7 @@ return { -- Autoformat
             "<leader>lf",
             function()
                 local this_buf = vim.fn.bufnr()
-                local result = require("conform").format{
+                local result = require("conform").format {
                     bufnr = this_buf,
                     async = true,
                     lsp_fallback = true,
