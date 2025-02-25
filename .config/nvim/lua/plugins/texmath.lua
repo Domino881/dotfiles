@@ -1,5 +1,6 @@
 return {
     'Domino881/texmath.nvim',
+    lazy = true,
     dependencies = {
         'nvim-treesitter/nvim-treesitter',
     },
