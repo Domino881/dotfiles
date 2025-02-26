@@ -40,6 +40,7 @@ require("lazy").setup {
     require 'plugins.render-markdown',    -- markdown rendered inside neovim
     require 'plugins.git',                -- Git integrations
     require 'plugins.texmath',            -- my clone of mdmath.nvim - previews of tex math
+    require 'plugins.jupyter-kernel',     -- hover / completions from attached kernel
 
     -- Plugins below are imported with little/no extra options
 

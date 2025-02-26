@@ -45,12 +45,12 @@ return { -- LSP Configuration & Plugins
         )
 
         require("mason-lspconfig").setup {
+            automatic_installation = true,
             ensure_installed = {
                 "lua_ls",
-                -- "pylsp",
                 "jedi_language_server",
+                "pyright",
                 "ruff",
-                -- "pyright",
                 "clangd",
             },
             handlers = {
@@ -65,11 +65,18 @@ return { -- LSP Configuration & Plugins
                         settings = {
                             python = { analysis = { autoSearchPaths = false } },
                         },
+                        on_attach = function(client, _)
+                            client.server_capabilities.hoverProvider = false
+                        end
                     })
                 end,
 
                 ["ruff"] = function()
-                    require("lspconfig")["ruff"].setup({})
+                    require("lspconfig")["ruff"].setup({
+                        on_attach = function(client, _)
+                            client.server_capabilities.hoverProvider = false
+                        end
+                    })
                 end,
 
                 ["jedi_language_server"] = function()
@@ -91,11 +98,6 @@ return { -- LSP Configuration & Plugins
                                 build = {
                                     executable = "latexrun",
                                 },
-                                -- latexFormatter = "latexindent",
-                                -- latexindent = {
-                                --     modifyLineBreaks = true,
-                                --     removeBlockLineBreaks = false,
-                                -- }
                             }
                         },
                     })
@@ -154,5 +156,10 @@ return { -- LSP Configuration & Plugins
                 vim.lsp.buf.format({ async = false })
             end
         })
+        -- hover doesn't steal focus
+        vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+            vim.lsp.handlers.hover,
+            { focusable = false }
+        )
     end,
 }

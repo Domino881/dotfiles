@@ -29,3 +29,15 @@ vim.keymap.set("n", "-", "<cmd>e %:h<CR>")
 
 vim.keymap.set("i", "<C-t>", "<Nop>")
 vim.keymap.set("n", "<C-t>", "<Nop>")
+
+-- enter floating window
+vim.keymap.set("n", "<C-h>", function()
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    local config = vim.api.nvim_win_get_config(win)
+    if config.relative == "win" or config.relative == "cursor" then
+      vim.api.nvim_set_current_win(win) -- Move cursor to hover window
+      return
+    end
+  end
+end, { noremap = true, silent = true })
+

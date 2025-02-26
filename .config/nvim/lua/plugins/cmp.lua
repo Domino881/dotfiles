@@ -9,6 +9,7 @@ return { -- Autocompletion
         { 'hrsh7th/cmp-cmdline', event = "CmdlineEnter" },
         'saadparwaiz1/cmp_luasnip',
         'kdheepak/cmp-latex-symbols',
+        'hrsh7th/cmp-nvim-lsp-signature-help',
     },
     opts = function(_, opts)
         local cmp = require 'cmp'
@@ -39,7 +40,9 @@ return { -- Autocompletion
             { name = 'nvim_lsp' },
             { name = 'path' },
             { name = 'buffer' },
+            { name = 'jupyter' },
             { name = 'luasnip' },
+            { name = 'nvim_lsp_signature_help' },
             {
                 name = 'latex_symbols',
                 option = {

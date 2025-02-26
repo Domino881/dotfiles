@@ -12,6 +12,8 @@ return {
             { silent = true, desc = "Molten Show/enter Output" })
         vim.keymap.set("n", "mi", ":MoltenImagePopup<CR>",
             { silent = true, desc = "Molten Image Popup" })
+        vim.keymap.set("n", "md", ":MoltenDeinit<CR>",
+            { silent = true, desc = "Molten Deinit" })
 
         vim.g.molten_image_provider = "image.nvim"
         vim.g.molten_image_location = "float"
