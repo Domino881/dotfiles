@@ -49,7 +49,7 @@ return { -- LSP Configuration & Plugins
             ensure_installed = {
                 "lua_ls",
                 "jedi_language_server",
-                "pyright",
+                "basedpyright",
                 "ruff",
                 "clangd",
             },
@@ -60,16 +60,41 @@ return { -- LSP Configuration & Plugins
                     require('lspconfig')[server_name].setup(server)
                 end,
 
-                ["pyright"] = function()
-                    require("lspconfig")["pyright"].setup({
+                ["basedpyright"] = function()
+                    require("lspconfig")["basedpyright"].setup({
                         settings = {
-                            python = { analysis = { autoSearchPaths = false } },
+                            basedpyright = {
+                                analysis = {
+                                    diagnosticMode = "openFilesOnly",
+                                    typeCheckingMode = "standard",
+                                    stubPath = "/home/dominik/.local/share/stubs",
+                                    inlayHints = {
+                                        callArgumentNames = true
+                                    }
+                                }
+                            }
                         },
                         on_attach = function(client, _)
                             client.server_capabilities.hoverProvider = false
                         end
                     })
                 end,
+
+                -- ["pyright"] = function()
+                --     require("lspconfig")["pyright"].setup({
+                --         settings = {
+                --             python = {
+                --                 analysis = {
+                --                     autoSearchPaths = false,
+                --                     reportMissingModuleSource = false,
+                --                 }
+                --             },
+                --         },
+                --         on_attach = function(client, _)
+                --             client.server_capabilities.hoverProvider = false
+                --         end
+                --     })
+                -- end,
 
                 ["ruff"] = function()
                     require("lspconfig")["ruff"].setup({
