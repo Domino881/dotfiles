@@ -80,22 +80,6 @@ return { -- LSP Configuration & Plugins
                     })
                 end,
 
-                -- ["pyright"] = function()
-                --     require("lspconfig")["pyright"].setup({
-                --         settings = {
-                --             python = {
-                --                 analysis = {
-                --                     autoSearchPaths = false,
-                --                     reportMissingModuleSource = false,
-                --                 }
-                --             },
-                --         },
-                --         on_attach = function(client, _)
-                --             client.server_capabilities.hoverProvider = false
-                --         end
-                --     })
-                -- end,
-
                 ["ruff"] = function()
                     require("lspconfig")["ruff"].setup({
                         on_attach = function(client, _)
@@ -125,12 +109,6 @@ return { -- LSP Configuration & Plugins
                                 },
                             }
                         },
-                    })
-                end,
-
-                ["grammarly"] = function()
-                    require("lspconfig")["grammarly"].setup({
-                        filetypes = { 'txt', 'md', 'tex' },
                     })
                 end,
             },

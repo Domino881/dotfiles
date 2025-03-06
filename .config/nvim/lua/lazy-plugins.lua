@@ -28,7 +28,7 @@ require("lazy").setup {
     require 'plugins.harpoon',            -- jumping between project files
     require 'plugins.ufo-fold',           -- nicer looking folds
     require 'plugins.treesitter-context', -- context line for long functions
-    require 'plugins.ult-autopair',       -- automatic brackets
+    require 'plugins.nvim-autopairs',     -- automatic brackets
     require 'plugins.undotree',           -- for viewing undo history
     require 'plugins.luasnip',            -- snippets
     require 'plugins.molten-ipython',     -- jupyter-like python execution
@@ -41,6 +41,7 @@ require("lazy").setup {
     require 'plugins.git',                -- Git integrations
     require 'plugins.texmath',            -- my clone of mdmath.nvim - previews of tex math
     require 'plugins.jupyter-kernel',     -- hover / completions from attached kernel
+    {"let-def/texpresso.vim", init = function() require('texpresso').texpresso_path = "/home/dominik/Downloads/texpresso/build/texpresso" end},
 
     -- Plugins below are imported with little/no extra options
 

@@ -55,5 +55,7 @@ return {
                 require "gitsigns".nav_hunk('prev')
             end
         end, { desc = "Previous Git Hunk" })
+
+        vim.keymap.set('n', 'gs', "<cmd>Gitsigns<CR>", { desc = "Gitsigns commands" })
     end,
 }

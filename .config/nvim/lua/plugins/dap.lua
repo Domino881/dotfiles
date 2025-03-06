@@ -5,6 +5,7 @@ return {
         'rcarriga/nvim-dap-ui',
     },
     lazy = true,
+    ft = { 'cpp' },
     init = function()
         require("overseer").enable_dap()
         local dap, dapui = require("dap"), require("dapui")

@@ -11,7 +11,7 @@ return {
         },
         init = function()
             require('luasnip.loaders.from_lua').load {
-                paths = { '~/.config/nvim/LuaSnip/' },
+                paths = { '~/.config/nvim/LuaSnip/lua' },
             }
         end,
     },

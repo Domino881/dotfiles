@@ -35,7 +35,8 @@ return { -- Autoformat
         formatters_by_ft = {
             lua = { "stylua" },
             python = { "ruff_format" },
-            tex = { "tex-fmt" },
+            tex = { "tex-fmt", "prettier" },
+            ["_"] = { "prettier" },
         },
 
         formatters = {
@@ -43,14 +44,13 @@ return { -- Autoformat
                 prepend_args = {
                     "--plugin", "prettier-plugin-latex",
                     "--print-width", "75",
-                    "--use-tabs", "false"
+                    "--use-tabs", "false",
+                    "--tab-width", "4",
                 },
             },
             latexindent = {
                 prepend_args = {
                     "-m",
-                    "-l",
-                    "/home/dominik/Documents/latexindent.yaml",
                 }
             },
             ["tex-fmt"] = {

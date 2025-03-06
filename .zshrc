@@ -61,6 +61,7 @@ alias ls='ls --color -ah'
 alias icat='kitten icat'
 alias pdf2htmlEX='docker run -ti --rm -v "`pwd`":/pdf -w /pdf pdf2htmlex/pdf2htmlex:0.18.8.rc2-master-20200820-ubuntu-20.04-x86_64'
 alias vim="$VISUAL"
+alias rm="trash-put"
 
 export BIBINPUTS="$HOME/Library/texmf/bibtex/bib"
 

@@ -98,5 +98,7 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
     callback = function(ev)
         vim.cmd([[setlocal spell]])
         vim.cmd([[hi SpellBad gui=undercurl guisp=red]])
+        vim.wo.foldmethod = 'marker'
+        vim.cmd([[NoMatchParen]])
     end
 })
