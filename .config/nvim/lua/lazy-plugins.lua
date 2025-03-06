@@ -47,7 +47,7 @@ require("lazy").setup {
     { "let-def/texpresso.vim",
         init = function()
             require('texpresso').texpresso_path =
-            "~/Downloads/texpresso/build/texpresso"
+            vim.fn.expand("$HOME/Downloads/texpresso/build/texpresso")
         end, },                                      -- instant LaTeX preview
     { 'numToStr/Comment.nvim',
         config = true, },                            -- commenting of lines

@@ -67,7 +67,7 @@ return { -- LSP Configuration & Plugins
                                 analysis = {
                                     diagnosticMode = "openFilesOnly",
                                     typeCheckingMode = "standard",
-                                    stubPath = "/home/dominik/.local/share/stubs",
+                                    stubPath = vim.fn.expand("$HOME/.local/share/stubs"),
                                     inlayHints = {
                                         callArgumentNames = true
                                     }
