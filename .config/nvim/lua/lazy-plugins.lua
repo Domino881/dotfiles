@@ -41,10 +41,14 @@ require("lazy").setup {
     require 'plugins.git',                -- Git integrations
     require 'plugins.texmath',            -- my clone of mdmath.nvim - previews of tex math
     require 'plugins.jupyter-kernel',     -- hover / completions from attached kernel
-    {"let-def/texpresso.vim", init = function() require('texpresso').texpresso_path = "/home/dominik/Downloads/texpresso/build/texpresso" end},
 
     -- Plugins below are imported with little/no extra options
 
+    { "let-def/texpresso.vim",
+        init = function()
+            require('texpresso').texpresso_path =
+            "~/Downloads/texpresso/build/texpresso"
+        end, },                                      -- instant LaTeX preview
     { 'numToStr/Comment.nvim',
         config = true, },                            -- commenting of lines
     { 'nvim-treesitter/nvim-treesitter-textobjects', -- vim motions for functions/classes
