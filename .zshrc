@@ -55,8 +55,10 @@ _zsh_cli_fg() { fg; }
 zle -N _zsh_cli_fg
 bindkey '^Z' _zsh_cli_fg
 
+export TMUX_CONF="$HOME/.config/tmux/.tmux.conf"
+
 # Aliases
-alias tmux='tmux -u'
+alias tmux="tmux -f ~/.config/tmux/.tmux.conf"
 alias ls='ls --color -ah'
 alias icat='kitten icat'
 alias pdf2htmlEX='docker run -ti --rm -v "`pwd`":/pdf -w /pdf pdf2htmlex/pdf2htmlex:0.18.8.rc2-master-20200820-ubuntu-20.04-x86_64'
@@ -77,3 +79,4 @@ source ~/.fzf.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

@@ -43,7 +43,7 @@ return { -- Autoformat
             prettier = {
                 prepend_args = {
                     "--plugin", "prettier-plugin-latex",
-                    "--print-width", "75",
+                    "--print-width", "70",
                     "--use-tabs", "false",
                     "--tab-width", "4",
                 },
@@ -56,7 +56,7 @@ return { -- Autoformat
             ["tex-fmt"] = {
                 prepend_args = {
                     "--tabsize", "4",
-                    "--wraplen", "85",
+                    "--wraplen", "70",
                 }
             }
         }

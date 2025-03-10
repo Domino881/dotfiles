@@ -96,9 +96,10 @@ vim.opt.spelllang = "en_gb"
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
     pattern = { "*.tex", "*.md" },
     callback = function(ev)
-        vim.cmd([[setlocal spell]])
         vim.cmd([[hi SpellBad gui=undercurl guisp=red]])
         vim.wo.foldmethod = 'marker'
-        vim.cmd([[NoMatchParen]])
+        vim.opt_local.spell = true
+        vim.opt_local.number = false
+        vim.opt_local.relativenumber = false
     end
 })
