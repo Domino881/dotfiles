@@ -2,21 +2,19 @@ return { -- Autoformat
     "stevearc/conform.nvim",
     lazy = true,
     event = "VeryLazy",
-    dependencies = { 'j-hui/fidget.nvim' },
+    dependencies = { "j-hui/fidget.nvim" },
     keys = {
         {
             "<leader>lf",
             function()
                 local this_buf = vim.fn.bufnr()
-                local result = require("conform").format {
+                local result = require("conform").format({
                     bufnr = this_buf,
                     async = true,
                     lsp_fallback = true,
-                }
+                })
                 if result then
-                    require("fidget").notify(
-                        "Formatted."
-                    )
+                    require("fidget").notify("Formatted.")
                 else
                     require("fidget").notify("Formatting failed.")
                 end
@@ -40,25 +38,41 @@ return { -- Autoformat
         },
 
         formatters = {
+            stylua = {
+                append_args = {
+                    "--indent-width",
+                    "4",
+                    "--column-width",
+                    "80",
+                    "--indent-type",
+                    "Spaces",
+                },
+            },
             prettier = {
                 prepend_args = {
-                    "--plugin", "prettier-plugin-latex",
-                    "--print-width", "70",
-                    "--use-tabs", "false",
-                    "--tab-width", "4",
+                    "--plugin",
+                    "prettier-plugin-latex",
+                    "--print-width",
+                    "70",
+                    "--use-tabs",
+                    "false",
+                    "--tab-width",
+                    "4",
                 },
             },
             latexindent = {
                 prepend_args = {
                     "-m",
-                }
+                },
             },
             ["tex-fmt"] = {
                 prepend_args = {
-                    "--tabsize", "4",
-                    "--wraplen", "70",
-                }
-            }
-        }
+                    "--tabsize",
+                    "4",
+                    "--wraplen",
+                    "70",
+                },
+            },
+        },
     },
 }
