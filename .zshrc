@@ -50,6 +50,29 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
+# List recent nvim files
+_list_oldfiles() {
+    # Get the oldfiles list from Neovim
+    local oldfiles=($(nvim -u NONE --headless +'lua io.write(table.concat(vim.v.oldfiles, "\n") .. "\n")' +qa))
+    # Filter invalid paths or files not found
+    local valid_files=()
+    for file in "${oldfiles[@]}"; do
+        if [[ -f "$file" ]]; then
+            valid_files+=("$file")
+        fi
+    done
+    # Use fzf to select from valid files
+    local files=($(printf "%s\n" "${valid_files[@]}" | \
+        grep -v '\[.*' | \
+        fzf --multi \
+        --preview 'bat -n --color=always --line-range=:500 {} 2>/dev/null || echo "Error previewing file"' \
+        --layout=default))
+
+  [[ ${#files[@]} -gt 0 ]] && nvim "${files[@]}"
+}
+zle -N _list_oldfiles
+bindkey '^f' _list_oldfiles
+
 # Ctrl-z to fg a suspended process
 _zsh_cli_fg() { fg; }
 zle -N _zsh_cli_fg
@@ -69,14 +92,17 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export BIBINPUTS="$HOME/Library/texmf/bibtex/bib"
 
 fzf --version &> /dev/null || ( git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install)
-# Disable showing hidden dirs on alt-c
-export FZF_ALT_C_OPTS="--walker dir --walker-skip .git,node_modules,target
-  --preview 'tree -C {}'"
-export FZF_CTRL_T_OPTS="--walker-skip timeshift,.wine,.steam,.git,node_modules,target"
+
+export FZF_DEFAULT_COMMAND="fdfind --hidden --strip-cwd-prefix --exclude .git,.wine,.steam,node_modules,timeshift"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fdfind --type=d --hidden --strip-cwd-prefix --exclude .git,node_modules,.steam,.wine,timeshift"
+
+export FZF_ALT_C_OPTS="--preview 'tree -C {} -L 1'"
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always -n --line-range :500 {}'"
+
 # Shell integrations
-source ~/.fzf.zsh 
+eval "$(fzf --zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

@@ -7,7 +7,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Setup the plugin manager
-require("lazy").setup {
+require("lazy").setup({
     defaults = { lazy = true },
     lockfile = vim.fn.stdpath("cache") .. "/lazy-lock.json",
 
@@ -57,11 +57,13 @@ require("lazy").setup {
         main = 'ibl' },
     { 'stevearc/stickybuf.nvim',                     -- don't open files in quickfix windows
         config = true },
-    { 'iberianpig/ranger-explorer.vim',
-        dependencies = { 'rbgrouleff/bclose.vim' } },
     'LunarVim/bigfile.nvim',    -- disable features in big files
     'romainl/vim-cool',         -- auto :nohl
     'farmergreg/vim-lastplace', -- opens files at the last place
     'tpope/vim-surround',       -- bracket / quote vim motions
     'stevearc/dressing.nvim',   -- improved neovim ui
-}
+}, {
+    rocks = {
+        hererocks = true,  -- recommended if you do not have global installation of Lua 5.1.
+    }
+})

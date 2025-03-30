@@ -12,7 +12,7 @@ local rep = require("luasnip.extras").rep
 local function title_to_label(args, parent, user_args)
     local title_text = args[1][1]
     -- Use text form of equations
-    title_text = string.gsub(title_text, "\\texorpdfstring{$.*$}{(.+)}", "%1")
+    title_text = string.gsub(title_text, "\\texorpdfstring{.+}{(.+)}", "%1")
     -- Remove spaces
     title_text = string.gsub(title_text, "[ ^\\_]", "")
     return title_text

@@ -4,6 +4,7 @@ return{
     version = "1.1.0",
     opts = {
         backend = "kitty",
+        processor = "magick_rock",
         integrations = {
             markdown = { enabled = true },
         },
@@ -14,5 +15,5 @@ return{
         window_overlap_clear_enabled = false, -- toggles images when windows are overlapped
         window_overlap_clear_ft_ignore = { "cmp_menu", "cmp_docs", "" },
         tmux_show_only_in_active_window = true,
-    }
+    },
 }
