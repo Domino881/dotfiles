@@ -34,6 +34,7 @@ return { -- Autoformat
             lua = { "stylua" },
             python = { "ruff_format" },
             tex = { "tex-fmt", "prettier" },
+            cpp = { "clang-format" },
             ["_"] = { "prettier" },
         },
 

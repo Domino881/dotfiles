@@ -101,5 +101,6 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
         vim.opt_local.spell = true
         vim.opt_local.number = false
         vim.opt_local.relativenumber = false
+        vim.opt_local.textwidth = 78
     end
 })

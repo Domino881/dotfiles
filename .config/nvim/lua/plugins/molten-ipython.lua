@@ -4,15 +4,15 @@ return {
     build = ":UpdateRemotePlugins",
     dependencies = { "3rd/image.nvim" },
     init = function()
-        vim.keymap.set("v", "<C-m>e", ":<C-u>MoltenEvaluateVisual<CR>",
+        vim.keymap.set("v", "me", ":<C-u>MoltenEvaluateVisual<CR>",
             { silent = true, desc = "Molten Evaluate Cell" })
-        vim.keymap.set("n", "<C-m>e", ":MoltenReevaluateCell<CR>",
+        vim.keymap.set("n", "me", ":MoltenReevaluateCell<CR>",
             { silent = true, desc = "Molten Evaluate Cell" })
-        vim.keymap.set("n", "<C-m>s", ":noautocmd MoltenEnterOutput<CR>",
+        vim.keymap.set("n", "ms", ":noautocmd MoltenEnterOutput<CR>",
             { silent = true, desc = "Molten Show/enter Output" })
-        vim.keymap.set("n", "<C-m>i", ":MoltenImagePopup<CR>",
+        vim.keymap.set("n", "mi", ":MoltenImagePopup<CR>",
             { silent = true, desc = "Molten Image Popup" })
-        vim.keymap.set("n", "<C-m>d", ":MoltenDeinit<CR>",
+        vim.keymap.set("n", "md", ":MoltenDeinit<CR>",
             { silent = true, desc = "Molten Deinit" })
 
         vim.g.molten_image_provider = "image.nvim"

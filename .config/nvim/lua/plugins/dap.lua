@@ -1,11 +1,11 @@
 return {
-    'mfussenegger/nvim-dap',
+    "mfussenegger/nvim-dap",
     dependencies = {
-        'nvim-neotest/nvim-nio',
-        'rcarriga/nvim-dap-ui',
+        "nvim-neotest/nvim-nio",
+        "rcarriga/nvim-dap-ui",
     },
     lazy = true,
-    ft = { 'cpp' },
+    ft = { "cpp" },
     init = function()
         require("overseer").enable_dap()
         local dap, dapui = require("dap"), require("dapui")
@@ -23,32 +23,36 @@ return {
         end
         local api = vim.api
         local keymap_restore = {}
-        dap.listeners.after['event_initialized']['me'] = function()
+        dap.listeners.after["event_initialized"]["me"] = function()
             for _, buf in pairs(api.nvim_list_bufs()) do
-                local keymaps = api.nvim_buf_get_keymap(buf, 'n')
+                local keymaps = api.nvim_buf_get_keymap(buf, "n")
                 for _, keymap in pairs(keymaps) do
                     if keymap.lhs == "K" then
                         table.insert(keymap_restore, keymap)
-                        api.nvim_buf_del_keymap(buf, 'n', 'K')
+                        api.nvim_buf_del_keymap(buf, "n", "K")
                     end
                 end
             end
             api.nvim_set_keymap(
-                'n', 'K', '<Cmd>lua require("dap.ui.widgets").hover()<CR>', { silent = true })
+                "n",
+                "K",
+                '<Cmd>lua require("dap.ui.widgets").hover()<CR>',
+                { silent = true }
+            )
         end
 
-        dap.listeners.after['event_terminated']['me'] = function()
-            for _, keymap in pairs(keymap_restore) do
-                api.nvim_buf_set_keymap(
-                    keymap.buffer,
-                    keymap.mode,
-                    keymap.lhs,
-                    keymap.rhs,
-                    { silent = keymap.silent == 1 }
-                )
-            end
-            keymap_restore = {}
-        end
+        -- dap.listeners.after["event_terminated"]["me"] = function()
+        --     for _, keymap in pairs(keymap_restore) do
+        --         api.nvim_buf_set_keymap(
+        --             keymap.buffer,
+        --             keymap.mode,
+        --             keymap.lhs,
+        --             keymap.rhs,
+        --             { silent = keymap.silent == 1 }
+        --         )
+        --     end
+        --     keymap_restore = {}
+        -- end
 
         vim.cmd([[highlight DapUIStopNC guibg=#3c3836]])
         vim.cmd([[highlight DapUIStartNC guibg=#3c3836]])
@@ -60,29 +64,46 @@ return {
         vim.cmd([[highlight DapUIStepOverNC guibg=#3c3836]])
     end,
     config = function()
-        local dap = require"dap"
+        local dap = require("dap")
         dap.adapters.codelldb = {
             type = 'server',
             port = "${port}",
             executable = {
-                command = 'codelldb',
+                command = '/home/linuxbrew/.linuxbrew/bin/lldb-dap',
                 args = {"--port", "${port}"},
             }
         }
+        -- dap.adapters.lldb = {
+        --     type = "executable",
+        --     command = "/home/linuxbrew/.linuxbrew/bin/lldb-dap",
+        --     name = "lldb",
+        -- }
         dap.adapters.gdb = {
             type = "executable",
             command = "gdb",
-            args = { "--interpreter=dap", "--eval-command", "set print pretty on" }
+            args = {
+                "--interpreter=dap",
+                "--eval-command",
+                "set print pretty on",
+            },
         }
         dap.configurations.cpp = {
             {
-                name = "Compile C++ project with Makefile",
+
+                name = "Launch",
                 type = "codelldb",
                 request = "launch",
-                preLaunchTask = "make main",
-                postLaunchTask = "make clean",
-                program = "bin/test",
-            }
+                program = function()
+                    return vim.fn.input(
+                        "Path to executable: ",
+                        vim.fn.getcwd() .. "/",
+                        "file"
+                    )
+                end,
+                cwd = "${workspaceFolder}",
+                stopOnEntry = false,
+                args = {},
+            },
         }
     end,
 }

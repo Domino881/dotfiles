@@ -64,10 +64,12 @@ return {
             [[
             \begin{figure}
                 <>
+                \caption{<>}
+                \label{<>}
             \end{figure}
           ]],
             -- The insert node is placed in the <> angle brackets
-            { i(1) },
+            { i(1), i(2), i(3) },
             { delimiters = "<>" })
     ),
 
@@ -143,4 +145,22 @@ return {
             { i(1), f(title_to_label, { 1 }), i(0), f(title_to_label, { 1 }) },
             { delimiters = "<>" })
     ),
+
+    ls.snippet(
+        { trig = "BWR", dscr = "A LaTeX wrapfigure environment", snippetType = "autosnippet" },
+        fmt(
+            [[
+            \begin{wrapfigure}{r}{0.5\textwidth}
+                \begin{center}
+                    <>
+                \end{center}
+                \caption{<>}
+                \label{<>}
+            \end{wrapfirure}
+          ]],
+            -- The insert node is placed in the <> angle brackets
+            { i(1), i(2), i(3) },
+            { delimiters = "<>" })
+    ),
+
 }

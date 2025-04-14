@@ -6,6 +6,7 @@ return {
         vim.g.vimtex_view_enabled = true
         vim.g.vimtex_view_method = 'zathura'
         vim.g.vimtex_mappings_enabled = false
+        vim.g.vimtex_imaps_enabled = false
         vim.g.vimtex_syntax_enabled = false
         vim.g.vimtex_quickfix_open_on_warning = 0
         vim.keymap.set('n',
@@ -17,6 +18,9 @@ return {
         vim.keymap.set('n',
             '<leader>tv', vim.cmd.VimtexView,
             { desc = 'VimTex View' })
+        vim.keymap.set('n',
+            '<leader>tt', vim.cmd.VimtexTocToggle,
+            { desc = 'VimTex Toggle Table of Contents' })
 
         local augroup = vim.api.nvim_create_augroup("VimtexGroup", { clear = true })
         vim.api.nvim_create_autocmd("User", {

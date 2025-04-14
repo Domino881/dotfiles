@@ -24,3 +24,7 @@ vim.keymap.set("n", "-", "<cmd>e %:h<CR>")
 
 vim.keymap.set("i", "<C-t>", "<Nop>")
 vim.keymap.set("n", "<C-t>", "<Nop>")
+
+vim.keymap.set("n", "<F5>", ":OverseerRestartLast<CR>")
+vim.keymap.set("n", "<F6>", ":OverseerRun<CR>")
+vim.keymap.set("n", "<F7>", ":OverseerToggle<CR>")

@@ -4,7 +4,24 @@ return {
         { "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
         "williamboman/mason-lspconfig.nvim",
         "WhoIsSethDaniel/mason-tool-installer.nvim",
-        { "j-hui/fidget.nvim", config = true },
+        {
+            "j-hui/fidget.nvim",
+            opts = {
+                progress = {
+                    poll_rate = 5,
+                    suppress_on_insert = true, -- Suppress new messages while in insert mode
+                    ignore_done_already = true, -- Ignore new tasks that are already complete
+                    ignore_empty_message = false, -- Ignore new tasks that don't contain a message
+                    display = {
+                        render_limit = 1,
+                        done_ttl = 0.8,
+                    },
+                },
+                notification = {
+                    override_vim_notify = true,
+                }
+            },
+        },
         { "folke/neodev.nvim", config = true }, -- Lua LSP for Neovim config
     },
     config = function()
@@ -33,6 +50,7 @@ return {
                 end,
                 ["lua_ls"] = function()
                     require("lspconfig")["lua_ls"].setup({
+                        capabilities = capabilies,
                         settings = {
                             Lua = {
                                 format = {
@@ -45,6 +63,7 @@ return {
 
                 basedpyright = function()
                     require("lspconfig").basedpyright.setup({
+                        capabilities = capabilies,
                         settings = {
                             basedpyright = {
                                 analysis = {
@@ -67,6 +86,7 @@ return {
 
                 ruff = function()
                     require("lspconfig")["ruff"].setup({
+                        capabilities = capabilies,
                         on_attach = function(client, _)
                             client.server_capabilities.renameProvider = false
                         end,
@@ -75,6 +95,7 @@ return {
 
                 ["jedi_language_server"] = function()
                     require("lspconfig").jedi_language_server.setup({
+                        capabilities = capabilies,
                         init_options = {
                             codeAction = {
                                 nameExtractVariable = "Extract variable",
@@ -90,10 +111,25 @@ return {
 
                 texlab = function()
                     require("lspconfig")["texlab"].setup({
+                        capabilities = capabilies,
                         settings = {
                             texlab = {
                                 build = {
                                     executable = "latexrun",
+                                },
+                            },
+                        },
+                    })
+                end,
+
+                ltex = function()
+                    require("lspconfig").ltex.setup({
+                        capabilities = capabilies,
+                        settings = {
+                            ltex = {
+                                language = "en-GB",
+                                disabledRules = {
+                                    ["en-GB"] = { "OXFORD_SPELLING_Z_NOT_S" },
                                 },
                             },
                         },

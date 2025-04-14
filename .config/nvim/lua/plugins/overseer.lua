@@ -1,6 +1,6 @@
 return {
-    'stevearc/overseer.nvim',
-    dependencies = { 'stevearc/dressing.nvim' },
+    "stevearc/overseer.nvim",
+    dependencies = { "stevearc/dressing.nvim" },
     lazy = true,
     keys = { "<F5>", "<F6>" },
     init = function()
@@ -13,9 +13,27 @@ return {
                 overseer.run_action(tasks[1], "restart")
             end
         end, {})
-        vim.keymap.set("n", "<F5>", ":OverseerRestartLast<CR>")
-        vim.keymap.set("n", "<F6>", ":OverseerRun<CR>")
-        vim.keymap.set("n", "<F7>", ":OverseerToggle<CR>")
+        require("overseer").register_template({
+            name = "Run python file",
+            builder = function(params)
+                return {
+                    cmd = { "python" },
+                    args = { vim.fn.expand("%") },
+                    name = "",
+                    cwd = ".",
+                    env = {},
+                    components = { "default" },
+                    metadata = {},
+                }
+            end,
+            -- Optional fields
+            tags = {},
+            params = {},
+            priority = 50,
+            condition = {
+                filetype = { "python" },
+            },
+        })
     end,
     opts = {
         -- Template modules to load
