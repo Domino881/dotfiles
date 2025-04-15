@@ -21,7 +21,8 @@ require("lazy").setup({
     require 'plugins.telescope',          -- search utility
     require 'plugins.which-key',          -- shows hints for keymaps
     require 'plugins.lsp',                -- errors / linting of code
-    require 'plugins.cmp',                -- autocompletion
+    require 'plugins.cmp',                -- autocompletion (option 1)
+    require 'plugins.blink-cmp',          -- autocompletion (option 2)
     require 'plugins.conform',            -- auto formatting of code
     require 'plugins.alpha',              -- home screen
     require 'plugins.gitsigns',           -- git diff lines in signcolumn
@@ -41,7 +42,6 @@ require("lazy").setup({
     require 'plugins.git',                -- Git integrations
     require 'plugins.texmath',            -- my clone of mdmath.nvim - previews of tex math
     require 'plugins.jupyter-kernel',     -- hover / completions from attached kernel
-    -- require 'plugins.ltex-ls',            -- grammar language server
 
     -- Plugins below are imported with little/no extra options
     { "let-def/texpresso.vim",

@@ -15,7 +15,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
         'nvim-telescope/telescope-ui-select.nvim',
         'nvim-tree/nvim-web-devicons',
         'nvim-telescope/telescope-bibtex.nvim',
-        'benfowler/telescope-luasnip.nvim',
+        -- 'benfowler/telescope-luasnip.nvim',
     },
     init = function()
         local builtin = require 'telescope.builtin'
@@ -95,12 +95,12 @@ return { -- Fuzzy Finder (files, lsp, etc)
             },
             load_extension = {
                 "bibtex",
-                "luasnip",
+                -- "luasnip",
             },
             extensions = {
-                luasnip = {
-                    previewer = false,
-                },
+                -- luasnip = {
+                --     previewer = false,
+                -- },
                 bibtex = {
                     depth = 1,
                     -- Depth for the *.bib file

@@ -11,7 +11,10 @@ return {
         },
         init = function()
             require("luasnip.loaders.from_lua").load({
-                paths = { "~/.config/nvim/LuaSnip/lua" },
+                paths = { "~/.config/nvim/snippets/lua/" },
+            })
+            require("luasnip.loaders.from_vscode").lazy_load({
+                paths = { "~/.config/nvim/snippets/vscode/friendly-snippets" },
             })
         end,
     },

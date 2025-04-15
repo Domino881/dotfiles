@@ -19,7 +19,7 @@ return {
                 },
                 notification = {
                     override_vim_notify = true,
-                }
+                },
             },
         },
         { "folke/neodev.nvim", config = true }, -- Lua LSP for Neovim config
@@ -30,7 +30,8 @@ return {
         capabilities = vim.tbl_deep_extend(
             "force",
             capabilities,
-            require("cmp_nvim_lsp").default_capabilities()
+            -- require("cmp_nvim_lsp").default_capabilities()
+            require('blink.cmp').get_lsp_capabilities({}, false)
         )
 
         require("mason-lspconfig").setup({
