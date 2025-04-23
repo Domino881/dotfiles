@@ -35,6 +35,7 @@ return { -- Autoformat
             python = { "ruff_format" },
             tex = { "tex-fmt", "prettier" },
             cpp = { "clang-format" },
+            typst = { "typstyle" },
             ["_"] = { "prettier" },
         },
 

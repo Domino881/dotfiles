@@ -98,9 +98,10 @@ return {
         { trig = "SEC", dscr = "A LaTeX section", snippetType = "autosnippet" },
         fmt(
             [[
-            \section{<>}\label{sec:<>} % {{{
+            \section{<>}
+            \label{sec:<>}
                 <>
-            % End section <> }}}
+            % End section <>
           ]],
             -- The insert node is placed in the <> angle brackets
             { i(1), f(title_to_label, { 1 }), i(0), f(title_to_label, { 1 }) },
@@ -111,9 +112,10 @@ return {
         { trig = "SSEC", dscr = "A LaTeX subsection", snippetType = "autosnippet" },
         fmt(
             [[
-            \subsection{<>}\label{sec:<>} % {{{
+            \subsection{<>}
+            \label{sec:<>}
                 <>
-            % End subsection <> }}}
+            % End subsection <>
           ]],
             -- The insert node is placed in the <> angle brackets
             { i(1), f(title_to_label, { 1 }), i(0), f(title_to_label, { 1 }) },
@@ -124,9 +126,9 @@ return {
         { trig = "SSEC", dscr = "A LaTeX subsubsection", snippetType = "autosnippet" },
         fmt(
             [[
-            \subsubsection{<>}\label{sec:<>} % {{{
+            \subsubsection{<>}\label{sec:<>}
                 <>
-            % End subsubsection <> }}}
+            % End subsubsection <>
           ]],
             -- The insert node is placed in the <> angle brackets
             { i(1), f(title_to_label, { 1 }), i(0), f(title_to_label, { 1 }) },

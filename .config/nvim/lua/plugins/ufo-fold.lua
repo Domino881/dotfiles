@@ -1,6 +1,11 @@
 return {
-    'kevinhwang91/nvim-ufo',
-    lazy = true,
-    dependencies = { 'kevinhwang91/promise-async' },
-    config = true,
+    "kevinhwang91/nvim-ufo",
+    lazy = false,
+    dependencies = { "kevinhwang91/promise-async" },
+    main = "ufo",
+    opts = {
+        provider_selector = function(bufnr, filetype, buftype)
+            return {"treesitter", "indent"}
+        end,
+    },
 }

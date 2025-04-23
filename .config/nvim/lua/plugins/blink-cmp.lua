@@ -2,7 +2,11 @@ return {
     "saghen/blink.cmp",
     -- use a release tag to download pre-built binaries
     version = "1.*",
-    dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
+    dependencies = {
+        { "L3MON4D3/LuaSnip", version = "v2.*" },
+        -- compatibility layer for using nvim-cmp sources (like jupyter)
+        { "saghen/blink.compat", lazy = true, config = true },
+    },
 
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
@@ -48,7 +52,26 @@ return {
             -- 'prefix' will fuzzy match on the text before the cursor
             -- 'full' will fuzzy match on the text before _and_ after the cursor
             keyword = { range = "full" },
-            menu = { auto_show = true },
+            menu = {
+                auto_show = function(ctx, item)
+                    if
+                        vim.bo.filetype == "markdown"
+                        or vim.bo.filetype == "tex"
+                        or vim.bo.filetype == "typst"
+                    then
+                        return false
+                    end
+                    return true
+                end,
+                border = "padded",
+                draw = {
+                    columns = {
+                        { "kind_icon" },
+                        { "label", "label_description", gap = 1 },
+                        { "source_name" },
+                    },
+                },
+            },
             ghost_text = { enabled = true },
         },
 
@@ -58,6 +81,12 @@ return {
         -- elsewhere in your config, without redefining it, due to `opts_extend`
         sources = {
             default = { "lsp", "path", "snippets", "buffer" },
+            providers = {
+                jupyter = {
+                    name = "jupyter",
+                    module = "blink.compat.source",
+                },
+            },
         },
 
         -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance

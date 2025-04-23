@@ -49,6 +49,9 @@ return {
             group = augroup,
             callback = function()
                 vim.g.vimtex_compiler_status = 0
+                if vim.bo.filetype == "markdown" then
+                    vim.g.vimtex_syntax_conceal_disable = 0
+                end
             end,
         })
         vim.api.nvim_create_autocmd("User", {

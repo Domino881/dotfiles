@@ -44,6 +44,12 @@ require("lazy").setup({
     require 'plugins.jupyter-kernel',     -- hover / completions from attached kernel
 
     -- Plugins below are imported with little/no extra options
+    {
+        'chomosuke/typst-preview.nvim',
+        ft = 'typst',
+        version = '1.*',
+        config = true,
+    },
     { "let-def/texpresso.vim",
         init = function()
             require('texpresso').texpresso_path =

@@ -31,7 +31,15 @@ return {
             "force",
             capabilities,
             -- require("cmp_nvim_lsp").default_capabilities()
-            require('blink.cmp').get_lsp_capabilities({}, false)
+            require("blink.cmp").get_lsp_capabilities({}, false),
+            {
+                textDocument = {
+                    foldingRange = {
+                        dynamicRegistration = false,
+                        lineFoldingOnly = true,
+                    },
+                },
+            }
         )
 
         require("mason-lspconfig").setup({
@@ -51,7 +59,7 @@ return {
                 end,
                 ["lua_ls"] = function()
                     require("lspconfig")["lua_ls"].setup({
-                        capabilities = capabilies,
+                        capabilities = capabilities,
                         settings = {
                             Lua = {
                                 format = {
@@ -64,7 +72,7 @@ return {
 
                 basedpyright = function()
                     require("lspconfig").basedpyright.setup({
-                        capabilities = capabilies,
+                        capabilities = capabilities,
                         settings = {
                             basedpyright = {
                                 analysis = {
@@ -87,7 +95,7 @@ return {
 
                 ruff = function()
                     require("lspconfig")["ruff"].setup({
-                        capabilities = capabilies,
+                        capabilities = capabilities,
                         on_attach = function(client, _)
                             client.server_capabilities.renameProvider = false
                         end,
@@ -96,7 +104,7 @@ return {
 
                 ["jedi_language_server"] = function()
                     require("lspconfig").jedi_language_server.setup({
-                        capabilities = capabilies,
+                        capabilities = capabilities,
                         init_options = {
                             codeAction = {
                                 nameExtractVariable = "Extract variable",
@@ -112,7 +120,8 @@ return {
 
                 texlab = function()
                     require("lspconfig")["texlab"].setup({
-                        capabilities = capabilies,
+                        capabilities = capabilities,
+                        filetypes = { "markdown", "tex" },
                         settings = {
                             texlab = {
                                 build = {
@@ -125,7 +134,8 @@ return {
 
                 ltex = function()
                     require("lspconfig").ltex.setup({
-                        capabilities = capabilies,
+                        capabilities = capabilities,
+                        filetypes = { "markdown", "tex" },
                         settings = {
                             ltex = {
                                 language = "en-GB",
@@ -133,6 +143,16 @@ return {
                                     ["en-GB"] = { "OXFORD_SPELLING_Z_NOT_S" },
                                 },
                             },
+                        },
+                    })
+                end,
+
+                tinymist = function()
+                    require("lspconfig").tinymist.setup({
+                        capabilities = capabilities,
+                        settings = {
+                            exportPdf = "onSave",
+                            formatterMode = "typstyle",
                         },
                     })
                 end,

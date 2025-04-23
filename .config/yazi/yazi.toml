@@ -69,13 +69,16 @@ openwith = [
 openpdf = [
     { run = 'sioyek "$@" &> /dev/null', orphan = true, block = false, desc = "Open PDF", for = "linux" },
 ]
+editdetached = [
+	{ run = 'kitty zsh --login -c "${EDITOR} $@"', desc = "Edit in new window", block = false, for = "unix" },
+]
 
 [open]
 rules = [
 	# Folder
 	{ name = "*/", use = [ "edit", "open", "reveal" ] },
 	# Text
-	{ mime = "text/*", use = [ "edit", "dragdrop", "openwith" ] },
+	{ mime = "text/*", use = [ "edit", "editdetached", "dragdrop", "openwith" ] },
 	# Image
 	{ mime = "image/*", use = [ "open", "dragdrop", "openwith" ] },
 	# Media
