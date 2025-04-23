@@ -12,35 +12,16 @@ return {
                     suppress_on_insert = true, -- Suppress new messages while in insert mode
                     ignore_done_already = true, -- Ignore new tasks that are already complete
                     ignore_empty_message = false, -- Ignore new tasks that don't contain a message
-                    display = {
-                        render_limit = 1,
-                        done_ttl = 0.8,
-                    },
                 },
                 notification = {
                     override_vim_notify = true,
                 },
             },
         },
-        { "folke/neodev.nvim", config = true }, -- Lua LSP for Neovim config
+        { "folke/lazydev.nvim", config = true }, -- Lua LSP for Neovim config
     },
     config = function()
         require("mason").setup()
-        local capabilities = vim.lsp.protocol.make_client_capabilities()
-        capabilities = vim.tbl_deep_extend(
-            "force",
-            capabilities,
-            -- require("cmp_nvim_lsp").default_capabilities()
-            require("blink.cmp").get_lsp_capabilities({}, false),
-            {
-                textDocument = {
-                    foldingRange = {
-                        dynamicRegistration = false,
-                        lineFoldingOnly = true,
-                    },
-                },
-            }
-        )
 
         require("mason-lspconfig").setup({
             automatic_installation = true,
@@ -53,109 +34,73 @@ return {
             },
             handlers = {
                 function(server_name)
-                    require("lspconfig")[server_name].setup({
-                        capabilities = capabilities,
-                    })
+                    vim.lsp.enable(server_name)
                 end,
-                ["lua_ls"] = function()
-                    require("lspconfig")["lua_ls"].setup({
-                        capabilities = capabilities,
-                        settings = {
-                            Lua = {
-                                format = {
-                                    enable = false,
-                                },
-                            },
-                        },
-                    })
-                end,
+            },
+        })
 
-                basedpyright = function()
-                    require("lspconfig").basedpyright.setup({
-                        capabilities = capabilities,
-                        settings = {
-                            basedpyright = {
-                                analysis = {
-                                    diagnosticMode = "openFilesOnly",
-                                    typeCheckingMode = "standard",
-                                    stubPath = vim.fn.expand(
-                                        "$HOME/.local/share/stubs"
-                                    ),
-                                    inlayHints = {
-                                        callArgumentNames = true,
-                                    },
-                                },
-                            },
-                        },
-                        on_attach = function(client, _)
-                            client.server_capabilities.hoverProvider = false
-                        end,
-                    })
-                end,
+        vim.lsp.config("lua_ls", {
+            settings = {
+                Lua = {
+                    format = {
+                        enable = false,
+                    },
+                },
+            },
+        })
 
-                ruff = function()
-                    require("lspconfig")["ruff"].setup({
-                        capabilities = capabilities,
-                        on_attach = function(client, _)
-                            client.server_capabilities.renameProvider = false
-                        end,
-                    })
-                end,
-
-                ["jedi_language_server"] = function()
-                    require("lspconfig").jedi_language_server.setup({
-                        capabilities = capabilities,
-                        init_options = {
-                            codeAction = {
-                                nameExtractVariable = "Extract variable",
-                                nameExtractFunction = "Extract function",
-                            },
-                            markupKindPreferred = "markdown",
+        vim.lsp.config("basedpyright", {
+            settings = {
+                basedpyright = {
+                    analysis = {
+                        diagnosticMode = "openFilesOnly",
+                        typeCheckingMode = "standard",
+                        stubPath = vim.fn.expand("$HOME/.local/share/stubs"),
+                        inlayHints = {
+                            callArgumentNames = true,
                         },
-                        on_attach = function(client, _)
-                            client.server_capabilities.renameProvider = false
-                        end,
-                    })
-                end,
+                    },
+                },
+            },
+        })
 
-                texlab = function()
-                    require("lspconfig")["texlab"].setup({
-                        capabilities = capabilities,
-                        filetypes = { "markdown", "tex" },
-                        settings = {
-                            texlab = {
-                                build = {
-                                    executable = "latexrun",
-                                },
-                            },
-                        },
-                    })
-                end,
+        vim.lsp.config("jedi_language_server", {
+            init_options = {
+                codeAction = {
+                    nameExtractVariable = "Extract variable",
+                    nameExtractFunction = "Extract function",
+                },
+                markupKindPreferred = "markdown",
+            },
+        })
 
-                ltex = function()
-                    require("lspconfig").ltex.setup({
-                        capabilities = capabilities,
-                        filetypes = { "markdown", "tex" },
-                        settings = {
-                            ltex = {
-                                language = "en-GB",
-                                disabledRules = {
-                                    ["en-GB"] = { "OXFORD_SPELLING_Z_NOT_S" },
-                                },
-                            },
-                        },
-                    })
-                end,
+        vim.lsp.config("texlab", {
+            filetypes = { "markdown", "tex" },
+            settings = {
+                texlab = {
+                    build = {
+                        executable = "latexrun",
+                    },
+                },
+            },
+        })
 
-                tinymist = function()
-                    require("lspconfig").tinymist.setup({
-                        capabilities = capabilities,
-                        settings = {
-                            exportPdf = "onSave",
-                            formatterMode = "typstyle",
-                        },
-                    })
-                end,
+        vim.lsp.config("ltex", {
+            filetypes = { "markdown", "tex" },
+            settings = {
+                ltex = {
+                    language = "en-GB",
+                    disabledRules = {
+                        ["en-GB"] = { "OXFORD_SPELLING_Z_NOT_S" },
+                    },
+                },
+            },
+        })
+
+        vim.lsp.config("tinymist", {
+            settings = {
+                exportPdf = "onSave",
+                formatterMode = "typstyle",
             },
         })
     end,
@@ -166,7 +111,7 @@ return {
                 "kickstart-lsp-detach",
                 { clear = true }
             ),
-            callback = function(event2)
+            callback = function()
                 vim.lsp.buf.clear_references()
             end,
         })
@@ -191,28 +136,6 @@ return {
                     "Goto Definition"
                 )
                 map("gD", vim.lsp.buf.declaration, "Goto Declaration")
-            end,
-        })
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            pattern = "*.go",
-            callback = function() -- organise imports in go
-                local params = vim.lsp.util.make_range_params()
-                params.context = { only = { "source.organizeImports" } }
-                local result = vim.lsp.buf_request_sync(
-                    0,
-                    "textDocument/codeAction",
-                    params
-                )
-                for cid, res in pairs(result or {}) do
-                    for _, r in pairs(res.result or {}) do
-                        if r.edit then
-                            local enc = (vim.lsp.get_client_by_id(cid) or {}).offset_encoding
-                                or "utf-16"
-                            vim.lsp.util.apply_workspace_edit(r.edit, enc)
-                        end
-                    end
-                end
-                vim.lsp.buf.format({ async = false })
             end,
         })
     end,

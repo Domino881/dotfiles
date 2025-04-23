@@ -25,7 +25,18 @@ return { -- Autoformat
     },
     opts = {
         notify_on_error = true,
-        format_on_save = false,
+        format_on_save = function()
+            if
+                vim.bo.filetype ~= "python"
+                or vim.bo.filetype ~= "cpp"
+                or vim.bo.filetype ~= "typst"
+                or vim.bo.filetype ~= "lua"
+            then
+                return { lsp_format = "fallback", timeout_ms = 500 }
+            else
+                return false
+            end
+        end,
         lsp_format = "fallback",
         log_level = vim.log.levels.WARN,
         notify_no_formatters = true,
