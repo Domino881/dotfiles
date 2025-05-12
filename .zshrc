@@ -5,20 +5,19 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Set the directory we want to store zinit and plugins
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-
 # Download Zinit, if it's not there yet
-if [ ! -d "$ZINIT_HOME" ]; then
-   mkdir -p "$(dirname $ZINIT_HOME)"
-   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+if [ ! -d "${XDG_DATA_HOME:-${HOME}/.local/share}/zinit" ]; then
+   bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 fi
 
-# Source/Load zinit
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Load completions
-autoload -Uz compinit && compinit
+autoload -U compinit && compinit
+autoload -U colors && colors
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -29,12 +28,17 @@ zinit light zsh-users/zsh-autosuggestions
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
-bindkey '^k' autosuggest-accept
-bindkey '^[w' kill-region
+bindkey '^y' autosuggest-accept
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+bindkey '^u' backward-kill-line
+bindkey '^j' backward-word
+bindkey '^k' forward-word
+bindkey '^w' backward-kill-word
 
 # History
-HISTSIZE=5000
-HISTFILE=~/.zsh_history
+HISTSIZE=50000
+HISTFILE="$XDG_CACHE_HOME/zsh_history" # move histfile to cache
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
@@ -103,6 +107,21 @@ export FZF_CTRL_T_OPTS="--preview 'bat --color=always -n --line-range :500 {}'"
 # Shell integrations
 eval "$(fzf --zsh)"
 
+export MANPAGER="less -R --use-color -Dd+r -Du+b" # colored man pages
+
+# colored less + termcap vars
+export LESS="R --use-color"
+export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
+export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
+export LESS_TERMCAP_me="$(printf '%b' '[0m')"
+export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
+export LESS_TERMCAP_se="$(printf '%b' '[0m')"
+export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
+export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Zoxide
+eval "$(zoxide init zsh)"
+alias cd=z

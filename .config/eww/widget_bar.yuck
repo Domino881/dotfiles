@@ -1,0 +1,18 @@
+(include "./widget_workspaces.yuck")
+(include "./widget_timedate.yuck")
+(include "./widget_sidestuff.yuck")
+
+(defvar mint-icon "/usr/share/icons/hicolor/scalable/apps/linuxmint-logo-filled-badge.svg")
+
+(defwidget bar []
+  (centerbox 
+    :orientation "h"
+    (workspaces 
+      :mint-icon mint-icon
+      :active-workspace active-workspace
+      :focused-workspace focused-workspace
+      :urgent-workspace urgent-workspace)
+    (time-date)
+    (sidestuff)
+    )
+  )

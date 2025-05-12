@@ -103,3 +103,5 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
         vim.opt_local.textwidth = 78
     end,
 })
+
+vim.opt.winborder = "rounded"

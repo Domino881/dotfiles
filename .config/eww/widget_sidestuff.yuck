@@ -1,0 +1,126 @@
+(include "./widget_powerbuttons.yuck")
+
+(defwidget sidestuff []
+  (box 
+    :class "sidestuff" 
+    :orientation "h" 
+    :space-evenly false 
+    :halign "end"
+    (network :strength net :offline "󰤭" :excellent "󰤨" :good "󰤥"
+             :okay "󰤢" :slow "󰤟")
+    (audio :high "" :medium "󰖀" :low "󰕿" :muted "󰝟"
+           :volume volume)
+    (cpu_usage :icon "󰍛")
+    (battery :status {EWW_BATTERY.BAT0.status}
+             :capacity {EWW_BATTERY.BAT0.capacity}
+             :charge "󰂄" :full "󰁹" :ninety "󰂂" :eighty "󰂁" :seventy "󰂀" :sixty "󰁿" 
+             :fifty "󰁾"  :fourty "󰁽" :thirty "󰁼" :twenty "󰁻" :eleventy "󱃍")
+
+    (label :text "|")
+    (systray 
+      :icon-size 20)
+
+    (buttons 
+      :shutdown "systemctl poweroff" 
+      :reboot "systemctl reboot"
+      :lock "loginctl lock-session"
+      :logout "i3-msg exit"
+      :suspend "systemctl suspend"
+      :hibernate "systemctl hibernate"
+      :shutdown_icon "⏻" 
+      :reboot_icon "󰑓"
+      :lock_icon ""
+      :logout_icon "󰿅"
+      :suspend_icon "󰏦"
+      :hibernate_icon "󰜗"
+      )
+    )
+  )
+
+
+(defwidget cpu_usage [icon]
+  (box
+    (label :text "${icon}  ${round(EWW_CPU.avg, 0)}%")
+    )
+  )
+
+(defwidget bright2 []
+  "jajo"
+  )
+
+(defwidget temp [icon]
+  (box  
+    (label :text "${icon}   ${round((EWW_TEMPS.ACPITZ_TEMP1 + EWW_TEMPS.ACPITZ_TEMP2 + 
+                                      EWW_TEMPS.ACPITZ_TEMP3 + EWW_TEMPS.ACPITZ_TEMP4) / 4, 1)}℃")
+    )
+  )
+
+
+(defwidget ram [icon]
+  (box  
+    :tooltip "${round(EWW_RAM.used_mem / 1048576, 2)}MiB/${round(EWW_RAM.total_mem / 1048576, 2)}MiB"
+    (label :text "${icon}   ${round(EWW_RAM.used_mem_perc, 1)}%")
+    )
+  )
+
+
+(defwidget disk [icon]
+  (box 
+    :tooltip `"/": ${round(EWW_DISK['/'].used / 1000000000, 2)}GB/${round(EWW_DISK['/'].total / 1000000000, 2)}GB`
+    (label :text "${icon}   ${round((EWW_DISK['/'].used_perc), 1)}%")
+    )
+  )
+
+
+(defwidget battery [capacity status eleventy twenty thirty fourty
+                    fifty sixty seventy eighty ninety full charge]
+  (box :space-evenly false :spacing 8
+    (label :text {(status == 'Charging' ? charge :
+                    capacity < 10 ? eleventy :
+                    capacity < 20 ? twenty :
+                    capacity < 30 ? thirty :
+                    capacity < 40 ? fourty :
+                    capacity < 50 ? fifty :
+                    capacity < 60 ? sixty :
+                    capacity < 70 ? seventy :
+                    capacity < 80 ? eighty :
+                    capacity < 90 ? ninety : full) + "  ${capacity}%"})
+    )
+  )
+
+
+(defpoll net :interval "5s"
+             :initial `N/A`
+  `nmcli -t -f SIGNAL,ACTIVE device wifi \
+  | awk -F':' '{if($2=="yes")print$1}'`)
+(defwidget network [strength offline excellent
+                    good okay slow]
+  (eventbox
+    :onmiddleclick `$HOME/.config/eww/scripts/togglewifi`
+    (box
+      :space-evenly false
+      :spacing 8
+      (label :text {strength == "" ? offline :
+        strength < 26 ? slow :
+        strength < 51 ? okay :
+        strength < 76 ? good : excellent})
+      )
+    )
+  )
+
+
+(defwidget audio [high medium low muted volume]
+  (eventbox 
+    :class "audio"
+    :onclick "pavucontrol &"
+    (box 
+      (label :text {volume <= 0? `${muted}`
+        : volume < 30 ? `${low}`
+        : volume < 70 ? `${medium}`
+        : `${high}`})
+      )
+    )
+  )
+
+(defpoll volume :interval "500ms" `$HOME/.config/eww/scripts/getvol`)
+;(deflisten volume :initial `50` `pactl subscribe | grep --line-buffered "sink" | while read -r line; do $HOME/.config/eww/scripts/getvol; done`)

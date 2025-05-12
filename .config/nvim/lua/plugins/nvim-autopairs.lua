@@ -14,12 +14,15 @@ return {
 
         npairs.get_rules("`")[1].not_filetypes = { "tex", "latex" }
         npairs.add_rules({
-            Rule("$", "$", { "tex", "latex" })
+            Rule("$", "$", { "tex", "latex", "typst" })
                 -- don't move right when repeat character
                 :with_move(),
         })
         npairs.add_rules({
             Rule("``", "''", { "tex", "latex" }):with_move(),
+        })
+        npairs.setup({
+            fast_wrap = {},
         })
     end,
 }

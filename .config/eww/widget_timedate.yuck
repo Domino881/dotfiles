@@ -1,0 +1,21 @@
+(defpoll date :interval "1s" :initial "N/A" "date +'%a %d %b %Y'")
+(defpoll time :interval "15s" :initial "N/A" "date +'%H:%M'")
+(defpoll timefull :interval "1s" :initial "N/A" "date +'%H:%M:%S'")
+(defvar time_rev false)
+(defwidget time-date []
+  (eventbox 
+    :class "time"
+    :onhover "eww update time_rev=true"
+    :onclick "gnome-calendar"
+    :onhoverlost "eww update time_rev=false"
+    (box :space-evenly "false"
+      (label :text {time_rev? "${timefull}" : "${time}" })
+      (revealer 
+        :transition "slideleft"
+        :reveal time_rev
+        :duration "350ms"
+        (label :text "${date}")
+        )
+      )  
+    )
+  )

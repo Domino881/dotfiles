@@ -4,7 +4,7 @@
 ## ![neovim-screenshot](https://github.com/user-attachments/assets/3e95040e-9ba0-4373-a54a-a16ae1f0adb5)
 
 ## Prerequisites (Neovim):
-- Neovim 0.10+
+- Neovim 0.11+
 - A nerd font (recommended: JetBrains Mono Nerd, available here: https://www.nerdfonts.com/#features)
 - `sudo apt install git gcc python3 python3-pip python3-venv jupyter-client librsvg2-bin fd-find python3-pynvim jupyter-client`
 - [tex-fmt](https://github.com/WGUNDERWOOD/tex-fmt/releases)

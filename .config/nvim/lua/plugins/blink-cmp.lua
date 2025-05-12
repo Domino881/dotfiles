@@ -4,8 +4,6 @@ return {
     version = "1.*",
     dependencies = {
         { "L3MON4D3/LuaSnip", version = "v2.*" },
-        -- compatibility layer for using nvim-cmp sources (like jupyter)
-        { "saghen/blink.compat", lazy = true, config = true },
     },
 
     ---@module 'blink.cmp'
@@ -41,12 +39,9 @@ return {
         signature = { enabled = true },
 
         appearance = {
-            -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-            -- Adjusts spacing to ensure icons are aligned
             nerd_font_variant = "mono",
         },
 
-        -- (Default) Only show the documentation popup when manually triggered
         completion = {
             documentation = { auto_show = false },
             -- 'prefix' will fuzzy match on the text before the cursor
@@ -81,12 +76,6 @@ return {
         -- elsewhere in your config, without redefining it, due to `opts_extend`
         sources = {
             default = { "lsp", "path", "snippets", "buffer" },
-            providers = {
-                jupyter = {
-                    name = "jupyter",
-                    module = "blink.compat.source",
-                },
-            },
         },
 
         -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance

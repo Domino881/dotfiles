@@ -16,12 +16,14 @@ return {
         },
         strikethrough = false,
         invert_selection = false,
-        inverse = true,    -- invert background for search, diffs, statuslines and errors
+        inverse = true, -- invert background for search, diffs, statuslines and errors
         contrast = "hard", -- can be "hard", "soft" or empty string
         overrides = {
             ColorColumn = { bg = "#171717" },
             SignColumn = { bg = "#070505" },
             NonText = { fg = "#191716" }, -- indentline
+            FloatBorder = { bg = "none" },
+            NormalFloat = { bg = "none" },
             Whitespace = { fg = "#191716" },
             IblScope = { fg = "#7c6f64" },
             Normal = { bg = "#070505" },
@@ -43,6 +45,6 @@ return {
             -- DapUIRestart = { bg = "#070505" },
             -- DapUIStepBack = { bg = "#070505" },
             -- DapUIPlayPause = { bg = "#070505" },
-        }
-    }
+        },
+    },
 }

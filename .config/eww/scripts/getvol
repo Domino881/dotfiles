@@ -1,0 +1,11 @@
+#!/bin/bash
+
+is_muted=$(pactl list sinks | awk '/Mute/ {print $2}')
+
+volume_level=$(amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%' | head -1)
+
+if [[ $is_muted == "no" ]]; then
+    echo "$volume_level"
+else
+    echo "0"
+fi

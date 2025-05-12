@@ -9,4 +9,10 @@ export VISUAL=/home/linuxbrew/.linuxbrew/bin/nvim
 export EDITOR=$VISUAL
 export PATH
 
+# follow XDG base dir specification
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
 export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH"
+. "$HOME/.cargo/env"

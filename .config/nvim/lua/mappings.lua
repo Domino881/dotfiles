@@ -18,9 +18,14 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- leader mappings
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show Diagnostic under cursor" })
+vim.keymap.set(
+    "n",
+    "<leader>e",
+    vim.diagnostic.open_float,
+    { desc = "Show Diagnostic under cursor" }
+)
 
-vim.keymap.set("n", "-", "<cmd>e %:h<CR>")
+-- vim.keymap.set("n", "-", "<cmd>e %:h<CR>")
 
 vim.keymap.set("i", "<C-t>", "<Nop>")
 vim.keymap.set("n", "<C-t>", "<Nop>")

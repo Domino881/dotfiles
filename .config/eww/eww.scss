@@ -1,0 +1,109 @@
+* {
+  all: unset; // Unsets everything so you can style everything from scratch
+  font-family: "Noto Sans";
+}
+
+.bar {
+  opacity: 1.0;
+  padding: 3px;
+}
+
+.sidestuff {
+  background-color: #222222;
+  padding: 1px 10px;
+  border-radius: 15px;
+  font-size: 24;
+
+  * {
+    padding: 0 6px;
+  }
+}
+
+.mintlogo {
+  background-color: #222222;
+  padding: 4px 4px;
+  margin: 0px 5px;
+  border-radius: 24px;
+}
+
+
+.brightness, .volume {
+  background-color: #222222;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50px;
+}
+
+.metric scale trough highlight {
+  all: unset;
+  background-color: #aaaaaa;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.metric scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 7px;
+  min-width: 250px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.metric label{
+  padding-right: 20px;
+  font-size: 25;
+  color: #cccccc;
+}
+
+.workspaces, .time {
+  background-color: #222222;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 25;
+}
+
+.workspaces {
+  color: gray;
+}
+
+.workspaces button, .power-buttons button {
+  padding: 1px 12px;
+  border-radius: 15px;
+  margin: 0 1px;
+  transition: all 0.15s ease-out;
+}
+
+.active-workspace {
+  border-radius: 0px;
+  color: white;
+}
+
+.focused-workspace {
+  background-color: #606060;
+  color: white;
+}
+
+.urgent-workspace {
+  background-color: DarkRed;
+  color: white;
+}
+
+.time * {
+  padding: 0 10px;
+}
+
+.power-buttons button {
+  &:hover {
+    transition: 200ms linear background-color, border-radius;
+    background-color: rgba(#3d464e, 0.6);
+  }
+}
+
+.power-buttons .shutdown {
+  color: rgba(#f87070, 0.8);
+}
+.power-buttons .reboot {
+  color: rgba(#f8a870, 0.8);
+}

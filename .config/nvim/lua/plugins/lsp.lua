@@ -101,6 +101,7 @@ return {
             settings = {
                 exportPdf = "onSave",
                 formatterMode = "typstyle",
+                rootPath = vim.fn.expand("$HOME"),
             },
         })
     end,
