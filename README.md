@@ -3,6 +3,8 @@
 
 ## ![neovim-screenshot](https://github.com/user-attachments/assets/3e95040e-9ba0-4373-a54a-a16ae1f0adb5)
 
+![i3-screenshot](https://github.com/user-attachments/assets/1b48399a-96d8-4b00-97a3-5da5171494c7)
+
 ## Prerequisites (Neovim):
 - Neovim 0.11+
 - A nerd font (recommended: JetBrains Mono Nerd, available here: https://www.nerdfonts.com/#features)
