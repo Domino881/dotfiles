@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $wallpaper /home/dominik/Pictures/tapety/NGC7000.jpg
+set $wallpaper /home/dominik/Pictures/tapety/ann2301b.jpg
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -27,10 +27,11 @@ title_align center
 exec --no-startup-id dex --autostart --environment i3
 exec_always --no-startup-id /home/dominik/.local/bin/alternating_layouts.py
 exec_always --no-startup-id picom -b
-exec --no-startup-id feh --bg-center $wallpaper
+# exec --no-startup-id feh --bg-center $wallpaper
 exec_always --no-startup-id ~/.config/eww/eww_launch.sh
-exec_always --no-startup-id killall xborders; xborders -c ~/.config/i3/xborders.json
-exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec --no-startup-id xborders -c ~/.config/i3/xborders.json
+exec_always --no-startup-id dunst -config ~/.cache/wal/dunstrc
+exec --no-startup-id wal -R
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.

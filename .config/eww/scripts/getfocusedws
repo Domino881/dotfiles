@@ -5,7 +5,3 @@ while read -r _; do
     focused_workspaces=$(echo "$workspaces_info" | jq --unbuffered -r '.[] | select(.focused == true).name')
     echo "$focused_workspaces"
 done
-# while true; do
-#     wmctrl -d | awk -F' ' '{ if ($2=="*") print $1+1; }';
-#     sleep 0.2;
-# done
