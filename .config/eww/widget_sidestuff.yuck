@@ -82,8 +82,8 @@
   )
 
 (defpoll bat_timetoempty :interval "10s" :initial "N/A"
-  `upower -d | grep  "BAT0" -A 20 | grep "time to empty"\
-   | sed "s/.*:\s*//g" | sed "s/ hours/h"`
+  `upower -d | grep  "BAT0" -A 20 | grep "time to [empty|full]"\
+   | sed "s/.*:\s*//g" | sed "s/ hours/h/" | sed "s/ minutes/min/"`
   )
 
 (defvar bat_rev false)
@@ -120,7 +120,7 @@
         :transition "slideright"
         :reveal bat_rev
         :duration "350ms"
-        (box (label :text "${bat_timetoempty} remaining" ))
+        (label :text "${bat_timetoempty} remaining")
         )
       )
     )
@@ -151,7 +151,7 @@
           strength < 76 ? good : excellent})
       )
       (revealer
-        :transition "slideright"
+        :transition "slideleft"
         :reveal net_rev
         :duration "350ms"
         (box (label :text wifi_ssid ))
