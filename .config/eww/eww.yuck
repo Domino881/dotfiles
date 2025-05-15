@@ -1,6 +1,5 @@
 (include "widget_bar.yuck")
-(include "widget_brightness.yuck")
-(include "widget_volume.yuck")
+(include "widget_popup.yuck")
 
 (defwindow bar
   :monitor 0
@@ -33,3 +32,25 @@
   :anchor "bottom center")
   (volume)
   )
+
+(defwindow micmute
+  :monitor 0
+  :windowtype "dialog"
+  :wm-ignore true
+  :geometry (geometry :x "0%" :y "-10%"
+  :width "100px"
+  :height "100px"
+  :anchor "bottom center")
+  (micmute)
+  )
+
+(defwindow confirm_buttons [confirm confirm_action]
+  :monitor 0
+  :windowtype "dialog"
+  :wm-ignore true
+  :geometry (geometry :x "0%"
+  :y "0%"
+  :width "30%"
+  :height "10%"
+  :anchor "center center")
+  (confirm_buttons :confirm confirm :confirm_action confirm_action))

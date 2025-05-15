@@ -10,28 +10,61 @@
 
 .sidestuff {
   background-color: #222222;
-  padding: 1px 10px;
+  padding: 5px 10px;
   border-radius: 15px;
   font-size: 24;
 
   * {
     padding: 0 6px;
   }
+  label {
+    padding: 0 2px;
+  }
+  .revealer {
+    background-color: black;
+  }
 }
 
-.mintlogo {
+.confirm_buttons, .mintlogo {
   background-color: #222222;
   padding: 4px 4px;
   margin: 0px 5px;
   border-radius: 24px;
 }
 
+.button-yes {
+  background-color: #aa4444;
+  border-radius: 24px;
+}
 
-.brightness, .volume {
+
+.brightness, .volume, .micmute  {
   background-color: #222222;
   padding: 10px;
   margin: 10px;
   border-radius: 50px;
+  font-size: 40;
+}
+
+.audio scale trough highlight {
+  all: unset;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+.audio scale trough {
+  all: unset;
+  background-color: #555555;
+  min-height: 6px;
+  border-radius: 3px;
+  min-width: 100px;
+  color: #000000;
+}
+.volume_dot scale slider {
+  all: unset;
+  background-color: #ffffff;
+  min-height: 20px;
+  min-width: 20px;
+  border-radius: 10px;
 }
 
 .metric scale trough highlight {

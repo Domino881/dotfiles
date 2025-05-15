@@ -1,5 +1,3 @@
-(include "./widget_powerbuttons.yuck")
-
 (defwidget sidestuff []
   (box 
     :class "sidestuff" 
@@ -26,7 +24,7 @@
       :lock "loginctl lock-session"
       :logout "i3-msg exit"
       :suspend "systemctl suspend"
-      :hibernate "systemctl hibernate"
+      :hibernate "dialog --yesno 'Do you want run the command' 10 30"
       :shutdown_icon "⏻" 
       :reboot_icon "󰑓"
       :lock_icon ""
@@ -37,15 +35,26 @@
     )
   )
 
+(defvar cpu_rev false)
 
 (defwidget cpu_usage [icon]
-  (box
-    (label :text "${icon}  ${round(EWW_CPU.avg, 0)}%")
-    )
+  (eventbox
+    :onhover "${EWW_CMD} update cpu_rev=true"
+    :onhoverlost "${EWW_CMD} update cpu_rev=false"
+    (box
+      :spacing 0
+      :space-evenly false
+      ;;     :tooltip "CPU: ${round(EWW_CPU.avg, 1)}%
+      ;; RAM: ${round(EWW_RAM.used_mem / 1048576 / 1000, 1)}GB/${round(EWW_RAM.total_mem / 1048576 / 1000, 1)}GB"
+      (label :text "${icon}  ${round(EWW_CPU.avg, 0)}%")
+      (revealer
+        :transition "slideleft"
+        :reveal cpu_rev
+        :duration "350ms"
+        (ram :icon "󰘚")
+      )
+      )
   )
-
-(defwidget bright2 []
-  "jajo"
   )
 
 (defwidget temp [icon]
@@ -57,9 +66,10 @@
 
 
 (defwidget ram [icon]
-  (box  
+  (box
+    :spacing 0
     :tooltip "${round(EWW_RAM.used_mem / 1048576, 2)}MiB/${round(EWW_RAM.total_mem / 1048576, 2)}MiB"
-    (label :text "${icon}   ${round(EWW_RAM.used_mem_perc, 1)}%")
+    (label :text "${icon}  ${round(EWW_RAM.used_mem_perc, 1)}%")
     )
   )
 
@@ -71,56 +81,189 @@
     )
   )
 
+(defpoll bat_timetoempty :interval "10s" :initial "N/A"
+  `upower -d | grep  "BAT0" -A 20 | grep "time to empty"\
+   | sed "s/.*:\s*//g" | sed "s/ hours/h"`
+  )
+
+(defvar bat_rev false)
 
 (defwidget battery [capacity status eleventy twenty thirty fourty
                     fifty sixty seventy eighty ninety full charge]
-  (box :space-evenly false :spacing 8
-    (label :text {(status == 'Charging' ? charge :
-                    capacity < 10 ? eleventy :
-                    capacity < 20 ? twenty :
-                    capacity < 30 ? thirty :
-                    capacity < 40 ? fourty :
-                    capacity < 50 ? fifty :
-                    capacity < 60 ? sixty :
-                    capacity < 70 ? seventy :
-                    capacity < 80 ? eighty :
-                    capacity < 90 ? ninety : full) + "  ${capacity}%"})
+  (eventbox
+    :onhover "${EWW_CMD} update bat_rev=true"
+    :onhoverlost "${EWW_CMD} update bat_rev=false"
+    :onmiddleclick `$HOME/.config/eww/scripts/togglewifi`
+    (box
+      :class "battery"
+      :space-evenly false
+      :spacing 0
+      (box :space-evenly false :spacing 0
+        (label :text {(status == 'Charging' ? charge :
+                        capacity < 10 ? eleventy :
+                        capacity < 20 ? twenty :
+                        capacity < 30 ? thirty :
+                        capacity < 40 ? fourty :
+                        capacity < 50 ? fifty :
+                        capacity < 60 ? sixty :
+                        capacity < 70 ? seventy :
+                        capacity < 80 ? eighty :
+                        capacity < 90 ? ninety : full) })
+        (revealer
+          :transition "slideleft"
+          :reveal {!bat_rev}
+          :duration "350ms"
+          (label :text "${capacity}%")
+          )
+        )
+      (revealer
+        :transition "slideright"
+        :reveal bat_rev
+        :duration "350ms"
+        (box (label :text "${bat_timetoempty} remaining" ))
+        )
+      )
     )
-  )
+    )
 
 
 (defpoll net :interval "5s"
              :initial `N/A`
   `nmcli -t -f SIGNAL,ACTIVE device wifi \
   | awk -F':' '{if($2=="yes")print$1}'`)
+(defpoll wifi_ssid :interval "5s" :initial `N/A`
+  `iwgetid | grep -o '\".*\"' | sed 's/\"//g'`
+  )
+(defvar net_rev false)
 (defwidget network [strength offline excellent
                     good okay slow]
   (eventbox
+    :onhover "${EWW_CMD} update net_rev=true"
+    :onhoverlost "${EWW_CMD} update net_rev=false"
     :onmiddleclick `$HOME/.config/eww/scripts/togglewifi`
     (box
       :space-evenly false
-      :spacing 8
-      (label :text {strength == "" ? offline :
-        strength < 26 ? slow :
-        strength < 51 ? okay :
-        strength < 76 ? good : excellent})
+      :spacing 0
+      (box
+        (label :text {strength == "" ? offline :
+          strength < 26 ? slow :
+          strength < 51 ? okay :
+          strength < 76 ? good : excellent})
+      )
+      (revealer
+        :transition "slideright"
+        :reveal net_rev
+        :duration "350ms"
+        (box (label :text wifi_ssid ))
+        )
       )
     )
   )
 
 
+(defvar vol_rev false)
 (defwidget audio [high medium low muted volume]
   (eventbox 
-    :class "audio"
-    :onclick "pavucontrol &"
-    (box 
-      (label :text {volume <= 0? `${muted}`
-        : volume < 30 ? `${low}`
-        : volume < 70 ? `${medium}`
-        : `${high}`})
+    ;; :onclick "pavucontrol &"
+    :onhover "${EWW_CMD} update vol_rev=true"
+    :onhoverlost "${EWW_CMD} update vol_rev=false"
+    (box
+      :space-evenly false
+      :spacing 0
+      (button
+      :onclick "amixer -D pulse sset Master toggle & eww poll volume"
+        (label :text {volume <= 0? `${muted}`
+          : volume < 30 ? `${low}`
+          : volume < 70 ? `${medium}`
+          : `${high}`})
+        )
+      (revealer
+        :transition "slideright"
+        :reveal vol_rev
+        :duration "350ms"
+        (overlay
+          (box
+            :spacing 0
+            :class "audio"
+            (scale
+              :active vol_rev
+              :min 0
+              :max 101
+              :value volume
+              :orientation "h"
+              )
+            )
+          (box
+            :class "volume_dot"
+            (scale
+              :active vol_rev
+              :min 0
+              :max 101
+              :value volume
+              :orientation "h"
+              :onchange "amixer -D pulse sset Master unmute; amixer -D pulse sset Master {}% & eww update volume={}"
+              )
+            )
+          )
+        )
       )
     )
   )
 
 (defpoll volume :interval "500ms" `$HOME/.config/eww/scripts/getvol`)
 ;(deflisten volume :initial `50` `pactl subscribe | grep --line-buffered "sink" | while read -r line; do $HOME/.config/eww/scripts/getvol; done`)
+
+;; power-buttons
+(defvar but_rev false)
+(defwidget buttons [shutdown shutdown_icon 
+                    reboot reboot_icon 
+                    lock lock_icon
+                    logout logout_icon
+                    suspend suspend_icon
+                    hibernate hibernate_icon]
+  (eventbox
+    :onhover "${EWW_CMD} update but_rev=true"
+    :onhoverlost "${EWW_CMD} update but_rev=false"
+    (box :class "power-buttons"
+         :space-evenly false
+      (label :text "|")
+      (revealer 
+        :transition "slideright"
+        :reveal but_rev
+        :duration "350ms"
+        (box 
+          (button :tooltip "suspend" :onclick suspend suspend_icon)
+          (button :tooltip "hibernate" :onclick hibernate hibernate_icon)
+          (button :tooltip "lock" :onclick lock lock_icon)
+          (button :tooltip "logout" :onclick logout logout_icon)
+          (button :tooltip "reboot" :class "reboot" 
+              :onclick "${EWW_CMD} open confirm_buttons\
+                       --arg confirm='Reboot'\
+                       --arg confirm_action='${reboot}'"
+            reboot_icon)
+          )
+        )
+      (button :tooltip "shutdown" :class "shutdown"
+              :onclick "${EWW_CMD} open confirm_buttons\
+                       --arg confirm='Shutdown'\
+                       --arg confirm_action='${shutdown}'"
+        shutdown_icon)
+      )
+    )
+  )
+
+(defwidget confirm_buttons[confirm confirm_action] 
+  (box :orientation "v"
+    (box "Are you sure?")
+    (button :onclick "")
+    (box
+      (button :onclick "${confirm_action} && ${EWW_CMD} close confirm_buttons"
+        :class "button-yes"
+        (label :text confirm)
+        )
+      (button :onclick "${EWW_CMD} close confirm_buttons"
+        (label :text "Cancel")
+        )
+    )
+    )
+  )

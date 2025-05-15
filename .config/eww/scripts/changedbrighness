@@ -1,6 +1,7 @@
 #!/bin/bash
 
 eww update bright_pid=$$
+eww poll pollbright
 
 [ `eww get bright_open` == "0" ] && eww open brightness
 eww update bright_open=1

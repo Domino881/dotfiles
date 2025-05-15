@@ -1,7 +1,7 @@
 #!/bin/bash
 
 eww update vol_pid=$$
-eww poll volume
+eww poll pollvol
 
 [ `eww get vol_open` == "0" ] && eww open volume
 eww update vol_open=1
