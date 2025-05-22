@@ -1,0 +1,103 @@
+# New Start: A modern Arch workflow built with an emphasis on functionality.
+# Copyright (C) 2018 Donovan Glover
+
+[global]
+    # Show multiple notifications in the same box
+    separator_height = 0
+
+    # Add vertical padding to the inside of the notification
+    padding = 5
+
+    # Add horizontal padding for when the text gets long enough
+    horizontal_padding = 8
+
+    # The frame color and width of the notification
+    frame_color = "{background}"
+    frame_width = 2
+
+    # How long a user needs to be idle for sticky notifications
+    idle_threshold = 120
+
+    # Font and typography settings
+    font = Noto Sans 12
+    alignment = left
+    word_wrap = yes
+
+    # Format for how notifications will be displayed
+    # Usage: `notify-send 'Title' 'Summary'`
+    format = "<b>%s</b>\n%b%p"
+
+    # Allow some HTML tags like <i> and <u> in notifications
+    markup = full
+
+    # Show how many messages are currently hidden (because of geometry).
+    indicate_hidden = yes
+
+    # Sort messages by urgency.
+    sort = yes
+
+    # Show age of message if message is older than show_age_threshold
+    # seconds.
+    # Set to -1 to disable.
+    show_age_threshold = 60
+
+    # Split notifications into multiple lines if they don't fit into
+    # geometry.
+    word_wrap = yes
+
+    # When word_wrap is set to no, specify where to make an ellipsis in long lines.
+    # Possible values are "start", "middle" and "end".
+    ellipsize = middle
+
+    # Ignore newlines '\n' in notifications.
+    ignore_newline = no
+
+    # Stack together notifications with the same content
+    stack_duplicates = true
+
+    # Hide the count of stacked notifications with the same content
+    hide_duplicate_count = false
+
+    # Display indicators for URLs (U) and actions (A).
+    show_indicators = no
+
+    ### Icons ###
+
+    # Align icons left/right/off
+    icon_position = left
+
+    # Scale larger icons down to this size, set to 0 to disable
+    max_icon_size = 24
+
+    # Paths to default icons.
+    # icon_path = /usr/share/icons/Adwaita/symbolic/status/:/usr/share/icons/Adwaita/symbolic/status/
+    icon_theme = Adwaita
+
+    ### History ###
+
+    sticky_history = yes
+    history_length = 20
+
+    ### Misc/Advanced ###
+    browser = /usr/bin/firefox
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+
+    corner_radius = 12
+
+# Set the background and foreground (text) color for all notifications
+[urgency_low]
+    background = "{background}"
+    foreground = "{foreground}"
+
+[urgency_normal]
+    background = "{background}"
+    foreground = "{foreground}"
+
+[urgency_critical]
+    background = "{background}"
+    foreground = "{foreground}"
+    frame_color = "{color1}"
+
+# vim:ft=cfg

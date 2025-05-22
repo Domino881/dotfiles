@@ -1,0 +1,30 @@
+{
+  "add books dialog dir": "/home/dominik/Downloads",
+  "add books dialog dir-last-used-filter-spec-all-files": false,
+  "catalogs_to_be_synced": {
+    "__class__": "set",
+    "__value__": []
+  },
+  "database location dialog": "/home/dominik/Library/Calibre",
+  "sort_history": [
+    [
+      "timestamp",
+      false
+    ],
+    [
+      "title",
+      false
+    ],
+    [
+      "authors",
+      true
+    ],
+    [
+      "timestamp",
+      false
+    ]
+  ],
+  "systray_msg": true,
+  "welcome_wizard_device": "kobo",
+  "welcome_wizard_was_run": true
+}

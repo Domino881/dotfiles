@@ -1,0 +1,20 @@
+{
+  "Options": {
+    "sizes": [
+      {
+        "default": false,
+        "height": 680,
+        "keep_aspect_ratio": false,
+        "only_shrink_larger_images": false,
+        "width": 450
+      },
+      {
+        "default": true,
+        "height": 1448,
+        "keep_aspect_ratio": false,
+        "only_shrink_larger_images": false,
+        "width": 1072
+      }
+    ]
+  }
+}

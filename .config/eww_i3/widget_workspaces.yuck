@@ -1,0 +1,61 @@
+(deflisten active-workspace `$HOME/.config/eww/scripts/getactivews`)
+(deflisten urgent-workspace `$HOME/.config/eww/scripts/geturgentws`)
+;; had to set the initial workspace to "1"
+(deflisten focused-workspace :initial "1" `$HOME/.config/eww/scripts/getfocusedws`)
+
+(defwidget workspaces [mint-icon active-workspace focused-workspace urgent-workspace]
+  (box :space-evenly false :halign "start"
+;;    (button :class "mintlogo" :onclick "$HOME/.config/rofi/launchers/type-2/launcher.sh"
+;;      (image :path mint-icon :image-width 40)
+;;      )
+    (box
+      :class "workspaces"
+      :orientation "h"
+      :space-evenly true
+      :halign "start"
+
+      (button
+        :class {
+        arraylength(search(focused-workspace, "1")) > 0 ? "focused-workspace" : 
+        arraylength(search(urgent-workspace, "1")) > 0 ? "urgent-workspace" : 
+        arraylength(search(active-workspace, "1")) > 0 ? "active-workspace" : 
+        "regular"
+        }
+        :onclick "i3-msg workspace 1" 1)
+
+      (button  
+        :class {
+        arraylength(search(focused-workspace, "2")) > 0 ? "focused-workspace" : 
+        arraylength(search(urgent-workspace, "2")) > 0 ? "urgent-workspace" : 
+        arraylength(search(active-workspace, "2")) > 0 ? "active-workspace" : 
+        "regular"
+        }
+        :onclick "i3-msg workspace 2" 2)
+
+      (button
+        :class {
+        arraylength(search(focused-workspace, "3")) > 0 ? "focused-workspace" : 
+        arraylength(search(urgent-workspace, "3")) > 0 ? "urgent-workspace" : 
+        arraylength(search(active-workspace, "3")) > 0 ? "active-workspace" : 
+        "regular"
+        }
+        :onclick "i3-msg workspace 3" 3)
+      (button
+        :class {
+        arraylength(search(focused-workspace, "4")) > 0 ? "focused-workspace" : 
+        arraylength(search(urgent-workspace, "4")) > 0 ? "urgent-workspace" : 
+        arraylength(search(active-workspace, "4")) > 0 ? "active-workspace" : 
+        "regular"
+        }
+        :onclick "i3-msg workspace 4" 4)
+      (button
+        :class {
+        arraylength(search(focused-workspace, "5")) > 0 ? "focused-workspace" : 
+        arraylength(search(urgent-workspace, "5")) > 0 ? "urgent-workspace" : 
+        arraylength(search(active-workspace, "5")) > 0 ? "active-workspace" : 
+        "regular"
+        }
+        :onclick "i3-msg workspace 5" 5)
+      )
+    )
+  )

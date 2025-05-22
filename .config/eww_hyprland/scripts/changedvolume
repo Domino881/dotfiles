@@ -1,0 +1,12 @@
+#!/bin/bash
+
+eww update vol_pid=$$
+eww poll pollvol
+
+[ `eww get vol_open` == "0" ] && eww open volume
+eww update vol_open=1
+
+sleep 0.5
+
+# Only the last script called attempts to close the window
+[ `eww get vol_pid` == $$ ] && eww update vol_open=0 && eww close volume

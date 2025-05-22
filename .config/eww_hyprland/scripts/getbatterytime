@@ -1,0 +1,7 @@
+#!/bin/bash
+
+STATE=$(upower -d | grep "BAT0" -A 20 | grep "state: " | sed "s/\s*state:\s*//")
+TIME=$(upower -d | grep  "BAT0" -A 20 | grep "time to [empty|full]"\
+   | sed "s/.*:\s*//g" | sed "s/ hours/h/" | sed "s/\.[0-9] minutes/min/g")
+
+[ $STATE == "fully-charged" ] && echo "full" || echo "$TIME remaining"

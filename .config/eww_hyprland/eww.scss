@@ -1,0 +1,160 @@
+$fg-color: #{"@theme_fg_color"};
+$bg-color: #222222;
+
+* {
+  all: unset; // Unsets everything so you can style everything from scratch
+  font-family: "Noto Sans";
+  font-size: 16px;
+}
+
+tooltip {
+  background-color: #555555;
+  border-radius: 5px;
+}
+
+.bar {
+  opacity: 1.0;
+  padding: 5px;
+  padding-bottom: 0px;
+}
+
+.sidestuff {
+  background-color: $bg-color;
+  padding: 5px 8px;
+  border-radius: 15px;
+
+  * {
+    padding: 0px 6px;
+  }
+  label {
+    padding: 0px 2px;
+  }
+}
+
+.confirm_buttons, .mintlogo {
+  background-color: $bg-color;
+  padding: 4px 4px;
+  margin: 0px 5px;
+  border-radius: 24px;
+}
+
+.button-yes {
+  background-color: #aa4444;
+  border-radius: 24px;
+}
+
+
+.brightness, .volume, .micmute  {
+  background-color: $bg-color;
+  padding: 0px;
+  margin: 7px;
+  border-radius: 0px;
+}
+
+.audio scale trough highlight {
+  all: unset;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+.audio scale trough {
+  all: unset;
+  background-color: #555555;
+  min-height: 6px;
+  border-radius: 3px;
+  min-width: 100px;
+  color: #000000;
+}
+.volume_dot scale slider {
+  all: unset;
+  background-color: #ffffff;
+  min-height: 15px;
+  min-width: 15px;
+  border-radius: 7.5px;
+}
+
+.metric scale trough highlight {
+  all: unset;
+  background-color: #aaaaaa;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.metric scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 7px;
+  min-width: 200px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.metric label{
+  padding-right: 20px;
+  color: #cccccc;
+}
+
+.workspaces, .time {
+  background-color: $bg-color;
+  padding: 3px 10px;
+  border-radius: 15px;
+}
+
+.workspaces {
+  color: #555555;
+}
+
+.workspaces button, .power-buttons button {
+  padding: 1px 12px;
+  border-radius: 15px;
+  margin: 0px 1px;
+  transition: all 0.15s ease-out;
+}
+
+.active-workspace {
+  border-radius: 0px;
+  color: $fg-color;
+}
+
+.focused-workspace {
+  /* background-image: radial-gradient(ellipse at center, #333333 0%, #333333 50%, #555555 100%); */
+  background-color: #33393b;
+  color: $fg-color;
+}
+
+.urgent-workspace {
+  background-color: DarkRed;
+  color: $fg-color;
+}
+
+.time * {
+  padding: 0px 10px;
+}
+
+.sidestuff-power {
+  background-color: $bg-color;
+  padding: 0px 0px;
+  border-radius: 15px;
+}
+
+.power-buttons button {
+  padding: 1px 12px;
+  padding-right: 14px;
+  border-radius: 15px;
+  margin: 0px 0px;
+  &:hover {
+    transition: 200ms linear background-color, border-radius;
+    background-color: rgba(#3d464e, 0.6);
+  }
+}
+
+.power-buttons .shutdown {
+  color: rgba(#f87070, 0.8);
+  margin: 0px 0px;
+}
+.power-buttons .shutdown label{
+  font-size: 25px;
+}
+.power-buttons .reboot {
+  color: rgba(#f8a870, 0.8);
+}

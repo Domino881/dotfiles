@@ -1,0 +1,37 @@
+;; VOLUME
+(defwidget volume []
+    (metric :label {volume > 0? "󰕾" : "󰝟" } :value pollvol :onchange "")
+  )
+(defpoll pollvol :interval "10s" `$HOME/.config/eww/scripts/getvol`)
+(defvar vol_open 0) ;; Whether the window is open
+(defvar vol_pid -1) ;; PID of process which last opened the window
+
+;; BRIGHTNESS
+(defpoll pollbright :interval "1s" :pollwhile bright_open
+             :initial `0` `light`)
+(defvar bright_open 0) ;; Whether the window is open
+(defvar bright_pid -1) ;; PID of process which last opened the window
+(defwidget brightness []
+    (metric :label "" :value pollbright :onchange "")
+  )
+
+;; MIC MUTE
+(defwidget micmute []
+    (transform
+      :translate-x {pollmicmute > 0? -3 : 0}
+      {pollmicmute > 0? "󰍭" : "󰍬"})
+  )
+(defpoll pollmicmute :interval "10s" `$HOME/.config/eww/modules/mic.sh`)
+(defvar mic_open 0) ;; Whether the window is open
+(defvar mic_pid -1) ;; PID of process which last opened the window
+
+(defwidget metric [label value onchange]
+  (box :orientation "h"
+       :class "metric"
+       :space-evenly false
+    (box :class "label" label)
+    (scale :min 0
+           :max 101
+           :active {onchange != ""}
+           :value value
+           :onchange onchange)))

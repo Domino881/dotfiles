@@ -1,0 +1,18 @@
+{
+  "disabled_plugins": {
+    "__class__": "set",
+    "__value__": []
+  },
+  "enabled_plugins": {
+    "__class__": "set",
+    "__value__": []
+  },
+  "filetype_mapping": {},
+  "plugin_customization": {},
+  "plugins": {
+    "Barnes & Noble": "/home/dominik/.config/calibre/plugins/Barnes & Noble.zip",
+    "Kobo Utilities": "/home/dominik/.config/calibre/plugins/Kobo Utilities.zip",
+    "LubimyCzytac": "/home/dominik/.config/calibre/plugins/LubimyCzytac.zip",
+    "Resize Cover": "/home/dominik/.config/calibre/plugins/Resize Cover.zip"
+  }
+}

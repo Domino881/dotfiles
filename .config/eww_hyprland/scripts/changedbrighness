@@ -1,0 +1,13 @@
+#!/bin/bash
+
+eww poll pollbright
+eww update bright_pid=$$
+
+[ `eww get bright_open` == "0" ] && eww open brightness
+eww update bright_open=1
+
+sleep 0.5
+
+# Only the last script called attempts to close the window
+[ `eww get bright_pid` == $$ ] && eww update bright_open=0 && eww close brightness
+

@@ -1,0 +1,795 @@
+{
+  "Prettify Cover plugin: cover options dialog": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAALaAAABWAAABYIAAAQfAAAC2gAAAW4AAAWCAAAEHwAAAAAAAAAACHAAAALaAAABbgAABYIAAAQf"
+  },
+  "action-layout-toolbar": [
+    "Add Books",
+    "Edit Metadata",
+    null,
+    "Convert Books",
+    "View",
+    null,
+    "Store",
+    "Donate",
+    "Fetch News",
+    "Help",
+    null,
+    "Preferences",
+    "Remove Books",
+    "Choose Library",
+    "Save To Disk",
+    "Connect Share",
+    "Tweak ePub",
+    "KoboUtilities",
+    "Prettify Cover",
+    "Resize Cover"
+  ],
+  "action-layout-toolbar-device": [
+    "Add Books",
+    "Edit Metadata",
+    null,
+    "Convert Books",
+    "View",
+    "Send To Device",
+    null,
+    null,
+    "Location Manager",
+    null,
+    null,
+    "Fetch News",
+    "Save To Disk",
+    "Store",
+    "Connect Share",
+    null,
+    "Remove Books",
+    null,
+    "Help",
+    "Preferences",
+    "KoboUtilities",
+    "Prettify Cover",
+    "Resize Cover"
+  ],
+  "basic_metadata_widget_splitter_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAADAAAA+gAAAbwAAAEKAf////8BAAAAAQA="
+  },
+  "book_list_pin_splitter_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAACAAABAAAAAEYA/////wEAAAABAA=="
+  },
+  "card_a_view books view state": {
+    "column_alignment": {
+      "size": "center",
+      "timestamp": "center"
+    },
+    "column_positions": {
+      "authors": 2,
+      "collections": 5,
+      "inlibrary": 0,
+      "size": 4,
+      "timestamp": 3,
+      "title": 1
+    },
+    "column_sizes": {
+      "authors": 98,
+      "collections": 113,
+      "inlibrary": 105,
+      "size": 59,
+      "timestamp": 71,
+      "title": 66
+    },
+    "formats_injected": true,
+    "hidden_columns": [],
+    "id_injected": true,
+    "languages_injected": true,
+    "last_modified_injected": true,
+    "path_injected": true,
+    "sort_history": [
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ]
+    ]
+  },
+  "card_b_view books view state": {
+    "column_alignment": {
+      "size": "center",
+      "timestamp": "center"
+    },
+    "column_positions": {
+      "authors": 2,
+      "collections": 5,
+      "inlibrary": 0,
+      "size": 4,
+      "timestamp": 3,
+      "title": 1
+    },
+    "column_sizes": {
+      "authors": 98,
+      "collections": 113,
+      "inlibrary": 105,
+      "size": 59,
+      "timestamp": 71,
+      "title": 66
+    },
+    "formats_injected": true,
+    "hidden_columns": [],
+    "id_injected": true,
+    "languages_injected": true,
+    "last_modified_injected": true,
+    "path_injected": true,
+    "sort_history": [
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ]
+    ]
+  },
+  "color_palette": "dark",
+  "cover_corner_radius": 8,
+  "cover_grid_background": {
+    "dark": [
+      29,
+      23,
+      17
+    ],
+    "dark_texture": null,
+    "light": [
+      70,
+      70,
+      70
+    ],
+    "light_texture": null,
+    "migrated": true
+  },
+  "dark_palette_name": "",
+  "dark_palettes": {
+    "__current__": {
+      "AlternateBase": "#2d2d2d",
+      "Base": "#121212",
+      "BrightText": "#ff0000",
+      "BrightText-disabled": "#ff0000",
+      "Button": "#2d2d2d",
+      "ButtonText": "#dddddd",
+      "ButtonText-disabled": "#7f7f7f",
+      "Highlight": "#0b45c4",
+      "HighlightedText": "#dddddd",
+      "HighlightedText-disabled": "#7f7f7f",
+      "Link": "#6cb4ee",
+      "LinkVisited": "#800080",
+      "PlaceholderText": "#7f7f7f",
+      "PlaceholderText-disabled": "#7f7f7f",
+      "Text": "#dddddd",
+      "Text-disabled": "#7f7f7f",
+      "ToolTipBase": "#2d2d2d",
+      "ToolTipText": "#dddddd",
+      "ToolTipText-disabled": "#dddddd",
+      "Window": "#2d2d2d",
+      "WindowText": "#dddddd",
+      "WindowText-disabled": "#dddddd"
+    }
+  },
+  "default_author_link": null,
+  "font": [
+    "Noto Sans",
+    14,
+    400,
+    false
+  ],
+  "font_stretch": 0,
+  "geometry-of-Plugin Updater plugin:plugin updater dialog": {
+    "frame_geometry": {
+      "height": 505,
+      "width": 1019,
+      "x": 569,
+      "y": 531
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 483,
+      "width": 1019,
+      "x": 569,
+      "y": 553
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 483,
+      "width": 1019,
+      "x": 569,
+      "y": 553
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAI5AAACEwAABjMAAAQLAAACOQAAAikAAAYzAAAECwAAAAAAAAAACHAAAAI5AAACKQAABjMAAAQL"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160
+      },
+      "virtual_geometry": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-calibre_main_window_geometry": {
+    "frame_geometry": {
+      "height": 896,
+      "width": 701,
+      "x": 0,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 896,
+      "width": 701,
+      "x": 0,
+      "y": 0
+    },
+    "maximized": true,
+    "normal_geometry": {
+      "height": -1,
+      "width": -1,
+      "x": 0,
+      "y": 0
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAArwAAAN/AAAAAAAAAAD////+/////gAAAAACAAAABaAAAAAAAAAAAAAAArwAAAN/"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "0x0893",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 960,
+        "width": 1440
+      },
+      "virtual_geometry": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-customize-palette-geometry": {
+    "frame_geometry": {
+      "height": 632,
+      "width": 826,
+      "x": 657,
+      "y": 449
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 610,
+      "width": 826,
+      "x": 657,
+      "y": 471
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 610,
+      "width": 826,
+      "x": 657,
+      "y": 471
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAKRAAABwQAABcoAAAQ4AAACkQAAAdcAAAXKAAAEOAAAAAAAAAAACHAAAAKRAAAB1wAABcoAAAQ4"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160
+      },
+      "virtual_geometry": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-image-trim-dialog-geometry": {
+    "frame_geometry": {
+      "height": 622,
+      "width": 900,
+      "x": 614,
+      "y": 387
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 600,
+      "width": 900,
+      "x": 614,
+      "y": 409
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 600,
+      "width": 900,
+      "x": 614,
+      "y": 409
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAJmAAABgwAABekAAAPwAAACZgAAAZkAAAXpAAAD8AAAAAAAAAAACHAAAAJmAAABmQAABekAAAPw"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160
+      },
+      "virtual_geometry": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-metadata_single_gui_geom": {
+    "frame_geometry": {
+      "height": 622,
+      "width": 850,
+      "x": 639,
+      "y": 387
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 600,
+      "width": 850,
+      "x": 639,
+      "y": 409
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 600,
+      "width": 850,
+      "x": 639,
+      "y": 409
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAJ/AAABgwAABdAAAAPwAAACfwAAAZkAAAXQAAAD8AAAAAAAAAAACHAAAAJ/AAABmQAABdAAAAPw"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160
+      },
+      "virtual_geometry": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-metasingle_window_geometry3": {
+    "frame_geometry": {
+      "height": 1412,
+      "width": 2090,
+      "x": 29,
+      "y": 32
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 1390,
+      "width": 2090,
+      "x": 29,
+      "y": 54
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 1390,
+      "width": 2090,
+      "x": 29,
+      "y": 54
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAAdAAAAIAAACEYAAAWjAAAAHQAAADYAAAhGAAAFowAAAAAAAAAACHAAAAAdAAAANgAACEYAAAWj"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160
+      },
+      "virtual_geometry": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-plugin config dialog:User interface action:Resize Cover": {
+    "frame_geometry": {
+      "height": 341,
+      "width": 598,
+      "x": 773,
+      "y": 547
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 319,
+      "width": 598,
+      "x": 773,
+      "y": 569
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 319,
+      "width": 598,
+      "x": 773,
+      "y": 569
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAMFAAACIwAABVoAAAN3AAADBQAAAjkAAAVaAAADdwAAAAAAAAAACHAAAAMFAAACOQAABVoAAAN3"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160
+      },
+      "virtual_geometry": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-preferences dialog geometry": {
+    "frame_geometry": {
+      "height": 741,
+      "width": 1132,
+      "x": 619,
+      "y": 479
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 719,
+      "width": 1132,
+      "x": 619,
+      "y": 501
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 719,
+      "width": 1132,
+      "x": 619,
+      "y": 501
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAJrAAAB3wAABtYAAATDAAACawAAAfUAAAbWAAAEwwAAAAAAAAAACHAAAAJrAAAB9QAABtYAAATD"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160
+      },
+      "virtual_geometry": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-single-cover-fetch-dialog-geometry": {
+    "frame_geometry": {
+      "height": 751,
+      "width": 940,
+      "x": 666,
+      "y": 296
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 729,
+      "width": 940,
+      "x": 666,
+      "y": 318
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 729,
+      "width": 940,
+      "x": 666,
+      "y": 318
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAKaAAABKAAABkUAAAQWAAACmgAAAT4AAAZFAAAEFgAAAAAAAAAACHAAAAKaAAABPgAABkUAAAQW"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1440,
+        "width": 2160
+      },
+      "virtual_geometry": {
+        "height": 1440,
+        "width": 2160,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "grid view visible": true,
+  "library_usage_stats": {
+    "/home/dominik/Library/Calibre": 18
+  },
+  "light_palette_name": "",
+  "light_palettes": {
+    "__current__": {
+      "AlternateBase": "#f5f5f5",
+      "Base": "#ffffff",
+      "BrightText": "#ff0000",
+      "BrightText-disabled": "#ff0000",
+      "Button": "#f0f0f0",
+      "ButtonText": "#000000",
+      "ButtonText-disabled": "#787878",
+      "Highlight": "#308cc6",
+      "HighlightedText": "#ffffff",
+      "HighlightedText-disabled": "#787878",
+      "Link": "#0000ff",
+      "LinkVisited": "#ff00ff",
+      "PlaceholderText": "#787878",
+      "PlaceholderText-disabled": "#787878",
+      "Text": "#000000",
+      "Text-disabled": "#787878",
+      "ToolTipBase": "#ffffdc",
+      "ToolTipText": "#000000",
+      "ToolTipText-disabled": "#000000",
+      "Window": "#f0f0f0",
+      "WindowText": "#000000",
+      "WindowText-disabled": "#000000"
+    }
+  },
+  "main_window_central_widget_state": {
+    "layout": "wide",
+    "narrow_desires": {
+      "book_details_height": 0.23051224944320714,
+      "cover_browser_width": 0.3494589433481859,
+      "quick_view_height": 0.2561247216035635,
+      "tag_browser_width": 0.2495225970719287
+    },
+    "narrow_visibility": {
+      "book_details": true,
+      "book_list": true,
+      "cover_browser": false,
+      "quick_view": false,
+      "tag_browser": true
+    },
+    "wide_desires": {
+      "book_details_width": 0.29980903882877147,
+      "cover_browser_height": 0.2854188210961737,
+      "quick_view_height": 0.2378490175801448,
+      "tag_browser_width": 0.09163533834586467
+    },
+    "wide_visibility": {
+      "book_details": true,
+      "book_list": true,
+      "cover_browser": false,
+      "quick_view": false,
+      "tag_browser": true
+    }
+  },
+  "memory_view books view state": {
+    "column_alignment": {
+      "size": "center",
+      "timestamp": "center"
+    },
+    "column_positions": {
+      "authors": 2,
+      "collections": 5,
+      "inlibrary": 0,
+      "size": 4,
+      "timestamp": 3,
+      "title": 1
+    },
+    "column_sizes": {
+      "authors": 131,
+      "collections": 186,
+      "inlibrary": 105,
+      "size": 69,
+      "timestamp": 104,
+      "title": 350
+    },
+    "formats_injected": true,
+    "hidden_columns": [],
+    "id_injected": true,
+    "languages_injected": true,
+    "last_modified_injected": true,
+    "path_injected": true,
+    "sort_history": [
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ]
+    ]
+  },
+  "previous_sort_order_BooksView": {
+    "timestamp": false
+  },
+  "quick_start_guide_added": true,
+  "qv_open_at_shutdown": false,
+  "recently_used_languages": [
+    "English",
+    "Polish"
+  ],
+  "search bar visible": true,
+  "show_emblems": false,
+  "tag browser search box visible": false,
+  "toolbar_text": "always"
+}
