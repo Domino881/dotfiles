@@ -50,6 +50,9 @@
     "Prettify Cover",
     "Resize Cover"
   ],
+  "ask_to_manage_device": [
+    "RF2DB2D0KHF"
+  ],
   "basic_metadata_widget_splitter_state": {
     "__class__": "bytearray",
     "__value__": "AAAA/wAAAAEAAAADAAAA+gAAAbwAAAEKAf////8BAAAAAQA="
@@ -58,6 +61,8 @@
     "__class__": "bytearray",
     "__value__": "AAAA/wAAAAEAAAACAAABAAAAAEYA/////wEAAAABAA=="
   },
+  "bulk-mde-casing-algorithm": "title_case",
+  "bulk_metadata_window_tab": 0,
   "card_a_view books view state": {
     "column_alignment": {
       "size": "center",
@@ -86,6 +91,22 @@
     "last_modified_injected": true,
     "path_injected": true,
     "sort_history": [
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
       [
         "timestamp",
         false
@@ -136,6 +157,22 @@
     "last_modified_injected": true,
     "path_injected": true,
     "sort_history": [
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
       [
         "timestamp",
         false
@@ -261,52 +298,154 @@
       }
     }
   },
-  "geometry-of-calibre_main_window_geometry": {
+  "geometry-of-bulk_metadata_window_geometry": {
     "frame_geometry": {
-      "height": 896,
-      "width": 701,
-      "x": 0,
+      "height": 1030,
+      "width": 1850,
+      "x": 1440,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 896,
-      "width": 701,
-      "x": 0,
+      "height": 1030,
+      "width": 1850,
+      "x": 1440,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": -1,
-      "width": -1,
-      "x": 0,
+      "height": 1030,
+      "width": 1850,
+      "x": 1440,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAAArwAAAN/AAAAAAAAAAD////+/////gAAAAACAAAABaAAAAAAAAAAAAAAArwAAAN/"
+      "__value__": "AdnQywADAAAAAAWgAAAAAAAADNkAAAQFAAAFoAAAAAAAAAzZAAAEBQAAAAECAAAAB4AAAAWgAAAAAAAADNkAAAQF"
     },
     "screen": {
       "depth": 32,
-      "device_pixel_ratio": 2.0,
+      "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 960,
-        "width": 1440,
-        "x": 0,
+        "height": 1080,
+        "width": 1920,
+        "x": 1440,
         "y": 0
       },
-      "index_in_screens_list": 0,
-      "manufacturer": "BOE",
-      "model": "0x0893",
-      "name": "eDP-1",
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL S2719H",
+      "name": "HDMI-A-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 960,
-        "width": 1440
+        "height": 1080,
+        "width": 1920
       },
       "virtual_geometry": {
-        "height": 960,
-        "width": 1440,
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-calibre_main_window_geometry": {
+    "frame_geometry": {
+      "height": 1066,
+      "width": 1906,
+      "x": 1440,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 1066,
+      "width": 1906,
+      "x": 1440,
+      "y": 0
+    },
+    "maximized": true,
+    "normal_geometry": {
+      "height": 1018,
+      "width": 948,
+      "x": 1440,
+      "y": 0
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAWgAAAAAAAADREAAAQpAAAFoAAAAAAAAAlTAAAD+QAAAAECAAAAB4AAAAWgAAAAAAAADREAAAQp"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 1440,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL S2719H",
+      "name": "HDMI-A-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-convert_single_dialog_geom": {
+    "frame_geometry": {
+      "height": 980,
+      "width": 1850,
+      "x": 1440,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 980,
+      "width": 1850,
+      "x": 1440,
+      "y": 0
+    },
+    "maximized": true,
+    "normal_geometry": {
+      "height": 980,
+      "width": 1850,
+      "x": 1440,
+      "y": 0
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAWgAAAAAAAADNkAAAPTAAAFoAAAAAAAAAzZAAAD0wAAAAECAAAAB4AAAAWgAAAAAAAADNkAAAPT"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 1440,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL S2719H",
+      "name": "HDMI-A-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
         "x": 0,
         "y": 0
       }
@@ -363,52 +502,103 @@
       }
     }
   },
+  "geometry-of-duplicates-question-dialog-geometry": {
+    "frame_geometry": {
+      "height": 388,
+      "width": 662,
+      "x": 1440,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 388,
+      "width": 662,
+      "x": 1440,
+      "y": 0
+    },
+    "maximized": true,
+    "normal_geometry": {
+      "height": 388,
+      "width": 662,
+      "x": 1440,
+      "y": 0
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAWgAAAAAAAACDUAAAGDAAAFoAAAAAAAAAg1AAABgwAAAAECAAAAB4AAAAWgAAAAAAAACDUAAAGD"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 1440,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL S2719H",
+      "name": "HDMI-A-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
   "geometry-of-image-trim-dialog-geometry": {
     "frame_geometry": {
-      "height": 622,
+      "height": 600,
       "width": 900,
-      "x": 614,
-      "y": 387
+      "x": 1440,
+      "y": 0
     },
     "full_screened": false,
     "geometry": {
       "height": 600,
       "width": 900,
-      "x": 614,
-      "y": 409
+      "x": 1440,
+      "y": 0
     },
-    "maximized": false,
+    "maximized": true,
     "normal_geometry": {
       "height": 600,
       "width": 900,
-      "x": 614,
-      "y": 409
+      "x": 1440,
+      "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAJmAAABgwAABekAAAPwAAACZgAAAZkAAAXpAAAD8AAAAAAAAAAACHAAAAJmAAABmQAABekAAAPw"
+      "__value__": "AdnQywADAAAAAAWgAAAAAAAACSMAAAJXAAAFoAAAAAAAAAkjAAACVwAAAAECAAAAB4AAAAWgAAAAAAAACSMAAAJX"
     },
     "screen": {
-      "depth": 24,
+      "depth": 32,
       "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 1440,
-        "width": 2160,
-        "x": 0,
+        "height": 1080,
+        "width": 1920,
+        "x": 1440,
         "y": 0
       },
-      "index_in_screens_list": 0,
-      "manufacturer": "BOE",
-      "model": "",
-      "name": "eDP-1",
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL S2719H",
+      "name": "HDMI-A-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1440,
-        "width": 2160
+        "height": 1080,
+        "width": 1920
       },
       "virtual_geometry": {
-        "height": 1440,
-        "width": 2160,
+        "height": 1080,
+        "width": 3360,
         "x": 0,
         "y": 0
       }
@@ -416,50 +606,50 @@
   },
   "geometry-of-metadata_single_gui_geom": {
     "frame_geometry": {
-      "height": 622,
+      "height": 600,
       "width": 850,
-      "x": 639,
-      "y": 387
+      "x": 1440,
+      "y": 0
     },
     "full_screened": false,
     "geometry": {
       "height": 600,
       "width": 850,
-      "x": 639,
-      "y": 409
+      "x": 1440,
+      "y": 0
     },
-    "maximized": false,
+    "maximized": true,
     "normal_geometry": {
       "height": 600,
       "width": 850,
-      "x": 639,
-      "y": 409
+      "x": 1440,
+      "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAJ/AAABgwAABdAAAAPwAAACfwAAAZkAAAXQAAAD8AAAAAAAAAAACHAAAAJ/AAABmQAABdAAAAPw"
+      "__value__": "AdnQywADAAAAAAWgAAAAAAAACPEAAAJXAAAFoAAAAAAAAAjxAAACVwAAAAECAAAAB4AAAAWgAAAAAAAACPEAAAJX"
     },
     "screen": {
-      "depth": 24,
+      "depth": 32,
       "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 1440,
-        "width": 2160,
-        "x": 0,
+        "height": 1080,
+        "width": 1920,
+        "x": 1440,
         "y": 0
       },
-      "index_in_screens_list": 0,
-      "manufacturer": "BOE",
-      "model": "",
-      "name": "eDP-1",
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL S2719H",
+      "name": "HDMI-A-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1440,
-        "width": 2160
+        "height": 1080,
+        "width": 1920
       },
       "virtual_geometry": {
-        "height": 1440,
-        "width": 2160,
+        "height": 1080,
+        "width": 3360,
         "x": 0,
         "y": 0
       }
@@ -467,50 +657,50 @@
   },
   "geometry-of-metasingle_window_geometry3": {
     "frame_geometry": {
-      "height": 1412,
-      "width": 2090,
-      "x": 29,
-      "y": 32
+      "height": 905,
+      "width": 1761,
+      "x": 1440,
+      "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 1390,
-      "width": 2090,
-      "x": 29,
-      "y": 54
+      "height": 905,
+      "width": 1761,
+      "x": 1440,
+      "y": 0
     },
-    "maximized": false,
+    "maximized": true,
     "normal_geometry": {
-      "height": 1390,
-      "width": 2090,
-      "x": 29,
-      "y": 54
+      "height": 905,
+      "width": 1761,
+      "x": 1440,
+      "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAdAAAAIAAACEYAAAWjAAAAHQAAADYAAAhGAAAFowAAAAAAAAAACHAAAAAdAAAANgAACEYAAAWj"
+      "__value__": "AdnQywADAAAAAAWgAAAAAAAADIAAAAOIAAAFoAAAAAAAAAyAAAADiAAAAAECAAAAB4AAAAWgAAAAAAAADIAAAAOI"
     },
     "screen": {
-      "depth": 24,
+      "depth": 32,
       "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 1440,
-        "width": 2160,
-        "x": 0,
+        "height": 1080,
+        "width": 1920,
+        "x": 1440,
         "y": 0
       },
-      "index_in_screens_list": 0,
-      "manufacturer": "BOE",
-      "model": "",
-      "name": "eDP-1",
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL S2719H",
+      "name": "HDMI-A-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1440,
-        "width": 2160
+        "height": 1080,
+        "width": 1920
       },
       "virtual_geometry": {
-        "height": 1440,
-        "width": 2160,
+        "height": 1080,
+        "width": 3360,
         "x": 0,
         "y": 0
       }
@@ -569,50 +759,50 @@
   },
   "geometry-of-preferences dialog geometry": {
     "frame_geometry": {
-      "height": 741,
+      "height": 719,
       "width": 1132,
-      "x": 619,
-      "y": 479
+      "x": 1440,
+      "y": 0
     },
     "full_screened": false,
     "geometry": {
       "height": 719,
       "width": 1132,
-      "x": 619,
-      "y": 501
+      "x": 1440,
+      "y": 0
     },
-    "maximized": false,
+    "maximized": true,
     "normal_geometry": {
       "height": 719,
       "width": 1132,
-      "x": 619,
-      "y": 501
+      "x": 1440,
+      "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAJrAAAB3wAABtYAAATDAAACawAAAfUAAAbWAAAEwwAAAAAAAAAACHAAAAJrAAAB9QAABtYAAATD"
+      "__value__": "AdnQywADAAAAAAWgAAAAAAAACgsAAALOAAAFoAAAAAAAAAoLAAACzgAAAAECAAAAB4AAAAWgAAAAAAAACgsAAALO"
     },
     "screen": {
-      "depth": 24,
+      "depth": 32,
       "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 1440,
-        "width": 2160,
-        "x": 0,
+        "height": 1080,
+        "width": 1920,
+        "x": 1440,
         "y": 0
       },
-      "index_in_screens_list": 0,
-      "manufacturer": "BOE",
-      "model": "",
-      "name": "eDP-1",
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL S2719H",
+      "name": "HDMI-A-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1440,
-        "width": 2160
+        "height": 1080,
+        "width": 1920
       },
       "virtual_geometry": {
-        "height": 1440,
-        "width": 2160,
+        "height": 1080,
+        "width": 3360,
         "x": 0,
         "y": 0
       }
@@ -620,50 +810,50 @@
   },
   "geometry-of-single-cover-fetch-dialog-geometry": {
     "frame_geometry": {
-      "height": 751,
+      "height": 729,
       "width": 940,
-      "x": 666,
-      "y": 296
+      "x": 1440,
+      "y": 0
     },
     "full_screened": false,
     "geometry": {
       "height": 729,
       "width": 940,
-      "x": 666,
-      "y": 318
+      "x": 1440,
+      "y": 0
     },
-    "maximized": false,
+    "maximized": true,
     "normal_geometry": {
       "height": 729,
       "width": 940,
-      "x": 666,
-      "y": 318
+      "x": 1440,
+      "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAKaAAABKAAABkUAAAQWAAACmgAAAT4AAAZFAAAEFgAAAAAAAAAACHAAAAKaAAABPgAABkUAAAQW"
+      "__value__": "AdnQywADAAAAAAWgAAAAAAAACUsAAALYAAAFoAAAAAAAAAlLAAAC2AAAAAECAAAAB4AAAAWgAAAAAAAACUsAAALY"
     },
     "screen": {
-      "depth": 24,
+      "depth": 32,
       "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 1440,
-        "width": 2160,
-        "x": 0,
+        "height": 1080,
+        "width": 1920,
+        "x": 1440,
         "y": 0
       },
-      "index_in_screens_list": 0,
-      "manufacturer": "BOE",
-      "model": "",
-      "name": "eDP-1",
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL S2719H",
+      "name": "HDMI-A-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1440,
-        "width": 2160
+        "height": 1080,
+        "width": 1920
       },
       "virtual_geometry": {
-        "height": 1440,
-        "width": 2160,
+        "height": 1080,
+        "width": 3360,
         "x": 0,
         "y": 0
       }
@@ -671,7 +861,7 @@
   },
   "grid view visible": true,
   "library_usage_stats": {
-    "/home/dominik/Library/Calibre": 18
+    "/home/dominik/Library/Calibre": 20
   },
   "light_palette_name": "",
   "light_palettes": {
@@ -719,7 +909,7 @@
       "book_details_width": 0.29980903882877147,
       "cover_browser_height": 0.2854188210961737,
       "quick_view_height": 0.2378490175801448,
-      "tag_browser_width": 0.09163533834586467
+      "tag_browser_width": 0.22770199370409233
     },
     "wide_visibility": {
       "book_details": true,
@@ -776,8 +966,28 @@
       [
         "timestamp",
         false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
       ]
     ]
+  },
+  "metadata-download-identify-widget-splitter-state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAACAAACAAAAAQAA/////wEAAAABAA=="
   },
   "previous_sort_order_BooksView": {
     "timestamp": false
@@ -785,8 +995,19 @@
   "quick_start_guide_added": true,
   "qv_open_at_shutdown": false,
   "recently_used_languages": [
-    "English",
-    "Polish"
+    "Polish",
+    "English"
+  ],
+  "replace_scene_breaks_history": [
+    "",
+    "<hr />",
+    "∗ ∗ ∗",
+    "• • •",
+    "♦ ♦ ♦",
+    "† †",
+    "‡ ‡ ‡",
+    "∞ ∞ ∞",
+    "¤ ¤ ¤"
   ],
   "search bar visible": true,
   "show_emblems": false,

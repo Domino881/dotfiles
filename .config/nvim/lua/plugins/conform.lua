@@ -32,7 +32,7 @@ return { -- Autoformat
                 or vim.bo.filetype == "typst"
                 or vim.bo.filetype == "lua"
             then
-                return { lsp_format = "fallback", timeout_ms = 500 }
+                return { lsp_format = "fallback", timeout_ms = 200 }
             else
                 return false
             end
@@ -46,6 +46,7 @@ return { -- Autoformat
             python = { "ruff_format" },
             tex = { "tex-fmt", "prettier" },
             cpp = { "clang-format" },
+            typescript = { "ts-standard" },
             ["_"] = { "prettier" },
         },
 

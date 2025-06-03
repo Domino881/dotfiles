@@ -1,11 +1,13 @@
 {
-  "add books dialog dir": "/home/dominik/Downloads",
+  "add books dialog dir": "/home/dominik/Downloads/Ebooki z mamy tabletu",
   "add books dialog dir-last-used-filter-spec-all-files": false,
   "catalogs_to_be_synced": {
     "__class__": "set",
     "__value__": []
   },
   "database location dialog": "/home/dominik/Library/Calibre",
+  "s_r_search_mode": 0,
+  "save to disk dialog": "/home/dominik/Downloads/Ebooki z mamy tabletu",
   "sort_history": [
     [
       "timestamp",

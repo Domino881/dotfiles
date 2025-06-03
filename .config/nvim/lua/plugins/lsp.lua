@@ -28,8 +28,8 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "jedi_language_server",
-                "basedpyright",
-                "ruff",
+                -- "basedpyright",
+                -- "ruff",
                 "clangd",
             },
             handlers = {
@@ -55,7 +55,7 @@ return {
                     analysis = {
                         diagnosticMode = "openFilesOnly",
                         typeCheckingMode = "standard",
-                        stubPath = vim.fn.expand("$HOME/.local/share/stubs"),
+                        -- stubPath = vim.fn.expand("$HOME/.local/share/stubs"),
                         inlayHints = {
                             callArgumentNames = true,
                         },

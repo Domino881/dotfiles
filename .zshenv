@@ -18,6 +18,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH"
 # . "$HOME/.cargo/env"
 
+ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
 # Colorscheme sync with wallpaper
 # Import colorscheme from 'wal' asynchronously
 (cat ~/.cache/wal/sequences &)

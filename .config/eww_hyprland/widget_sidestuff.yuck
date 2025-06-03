@@ -6,6 +6,7 @@
     :halign "end"
     (network :strength net :offline "󰤭" :excellent "󰤨" :good "󰤥"
              :okay "󰤢" :slow "󰤟")
+    (bluetooth)
     (audio :high "" :medium "󰖀" :low "󰕿" :muted "󰝟"
            :volume volume)
     (systray
@@ -173,6 +174,21 @@
         :duration "350ms"
         (box (label :text wifi_ssid ))
         )
+      )
+    )
+  )
+
+(defpoll bluestatus :interval "5s" :initial "off"
+  `$HOME/.config/eww/modules/bluetooth.sh`)
+(defwidget bluetooth []
+  (eventbox
+    :onclick `overskride &`
+    (box
+      :space-evenly false
+      :spacing 0
+      :class {bluestatus == "off"? "bluetooth-off" : ""}
+      (label :text {bluestatus == "on"? "󰂯"
+        :bluestatus == "paired" ? "󰂱" : "󰂲"})
       )
     )
   )

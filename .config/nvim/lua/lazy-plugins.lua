@@ -49,10 +49,13 @@ require("lazy").setup({
     require("plugins.git"), -- Git integrations
     require("plugins.texmath"), -- my clone of mdmath.nvim - previews of tex math
     require("plugins.jupyter-kernel"), -- hover / completions from attached kernel
-    require("plugins.yazi"),
+    require("plugins.yazi"), -- File explorer
 
     -- Plugins below are imported with little/no extra options
-    --
+    {
+        'brianhuster/live-preview.nvim',
+        dependencies = { 'nvim-telescope/telescope.nvim' }
+    },
     {
         "chomosuke/typst-preview.nvim", -- live preview in browser for Typst
         ft = "typst",

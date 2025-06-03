@@ -16,6 +16,7 @@ tooltip {
   opacity: 1.0;
   padding: 5px;
   padding-bottom: 0px;
+  /* background-color: #151515; */
 }
 
 .sidestuff {
@@ -157,4 +158,8 @@ tooltip {
 }
 .power-buttons .reboot {
   color: rgba(#f8a870, 0.8);
+}
+
+.bluetooth-off {
+  color: #666666;
 }
