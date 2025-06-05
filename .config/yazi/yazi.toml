@@ -1,0 +1,8 @@
+
+[plugin]
+prepend_preloaders = [
+	{ mime = "image/{svg}", run = "magick" },
+]
+prepend_previewers = [
+	{ mime = "image/{svg}", run = "magick" },
+]
