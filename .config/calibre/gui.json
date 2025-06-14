@@ -118,14 +118,6 @@
       [
         "timestamp",
         false
-      ],
-      [
-        "inlibrary",
-        false
-      ],
-      [
-        "timestamp",
-        false
       ]
     ]
   },
@@ -157,14 +149,6 @@
     "last_modified_injected": true,
     "path_injected": true,
     "sort_history": [
-      [
-        "timestamp",
-        false
-      ],
-      [
-        "inlibrary",
-        false
-      ],
       [
         "timestamp",
         false
@@ -351,50 +335,50 @@
   },
   "geometry-of-calibre_main_window_geometry": {
     "frame_geometry": {
-      "height": 1066,
-      "width": 1906,
-      "x": 1440,
+      "height": 900,
+      "width": 708,
+      "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 1066,
-      "width": 1906,
-      "x": 1440,
+      "height": 900,
+      "width": 708,
+      "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1018,
-      "width": 948,
+      "height": 1020,
+      "width": 1906,
       "x": 1440,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAWgAAAAAAAADREAAAQpAAAFoAAAAAAAAAlTAAAD+QAAAAECAAAAB4AAAAWgAAAAAAAADREAAAQp"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAsMAAAODAAAFoAAAAAAAAA0RAAAD+wAAAAACAAAABaAAAAAAAAAAAAAAAsMAAAOD"
     },
     "screen": {
       "depth": 32,
-      "device_pixel_ratio": 1.0,
+      "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920,
-        "x": 1440,
+        "height": 960,
+        "width": 1440,
+        "x": 0,
         "y": 0
       },
-      "index_in_screens_list": 1,
-      "manufacturer": "Dell Inc.",
-      "model": "DELL S2719H",
-      "name": "HDMI-A-1",
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "0x0893",
+      "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
-        "height": 1080,
-        "width": 3360,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -506,44 +490,44 @@
     "frame_geometry": {
       "height": 388,
       "width": 662,
-      "x": 1440,
+      "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
       "height": 388,
       "width": 662,
-      "x": 1440,
+      "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
       "height": 388,
       "width": 662,
-      "x": 1440,
+      "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAWgAAAAAAAACDUAAAGDAAAFoAAAAAAAAAg1AAABgwAAAAECAAAAB4AAAAWgAAAAAAAACDUAAAGD"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAApUAAAGDAAAAAAAAAAAAAAKVAAABgwAAAAACAAAABaAAAAAAAAAAAAAAApUAAAGD"
     },
     "screen": {
       "depth": 32,
-      "device_pixel_ratio": 1.0,
+      "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920,
-        "x": 1440,
+        "height": 960,
+        "width": 1440,
+        "x": 0,
         "y": 0
       },
-      "index_in_screens_list": 1,
-      "manufacturer": "Dell Inc.",
-      "model": "DELL S2719H",
-      "name": "HDMI-A-1",
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "0x0893",
+      "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
         "height": 1080,
@@ -679,6 +663,57 @@
     "qt": {
       "__class__": "bytearray",
       "__value__": "AdnQywADAAAAAAWgAAAAAAAADIAAAAOIAAAFoAAAAAAAAAyAAAADiAAAAAECAAAAB4AAAAWgAAAAAAAADIAAAAOI"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 1440,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL S2719H",
+      "name": "HDMI-A-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-plugin config dialog:Device interface:KoboTouch": {
+    "frame_geometry": {
+      "height": 768,
+      "width": 1168,
+      "x": 1440,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 768,
+      "width": 1168,
+      "x": 1440,
+      "y": 0
+    },
+    "maximized": true,
+    "normal_geometry": {
+      "height": 768,
+      "width": 1168,
+      "x": 1440,
+      "y": 0
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAWgAAAAAAAACi8AAAL/AAAFoAAAAAAAAAovAAAC/wAAAAECAAAAB4AAAAWgAAAAAAAACi8AAAL/"
     },
     "screen": {
       "depth": 32,
@@ -859,9 +894,11 @@
       }
     }
   },
+  "gpm_template_editor_font": "Noto Sans",
+  "gpm_template_editor_word_wrap_mode": true,
   "grid view visible": true,
   "library_usage_stats": {
-    "/home/dominik/Library/Calibre": 20
+    "/home/dominik/Library/Calibre": 32
   },
   "light_palette_name": "",
   "light_palettes": {
@@ -974,14 +1011,6 @@
       [
         "timestamp",
         false
-      ],
-      [
-        "inlibrary",
-        false
-      ],
-      [
-        "timestamp",
-        false
       ]
     ]
   },
@@ -995,8 +1024,8 @@
   "quick_start_guide_added": true,
   "qv_open_at_shutdown": false,
   "recently_used_languages": [
-    "Polish",
-    "English"
+    "English",
+    "Polish"
   ],
   "replace_scene_breaks_history": [
     "",
@@ -1012,5 +1041,7 @@
   "search bar visible": true,
   "show_emblems": false,
   "tag browser search box visible": false,
+  "template_functions_prefs_st_show_help": true,
+  "template_functions_prefs_tf_show_help": true,
   "toolbar_text": "always"
 }

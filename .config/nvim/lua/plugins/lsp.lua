@@ -27,9 +27,7 @@ return {
             automatic_installation = true,
             ensure_installed = {
                 "lua_ls",
-                "jedi_language_server",
-                -- "basedpyright",
-                -- "ruff",
+                "ty",
                 "clangd",
             },
             handlers = {

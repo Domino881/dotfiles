@@ -1,28 +1,28 @@
 {
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 1080,
-      "width": 1920,
+      "height": 1020,
+      "width": 948,
       "x": 1440,
       "y": 0
     },
-    "full_screened": true,
+    "full_screened": false,
     "geometry": {
-      "height": 1080,
-      "width": 1920,
+      "height": 1020,
+      "width": 948,
       "x": 1440,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 504,
+      "height": 1020,
       "width": 948,
       "x": 1440,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAWgAAAAAAAADR8AAAQ3AAAFoAAAAAAAAAlTAAAB9wAAAAECBAAAB4AAAAWgAAAAAAAADR8AAAQ3"
+      "__value__": "AdnQywADAAAAAAWgAAAAAAAACVMAAAP7AAAFoAAAAAAAAAlTAAAD+wAAAAECAAAAB4AAAAWgAAAAAAAACVMAAAP7"
     },
     "screen": {
       "depth": 32,
@@ -52,19 +52,67 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEHAAAEOPwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAAEOAAAAJoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAsgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACjAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAASIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAHAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAPoA////AAAGcwAABDgAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEHAAAD/PwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAAD/AAAAJoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAsgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACjAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAASIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAHAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAPoA////AAACpwAAA/wAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "session_data": {
+    "base_font_size": 15,
+    "columns_per_screen": {
+      "landscape": 1,
+      "portrait": 1
+    },
+    "controls_footer": {
+      "left": "empty",
+      "middle": "empty",
+      "right": "progress"
+    },
     "controls_help_shown_count": 2,
+    "current_color_scheme": "white",
+    "footer": {
+      "left": "menu-icon-on-hover",
+      "middle": "empty",
+      "right": "progress"
+    },
+    "header": {
+      "left": "empty",
+      "middle": "empty",
+      "right": "menu-icon-on-hover"
+    },
+    "left-margin": {
+      "left": "empty",
+      "middle": "empty",
+      "right": "empty"
+    },
+    "max_text_height": 1448,
+    "max_text_width": 1072,
+    "right-margin": {
+      "left": "empty",
+      "middle": "empty",
+      "right": "empty"
+    },
     "standalone_font_settings": {},
     "standalone_misc_settings": {
-      "remember_last_read": true,
-      "remember_window_geometry": false,
-      "save_annotations_in_ebook": true,
-      "singleinstance": false
+      "remember_window_geometry": true
     },
     "standalone_recently_opened": [
+      {
+        "authors": [
+          "Brandon Sanderson"
+        ],
+        "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (88)/Wind and Truth - Brandon Sanderson.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (88)/Wind and Truth - Brandon Sanderson.epub",
+        "timestamp": "2025-05-30T09:41:45.526Z",
+        "title": "Wind and Truth"
+      },
+      {
+        "authors": [
+          "Brandon Sanderson"
+        ],
+        "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (42)/Wind and Truth - Brandon Sanderson.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (42)/Wind and Truth - Brandon Sanderson.epub",
+        "timestamp": "2025-05-29T13:48:24.579Z",
+        "title": "Wind and Truth"
+      },
       {
         "authors": [
           "Brandon Sanderson"

@@ -120,4 +120,3 @@ export MANROFFOPT="-P -c"
 # Zoxide
 eval "$(zoxide init zsh)"
 alias cd=z
-### End of Zinit's installer chunk

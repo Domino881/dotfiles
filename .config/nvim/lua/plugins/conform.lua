@@ -63,8 +63,8 @@ return { -- Autoformat
             },
             prettier = {
                 prepend_args = {
-                    "--plugin",
-                    "prettier-plugin-latex",
+                    -- "--plugin",
+                    -- "prettier-plugin-latex",
                     "--print-width",
                     "70",
                     "--use-tabs",
