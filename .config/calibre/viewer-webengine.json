@@ -1,50 +1,50 @@
 {
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 1020,
-      "width": 948,
-      "x": 1440,
+      "height": 898,
+      "width": 708,
+      "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 1020,
-      "width": 948,
-      "x": 1440,
+      "height": 898,
+      "width": 708,
+      "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1020,
-      "width": 948,
-      "x": 1440,
+      "height": 898,
+      "width": 708,
+      "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAWgAAAAAAAACVMAAAP7AAAFoAAAAAAAAAlTAAAD+wAAAAECAAAAB4AAAAWgAAAAAAAACVMAAAP7"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAsMAAAOBAAAAAAAAAAAAAALDAAADgQAAAAACAAAABaAAAAAAAAAAAAAAAsMAAAOB"
     },
     "screen": {
       "depth": 32,
-      "device_pixel_ratio": 1.0,
+      "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920,
-        "x": 1440,
+        "height": 960,
+        "width": 1440,
+        "x": 0,
         "y": 0
       },
-      "index_in_screens_list": 1,
-      "manufacturer": "Dell Inc.",
-      "model": "DELL S2719H",
-      "name": "HDMI-A-1",
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "0x0893",
+      "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
-        "height": 1080,
-        "width": 3360,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -52,7 +52,7 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEHAAAD/PwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAAD/AAAAJoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAsgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACjAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAASIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAHAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAPoA////AAACpwAAA/wAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEHAAADgvwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAADggAAAJoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAsgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACjAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAASIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAHAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAPoA////AAABtwAAA4IAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "session_data": {
@@ -99,6 +99,33 @@
         "authors": [
           "Brandon Sanderson"
         ],
+        "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Studnia wstapienia (84)/Studnia wstapienia - Brandon Sanderson.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Studnia wstapienia (84)/Studnia wstapienia - Brandon Sanderson.epub",
+        "timestamp": "2025-06-23T08:20:41.421Z",
+        "title": "Studnia wstąpienia"
+      },
+      {
+        "authors": [
+          "Veronica Roth"
+        ],
+        "key": "/tmp/calibre-k7mzv9o1/7027yl2r_view_device_book.epub",
+        "pathtoebook": "/tmp/calibre-k7mzv9o1/7027yl2r_view_device_book.epub",
+        "timestamp": "2025-06-08T19:47:22.373Z",
+        "title": "Niezgodna"
+      },
+      {
+        "authors": [
+          "Suzanne Collins"
+        ],
+        "key": "/home/dominik/Library/Calibre/Suzanne Collins/Igrzyska. Wschod slonca w dniu dozynek (89)/Igrzyska. Wschod slonca w dniu dozynek - Suzanne Collins.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Suzanne Collins/Igrzyska. Wschod slonca w dniu dozynek (89)/Igrzyska. Wschod slonca w dniu dozynek - Suzanne Collins.epub",
+        "timestamp": "2025-06-08T19:38:55.629Z",
+        "title": "Igrzyska. Wschód słońca w dniu dożynek"
+      },
+      {
+        "authors": [
+          "Brandon Sanderson"
+        ],
         "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (88)/Wind and Truth - Brandon Sanderson.epub",
         "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (88)/Wind and Truth - Brandon Sanderson.epub",
         "timestamp": "2025-05-30T09:41:45.526Z",
@@ -112,15 +139,6 @@
         "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (42)/Wind and Truth - Brandon Sanderson.epub",
         "timestamp": "2025-05-29T13:48:24.579Z",
         "title": "Wind and Truth"
-      },
-      {
-        "authors": [
-          "Brandon Sanderson"
-        ],
-        "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Studnia wstapienia (84)/Studnia wstapienia - Brandon Sanderson.epub",
-        "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Studnia wstapienia (84)/Studnia wstapienia - Brandon Sanderson.epub",
-        "timestamp": "2025-05-28T10:43:25.297Z",
-        "title": "Studnia wstąpienia"
       },
       {
         "authors": [

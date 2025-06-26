@@ -6,7 +6,7 @@
   "choose_tweak_fmt": true,
   "css-editor-state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAAAAAAA4gAAAMSAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAD9AAAAAAAAAnwAAAJFAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAA=="
   },
   "custom_colors_for_color_dialog": [
     [
@@ -116,50 +116,101 @@
   },
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 1080,
-      "width": 1920,
-      "x": 1440,
+      "height": 898,
+      "width": 708,
+      "x": 0,
       "y": 0
     },
-    "full_screened": true,
+    "full_screened": false,
     "geometry": {
-      "height": 1080,
-      "width": 1920,
-      "x": 1440,
+      "height": 898,
+      "width": 708,
+      "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1080,
-      "width": 1920,
-      "x": 1440,
+      "height": 960,
+      "width": 1440,
+      "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAWgAAAAAAAADR8AAAQ3AAAFoAAAAAAAAA0fAAAENwAAAAECBAAAB4AAAAWgAAAAAAAADR8AAAQ3"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAsMAAAOBAAAAAAAAAAAAAAWfAAADvwAAAAACAAAABaAAAAAAAAAAAAAAAsMAAAOB"
     },
     "screen": {
       "depth": 32,
-      "device_pixel_ratio": 1.0,
+      "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920,
-        "x": 1440,
+        "height": 960,
+        "width": 1440,
+        "x": 0,
         "y": 0
       },
-      "index_in_screens_list": 1,
-      "manufacturer": "Dell Inc.",
-      "model": "DELL S2719H",
-      "name": "HDMI-A-1",
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "0x0893",
+      "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
-        "height": 1080,
-        "width": 3360,
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-manage-fonts-geometry": {
+    "frame_geometry": {
+      "height": 484,
+      "width": 825,
+      "x": 298,
+      "y": 198
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 484,
+      "width": 825,
+      "x": 298,
+      "y": 198
+    },
+    "maximized": true,
+    "normal_geometry": {
+      "height": 484,
+      "width": 825,
+      "x": 298,
+      "y": 198
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAEqAAAAxgAABGIAAAKpAAABKgAAAMYAAARiAAACqQAAAAACAAAABaAAAAEqAAAAxgAABGIAAAKp"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "0x0893",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 960,
+        "width": 1440
+      },
+      "virtual_geometry": {
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -169,48 +220,48 @@
     "frame_geometry": {
       "height": 599,
       "width": 1125,
-      "x": 1440,
+      "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
       "height": 599,
       "width": 1125,
-      "x": 1440,
+      "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
       "height": 599,
       "width": 1125,
-      "x": 1440,
+      "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAWgAAAAAAAACgQAAAJWAAAFoAAAAAAAAAoEAAACVgAAAAECAAAAB4AAAAWgAAAAAAAACgQAAAJW"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABGQAAAJWAAAAAAAAAAAAAARkAAACVgAAAAACAAAABaAAAAAAAAAAAAAABGQAAAJW"
     },
     "screen": {
       "depth": 32,
-      "device_pixel_ratio": 1.0,
+      "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920,
-        "x": 1440,
+        "height": 960,
+        "width": 1440,
+        "x": 0,
         "y": 0
       },
-      "index_in_screens_list": 1,
-      "manufacturer": "Dell Inc.",
-      "model": "DELL S2719H",
-      "name": "HDMI-A-1",
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "0x0893",
+      "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
-        "height": 1080,
-        "width": 3360,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -218,7 +269,7 @@
   },
   "html-editor-state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAAAAAAA4gAAAMSAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAAAAAB4AaAB0AG0AbABfAGYAbwByAG0AYQB0AF8AYgBhAHIBAAABv/////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAD9AAAAAAAAAioAAAI3AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAAAAAB4AaAB0AG0AbABfAGYAbwByAG0AYQB0AF8AYgBhAHIBAAABv/////8AAAAAAAAAAA=="
   },
   "image-editor-state": {
     "__class__": "bytearray",
@@ -226,13 +277,17 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAGxAAAD0/wCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAEYAAAPTAAAAYgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAGIA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAJ0A////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAJwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAo0A////AAAAAQAAAjsAAAPT/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAARgAAA9MAAABmAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABiAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA9AP///wAAA4gAAAPTAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAABFAAADHfwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAEYAAAMdAAAAYgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAGIA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAJ0A////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAJwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAo0A////AAAAAQAAAEoAAAMd/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAARgAAAx0AAABmAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABiAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA9AP///wAAAioAAAMdAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+  },
+  "manage-fonts-splitter-state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAACAAABAAAAAb8B/////wEAAAABAA=="
   },
   "recent-books": [
+    "/home/dominik/Library/Calibre/Brandon Sanderson/Studnia wstapienia (84)/Studnia wstapienia - Brandon Sanderson.epub",
     "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (88)/Wind and Truth - Brandon Sanderson.epub",
     "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (42)/Wind and Truth - Brandon Sanderson.kepub",
     "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (42)/Wind and Truth - Brandon Sanderson.epub",
-    "/home/dominik/Library/Calibre/Brandon Sanderson/Studnia wstapienia (84)/Studnia wstapienia - Brandon Sanderson.epub",
     "/home/dominik/Library/Calibre/Brandon Sanderson/Z mgly zrodzony (87)/Z mgly zrodzony - Brandon Sanderson.epub",
     "/home/dominik/Library/Calibre/Brandon Sanderson/Bohater wiekow (81)/Bohater wiekow - Brandon Sanderson.epub",
     "/home/dominik/Downloads/01 - Niezgodna.epub",
