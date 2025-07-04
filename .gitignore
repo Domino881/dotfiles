@@ -1,0 +1,4 @@
+**/@girs/*
+**/node_modules/*
+env.d.ts
+tsconfig.json

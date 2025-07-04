@@ -33,3 +33,9 @@ vim.keymap.set("n", "<C-t>", "<Nop>")
 vim.keymap.set("n", "<F5>", ":OverseerRestartLast<CR>")
 vim.keymap.set("n", "<F6>", ":OverseerRun<CR>")
 vim.keymap.set("n", "<F7>", ":OverseerToggle<CR>")
+
+vim.keymap.set("n", "<leader>.l", "luafile %<CR>", { desc = "Source current Lua file" })
+vim.keymap.set("n", "<leader>..", "source %<CR>", { desc = "Source current file" })
+
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], {desc = "Yank to system clipboard"})
+vim.keymap.set({"n", "v"}, "<leader>p", [["+p]], {desc = "Paste to system clipboard"})
