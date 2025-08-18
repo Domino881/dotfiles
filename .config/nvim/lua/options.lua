@@ -104,4 +104,20 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
     end,
 })
 
+vim.api.nvim_create_augroup("ags", { clear = true })
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+    group = "ags",
+    pattern = { vim.fn.expand("$HOME/.config/ags/") .. "*" },
+    callback = function(_)
+        vim.cmd([[silent exec "!$HOME/.config/ags/start.sh &"]])
+    end,
+})
+
 vim.opt.winborder = "rounded"
+
+vim.api.nvim_create_autocmd({ "Filetype" }, {
+    pattern = { "css", "scss" },
+    callback = function ()
+        vim.bo.shiftwidth = 4
+    end
+})
