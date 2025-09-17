@@ -92,6 +92,8 @@ vim.opt.smartcase = true
 
 vim.opt.spelllang = "en_gb"
 
+vim.opt.winborder = "rounded"
+
 vim.api.nvim_create_augroup("user-writing", { clear = false })
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
     group = "user-writing",
@@ -113,10 +115,10 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
     end,
 })
 
-vim.opt.winborder = "rounded"
-
+vim.api.nvim_create_augroup("user-misc", { clear = true })
 vim.api.nvim_create_autocmd({ "Filetype" }, {
     pattern = { "css", "scss" },
+    group = "user-misc",
     callback = function ()
         vim.bo.shiftwidth = 4
     end

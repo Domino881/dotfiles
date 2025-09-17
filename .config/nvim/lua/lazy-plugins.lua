@@ -28,9 +28,7 @@ require("lazy").setup({
     require("plugins.telescope"), -- search utility
     require("plugins.which-key"), -- shows hints for keymaps
     require("plugins.lsp"), -- errors / linting of code
-    require("plugins.cmp"), -- autocompletion (option 1)
-    require("plugins.blink-cmp"), -- autocompletion (option 2)
-    require("plugins.conform"), -- auto formatting of code
+    require("plugins.blink-cmp"), -- autocompletion
     require("plugins.alpha"), -- home screen
     require("plugins.gitsigns"), -- git diff lines in signcolumn
     require("plugins.harpoon"), -- jumping between project files
@@ -53,7 +51,7 @@ require("lazy").setup({
 
     -- Plugins below are imported with little/no extra options
     {
-        'brianhuster/live-preview.nvim',
+        'brianhuster/live-preview.nvim', -- live preview of Markdown, HTML, SVG
         dependencies = { 'nvim-telescope/telescope.nvim' }
     },
     {
@@ -75,14 +73,9 @@ require("lazy").setup({
         event = "VeryLazy",
     },
     {
-        "lukas-reineke/indent-blankline.nvim", -- scope indicators
-        main = "ibl",
-    },
-    {
         "stevearc/stickybuf.nvim", -- don't open files in quickfix windows
         config = true,
     },
-    "elkowar/yuck.vim",
     "LunarVim/bigfile.nvim", -- disable features in big files
     "romainl/vim-cool", -- auto :nohl
     "farmergreg/vim-lastplace", -- opens files at the last place
