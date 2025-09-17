@@ -6,15 +6,6 @@ return {
     config = function()
         local alpha = require 'alpha'
         local theta = require 'alpha.themes.theta'
-        vim.api.nvim_set_hl(0, "GraemeLogo1", { fg = "#abfa8e" })
-        vim.api.nvim_set_hl(0, "GraemeLogo2", { fg = "#8dec6a" })
-        vim.api.nvim_set_hl(0, "GraemeLogo3", { fg = "#69d841" })
-        vim.api.nvim_set_hl(0, "GraemeLogo4", { fg = "#6ace46" })
-        vim.api.nvim_set_hl(0, "GraemeLogo5", { fg = "#58b337" })
-        vim.api.nvim_set_hl(0, "GraemeLogo6", { fg = "#408726" })
-        vim.api.nvim_set_hl(0, "GraemeLogo7", { fg = "#3a7b23" })
-        vim.api.nvim_set_hl(0, "GraemeLogo8", { fg = "#336b1e" })
-        vim.api.nvim_set_hl(0, "GraemeLogo9", { fg = "#2b5b1a" })
         vim.api.nvim_set_hl(0, "NeovimDashboardLogo1", { fg = "#70f8ff" })
         vim.api.nvim_set_hl(0, "NeovimDashboardLogo2", { fg = "#2ddde6" })
         vim.api.nvim_set_hl(0, "NeovimDashboardLogo3", { fg = "#22adb4" })

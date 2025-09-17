@@ -7,6 +7,16 @@ return {
         { "<c-space>", desc = "Increment Selection" },
         { "<bs>",      desc = "Decrement Selection", mode = "x" },
     },
+    dependencies = {
+        "nvim-treesitter/nvim-treesitter-textobjects", -- vim motions for functions/classes
+        {
+            "nvim-treesitter/nvim-treesitter-context",
+            config = true,
+            init = function ()
+                vim.cmd([[hi link TreesitterContext Visual]])
+            end
+        },
+    },
     main = "nvim-treesitter.configs",
     opts = {
         highlight = { enable = true },
