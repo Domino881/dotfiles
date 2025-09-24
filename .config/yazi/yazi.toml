@@ -6,3 +6,13 @@ prepend_preloaders = [
 prepend_previewers = [
 	{ mime = "image/{svg}", run = "magick" },
 ]
+
+[open]
+append_rules = [
+	{ name = "*", use = "openwith" },
+]
+
+[opener]
+openwith = [
+	{ desc="Open With", run = 'read yazi_opener && "$yazi_opener" "$@"', block=true, orphan = true, for = "unix" },
+]
