@@ -335,28 +335,28 @@
   },
   "geometry-of-calibre_main_window_geometry": {
     "frame_geometry": {
-      "height": 898,
-      "width": 1426,
+      "height": 905,
+      "width": 1213,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 898,
-      "width": 1426,
+      "height": 905,
+      "width": 1213,
       "x": 0,
       "y": 0
     },
-    "maximized": true,
+    "maximized": false,
     "normal_geometry": {
-      "height": 1018,
-      "width": 1906,
-      "x": 1440,
+      "height": 905,
+      "width": 1213,
+      "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZEAAAOBAAAFoAAAAAAAAA0RAAAD+QAAAAACAAAABaAAAAAAAAAAAAAABZEAAAOB"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABLwAAAOIAAAAAAAAAAAAAAS8AAADiAAAAAAAAAAABaAAAAAAAAAAAAAABLwAAAOI"
     },
     "screen": {
       "depth": 32,
@@ -421,7 +421,7 @@
       "index_in_screens_list": 1,
       "manufacturer": "Dell Inc.",
       "model": "DELL S2719H",
-      "name": "HDMI-A-1",
+      "name": "DP-1",
       "serial": "",
       "size_in_logical_pixels": {
         "height": 1080,
@@ -625,7 +625,7 @@
       "index_in_screens_list": 1,
       "manufacturer": "Dell Inc.",
       "model": "DELL S2719H",
-      "name": "HDMI-A-1",
+      "name": "DP-1",
       "serial": "",
       "size_in_logical_pixels": {
         "height": 1080,
@@ -898,7 +898,7 @@
   "gpm_template_editor_word_wrap_mode": true,
   "grid view visible": true,
   "library_usage_stats": {
-    "/home/dominik/Library/Calibre": 48
+    "/home/dominik/Library/Calibre": 82
   },
   "light_palette_name": "",
   "light_palettes": {
@@ -1024,8 +1024,8 @@
   "quick_start_guide_added": true,
   "qv_open_at_shutdown": false,
   "recently_used_languages": [
-    "Polish",
-    "English"
+    "English",
+    "Polish"
   ],
   "replace_scene_breaks_history": [
     "",

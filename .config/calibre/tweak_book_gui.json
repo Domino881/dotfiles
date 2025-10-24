@@ -116,50 +116,50 @@
   },
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 898,
-      "width": 708,
-      "x": 0,
+      "height": 1024,
+      "width": 948,
+      "x": 1440,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 898,
-      "width": 708,
-      "x": 0,
+      "height": 1024,
+      "width": 948,
+      "x": 1440,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 960,
-      "width": 1440,
-      "x": 0,
+      "height": 1024,
+      "width": 948,
+      "x": 1440,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAsMAAAOBAAAAAAAAAAAAAAWfAAADvwAAAAACAAAABaAAAAAAAAAAAAAAAsMAAAOB"
+      "__value__": "AdnQywADAAAAAAWgAAAAAAAACVMAAAP/AAAFoAAAAAAAAAlTAAAD/wAAAAECAAAAB4AAAAWgAAAAAAAACVMAAAP/"
     },
     "screen": {
       "depth": 32,
-      "device_pixel_ratio": 2.0,
+      "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 960,
-        "width": 1440,
-        "x": 0,
+        "height": 1080,
+        "width": 1920,
+        "x": 1440,
         "y": 0
       },
-      "index_in_screens_list": 0,
-      "manufacturer": "BOE",
-      "model": "0x0893",
-      "name": "eDP-1",
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL S2719H",
+      "name": "DP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 960,
-        "width": 1440
+        "height": 1080,
+        "width": 1920
       },
       "virtual_geometry": {
-        "height": 960,
-        "width": 1440,
+        "height": 1080,
+        "width": 3360,
         "x": 0,
         "y": 0
       }
@@ -269,7 +269,7 @@
   },
   "html-editor-state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAAAAAAAioAAAI3AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAAAAAB4AaAB0AG0AbABfAGYAbwByAG0AYQB0AF8AYgBhAHIBAAABv/////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAD9AAAAAAAAAnwAAAK4AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAAAAAB4AaAB0AG0AbABfAGYAbwByAG0AYQB0AF8AYgBhAHIBAAABv/////8AAAAAAAAAAA=="
   },
   "image-editor-state": {
     "__class__": "bytearray",
@@ -277,13 +277,14 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAABFAAADHfwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAEYAAAMdAAAAYgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAGIA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAJ0A////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAJwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAo0A////AAAAAQAAAEoAAAMd/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAARgAAAx0AAABmAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABiAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA9AP///wAAAioAAAMdAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAADiAAADm/wCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAEYAAAObAAAAYgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAGIA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAJ0A////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAJwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAo0A////AAAAAQAAAEoAAAOb/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAARgAAA5sAAABmAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABiAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA9AP///wAAAnwAAAObAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "manage-fonts-splitter-state": {
     "__class__": "bytearray",
     "__value__": "AAAA/wAAAAEAAAACAAABAAAAAb8B/////wEAAAABAA=="
   },
   "recent-books": [
+    "/home/dominik/Library/Calibre/Brandon Sanderson/Slowa Swiatlosci (82)/Slowa Swiatlosci - Brandon Sanderson.epub",
     "/home/dominik/Library/Calibre/Brandon Sanderson/Studnia wstapienia (84)/Studnia wstapienia - Brandon Sanderson.epub",
     "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (88)/Wind and Truth - Brandon Sanderson.epub",
     "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (42)/Wind and Truth - Brandon Sanderson.kepub",

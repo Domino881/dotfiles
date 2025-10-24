@@ -1,28 +1,28 @@
 {
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 898,
+      "height": 903,
       "width": 708,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 898,
+      "height": 903,
       "width": 708,
       "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 898,
+      "height": 903,
       "width": 708,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAsMAAAOBAAAAAAAAAAAAAALDAAADgQAAAAACAAAABaAAAAAAAAAAAAAAAsMAAAOB"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAsMAAAOGAAAAAAAAAAAAAALDAAADhgAAAAACAAAABaAAAAAAAAAAAAAAAsMAAAOG"
     },
     "screen": {
       "depth": 32,
@@ -52,7 +52,7 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEHAAADgvwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAADggAAAJoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAsgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACjAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAASIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAHAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAPoA////AAABtwAAA4IAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEHAAADh/wCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAADhwAAAJoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAsgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACjAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAASIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAHAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAPoA////AAABtwAAA4cAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "session_data": {
@@ -95,6 +95,24 @@
       "remember_window_geometry": true
     },
     "standalone_recently_opened": [
+      {
+        "authors": [
+          "Olga Tokarczuk"
+        ],
+        "key": "/home/dominik/Library/Calibre/Olga Tokarczuk/Ksiegi Jakubowe (91)/Ksiegi Jakubowe - Olga Tokarczuk.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Olga Tokarczuk/Ksiegi Jakubowe (91)/Ksiegi Jakubowe - Olga Tokarczuk.epub",
+        "timestamp": "2025-08-09T17:45:39.292Z",
+        "title": "Księgi Jakubowe"
+      },
+      {
+        "authors": [
+          "Andrzej Sapkowski"
+        ],
+        "key": "/home/dominik/Library/Calibre/Andrzej Sapkowski/Czas pogardy (15)/Czas pogardy - Andrzej Sapkowski.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Andrzej Sapkowski/Czas pogardy (15)/Czas pogardy - Andrzej Sapkowski.epub",
+        "timestamp": "2025-07-26T20:42:15.248Z",
+        "title": "Czas pogardy"
+      },
       {
         "authors": [
           "Brandon Sanderson"
