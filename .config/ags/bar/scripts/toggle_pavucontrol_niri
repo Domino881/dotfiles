@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if pidof pavucontrol; then
+    killall pavucontrol
+else
+    niri msg action spawn -- pavucontrol 
+fi

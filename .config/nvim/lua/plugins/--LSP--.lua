@@ -120,9 +120,9 @@ return {
                 { clear = true }
             ),
             callback = function(event)
-                local map = function(keys, func, desc)
+                local map = function(modes, keys, func, desc)
                     vim.keymap.set(
-                        "n",
+                        modes,
                         keys,
                         func,
                         { buffer = event.buf, desc = "LSP: " .. desc }
@@ -130,12 +130,13 @@ return {
                 end
 
                 map(
+                    "n",
                     "gd",
                     require("telescope.builtin").lsp_definitions,
                     "Goto Definition"
                 )
-                map("gD", vim.lsp.buf.declaration, "Goto Declaration")
-                map("<leader>lf", vim.lsp.buf.format, "Format buffer")
+                map("n", "gD", vim.lsp.buf.declaration, "Goto Declaration")
+                map({"n", "v"}, "<leader>lf", vim.lsp.buf.format, "Format buffer")
             end,
         })
     end,

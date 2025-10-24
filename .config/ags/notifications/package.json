@@ -1,0 +1,7 @@
+{
+    "name": "astal-shell",
+    "dependencies": {
+        "astal": "/usr/share/astal/gjs",
+        "heap-js": "/home/dominik/node_modules/heap-js/dist"
+    }
+}

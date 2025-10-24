@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if pidof blueberry; then
+    killall blueberry
+else
+    hyprctl dispatch exec blueberry
+fi

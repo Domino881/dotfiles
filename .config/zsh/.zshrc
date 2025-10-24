@@ -120,3 +120,10 @@ export MANROFFOPT="-P -c"
 # Zoxide
 eval "$(zoxide init zsh)"
 alias cd=z
+
+# Niri
+if [ ! -f ~/.cache/niri-completions ]; then
+    echo "generating niri"
+    niri completions zsh > ~/.cache/niri-completions
+fi
+source ~/.cache/niri-completions

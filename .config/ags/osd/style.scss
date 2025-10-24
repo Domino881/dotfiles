@@ -1,0 +1,49 @@
+$fg-color: white;
+$bg-color: rgba(#242424, 1.0);
+$trough-color: rgba(#444444, 0.7);
+
+window.OSD {
+    background: rgba(green, 0.0);
+    box.OSD {
+        border-radius: 30px;
+        background: $bg-color;
+        padding: 13px 16px;
+        margin: 13px;
+        box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+    }
+
+    icon {
+        font-size: 14px;
+        padding: 0px 5px 0px 0px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    levelbar {
+        trough {
+            margin: 0px;
+            border: none;
+            border-radius: 30px;
+            background-color: transparent;
+            block.filled {
+                background-color: $fg-color;
+                border-radius: 30px;
+                border: none;
+            }
+            block.empty {
+                background-color: $trough-color;
+                border: none;
+            }
+        }
+
+        block {
+            min-height: 6px;
+            border-radius: 30px;
+            box-shadow: none;
+            border-width: 0px;
+            outline-width: 0px;
+        }
+    }
+}

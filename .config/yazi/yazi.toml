@@ -9,7 +9,8 @@ prepend_previewers = [
 
 [open]
 append_rules = [
-	{ name = "*", use = "openwith" },
+    { name = "*.pdf", use = "open" },
+	{ name = "*", use = "openwith" }
 ]
 
 [opener]

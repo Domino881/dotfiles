@@ -1,0 +1,262 @@
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+$fg-color: white;
+$bar-color: rgba(#222222, 1.0);
+$bg-color: rgba(#222222, 0.5);
+
+$radius: 81px;
+$font-size: 16px;
+
+$element-pad: 8px;
+
+$bar-margin: 4px;
+$bar-height: 35px;
+
+window.Bar {
+    font-weight: normal;
+    font-size: $font-size;
+    /* border: 2px dashed red; */
+    > box {
+        /* border: 2px dashed red; */
+        margin: $bar-margin;
+        /* background: $bar-color; */
+        margin-bottom: 0px;
+        padding: 0px;
+        min-height: $bar-height;
+        border-radius: $radius;
+    }
+}
+
+window.BarReserve {
+    > box {
+        border-radius: $radius;
+        min-height: $bar-height;
+        background: $bar-color;
+        margin: $bar-margin;
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+}
+
+.Right,
+.Time,
+.Workspaces,
+.Media {
+    /* color: $bg-color; */
+    border-radius: $radius;
+    /* border: 0.8px solid rgba($bg-color, 0.1); */
+    /* box-shadow: inset -4px -5px 33px rgba(black, 0.1); */
+    margin: 0px;
+    padding: 0px 20px 0px 20px;
+    button {
+        border-radius: $radius;
+        background: transparent;
+        box-shadow: none;
+        outline-width: 0px;
+        border-width: 0px;
+        transition-duration: 0.2s;
+    }
+    button:hover {
+        background: rgba($fg-color, 0.1);
+        color: white;
+    }
+}
+
+.Media {
+    label {
+        color: rgba($fg-color, 0.9);
+    }
+    .MediaTime {
+        margin: 0px 8px 0px 3px;
+        label {
+            color: rgba($fg-color, 0.7);
+        }
+    }
+    .MediaButtons {
+        color: $fg-color;
+        margin: 0px 0px 0px 2px;
+        padding: 0px;
+        button {
+            padding: 2px;
+            margin: 0px;
+        }
+    }
+    .InactiveMediaButton {
+        color: red;
+        icon {
+            color: red;
+        }
+    }
+}
+
+.Workspaces {
+    margin-left: 0px;
+    padding: 0px 10px 0px 10px;
+    background: transparent;
+    button {
+        border-radius: $radius;
+        margin: 2px 0px 2px 0px;
+        box-shadow:
+            inset -2px -4px 5px rgba(black, 0.2),
+            inset 5px 5px 4px rgba(white, 0.03);
+    }
+    label {
+        padding: 0px;
+        margin: 0px;
+        color: rgba($fg-color, 0.4);
+        text-shadow: none;
+        font-weight: 400;
+    }
+    .focused {
+        box-shadow: 0.5px 1px 2px #000000 inset;
+        background: $bg-color;
+        label {
+            color: $fg-color;
+            text-shadow: 0px 0px 2px rgba(white, 0.2);
+        }
+    }
+}
+
+.Time {
+    label {
+        color: $fg-color;
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+}
+.timeContainer {
+    min-width: 315px;
+    margin-left: 232px;
+}
+
+.Right {
+    padding: 0px 10px 0px 10px;
+    margin-right: 10px;
+    .component {
+        button {
+            padding: 0px $element-pad 0px $element-pad;
+        }
+        padding: 0px;
+        margin: 0px 2px 0px 2px;
+    }
+    .AudioSlider {
+        trough {
+            background: rgba($fg-color, 0.3);
+            min-height: 4px;
+        }
+        trough highlight {
+            background: rgba($fg-color, 1);
+        }
+        trough slider {
+            border-width: 0px;
+            background: rgba($fg-color, 1);
+        }
+    }
+
+    .BluetoothInactive icon {
+        color: rgba($fg-color, 0.3);
+        icon {
+            color: rgba($fg-color, 0.3);
+        }
+    }
+    .BluetoothReveal {
+        background: rgba($fg-color, 0.05);
+        border-radius: $radius;
+        padding: 0px 6px 0px 6px;
+        margin: 0px;
+        icon {
+            margin-right: 4px;
+        }
+    }
+
+    .BatteryPillBg {
+        margin: 7px 0px;
+        background-color: rgba($fg-color, 0.5);
+        border-radius: 12px;
+    }
+    .BatteryPillFill {
+        margin: 7px 0px;
+        border-radius: 12px;
+        background-image: url("assets/white.png");
+        background-repeat: no-repeat;
+    }
+    .BatteryPillFillGreen {
+        background-image: url("assets/green.png");
+    }
+    .BatteryPillFillCritical {
+        background-image: url("assets/red.png");
+    }
+    .BatteryPillLabel {
+        color: rgba($bg-color, 1);
+        margin: -5px 5px;
+        icon {
+            font-size: 10px;
+            margin-left: -2px;
+        }
+        label {
+            margin-top: -1px;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 0px;
+        }
+    }
+    .BatteryPillLabelVertical {
+        margin: 0px 1px;
+        icon {
+            font-size: 10px;
+            margin: 0pt -1pt -2pt 0pt;
+        }
+    }
+    .BatteryLevel2 {
+        padding-left: calc($element-pad / 2);
+        button { 
+            padding: 0px 6px;
+            margin: 3px 0px;
+            border-radius: 13px;
+        }
+    }
+}
+
+.PowerButtons {
+    /* background: $bg-color; */
+    /* border: 0.8px solid $bg-color; */
+    border-radius: $radius;
+    button {
+        background: $bg-color;
+        margin: 1px;
+        padding: 0px;
+        border: none;
+        box-shadow:
+            1px 1px 1px rgba(white, 0.05) inset,
+            -2px -2px 1px rgba(black, 0.1) inset;
+        min-width: 2.1rem;
+        min-height: 2rem;
+        border-radius: 50%;
+        transition-duration: 0.2s;
+    }
+    button:hover {
+        background: rgba($fg-color, 0.1);
+    }
+    .shutdown {
+        color: rgba(#f87070, 0.8);
+    }
+    .reboot {
+        color: rgba(#f8a870, 0.8);
+    }
+}
+
+.popupWindow {
+    background: gray;
+    min-height: 150px;
+    min-width: 300px;
+}
+
+.declickArea {
+    all: unset;
+    background: transparent;
+    * {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: transparent;
+    }
+}
