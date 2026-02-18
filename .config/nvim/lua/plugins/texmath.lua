@@ -1,6 +1,7 @@
 return {
     "Domino881/texmath.nvim",
     lazy = true,
+    enabled = false,
     cmd = { "MdMath" },
     ft = { "markdown", "tex" },
     dependencies = {

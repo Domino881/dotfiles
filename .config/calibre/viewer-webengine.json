@@ -1,28 +1,28 @@
 {
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 903,
-      "width": 708,
+      "height": 908,
+      "width": 710,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 903,
-      "width": 708,
+      "height": 908,
+      "width": 710,
       "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 903,
-      "width": 708,
+      "height": 908,
+      "width": 710,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAsMAAAOGAAAAAAAAAAAAAALDAAADhgAAAAACAAAABaAAAAAAAAAAAAAAAsMAAAOG"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAsUAAAOLAAAAAAAAAAAAAALFAAADiwAAAAACAAAABaAAAAAAAAAAAAAAAsUAAAOL"
     },
     "screen": {
       "depth": 32,
@@ -52,7 +52,7 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEHAAADh/wCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAADhwAAAJoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAsgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACjAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAASIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAHAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAPoA////AAABtwAAA4cAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEHAAADjPwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAADjAAAAJoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAsgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACjAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAASIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAHAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAPoA////AAABuQAAA4wAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "session_data": {
@@ -95,6 +95,15 @@
       "remember_window_geometry": true
     },
     "standalone_recently_opened": [
+      {
+        "authors": [
+          "Kazuo Ishiguro"
+        ],
+        "key": "/home/dominik/Library/Calibre/Kazuo Ishiguro/Pogrzebany olbrzym (93)/Pogrzebany olbrzym - Kazuo Ishiguro.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Kazuo Ishiguro/Pogrzebany olbrzym (93)/Pogrzebany olbrzym - Kazuo Ishiguro.epub",
+        "timestamp": "2025-10-25T19:06:09.515Z",
+        "title": "Pogrzebany olbrzym"
+      },
       {
         "authors": [
           "Olga Tokarczuk"

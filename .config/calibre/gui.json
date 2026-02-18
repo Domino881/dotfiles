@@ -335,28 +335,28 @@
   },
   "geometry-of-calibre_main_window_geometry": {
     "frame_geometry": {
-      "height": 905,
-      "width": 1213,
+      "height": 920,
+      "width": 1217,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 905,
-      "width": 1213,
+      "height": 920,
+      "width": 1217,
       "x": 0,
       "y": 0
     },
-    "maximized": false,
+    "maximized": true,
     "normal_geometry": {
-      "height": 905,
-      "width": 1213,
+      "height": 908,
+      "width": 1428,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABLwAAAOIAAAAAAAAAAAAAAS8AAADiAAAAAAAAAAABaAAAAAAAAAAAAAABLwAAAOI"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABMAAAAOXAAAAAAAAAAAAAAWTAAADiwAAAAACAAAABaAAAAAAAAAAAAAABMAAAAOX"
     },
     "screen": {
       "depth": 32,
@@ -898,7 +898,7 @@
   "gpm_template_editor_word_wrap_mode": true,
   "grid view visible": true,
   "library_usage_stats": {
-    "/home/dominik/Library/Calibre": 82
+    "/home/dominik/Library/Calibre": 86
   },
   "light_palette_name": "",
   "light_palettes": {
@@ -1024,8 +1024,8 @@
   "quick_start_guide_added": true,
   "qv_open_at_shutdown": false,
   "recently_used_languages": [
-    "English",
-    "Polish"
+    "Polish",
+    "English"
   ],
   "replace_scene_breaks_history": [
     "",

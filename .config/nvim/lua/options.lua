@@ -100,9 +100,13 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
     pattern = { "*.tex", "*.md", "*.typ" },
     callback = function(_)
         vim.opt_local.spell = true
-        vim.opt_local.number = false
-        vim.opt_local.relativenumber = false
-        vim.opt_local.textwidth = 78
+        -- vim.opt_local.number = false
+        -- vim.opt_local.relativenumber = false
+        vim.opt_local.textwidth = 80
+        vim.opt_local.sidescrolloff = 0
+        vim.opt_local.sidescroll = 15
+        vim.opt_local.cmdheight = 0
+        -- vim.opt_local.signcolumn = "no"
     end,
 })
 
@@ -123,3 +127,30 @@ vim.api.nvim_create_autocmd({ "Filetype" }, {
         vim.bo.shiftwidth = 4
     end
 })
+
+vim.api.nvim_create_user_command("Centerpad", function ()
+    vim.cmd([[22vnew]])
+    vim.cmd([[set nonumber]])
+    vim.cmd([[set norelativenumber]])
+    vim.cmd([[set ft=pad]])
+    vim.cmd([[PinBuffer]])
+    vim.cmd([[wincmd l]])
+end, {})
+
+vim.api.nvim_create_user_command("WolframToTypst", function (tab)
+    local range = tab.line1 .. "," .. tab.line2
+    -- vim.cmd(range .. [[s/\[\(.\{-}\)\]/(\1)/ge]], {silent = true})
+    vim.cmd(range .. [[s/\[/(/ge]])
+    vim.cmd(range .. [[s/\]/)/ge]])
+    vim.cmd(range .. [[s/\([a-z]\)\([0-9]\)/\1_\2/ge]])
+    vim.cmd(range .. [[s/Sqrt/sqrt/ge]])
+    vim.cmd(range .. [[s/E/e/ge]])
+    vim.cmd(range .. [[s/I/i/ge]])
+    vim.cmd(range .. [[s/Cos/cos/ge]])
+    vim.cmd(range .. [[s/Sin/sin/ge]])
+
+    -- vim.cmd(range .. [[join]])
+    -- vim.cmd([[s/\([+-]\)/<CR>\1/ge]])
+    -- vim.cmd([[s/<CR>/\r/ge]])
+    vim.cmd([[s/\\(Pi)/pi/ge]])
+end, {range = true})

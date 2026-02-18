@@ -31,7 +31,8 @@ function main() {
 
 App.start({
     instanceName: "bar",
-    icons: `/usr/share/icons/Adwaita/symbolic/actions/`,
+    // icons: `/usr/share/icons/Adwaita/symbolic/actions/`,
+    icons: `${SRC}/icons`,
     css: style,
     main
 })

@@ -3,32 +3,30 @@ $fg-color: white;
 $bar-color: rgba(#222222, 1.0);
 $bg-color: rgba(#222222, 0.5);
 
-$radius: 81px;
-$font-size: 16px;
+$radius: 15px;
+$font-size: 18px;
 
 $element-pad: 8px;
 
 $bar-margin: 4px;
-$bar-height: 35px;
+$bar-height: 36px;
 
 window.Bar {
     font-weight: normal;
     font-size: $font-size;
-    /* border: 2px dashed red; */
     > box {
-        /* border: 2px dashed red; */
+        border-radius: calc($bar-height / 2 - 1px);
+        font-size: $font-size;
         margin: $bar-margin;
-        /* background: $bar-color; */
         margin-bottom: 0px;
         padding: 0px;
         min-height: $bar-height;
-        border-radius: $radius;
     }
 }
 
 window.BarReserve {
     > box {
-        border-radius: $radius;
+        border-radius: calc($bar-height / 2 - 1px);
         min-height: $bar-height;
         background: $bar-color;
         margin: $bar-margin;
@@ -41,10 +39,6 @@ window.BarReserve {
 .Time,
 .Workspaces,
 .Media {
-    /* color: $bg-color; */
-    border-radius: $radius;
-    /* border: 0.8px solid rgba($bg-color, 0.1); */
-    /* box-shadow: inset -4px -5px 33px rgba(black, 0.1); */
     margin: 0px;
     padding: 0px 20px 0px 20px;
     button {
@@ -89,26 +83,31 @@ window.BarReserve {
 }
 
 .Workspaces {
-    margin-left: 0px;
-    padding: 0px 10px 0px 10px;
+    margin-left: 3px;
+    margin-right: 10px;
+    padding: 0px;
     background: transparent;
     button {
         border-radius: $radius;
+        padding: 0px;
+        border-radius: 50%;
         margin: 2px 0px 2px 0px;
         box-shadow:
-            inset -2px -4px 5px rgba(black, 0.2),
-            inset 5px 5px 4px rgba(white, 0.03);
+            1px 1px 1px rgba(white, 0.05) inset,
+            -2px -2px 1px rgba(black, 0.1) inset;
     }
     label {
-        padding: 0px;
-        margin: 0px;
         color: rgba($fg-color, 0.4);
         text-shadow: none;
         font-weight: 400;
+        min-width: 2rem;
+        min-height: 2rem;
     }
     .focused {
-        box-shadow: 0.5px 1px 2px #000000 inset;
-        background: $bg-color;
+        box-shadow:
+            1px 1px 2px rgba(black, 0.3) inset,
+            -1px -1px 1px rgba(white, 0.1) inset;
+        background: rgba(black, 0.3);
         label {
             color: $fg-color;
             text-shadow: 0px 0px 2px rgba(white, 0.2);
@@ -119,7 +118,7 @@ window.BarReserve {
 .Time {
     label {
         color: $fg-color;
-        font-size: 1.1rem;
+        font-size: $font-size;
         font-weight: 400;
     }
 }
@@ -152,6 +151,10 @@ window.BarReserve {
         }
     }
 
+    .Wifi {
+        font-size: 1.1rem;
+    }
+
     .BluetoothInactive icon {
         color: rgba($fg-color, 0.3);
         icon {
@@ -171,11 +174,11 @@ window.BarReserve {
     .BatteryPillBg {
         margin: 7px 0px;
         background-color: rgba($fg-color, 0.5);
-        border-radius: 12px;
+        border-radius: 11px;
     }
     .BatteryPillFill {
         margin: 7px 0px;
-        border-radius: 12px;
+        border-radius: 11px;
         background-image: url("assets/white.png");
         background-repeat: no-repeat;
     }
@@ -187,16 +190,20 @@ window.BarReserve {
     }
     .BatteryPillLabel {
         color: rgba($bg-color, 1);
-        margin: -5px 5px;
+        margin: 0px 7px;
+        /* border: 1px solid red; */
         icon {
             font-size: 10px;
             margin-left: -2px;
         }
         label {
-            margin-top: -1px;
-            font-size: 15px;
-            font-weight: bold;
-            letter-spacing: 0px;
+            /* border: 1px solid green; */
+            margin: 0px;
+            margin-left: 1px;
+            min-width: 1em;
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
     }
     .BatteryPillLabelVertical {
@@ -217,9 +224,8 @@ window.BarReserve {
 }
 
 .PowerButtons {
-    /* background: $bg-color; */
-    /* border: 0.8px solid $bg-color; */
     border-radius: $radius;
+    margin-right: 3px;
     button {
         background: $bg-color;
         margin: 1px;

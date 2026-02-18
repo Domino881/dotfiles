@@ -1,6 +1,5 @@
 import { bind, Binding, Variable } from "astal";
 import { Gtk } from "astal/gtk3";
-import Battery from "gi://AstalBattery";
 import {
     Box,
     Label,
@@ -11,12 +10,14 @@ import {
 
 export default function batteryPill({
     percentage,
-    state,
+    charging,
+    pluggedIn,
     vertical,
     greenFill,
 }: {
     percentage: number | Binding<number>;
-    state: Binding<Battery.State> | null;
+    charging: Binding<Boolean> | null;
+    pluggedIn: Binding<Boolean> | null;
     vertical: boolean;
     greenFill: boolean;
 }): Gtk.Widget {
@@ -34,28 +35,24 @@ export default function batteryPill({
                 css: transparent ? "color: transparent;" : "",
             },
             new Revealer({
-                reveal_child: state?.as(
-                    (state) =>
-                        state == Battery.State.CHARGING ||
-                        state == Battery.State.PENDING_CHARGE ||
-                        state == Battery.State.PENDING_DISCHARGE,
-                ),
+                reveal_child: pluggedIn?.as(Boolean),
                 transition_type:
                     Gtk.RevealerTransitionType.SLIDE_LEFT,
-                child: state
-                    ? new Icon({
-                          icon: bind(state).as((c) =>
-                              c == Battery.State.CHARGING
-                                  ? "camera-flash-symbolic"
-                                  : "dot-symbolic",
-                          ),
-                      })
-                    : new Box(),
+                transitionDuration: 1000,
+                child: new Icon({
+                    icon: charging?.as(
+                        c => c ? "camera-flash-symbolic" : "dot-symbolic",
+                    ),
+                }),
             }),
             new Label({
                 halign: Gtk.Align.CENTER,
+                valign: Gtk.Align.FILL,
+                useMarkup: true,
                 label: bind(percentageVar).as((p) =>
-                    Math.round(p).toString(),
+                    '<span line_height="0.5">'
+                    + Math.round(p).toString()
+                    + '</span>',
                 ),
             }),
         );
@@ -81,10 +78,10 @@ export default function batteryPill({
                     "BatteryPillFill",
             ),
             css: vertical
-                ? "background-position: 0% 100%; border-radius: 6px;" +
-                  cssSize
+                ? "background-position: 0% 100%; border-radius: 6px;" + cssSize
                 : cssSize,
-        }),
-        batteryLabel(),
+        },
+            batteryLabel(),
+        ),
     );
 }

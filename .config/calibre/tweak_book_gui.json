@@ -114,52 +114,103 @@
     "where": "text",
     "wrap": true
   },
-  "geometry-of-main_window_geometry": {
+  "geometry-of-import-foreign-geometry": {
     "frame_geometry": {
-      "height": 1024,
-      "width": 948,
-      "x": 1440,
-      "y": 0
+      "height": 246,
+      "width": 649,
+      "x": 466,
+      "y": 370
     },
     "full_screened": false,
     "geometry": {
-      "height": 1024,
-      "width": 948,
-      "x": 1440,
-      "y": 0
+      "height": 246,
+      "width": 649,
+      "x": 466,
+      "y": 370
     },
-    "maximized": true,
+    "maximized": false,
     "normal_geometry": {
-      "height": 1024,
-      "width": 948,
-      "x": 1440,
-      "y": 0
+      "height": 246,
+      "width": 649,
+      "x": 466,
+      "y": 370
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAWgAAAAAAAACVMAAAP/AAAFoAAAAAAAAAlTAAAD/wAAAAECAAAAB4AAAAWgAAAAAAAACVMAAAP/"
+      "__value__": "AdnQywADAAAAAAHSAAABcgAABFoAAAJnAAAB0gAAAXIAAARaAAACZwAAAAAAAAAABkAAAAHSAAABcgAABFoAAAJn"
     },
     "screen": {
       "depth": 32,
-      "device_pixel_ratio": 1.0,
+      "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920,
-        "x": 1440,
+        "height": 1067,
+        "width": 1600,
+        "x": 0,
         "y": 0
       },
-      "index_in_screens_list": 1,
-      "manufacturer": "Dell Inc.",
-      "model": "DELL S2719H",
-      "name": "DP-1",
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "eDP-1-0x0893",
+      "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920
+        "height": 1067,
+        "width": 1600
       },
       "virtual_geometry": {
-        "height": 1080,
-        "width": 3360,
+        "height": 1067,
+        "width": 1600,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-main_window_geometry": {
+    "frame_geometry": {
+      "height": 984,
+      "width": 1600,
+      "x": 326,
+      "y": 21
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 984,
+      "width": 1600,
+      "x": 326,
+      "y": 21
+    },
+    "maximized": true,
+    "normal_geometry": {
+      "height": 984,
+      "width": 1600,
+      "x": 326,
+      "y": 21
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAFGAAAAFQAAB4UAAAPsAAABRgAAABUAAAeFAAAD7AAAAAACAAAABkAAAAFGAAAAFQAAB4UAAAPs"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1067,
+        "width": 1600,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "eDP-1-0x0893",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1067,
+        "width": 1600
+      },
+      "virtual_geometry": {
+        "height": 1067,
+        "width": 1600,
         "x": 0,
         "y": 0
       }
@@ -277,7 +328,7 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAADiAAADm/wCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAEYAAAObAAAAYgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAGIA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAJ0A////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAJwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAo0A////AAAAAQAAAEoAAAOb/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAARgAAA5sAAABmAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABiAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA9AP///wAAAnwAAAObAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAADiAAADc/wCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAEYAAANzAAAAYgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAGIA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAJ0A////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAJwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAo0A////AAAAAQAAAEoAAANz/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAARgAAA3MAAABmAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABiAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA9AP///wAABQgAAANzAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "manage-fonts-splitter-state": {
     "__class__": "bytearray",
@@ -300,7 +351,7 @@
     "where": "current",
     "wrap": true
   },
-  "search-panel-visible": true,
+  "search-panel-visible": false,
   "text_search_widget_state": {
     "case_sensitive": false,
     "dot_all": true,

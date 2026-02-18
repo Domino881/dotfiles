@@ -134,9 +134,9 @@ function SysTray() {
                     children: widgetArray,
                 });
                 mainBox.add(
-                    new Label({
-                        label: "|",
-                        css: "opacity: 0.1; margin: 0px 5px 0px 5px;",
+                    new Box({
+                        css: "background: white; min-width: 1px; opacity: 0.1;"
+                            + "margin: 7px 5px;",
                     }),
                 );
 
@@ -250,8 +250,8 @@ function Wifi() {
         setup: (self) =>
             self.hook(network.wifi, "notify::state", () => {
                 wifiIcon.set(getWifiIcon());
-                timeout(800, () => {
-                    // These didn't update with bind(wifi)
+                wifiTooltip.set(getWifiTooltip());
+                timeout(3000, () => {
                     wifiIcon.set(getWifiIcon());
                     wifiTooltip.set(getWifiTooltip());
                 });
@@ -262,13 +262,8 @@ function Wifi() {
             {},
             new Button({
                 className: bind(network.wifi, "state").as((s) =>
-                    s == Network.DeviceState.DISCONNECTED
-                        || s == Network.DeviceState.FAILED
-                        || s == Network.DeviceState.UNAVAILABLE
-                        || s == Network.DeviceState.UNKNOWN
-                        || s == Network.DeviceState.UNMANAGED
-                        ? "BluetoothInactive"
-                        : "",
+                    s == Network.DeviceState.UNAVAILABLE
+                        ? "BluetoothInactive" : "",
                 ),
                 child: new Widget.Icon({
                     icon: bind(wifiIcon),
@@ -439,6 +434,7 @@ function AudioSlider() {
 function BatteryLevel2() {
     const bat = Battery.get_default();
     const tray = Tray.get_default();
+    const linePower = Battery.UPower.new().get_devices()[1];
 
     const timeRemaining = Variable.derive(
         [
@@ -498,7 +494,8 @@ function BatteryLevel2() {
                 percentage: bind(bat, "percentage").as(
                     (p) => 100 * p,
                 ),
-                state: bind(bat, "state"),
+                charging: bind(bat, "charging"),
+                pluggedIn: bind(linePower, "online"),
                 vertical: false,
                 greenFill: false,
             }),

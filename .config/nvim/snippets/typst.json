@@ -1,0 +1,11 @@
+{
+    "CetZ canvas": {
+        "prefix": "#cetz",
+        "body": [ "#cetz.canvas({", "\timport cetz.draw: *", "\t${1}", "})" ],
+        "description": "The CetZ canvas"
+    },
+    "foo": {
+        "prefix": "foo",
+        "body": "ajajaj"
+    }
+}
