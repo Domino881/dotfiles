@@ -1,0 +1,16 @@
+# Lines starting with # are comments
+
+# Save all videos under YouTube directory in your home directory
+-o ~/Videos/YouTube/%(title)s.%(ext)s
+
+--cookies-from firefox
+--mark-watched
+
+# Download the best video available but max 1080p and max 1500Mb
+# -S "res:1080"
+-f "bv*[height<=1080][filesize<=2000M]+ba / b[height<=1080][filesize<=2000M]"
+
+# Write subtitle file
+--embed-subs
+# --write-auto-sub
+--sub-langs "en.*"

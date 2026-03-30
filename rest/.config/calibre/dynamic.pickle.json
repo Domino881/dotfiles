@@ -1,0 +1,51 @@
+{
+  "about_get_books_msg_again": false,
+  "add books dialog dir": "/home/dominik/Documents/testing/make-outline",
+  "add books dialog dir-last-used-filter-spec-all-files": false,
+  "add formats dialog": "/home/dominik/Documents/testing/make-outline",
+  "add formats dialog-last-used-filter-spec-all-files": false,
+  "catalogs_to_be_synced": {
+    "__class__": "set",
+    "__value__": []
+  },
+  "change cover dialog": "/home/dominik/Downloads",
+  "choose library location": "/home/dominik/Library2",
+  "database location dialog": "/home/dominik/Library/Calibre",
+  "notified-version-updates": {
+    "__class__": "set",
+    "__value__": [
+      "8.8",
+      "8.5",
+      "8.16",
+      "8.10",
+      "8.12",
+      "8.7",
+      "8.9",
+      "8.11",
+      "9.2"
+    ]
+  },
+  "s_r_search_mode": 0,
+  "save to disk dialog": "/home/dominik/Downloads",
+  "sort_history": [
+    [
+      "timestamp",
+      false
+    ],
+    [
+      "title",
+      false
+    ],
+    [
+      "authors",
+      true
+    ],
+    [
+      "timestamp",
+      false
+    ]
+  ],
+  "systray_msg": true,
+  "welcome_wizard_device": "kobo",
+  "welcome_wizard_was_run": true
+}
