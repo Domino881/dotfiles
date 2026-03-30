@@ -1,6 +1,6 @@
 return {
 	"ellisonleao/gruvbox.nvim",
-	priority = 1000,
+	priority = 9999,
 	config = true,
 	opts = {
 		terminal_colors = false, -- add neovim terminal colors

@@ -41,10 +41,18 @@ vim.keymap.set("c", "<C-a>", "<Home>")
 
 vim.api.nvim_create_augroup("typst", { clear = true })
 vim.api.nvim_create_autocmd({ "Filetype" }, {
-    pattern = { "typst" },
-    group = "typst",
-    callback = function ()
-        vim.keymap.set("n", "]]", "/^=<CR>:nohl<CR>")
-        vim.keymap.set("n", "[[", "?^=<CR>:nohl<CR>")
-    end
+	pattern = { "typst" },
+	group = "typst",
+	callback = function()
+		vim.keymap.set("n", "]]", "/^=<CR>:nohl<CR>", { desc = "Next Typst Chapter" })
+		vim.keymap.set("n", "[[", "?^=<CR>:nohl<CR>", { desc = "Previous Typst Chapter" })
+		vim.keymap.set("v", "]]", "/^=<CR>", { desc = "Next Typst Chapter" })
+		vim.keymap.set("v", "[[", "?^=<CR>", { desc = "Previous Typst Chapter" })
+		vim.keymap.set("n", "]=", "0/^\\s*=<CR>:nohl<CR>^", { desc = "Next Equality Break" })
+		vim.keymap.set("n", "[=", "0?^\\s*=<CR>:nohl<CR>^", { desc = "Previous Equality Break" })
+		vim.keymap.set("v", "]=", "0/^\\s*=<CR>", { desc = "Next Equality Break" })
+		vim.keymap.set("v", "[=", "0?^\\s*=<CR>", { desc = "Previous Equality Break" })
+	end,
 })
+
+vim.keymap.del("i", "<Tab>")

@@ -23,6 +23,7 @@ fi
 autoload -U compinit && compinit
 autoload -U colors && colors
 autoload -U select-word-style
+autoload -z edit-command-line
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -41,6 +42,8 @@ bindkey '^j' backward-word
 bindkey '^k' forward-word
 bindkey '^w' backward-kill-word
 bindkey "^[[3~" delete-char
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
 
 # Characters which, in addition to alphanumeric, belong to words
 export WORDCHARS="*?_~&!#$%^"

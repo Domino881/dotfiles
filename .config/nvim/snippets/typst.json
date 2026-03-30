@@ -4,8 +4,28 @@
         "body": [ "#cetz.canvas({", "\timport cetz.draw: *", "\t${1}", "})" ],
         "description": "The CetZ canvas"
     },
-    "foo": {
+    "Grid": {
+        "prefix": "#grid",
+        "body": [
+            "#grid(",
+            "\tcolumns: ${1:2},",
+            "\t$0",
+            ")" 
+        ],
+        "description": "A grid"
+    },
+    "Figure": {
+        "prefix": "#figure",
+        "body": [
+            "#figure($1)[",
+            "\t$0",
+            "]" 
+        ],
+        "description": "An empty figure"
+    },
+    "Last snippet": {
         "prefix": "foo",
-        "body": "ajajaj"
+        "body": "ajajaj",
+        "description": "Left since no trailing commas allowed in json"
     }
 }

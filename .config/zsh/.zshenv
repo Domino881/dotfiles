@@ -20,6 +20,9 @@ export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH"
 
 ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+# libreoffice styling
+export SAL_USE_VCLPLUGIN=qt6
+
 # Colorscheme sync with wallpaper
 # Import colorscheme from 'wal' asynchronously
 (cat ~/.cache/wal/sequences &)

@@ -1,9 +1,9 @@
 return {
-    "chomosuke/typst-preview.nvim", -- live preview in browser for Typst
-    ft = "typst",
-    -- version = "1.*",
-    -- config = true,
-    opts = {
-        debug = false,
-    },
+	"chomosuke/typst-preview.nvim", -- live preview in browser for Typst
+	lazy = true,
+	ft = "typst",
+	opts = {
+		debug = false,
+		-- open_cmd = "qutebrowser %s",
+	},
 }

@@ -1,5 +1,7 @@
 return {
 	"mfussenegger/nvim-dap",
+	lazy = true,
+	ft = { "cpp" },
 	dependencies = {
 		"nvim-neotest/nvim-nio",
 		"rcarriga/nvim-dap-ui",
@@ -17,8 +19,6 @@ return {
 			end,
 		},
 	},
-	lazy = true,
-	ft = { "cpp" },
 	init = function()
 		require("overseer").enable_dap()
 		local dap, dapui = require("dap"), require("dapui")

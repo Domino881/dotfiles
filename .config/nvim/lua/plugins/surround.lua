@@ -12,7 +12,7 @@ return {
 
 			-- Module mappings. Use `''` (empty string) to disable one.
 			mappings = {
-				add = "ys", -- Add surrounding in Normal and Visual modes
+				add = "S", -- Add surrounding in Normal and Visual modes
 				delete = "ds", -- Delete surrounding
 				replace = "cs", -- Replace surrounding
 				find = "", -- Find surrounding (to the right)
@@ -21,7 +21,7 @@ return {
 			},
 		})
 		-- Remap adding surrounding to Visual mode selection
-		vim.keymap.del("x", "ys")
-		vim.keymap.set("x", "S", [[:<C-u>lua MiniSurround.add('visual')<CR>]], { silent = true })
+		-- vim.keymap.del("x", "S")
+		-- vim.keymap.set("x", "S", [[:<C-u>lua MiniSurround.add('visual')<CR>]], { silent = true })
 	end,
 }

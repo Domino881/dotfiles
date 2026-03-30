@@ -132,5 +132,29 @@ return {
 				map("n", "K", vim.lsp.buf.hover, "Hover with LSP")
 			end,
 		})
+		vim.api.nvim_create_autocmd("LspAttach", {
+			group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
+			callback = function(event)
+				local map = function(modes, keys, func, desc)
+					vim.keymap.set(modes, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
+				end
+
+				map("n", "gd", require("telescope.builtin").lsp_definitions, "Goto Definition")
+				map("n", "gD", vim.lsp.buf.declaration, "Goto Declaration")
+				map({ "n", "v" }, "<leader>lf", vim.lsp.buf.format, "Format buffer")
+				map("n", "K", vim.lsp.buf.hover, "Hover with LSP")
+
+				vim.api.nvim_create_autocmd("BufWritePre", {
+					group = vim.api.nvim_create_augroup("format-on-write", { clear = true }),
+					pattern = { "*.typ", "*.lua", "*.bajo" },
+					callback = function(_)
+						vim.lsp.buf.format({
+							timeout_ms = 500,
+						})
+						vim.notify("Formatted.")
+					end,
+				})
+			end,
+		})
 	end,
 }

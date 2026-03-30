@@ -1,7 +1,7 @@
 return {
 	"lkhphuc/jupyter-kernel.nvim",
 	lazy = true,
-	ft = { "python" },
+	ft = { "python", "ipynb" },
 	enabled = false,
 	opts = {
 		inspect = {
