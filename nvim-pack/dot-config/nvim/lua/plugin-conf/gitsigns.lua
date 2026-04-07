@@ -37,3 +37,21 @@ require("gitsigns").setup({
 		col = 1,
 	},
 })
+
+vim.keymap.set("n", "]c", function()
+	if vim.wo.diff then
+		vim.cmd.normal({ "]c", bang = true })
+	else
+		require("gitsigns").nav_hunk("next")
+	end
+end, { desc = "Next Git Hunk" })
+
+vim.keymap.set("n", "[c", function()
+	if vim.wo.diff then
+		vim.cmd.normal({ "[c", bang = true })
+	else
+		require("gitsigns").nav_hunk("prev")
+	end
+end, { desc = "Previous Git Hunk" })
+
+vim.keymap.set("n", "gs", "<cmd>Gitsigns<CR>", { desc = "Gitsigns commands" })

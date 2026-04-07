@@ -1,6 +1,6 @@
 {
   "about_get_books_msg_again": false,
-  "add books dialog dir": "/home/dominik/Documents/testing/make-outline",
+  "add books dialog dir": "/home/dominik/Downloads",
   "add books dialog dir-last-used-filter-spec-all-files": false,
   "add formats dialog": "/home/dominik/Documents/testing/make-outline",
   "add formats dialog-last-used-filter-spec-all-files": false,
@@ -14,15 +14,15 @@
   "notified-version-updates": {
     "__class__": "set",
     "__value__": [
-      "8.8",
-      "8.5",
-      "8.16",
-      "8.10",
-      "8.12",
-      "8.7",
       "8.9",
+      "8.16",
+      "9.2",
+      "8.12",
+      "8.5",
       "8.11",
-      "9.2"
+      "8.10",
+      "8.7",
+      "8.8"
     ]
   },
   "s_r_search_mode": 0,

@@ -49,7 +49,7 @@ require("plugin-conf.lualine")
 
 -- Quality of life
 vim.pack.add({
-	"https://github.com/numToStr/Comment.nvim", -- commenting of lines
+	-- "https://github.com/numToStr/Comment.nvim", -- commenting of lines
 	"https://github.com/romainl/vim-cool", -- auto :nohl
 	"https://github.com/farmergreg/vim-lastplace", -- opens files at the last place
 	"https://github.com/stevearc/dressing.nvim", -- improved neovim ui
@@ -57,7 +57,7 @@ vim.pack.add({
 	"https://github.com/LunarVim/bigfile.nvim", -- disable features in big files
 	"https://github.com/rcarriga/nvim-notify",
 })
-require("Comment").setup()
+-- require("Comment").setup()
 require("stickybuf").setup()
 require("notify").setup({
 	render = "minimal",
@@ -76,7 +76,9 @@ require("ccc").setup({
 	highlighter = {
 		auto_enable = true,
 		lsp = true,
+		excludes = { "typst" },
 	},
+	highlight_mode = "virtual",
 })
 
 vim.pack.add({

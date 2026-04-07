@@ -8,16 +8,6 @@ local function load_source(source)
 	end
 end
 
--- local function load_colorscheme_async(colorscheme)
--- 	vim.defer_fn(function()
--- 		if vim.g.default_colorscheme then
--- 			if not pcall(vim.cmd.colorscheme, colorscheme) then
--- 				vim.notify("Error setting up colorscheme: " .. colorscheme, vim.log.levels.ERROR)
--- 			end
--- 		end
--- 	end, 0)
--- end
-
 -- Call the functions defined above.
 load_source("options")
 load_source("pack-plugins")

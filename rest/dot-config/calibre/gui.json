@@ -159,6 +159,7 @@
   },
   "color_palette": "dark",
   "cover_corner_radius": 8,
+  "cover_generation_save_settings_for_future": true,
   "cover_grid_background": {
     "dark": [
       29,
@@ -447,6 +448,57 @@
     },
     "maximized": true,
     "normal_geometry": {
+      "height": 896,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZ8AAAN/AAAAAAAAAAAAAAWfAAADfwAAAAACAAAABaAAAAAAAAAAAAAABZ8AAAN/"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "eDP-1-0x0893",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 960,
+        "width": 1440
+      },
+      "virtual_geometry": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-convert_single_dialog_geom": {
+    "frame_geometry": {
+      "height": 896,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 896,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "maximized": true,
+    "normal_geometry": {
       "height": 960,
       "width": 1440,
       "x": 0,
@@ -482,37 +534,37 @@
       }
     }
   },
-  "geometry-of-convert_single_dialog_geom": {
+  "geometry-of-cover_settings_dialog_geom": {
     "frame_geometry": {
-      "height": 1003,
-      "width": 1600,
-      "x": 0,
+      "height": 896,
+      "width": 982,
+      "x": 219,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 1003,
-      "width": 1600,
-      "x": 0,
+      "height": 896,
+      "width": 982,
+      "x": 219,
       "y": 0
     },
-    "maximized": true,
+    "maximized": false,
     "normal_geometry": {
-      "height": 980,
-      "width": 1600,
-      "x": 0,
-      "y": 43
+      "height": 896,
+      "width": 982,
+      "x": 219,
+      "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABj8AAAPqAAAAAAAAACsAAAY/AAAD/gAAAAACAAAABkAAAAAAAAAAAAAABj8AAAPq"
+      "__value__": "AdnQywADAAAAAADbAAAAAAAABLAAAAN/AAAA2wAAAAAAAASwAAADfwAAAAAAAAAABaAAAADbAAAAAAAABLAAAAN/"
     },
     "screen": {
       "depth": 32,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       },
@@ -522,12 +574,12 @@
       "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -783,6 +835,57 @@
       "virtual_geometry": {
         "height": 1067,
         "width": 1600,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-jobs_dialog_geometry": {
+    "frame_geometry": {
+      "height": 374,
+      "width": 725,
+      "x": 484,
+      "y": 221
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 374,
+      "width": 725,
+      "x": 484,
+      "y": 221
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 374,
+      "width": 725,
+      "x": 484,
+      "y": 221
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAHkAAAA3QAABLgAAAJSAAAB5AAAAN0AAAS4AAACUgAAAAAAAAAABaAAAAHkAAAA3QAABLgAAAJS"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "eDP-1-0x0893",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 960,
+        "width": 1440
+      },
+      "virtual_geometry": {
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -1250,34 +1353,34 @@
   "geometry-of-template_editor_dialog_geometry": {
     "frame_geometry": {
       "height": 646,
-      "width": 846,
+      "width": 1061,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
       "height": 646,
-      "width": 846,
+      "width": 1061,
       "x": 0,
       "y": 0
     },
     "maximized": false,
     "normal_geometry": {
       "height": 646,
-      "width": 846,
+      "width": 1061,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAAA00AAAKFAAAAAAAAAAAAAANNAAAChQAAAAAAAAAABkAAAAAAAAAAAAAAA00AAAKF"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABCQAAAKFAAAAAAAAAAAAAAQkAAAChQAAAAAAAAAABaAAAAAAAAAAAAAABCQAAAKF"
     },
     "screen": {
       "depth": 32,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       },
@@ -1287,12 +1390,12 @@
       "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -1301,8 +1404,12 @@
   "gpm_template_editor_font": "Noto Sans",
   "gpm_template_editor_word_wrap_mode": true,
   "grid view visible": true,
+  "jobs view column layout3": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfQAAAAFAQEBAAAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAAAAAAD6AAAAAAAAAAAAAAAAAAAAAAFAAAAAA=="
+  },
   "library_usage_stats": {
-    "/home/dominik/Library/Calibre": 168
+    "/home/dominik/Library/Calibre": 178
   },
   "light_palette_name": "",
   "light_palettes": {
@@ -1461,7 +1568,7 @@
   "template_editor_table_widths": [
     208,
     58,
-    511
+    542
   ],
   "template_functions_prefs_st_show_help": true,
   "template_functions_prefs_tf_show_help": true,
