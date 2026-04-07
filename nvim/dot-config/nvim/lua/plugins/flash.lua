@@ -1,12 +1,13 @@
 return {
 	"folke/flash.nvim",
+	enabled = false,
 	event = "VeryLazy",
-    init = function ()
-        vim.cmd([[highlight clear FlashMatch]])
-        vim.cmd([[highlight clear FlashLabel]])
-        vim.cmd([[highlight link FlashMatch HtmlUnderline]])
-        vim.cmd([[highlight link FlashLabel HtmlUnderline]])
-    end,
+	init = function()
+		vim.cmd([[highlight clear FlashMatch]])
+		vim.cmd([[highlight clear FlashLabel]])
+		vim.cmd([[highlight link FlashMatch HtmlUnderline]])
+		vim.cmd([[highlight link FlashLabel HtmlUnderline]])
+	end,
 	---@type Flash.Config
 	opts = {},
 	keys = {

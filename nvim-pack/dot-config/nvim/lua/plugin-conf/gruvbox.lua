@@ -1,10 +1,4 @@
-local bgColor = "#070505"
-local darkFg1 = "#191716"
-
-return {
-	"ellisonleao/gruvbox.nvim",
-	priority = 9999,
-	opts = {
+require("gruvbox").setup({
 		terminal_colors = false, -- add neovim terminal colors
 		undercurl = false,
 		underline = true,
@@ -22,16 +16,17 @@ return {
 		contrast = "hard", -- can be "hard", "soft" or empty string
 		overrides = {
 			ColorColumn = { bg = "#171717" },
-			SignColumn = { bg = bgColor },
-			NonText = { fg = darkFg1 }, -- indentline
+			SignColumn = { bg = "#070505" },
+			NonText = { fg = "#191716" }, -- indentline
 			FloatBorder = { bg = "none" },
 			NormalFloat = { bg = "none" },
-			Whitespace = { fg = darkFg1 },
+			Whitespace = { fg = "#191716" },
 			IblScope = { fg = "#7c6f64" },
-			Normal = { bg = bgColor },
-			GruvboxYellowSign = { bg = bgColor },
-			GruvboxRedSign = { bg = bgColor },
-			GruvboxBlueSign = { bg = bgColor },
+			Normal = { bg = "#070505" },
+			GruvboxYellowSign = { bg = "#070505" },
+			GruvboxRedSign = { bg = "#070505" },
+			GruvboxBlueSign = { bg = "#070505" },
+			RenderMarkdownCode = { bg = "#312e2c" },
 			GruvboxRedUnderline = { underdotted = true },
 			GruvboxAquaUnderline = { underline = true },
 			GruvboxBlueUnderline = { underline = true },
@@ -39,14 +34,12 @@ return {
 			GruvboxOrangeUnderline = { underline = true },
 			GruvboxYellowUnderline = { underline = true },
 			GruvboxPurpleUnderline = { underline = true },
-			DapUIStop = { bg = bgColor },
-			DapUIStepInto = { bg = bgColor },
-			DapUIStepOver = { bg = bgColor },
-			DapUIStepOut = { bg = bgColor },
-			DapUIRestart = { bg = bgColor },
-			DapUIStepBack = { bg = bgColor },
-			DapUIPlayPause = { bg = bgColor },
-			TelescopeNormal = { bg = bgColor },
+			DapUIStop = { bg = "#070505" },
+			DapUIStepInto = { bg = "#070505" },
+			DapUIStepOver = { bg = "#070505" },
+			DapUIStepOut = { bg = "#070505" },
+			DapUIRestart = { bg = "#070505" },
+			DapUIStepBack = { bg = "#070505" },
+			DapUIPlayPause = { bg = "#070505" },
 		},
-	},
-}
+})

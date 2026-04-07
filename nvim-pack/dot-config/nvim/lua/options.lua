@@ -1,8 +1,14 @@
-vim.g.default_colorscheme = "gruvbox"
+vim.g.mapleader = " "
+
+-- vim.g.python_recommended_style = false
+-- vim.g.python_indent = {
+-- 	open_paren = "shiftwidth()",
+-- 	nested_paren = "shiftwidth()",
+-- 	continue = "shiftwidth()",
+-- }
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.g.mapleader = " "
 
 vim.opt.undofile = true
 vim.opt.undolevels = 1000
@@ -25,22 +31,15 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.wrap = false
-vim.opt.cino = "p2s,(1,:1,g1,h2" -- indents
+-- vim.opt.cino = "p2s,(1,:1,g1,h2" -- indents
 vim.opt.showmode = false -- don't show "--insert--"
-
-vim.g.python_recommended_style = false
-vim.g.python_indent = {
-	open_paren = "shiftwidth()",
-	nested_paren = "shiftwidth()",
-	continue = "shiftwidth()",
-}
 
 -- color column
 vim.opt.cc = "80"
 vim.opt.signcolumn = "yes"
 
 -- autocompletion based only on current buffer
-vim.opt.complete = "."
+-- vim.opt.complete = "."
 
 vim.opt.list = true
 vim.opt.listchars = { space = "·", tab = ">-", trail = "$" }
@@ -49,13 +48,26 @@ vim.opt.termguicolors = true
 
 vim.opt.mouse = "n"
 
-vim.opt.updatetime = 50
+-- vim.opt.updatetime = 50
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+vim.opt.spelllang = "en_gb"
+
+vim.opt.winborder = "rounded"
+
+vim.opt.shell = "/bin/zsh -f" -- fix for colors in !cmd output
+
+vim.opt.foldenable = true
+vim.wo.foldlevel = 999
+vim.wo.foldnestmax = 1
 
 vim.diagnostic.config({
 	severity_sort = true,
 	float = {
 		source = true,
-		style = "minimal",
+		-- style = "minimal",
 		header = "",
 		prefix = "",
 	},
@@ -68,35 +80,15 @@ vim.diagnostic.config({
 	},
 	virtual_text = {
 		virt_text_pos = "eol",
-		format = function(diagnostic)
-			local mes = diagnostic.message
-			if diagnostic.source == "pylint" then
-				local colon = string.find(mes, ":") or 0
-				return string.sub(mes, colon + 1)
-			elseif diagnostic.source == "pyflakes" then
-				local colon = string.find(mes, ":") or 0
-				return string.sub(mes, colon + 1)
-			elseif diagnostic.source == "pycodestyle" then
-				local colon = string.find(mes, ":") or 0
-				return string.sub(mes, colon + 1 + 4)
-			elseif diagnostic.source == "formatdiff" then
-				return "formatdiff"
-			end
-			return mes
-		end,
+		-- format = function(diagnostic)
+		-- 	local mes = diagnostic.message
+		-- 	-- mes = string.gsub(mes, diagnostic.source .. "[:][ ]", "")
+		-- 	return
+		-- end,
 	},
 })
 
-vim.wo.foldlevel = 999
-vim.wo.foldnestmax = 1
-vim.o.foldenable = true
-
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
-vim.opt.spelllang = "en_gb"
-
-vim.opt.winborder = "rounded"
+------------------ AUTOCOMMANDS
 
 vim.api.nvim_create_augroup("user-writing", { clear = false })
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
@@ -104,33 +96,14 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 	pattern = { "*.tex", "*.md", "*.typ" },
 	callback = function(_)
 		vim.opt_local.spell = true
-		-- vim.opt_local.number = false
-		-- vim.opt_local.relativenumber = false
 		vim.opt_local.textwidth = 80
 		vim.opt_local.sidescrolloff = 0
 		vim.opt_local.sidescroll = 15
 		vim.opt_local.cmdheight = 0
-		-- vim.opt_local.signcolumn = "no"
 	end,
 })
 
-vim.api.nvim_create_augroup("ags", { clear = true })
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-	group = "ags",
-	pattern = { vim.fn.expand("$HOME/.config/ags/") .. "*" },
-	callback = function(_)
-		vim.cmd([[silent exec "!$HOME/.config/ags/start.sh &"]])
-	end,
-})
-
-vim.api.nvim_create_augroup("user-misc", { clear = true })
--- vim.api.nvim_create_autocmd('BufFilePost', {
--- 	pattern = { "css", "scss" },
--- 	group = "user-misc",
--- 	callback = function()
--- 		vim.bo.shiftwidth = 4
--- 	end,
--- })
+------------------ USER COMMANDS
 
 vim.api.nvim_create_user_command("Centerpad", function()
 	vim.cmd([[22vnew]])

@@ -1,5 +1,6 @@
 return {
 	"3rd/image.nvim",
+	enabled = false,
 	lazy = true,
 	ft = { "python" },
 	version = "1.1.0",
