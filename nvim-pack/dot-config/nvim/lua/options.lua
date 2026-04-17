@@ -57,7 +57,7 @@ vim.opt.spelllang = "en_gb"
 
 vim.opt.winborder = "rounded"
 
-vim.opt.shell = "/bin/zsh -f" -- fix for colors in !cmd output
+-- vim.opt.shell = "/bin/zsh -f" -- fix for colors in !cmd output
 
 vim.opt.foldenable = true
 vim.wo.foldlevel = 999
@@ -87,6 +87,8 @@ vim.diagnostic.config({
 		-- end,
 	},
 })
+
+-- require("vim._core.ui2").enable()
 
 ------------------ AUTOCOMMANDS
 

@@ -22,9 +22,12 @@ require("nvim-treesitter").install({
 	"vimdoc",
 })
 
+local augroup = vim.api.nvim_create_augroup("user-treesitter", { clear = true })
+
 -- Enable treesitter
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "*" },
+	group = augroup,
 	callback = function()
 		pcall(vim.treesitter.start)
 	end,
@@ -33,6 +36,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Ask to install missing parsers
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "*" },
+	group = augroup,
 	callback = function()
 		local ft = vim.bo.filetype
 		local available_to_install = {}

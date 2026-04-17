@@ -39,6 +39,8 @@ vim.keymap.set("c", "<C-j>", "<C-Left>")
 vim.keymap.set("c", "<C-k>", "<C-Right>")
 vim.keymap.set("c", "<C-a>", "<Home>")
 
+vim.keymap.set("n", "<C-w><CR>", "<C-w>v:term<CR>i")
+
 vim.api.nvim_create_augroup("typst", { clear = true })
 vim.api.nvim_create_autocmd({ "Filetype" }, {
 	pattern = { "typst" },

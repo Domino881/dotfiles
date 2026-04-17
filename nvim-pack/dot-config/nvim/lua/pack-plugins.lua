@@ -8,6 +8,8 @@ vim.api.nvim_create_autocmd("PackChanged", {
 				vim.system({ "make" }, { cwd = ev.data.path })
 			elseif name == "treesitter" then
 				vim.cmd(":TSUpdate<CR>")
+			elseif name == "LuaSnip" then
+				vim.cmd("make install_jsregexp")
 			end
 		end
 	end,
@@ -40,6 +42,7 @@ vim.pack.add({
 
 require("plugin-conf.lsp")
 require("plugin-conf.blink")
+require("plugin-conf.luasnip")
 
 vim.pack.add({
 	"https://github.com/nvim-tree/nvim-web-devicons",
@@ -142,15 +145,7 @@ require("ultimate-autopair").setup({
 
 vim.cmd("packadd nvim.undotree")
 vim.keymap.set("n", "<leader>u", ":Undotree<CR>", { desc = "Toggle Undotree" })
--- vim.pack.add({
--- 	"https://github.com/mbbill/undotree",
--- })
--- vim.keymap.set("n", "<leader>u", function()
--- 	vim.cmd.UndotreeToggle()
--- 	vim.cmd.UndotreeFocus()
--- end, { desc = "Toggle Undotree" })
--- vim.g.undotree_WindowLayout = 3
--- vim.g.undotree_SplitWidth = 58
+-- vim.cmd("packadd termdebug")
 
 vim.pack.add({
 	"https://github.com/lervag/vimtex",
@@ -163,7 +158,6 @@ vim.pack.add({
 require("plugin-conf.which-key")
 
 vim.pack.add({
-	-- "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
 	"https://github.com/nvim-treesitter/nvim-treesitter-context",
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects", version = "main" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },

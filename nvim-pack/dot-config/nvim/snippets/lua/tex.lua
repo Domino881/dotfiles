@@ -165,4 +165,63 @@ return {
             { delimiters = "<>" })
     ),
 
+
+    ls.snippet(
+        {trig = ";a", dscr = "Greek letter alpha", snippetType = "autosnippet"},
+        fmt("\\alpha", {},{delimiters="<>"})
+    ),
+    ls.snippet(
+        {trig = ";b", dscr = "Greek letter beta", snippetType = "autosnippet"},
+        fmt("\\beta", {}, {delimiters="<>"})
+    ),
+
+    ls.snippet(
+        {trig = ";g", dscr = "Greek letter gamma", snippetType = "autosnippet"},
+        fmt("\\gamma", {}, {delimiters="<>"})
+    ),
+    ls.snippet(
+        {trig = ";d", dscr = "Greek letter delta", snippetType = "autosnippet"},
+        fmt("\\delta", {}, {delimiters="<>"})
+    ),
+    ls.snippet(
+        {trig = ";e", dscr = "Greek letter epsilon", snippetType = "autosnippet"},
+        fmt("\\epsilon", {}, {delimiters="<>"})
+    ),
+    ls.snippet(
+        {trig = ";f", dscr = "Greek letter phi", snippetType = "autosnippet"},
+        fmt("\\phi", {}, {delimiters="<>"})
+    ),
+    ls.snippet(
+        {trig = ";o", dscr = "Greek letter omega", snippetType = "autosnippet"},
+        fmt("\\omega", {}, {delimiters="<>"})
+    ),
+    ls.snippet(
+        {trig = ";r", dscr = "Greek letter rho", snippetType = "autosnippet"},
+        fmt("\\rho", {}, {delimiters="<>"})
+    ),
+    ls.snippet(
+        {trig = ";t", dscr = "Greek letter tau", snippetType = "autosnippet"},
+        fmt("\\tau", {}, {delimiters="<>"})
+    ),
+    ls.snippet(
+        {trig = ";n", dscr = "Greek letter nu", snippetType = "autosnippet"},
+        fmt("\\nu", {}, {delimiters="<>"})
+    ),
+    ls.snippet(
+        {trig = ";m", dscr = "Greek letter mu", snippetType = "autosnippet"},
+        fmt("\\mu", {}, {delimiters="<>"})
+    ),
+    ls.snippet(
+        {trig = ";b", dscr = "Greek letter beta", snippetType = "autosnippet"},
+        fmt("\\beta", {}, {delimiters="<>"})
+    ),
+    ls.snippet(
+        {trig = ";t", dscr = "Greek letter theta", snippetType = "autosnippet"},
+        fmt("\\theta", {}, {delimiters="<>"})
+    ),
+    ls.snippet(
+        {trig = ";h", dscr = "Greek letter psi", snippetType = "autosnippet"},
+        fmt("\\psi", {}, {delimiters="<>"})
+    ),
+
 }

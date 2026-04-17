@@ -101,6 +101,8 @@ vim.lsp.config("tinymist", {
 	},
 })
 
+vim.lsp.enable("julials")
+
 vim.api.nvim_create_autocmd("LspDetach", {
 	group = vim.api.nvim_create_augroup("lsp-detach", { clear = true }),
 	callback = function()
@@ -140,6 +142,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		vim.lsp.buf.format({
 			timeout_ms = 500,
 		})
-		vim.notify("Formatted.")
+
+		require("fidget").notify("Formatted.")
 	end,
 })
