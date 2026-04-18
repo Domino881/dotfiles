@@ -23,6 +23,7 @@ require("gruvbox").setup({
 			Whitespace = { fg = "#191716" },
 			IblScope = { fg = "#7c6f64" },
 			Normal = { bg = "#070505" },
+			WinSeparator = { bg = "#070505", fg="#7c6f64" },
 			GruvboxYellowSign = { bg = "#070505" },
 			GruvboxRedSign = { bg = "#070505" },
 			GruvboxBlueSign = { bg = "#070505" },
@@ -41,5 +42,11 @@ require("gruvbox").setup({
 			DapUIRestart = { bg = "#070505" },
 			DapUIStepBack = { bg = "#070505" },
 			DapUIPlayPause = { bg = "#070505" },
+			StatusLine = { bg = "#a89984", fg="#7c6f64" },
+			StatusLineNC = { bg = "#32302f", fg="#7c6f64" },
+			TreesitterContext = { bg = "#32302f", fg="#7c6f64" },
+			TreesitterContextLineNumber = { bg = "#32302f", fg="#7c6f64" },
+			TreesitterContextBottom = { underline=true, sp="#7c6f64" },
 		},
 })
+vim.cmd("colorscheme gruvbox")

@@ -27,13 +27,6 @@ require("mason-lspconfig").setup({
 	},
 })
 
-vim.lsp.config("tinymist", {
-	settings = {
-		exportPdf = "onSave",
-		outputPath = "$root/$dir/$name",
-	},
-})
-
 vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
@@ -96,7 +89,8 @@ vim.lsp.config("ltex", {
 vim.lsp.config("tinymist", {
 	settings = {
 		exportPdf = "onSave",
-		formatterMode = "typstyle",
+		formatterMode = "typstfmt",
+		formatterPrintWidth = 80,
 		rootPath = vim.fn.expand("$HOME"),
 	},
 })

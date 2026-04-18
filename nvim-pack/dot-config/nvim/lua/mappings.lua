@@ -39,7 +39,9 @@ vim.keymap.set("c", "<C-j>", "<C-Left>")
 vim.keymap.set("c", "<C-k>", "<C-Right>")
 vim.keymap.set("c", "<C-a>", "<Home>")
 
-vim.keymap.set("n", "<C-w><CR>", "<C-w>v:term<CR>i")
+vim.keymap.set("n", "<C-w><CR>", "<C-w>v<C-w>w:term<CR>i")
+-- vim.keymap.set("t", "<C-\\>", "<C-\\><C-n>")
+vim.keymap.set("t", "<C-[>", "<C-\\><C-n>")
 
 vim.api.nvim_create_augroup("typst", { clear = true })
 vim.api.nvim_create_autocmd({ "Filetype" }, {
@@ -56,5 +58,3 @@ vim.api.nvim_create_autocmd({ "Filetype" }, {
 		vim.keymap.set("v", "[=", "0?^\\s*=<CR>", { desc = "Previous Equality Break" })
 	end,
 })
-
-vim.keymap.del("i", "<Tab>")

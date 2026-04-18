@@ -46,7 +46,7 @@ vim.opt.listchars = { space = "·", tab = ">-", trail = "$" }
 
 vim.opt.termguicolors = true
 
-vim.opt.mouse = "n"
+vim.opt.mouse = "nv"
 
 -- vim.opt.updatetime = 50
 
@@ -56,6 +56,7 @@ vim.opt.smartcase = true
 vim.opt.spelllang = "en_gb"
 
 vim.opt.winborder = "rounded"
+vim.opt.fillchars:append {vert="🮇"}
 
 -- vim.opt.shell = "/bin/zsh -f" -- fix for colors in !cmd output
 
