@@ -18,7 +18,7 @@ require("gruvbox").setup({
 			ColorColumn = { bg = "#171717" },
 			SignColumn = { bg = "#070505" },
 			NonText = { fg = "#191716" }, -- indentline
-			FloatBorder = { bg = "none" },
+			FloatBorder = { bg = "none", fg="#ebdbb2" },
 			NormalFloat = { bg = "none" },
 			Whitespace = { fg = "#191716" },
 			IblScope = { fg = "#7c6f64" },

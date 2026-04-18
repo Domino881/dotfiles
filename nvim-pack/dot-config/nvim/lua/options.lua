@@ -1,12 +1,5 @@
 vim.g.mapleader = " "
 
--- vim.g.python_recommended_style = false
--- vim.g.python_indent = {
--- 	open_paren = "shiftwidth()",
--- 	nested_paren = "shiftwidth()",
--- 	continue = "shiftwidth()",
--- }
-
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -38,9 +31,6 @@ vim.opt.showmode = false -- don't show "--insert--"
 vim.opt.cc = "80"
 vim.opt.signcolumn = "yes"
 
--- autocompletion based only on current buffer
--- vim.opt.complete = "."
-
 vim.opt.list = true
 vim.opt.listchars = { space = "·", tab = ">-", trail = "$" }
 
@@ -48,17 +38,14 @@ vim.opt.termguicolors = true
 
 vim.opt.mouse = "nv"
 
--- vim.opt.updatetime = 50
-
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.spelllang = "en_gb"
 
-vim.opt.winborder = "rounded"
+-- vim.opt.winborder = "rounded"
+vim.o.winborder="🭽,▔,🭾,▕,🭿,▁,🭼,▏"
 vim.opt.fillchars:append {vert="🮇"}
-
--- vim.opt.shell = "/bin/zsh -f" -- fix for colors in !cmd output
 
 vim.opt.foldenable = true
 vim.wo.foldlevel = 999
