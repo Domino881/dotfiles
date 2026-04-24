@@ -68,7 +68,13 @@ vim.lsp.config("texlab", {
 		texlab = {
 			latexFormatter = "tex-fmt",
 			build = {
-				executable = "latexrun",
+				executable = "tectonic",
+				args = { "--synctex", "--keep-logs", "--keep-intermediates", "%f" },
+				onSave = false,
+			},
+			forwardSearch = {
+				executable = "okular",
+				args = { "--unique", "file:%p#src:%l%f" },
 			},
 		},
 	},
@@ -89,13 +95,23 @@ vim.lsp.config("ltex", {
 vim.lsp.config("tinymist", {
 	settings = {
 		exportPdf = "onSave",
-		formatterMode = "typstfmt",
-		formatterPrintWidth = 80,
 		rootPath = vim.fn.expand("$HOME"),
+		formatterMode = "typstyle",
+		formatterPrintWidth = 80,
+		formatterProseWrap = true,
+		formatterIndentSize = 4,
 	},
 })
 
 vim.lsp.enable("julials")
+
+-- vim.lsp.config["tex-fmt"] = {
+--     cmd = { "tex-fmt" },
+--     filetypes = { "tex" },
+--     capabilities = {
+--         fo
+--     }
+-- }
 
 vim.api.nvim_create_autocmd("LspDetach", {
 	group = vim.api.nvim_create_augroup("lsp-detach", { clear = true }),

@@ -11,12 +11,11 @@ local rep = require("luasnip.extras").rep
 local treesitter_postfix = require("luasnip.extras.treesitter_postfix").treesitter_postfix
 local cond_obj = require("luasnip.extras.conditions")
 
-local MATH_NODES = {
-	math = true,
-	formula = true,
-}
-
 local in_mathzone = cond_obj.make_condition(function()
+	local MATH_NODES = {
+		math = true,
+		formula = true,
+	}
 	local node = vim.treesitter.get_node({ ignore_injections = false })
 	while node do
 		if MATH_NODES[node:type()] then

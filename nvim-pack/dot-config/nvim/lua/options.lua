@@ -44,12 +44,23 @@ vim.opt.smartcase = true
 vim.opt.spelllang = "en_gb"
 
 -- vim.opt.winborder = "rounded"
-vim.o.winborder="🭽,▔,🭾,▕,🭿,▁,🭼,▏"
-vim.opt.fillchars:append {vert="🮇"}
+vim.o.winborder = "🭽,▔,🭾,▕,🭿,▁,🭼,▏"
+vim.opt.fillchars:append({
+	horiz = "━",
+	horizup = "┻",
+	horizdown = "┳",
+	vert = "┃",
+	vertleft = "┫",
+	vertright = "┣",
+	verthoriz = "╋",
+})
 
+vim.opt.conceallevel = 0
 vim.opt.foldenable = true
 vim.wo.foldlevel = 999
 vim.wo.foldnestmax = 1
+
+vim.o.laststatus = 3
 
 vim.diagnostic.config({
 	severity_sort = true,
@@ -76,7 +87,7 @@ vim.diagnostic.config({
 	},
 })
 
--- require("vim._core.ui2").enable()
+require("vim._core.ui2").enable()
 
 ------------------ AUTOCOMMANDS
 
@@ -121,3 +132,5 @@ vim.api.nvim_create_user_command("WolframToTypst", function(tab)
 	-- vim.cmd([[s/<CR>/\r/ge]])
 	vim.cmd([[s/\\(Pi)/pi/ge]])
 end, { range = true })
+
+vim.api.nvim_create_user_command("RestartRestore", "mksession! /tmp/session.vim | restart source /tmp/session.vim", {})

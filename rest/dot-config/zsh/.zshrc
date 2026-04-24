@@ -140,3 +140,8 @@ fi
 source ~/.cache/niri-completions
 
 eval "$(uv generate-shell-completion zsh)"
+
+_fix_cursor() {
+   echo -ne '\e[5 q'
+}
+precmd_functions+=(_fix_cursor)

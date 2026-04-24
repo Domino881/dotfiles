@@ -1,3 +1,16 @@
+local function typst_in_code()
+	local success, node = pcall(vim.treesitter.get_node)
+	if success then
+		while node do
+			if node:type() == "code" then
+				return true
+			end
+			node = node:parent()
+		end
+	end
+	return false
+end
+
 require("blink.cmp").setup({
 	keymap = {
 		-- preset = "default",
@@ -33,8 +46,10 @@ require("blink.cmp").setup({
 		keyword = { range = "full" },
 		menu = {
 			auto_show = function(ctx, item)
-				if vim.bo.filetype == "markdown" or vim.bo.filetype == "typst" then
+				if vim.bo.filetype == "markdown" then
 					return false
+				elseif vim.bo.filetype == "typst" then
+					return typst_in_code()
 				end
 				return true
 			end,
@@ -50,7 +65,7 @@ require("blink.cmp").setup({
 		ghost_text = { enabled = false },
 	},
 
-    snippets = { preset = 'luasnip' },
+	snippets = { preset = "luasnip" },
 	sources = {
 		default = { "lsp", "path", "snippets", "buffer" },
 	},
