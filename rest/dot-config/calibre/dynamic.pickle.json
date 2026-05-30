@@ -1,8 +1,8 @@
 {
   "about_get_books_msg_again": false,
-  "add books dialog dir": "/home/dominik/Downloads",
+  "add books dialog dir": "/home/dominik/Documents/testing/ocr",
   "add books dialog dir-last-used-filter-spec-all-files": false,
-  "add formats dialog": "/home/dominik/Documents/testing/make-outline",
+  "add formats dialog": "/home/dominik/Downloads",
   "add formats dialog-last-used-filter-spec-all-files": false,
   "catalogs_to_be_synced": {
     "__class__": "set",
@@ -14,15 +14,16 @@
   "notified-version-updates": {
     "__class__": "set",
     "__value__": [
-      "8.9",
-      "8.16",
-      "9.2",
-      "8.12",
-      "8.5",
-      "8.11",
       "8.10",
+      "8.12",
+      "8.16",
+      "8.5",
+      "8.9",
+      "9.2",
+      "8.11",
+      "8.8",
       "8.7",
-      "8.8"
+      "9.7"
     ]
   },
   "s_r_search_mode": 0,

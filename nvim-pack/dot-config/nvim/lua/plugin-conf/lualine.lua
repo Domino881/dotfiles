@@ -71,7 +71,13 @@ require("lualine").setup({
 					return vim.bo.filetype == "tex"
 				end,
 			},
+			-- {
+			-- 	require("tinymist-clientfeatures.tinymist_status").show_status,
+			-- 	cond = function()
+			-- 		return vim.bo.filetype == "typst"
+			-- 	end,
+			-- 	color = require("tinymist-clientfeatures.tinymist_status").show_status_color,
+			-- },
 		},
 	},
 })
-

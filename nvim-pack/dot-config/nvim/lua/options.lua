@@ -56,7 +56,9 @@ vim.opt.fillchars:append({
 })
 
 vim.opt.conceallevel = 0
+vim.opt.concealcursor = "n"
 vim.opt.foldenable = true
+vim.opt.updatetime = 50
 vim.wo.foldlevel = 999
 vim.wo.foldnestmax = 1
 
@@ -75,15 +77,18 @@ vim.diagnostic.config({
 			[vim.diagnostic.severity.WARN] = "●",
 			[vim.diagnostic.severity.ERROR] = "●",
 			[vim.diagnostic.severity.INFO] = "●",
+			[vim.diagnostic.severity.HINT] = "",
 		},
 	},
 	virtual_text = {
-		virt_text_pos = "eol",
-		-- format = function(diagnostic)
-		-- 	local mes = diagnostic.message
-		-- 	-- mes = string.gsub(mes, diagnostic.source .. "[:][ ]", "")
-		-- 	return
-		-- end,
+		virt_text_pos = "eol_right_align",
+		prefix = function(diag, _, _)
+			if diag.severity == vim.diagnostic.severity.HINT then
+				return ""
+			else
+				return "🬋"
+			end
+		end,
 	},
 })
 
@@ -100,7 +105,40 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 		vim.opt_local.textwidth = 80
 		vim.opt_local.sidescrolloff = 0
 		vim.opt_local.sidescroll = 15
-		vim.opt_local.cmdheight = 0
+		-- vim.opt_local.cmdheight = 0
+		vim.opt_local.comments:append({ "b:-", "b:*" })
+		vim.opt_local.formatoptions:append("r")
+	end,
+})
+-- vim.api.nvim_create_autocmd({ "InsertEnter" }, {
+-- 	group = "user-writing",
+-- 	pattern = { "*.tex", "*.md", "*.typ" },
+-- 	callback = function(_)
+-- 		vim.opt_local.number = false
+-- 		vim.opt_local.relativenumber = false
+-- 		vim.opt_local.signcolumn = "no"
+-- 	end,
+-- })
+-- vim.api.nvim_create_autocmd("InsertLeave", {
+-- 	group = "user-writing",
+-- 	pattern = { "*.tex", "*.md", "*.typ" },
+-- 	callback = function(_)
+-- 		vim.opt_local.number = true
+-- 		vim.opt_local.relativenumber = true
+-- 		vim.opt_local.signcolumn = "yes"
+-- 	end,
+-- })
+
+vim.api.nvim_create_augroup("user-floating", { clear = false })
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "markdown",
+	group = "user-floating",
+	callback = function()
+		local win = vim.api.nvim_get_current_win()
+		-- Only target floating windows, not regular markdown buffers
+		if vim.api.nvim_win_get_config(win).relative ~= "" then
+			vim.wo[win].concealcursor = "n"
+		end
 	end,
 })
 

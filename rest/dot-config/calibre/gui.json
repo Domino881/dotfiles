@@ -12,7 +12,8 @@
     null,
     "KoboUtilities",
     "Resize Cover",
-    "KOReader Sync"
+    "KOReader Sync",
+    "Ebook Translator"
   ],
   "action-layout-toolbar-device": [
     "Preferences",
@@ -332,35 +333,35 @@
   "general_category_editor_row_height": 30,
   "geometry-of-Plugin Updater plugin:plugin updater dialog": {
     "frame_geometry": {
-      "height": 1003,
-      "width": 1600,
+      "height": 896,
+      "width": 1440,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 1003,
-      "width": 1600,
+      "height": 896,
+      "width": 1440,
       "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1003,
-      "width": 1600,
+      "height": 896,
+      "width": 1440,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABj8AAAPqAAAAAAAAAAAAAAY/AAAD6gAAAAACAAAABkAAAAAAAAAAAAAABj8AAAPq"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZ8AAAN/AAAAAAAAAAAAAAWfAAADfwAAAAACAAAABaAAAAAAAAAAAAAABZ8AAAN/"
     },
     "screen": {
       "depth": 32,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       },
@@ -370,12 +371,12 @@
       "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -437,25 +438,25 @@
       "height": 896,
       "width": 1440,
       "x": 0,
-      "y": 0
+      "y": 32
     },
     "full_screened": false,
     "geometry": {
       "height": 896,
       "width": 1440,
       "x": 0,
-      "y": 0
+      "y": 32
     },
-    "maximized": true,
+    "maximized": false,
     "normal_geometry": {
       "height": 896,
       "width": 1440,
       "x": 0,
-      "y": 0
+      "y": 32
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZ8AAAN/AAAAAAAAAAAAAAWfAAADfwAAAAACAAAABaAAAAAAAAAAAAAABZ8AAAN/"
+      "__value__": "AdnQywADAAAAAAAAAAAAIAAABZ8AAAOfAAAAAAAAACAAAAWfAAADnwAAAAAAAAAABaAAAAAAAAAAIAAABZ8AAAOf"
     },
     "screen": {
       "depth": 32,
@@ -499,14 +500,14 @@
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 960,
+      "height": 896,
       "width": 1440,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZ8AAAN/AAAAAAAAAAAAAAWfAAADvwAAAAACAAAABaAAAAAAAAAAAAAABZ8AAAN/"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZ8AAAN/AAAAAAAAAAAAAAWfAAADfwAAAAACAAAABaAAAAAAAAAAAAAABZ8AAAN/"
     },
     "screen": {
       "depth": 32,
@@ -791,35 +792,35 @@
   },
   "geometry-of-image-trim-dialog-geometry": {
     "frame_geometry": {
-      "height": 1003,
-      "width": 1600,
+      "height": 896,
+      "width": 1440,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 1003,
-      "width": 1600,
+      "height": 896,
+      "width": 1440,
       "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1003,
-      "width": 1600,
+      "height": 896,
+      "width": 1440,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABj8AAAPqAAAAAAAAAAAAAAY/AAAD6gAAAAACAAAABkAAAAAAAAAAAAAABj8AAAPq"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZ8AAAN/AAAAAAAAAAAAAAWfAAADfwAAAAACAAAABaAAAAAAAAAAAAAABZ8AAAN/"
     },
     "screen": {
       "depth": 32,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       },
@@ -829,12 +830,12 @@
       "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -1220,14 +1221,14 @@
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAAA/cAAAJlAAAAAAAAAAAAAAP3AAACZQAAAAAAAAAABkAAAAAAAAAAAAAAA/cAAAJl"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAA/cAAAJlAAAAAAAAAAAAAAP3AAACZQAAAAAAAAAABaAAAAAAAAAAAAAAA/cAAAJl"
     },
     "screen": {
       "depth": 32,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       },
@@ -1237,12 +1238,12 @@
       "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -1301,35 +1302,35 @@
   },
   "geometry-of-single-cover-fetch-dialog-geometry": {
     "frame_geometry": {
-      "height": 1003,
-      "width": 1600,
+      "height": 896,
+      "width": 1440,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 1003,
-      "width": 1600,
+      "height": 896,
+      "width": 1440,
       "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1003,
-      "width": 1600,
+      "height": 960,
+      "width": 1440,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABj8AAAPqAAAAAAAAAAAAAAY/AAAD6gAAAAACAAAABkAAAAAAAAAAAAAABj8AAAPq"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZ8AAAN/AAAAAAAAAAAAAAWfAAADvwAAAAACAAAABaAAAAAAAAAAAAAABZ8AAAN/"
     },
     "screen": {
       "depth": 32,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       },
@@ -1339,12 +1340,12 @@
       "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -1409,7 +1410,7 @@
     "__value__": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfQAAAAFAQEBAAAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAAAAAAD6AAAAAAAAAAAAAAAAAAAAAAFAAAAAA=="
   },
   "library_usage_stats": {
-    "/home/dominik/Library/Calibre": 178
+    "/home/dominik/Library/Calibre": 206
   },
   "light_palette_name": "",
   "light_palettes": {

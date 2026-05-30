@@ -8,150 +8,199 @@ local r = ls.restore_node
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
+local cond_obj = require("luasnip.extras.conditions")
 
 local function title_to_label(args, parent, user_args)
-    local title_text = args[1][1]
-    -- Use text form of equations
-    title_text = string.gsub(title_text, "\\texorpdfstring{.+}{(.+)}", "%1")
-    -- Remove spaces
-    title_text = string.gsub(title_text, "[ ^\\_]", "")
-    return title_text
+	local title_text = args[1][1]
+	-- Use text form of equations
+	title_text = string.gsub(title_text, "\\texorpdfstring{.+}{(.+)}", "%1")
+	-- Remove spaces
+	title_text = string.gsub(title_text, "[ ^\\_]", "")
+	title_text = string.gsub(title_text, "[{}&]", "")
+	return title_text
 end
 
+local in_mathzone = cond_obj.make_condition(function()
+	local MATH_NODES = {
+		math_environment = true,
+		inline_formula = true,
+	}
+	local node = vim.treesitter.get_node({ ignore_injections = false })
+	while node do
+		if MATH_NODES[node:type()] then
+			return true
+		end
+		node = node:parent()
+	end
+	return false
+end)
+
 return {
-    ls.snippet(
-        { trig = "\\begin", dscr = "A LaTeX environment", snippetType = "autosnippet" },
-        fmt(
-            [[
+	ls.snippet(
+		{ trig = "\\begin", dscr = "A LaTeX environment", snippetType = "autosnippet" },
+		fmt(
+			[[
             \begin{<>}
                 <>
             \end{<>}
           ]],
-            -- The insert node is placed in the <> angle brackets
-            { i(1), i(2), rep(1) },
-            { delimiters = "<>" })
-    ),
+			-- The insert node is placed in the <> angle brackets
+			{ i(1), i(2), rep(1) },
+			{ delimiters = "<>" }
+		)
+	),
 
-    ls.snippet(
-        { trig = "BEQ", dscr = "A LaTeX equation* environment", snippetType = "autosnippet" },
-        fmt(
-            [[
+	ls.snippet(
+		{ trig = "BEQ", dscr = "A LaTeX equation* environment", snippetType = "autosnippet" },
+		fmt(
+			[[
             \begin{equation*}
                 <>
             \end{equation*}
           ]],
-            -- The insert node is placed in the <> angle brackets
-            { i(1) },
-            { delimiters = "<>" })
-    ),
+			-- The insert node is placed in the <> angle brackets
+			{ i(1) },
+			{ delimiters = "<>" }
+		)
+	),
 
-    ls.snippet(
-        { trig = "BAL", dscr = "A LaTeX align* environment", snippetType = "autosnippet" },
-        fmt(
-            [[
-            \begin{align*}
+	ls.snippet(
+		{ trig = "BAL", dscr = "A LaTeX align environment", snippetType = "autosnippet" },
+		fmt(
+			[[
+            \begin{align}
                 <>
-            \end{align*}
+            \end{align}
           ]],
-            -- The insert node is placed in the <> angle brackets
-            { i(1) },
-            { delimiters = "<>" })
-    ),
+			-- The insert node is placed in the <> angle brackets
+			{ i(1) },
+			{ delimiters = "<>" }
+		)
+	),
+	ls.snippet(
+		{ trig = "BGA", dscr = "A LaTeX gather environment", snippetType = "autosnippet" },
+		fmt(
+			[[
+            \begin{gather}
+                <>
+            \end{gather}
+          ]],
+			-- The insert node is placed in the <> angle brackets
+			{ i(1) },
+			{ delimiters = "<>" }
+		)
+	),
 
-    ls.snippet(
-        { trig = "BFI", dscr = "A LaTeX figure environment", snippetType = "autosnippet" },
-        fmt(
-            [[
+	ls.snippet(
+		{ trig = "BFI", dscr = "A LaTeX figure environment", snippetType = "autosnippet" },
+		fmt(
+			[[
             \begin{figure}
                 <>
                 \caption{<>}
                 \label{<>}
             \end{figure}
           ]],
-            -- The insert node is placed in the <> angle brackets
-            { i(1), i(2), i(3) },
-            { delimiters = "<>" })
-    ),
+			-- The insert node is placed in the <> angle brackets
+			{ i(1), i(2), i(3) },
+			{ delimiters = "<>" }
+		)
+	),
 
-    ls.snippet(
-        { trig = "BIT", dscr = "A LaTeX itemize environment", snippetType = "autosnippet" },
-        fmt(
-            [[
+	ls.snippet(
+		{ trig = "BIT", dscr = "A LaTeX itemize environment", snippetType = "autosnippet" },
+		fmt(
+			[[
             \begin{itemize}
                 \item <>
             \end{itemize}
           ]],
-            -- The insert node is placed in the <> angle brackets
-            { i(1) },
-            { delimiters = "<>" })
-    ),
+			-- The insert node is placed in the <> angle brackets
+			{ i(1) },
+			{ delimiters = "<>" }
+		)
+	),
 
-    ls.snippet(
-        { trig = "IMG", dscr = "LaTeX include graphics", snippetType = "autosnippet" },
-        fmt([[\includegraphics[width=<>\linewidth]{<>}]],
-            -- The insert node is placed in the <> angle brackets
-            { i(1), i(0) },
-            { delimiters = "<>" })
-    ),
+	ls.snippet(
+		{ trig = "IMG", dscr = "LaTeX include graphics", snippetType = "autosnippet" },
+		fmt(
+			[[\includegraphics[width=<>\linewidth]{<>}]],
+			-- The insert node is placed in the <> angle brackets
+			{ i(1), i(0) },
+			{ delimiters = "<>" }
+		)
+	),
 
-    ls.snippet(
-        { trig = "SEC", dscr = "A LaTeX section", snippetType = "autosnippet" },
-        fmt(
-            [[
+	ls.snippet(
+		{ trig = "SEC", dscr = "A LaTeX section", snippetType = "autosnippet" },
+		fmt(
+			[[
             \section{<>}
             \label{sec:<>}
-                <>
+
+            <>
+
             % End section <>
           ]],
-            -- The insert node is placed in the <> angle brackets
-            { i(1), f(title_to_label, { 1 }), i(0), f(title_to_label, { 1 }) },
-            { delimiters = "<>" })
-    ),
+			-- The insert node is placed in the <> angle brackets
+			{ i(1), f(title_to_label, { 1 }), i(0), f(title_to_label, { 1 }) },
+			{ delimiters = "<>" }
+		)
+	),
 
-    ls.snippet(
-        { trig = "SSEC", dscr = "A LaTeX subsection", snippetType = "autosnippet" },
-        fmt(
-            [[
+	ls.snippet(
+		{ trig = "SSEC", dscr = "A LaTeX subsection", snippetType = "autosnippet" },
+		fmt(
+			[[
             \subsection{<>}
             \label{sec:<>}
-                <>
+
+            <>
+
             % End subsection <>
           ]],
-            -- The insert node is placed in the <> angle brackets
-            { i(1), f(title_to_label, { 1 }), i(0), f(title_to_label, { 1 }) },
-            { delimiters = "<>" })
-    ),
+			-- The insert node is placed in the <> angle brackets
+			{ i(1), f(title_to_label, { 1 }), i(0), f(title_to_label, { 1 }) },
+			{ delimiters = "<>" }
+		)
+	),
 
-    ls.snippet(
-        { trig = "SSEC", dscr = "A LaTeX subsubsection", snippetType = "autosnippet" },
-        fmt(
-            [[
+	ls.snippet(
+		{ trig = "SSEC", dscr = "A LaTeX subsubsection", snippetType = "autosnippet" },
+		fmt(
+			[[
             \subsubsection{<>}\label{sec:<>}
-                <>
+
+            <>
+
             % End subsubsection <>
           ]],
-            -- The insert node is placed in the <> angle brackets
-            { i(1), f(title_to_label, { 1 }), i(0), f(title_to_label, { 1 }) },
-            { delimiters = "<>" })
-    ),
+			-- The insert node is placed in the <> angle brackets
+			{ i(1), f(title_to_label, { 1 }), i(0), f(title_to_label, { 1 }) },
+			{ delimiters = "<>" }
+		)
+	),
 
-    ls.snippet(
-        { trig = "CHA", dscr = "A LaTeX chapter", snippetType = "autosnippet" },
-        fmt(
-            [[
+	ls.snippet(
+		{ trig = "CHA", dscr = "A LaTeX chapter", snippetType = "autosnippet" },
+		fmt(
+			[[
             \chapter{<>}\label{cha:<>} % {{{
-                <>
+
+            <>
+
             % End chapter <> }}}
           ]],
-            -- The insert node is placed in the <> angle brackets
-            { i(1), f(title_to_label, { 1 }), i(0), f(title_to_label, { 1 }) },
-            { delimiters = "<>" })
-    ),
+			-- The insert node is placed in the <> angle brackets
+			{ i(1), f(title_to_label, { 1 }), i(0), f(title_to_label, { 1 }) },
+			{ delimiters = "<>" }
+		)
+	),
 
-    ls.snippet(
-        { trig = "BWR", dscr = "A LaTeX wrapfigure environment", snippetType = "autosnippet" },
-        fmt(
-            [[
+	ls.snippet(
+		{ trig = "BWR", dscr = "A LaTeX wrapfigure environment", snippetType = "autosnippet" },
+		fmt(
+			[[
             \begin{wrapfigure}{r}{0.5\textwidth}
                 \begin{center}
                     <>
@@ -160,68 +209,76 @@ return {
                 \label{<>}
             \end{wrapfirure}
           ]],
-            -- The insert node is placed in the <> angle brackets
-            { i(1), i(2), i(3) },
-            { delimiters = "<>" })
-    ),
+			-- The insert node is placed in the <> angle brackets
+			{ i(1), i(2), i(3) },
+			{ delimiters = "<>" }
+		)
+	),
 
+	ls.snippet(
+		{ trig = ";a", dscr = "Greek letter alpha", snippetType = "autosnippet" },
+		fmt("\\alpha", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";b", dscr = "Greek letter beta", snippetType = "autosnippet" },
+		fmt("\\beta", {}, { delimiters = "<>", cond = in_mathzone })
+	),
 
-    ls.snippet(
-        {trig = ";a", dscr = "Greek letter alpha", snippetType = "autosnippet"},
-        fmt("\\alpha", {},{delimiters="<>"})
-    ),
-    ls.snippet(
-        {trig = ";b", dscr = "Greek letter beta", snippetType = "autosnippet"},
-        fmt("\\beta", {}, {delimiters="<>"})
-    ),
-
-    ls.snippet(
-        {trig = ";g", dscr = "Greek letter gamma", snippetType = "autosnippet"},
-        fmt("\\gamma", {}, {delimiters="<>"})
-    ),
-    ls.snippet(
-        {trig = ";d", dscr = "Greek letter delta", snippetType = "autosnippet"},
-        fmt("\\delta", {}, {delimiters="<>"})
-    ),
-    ls.snippet(
-        {trig = ";e", dscr = "Greek letter epsilon", snippetType = "autosnippet"},
-        fmt("\\epsilon", {}, {delimiters="<>"})
-    ),
-    ls.snippet(
-        {trig = ";f", dscr = "Greek letter phi", snippetType = "autosnippet"},
-        fmt("\\phi", {}, {delimiters="<>"})
-    ),
-    ls.snippet(
-        {trig = ";o", dscr = "Greek letter omega", snippetType = "autosnippet"},
-        fmt("\\omega", {}, {delimiters="<>"})
-    ),
-    ls.snippet(
-        {trig = ";r", dscr = "Greek letter rho", snippetType = "autosnippet"},
-        fmt("\\rho", {}, {delimiters="<>"})
-    ),
-    ls.snippet(
-        {trig = ";t", dscr = "Greek letter tau", snippetType = "autosnippet"},
-        fmt("\\tau", {}, {delimiters="<>"})
-    ),
-    ls.snippet(
-        {trig = ";n", dscr = "Greek letter nu", snippetType = "autosnippet"},
-        fmt("\\nu", {}, {delimiters="<>"})
-    ),
-    ls.snippet(
-        {trig = ";m", dscr = "Greek letter mu", snippetType = "autosnippet"},
-        fmt("\\mu", {}, {delimiters="<>"})
-    ),
-    ls.snippet(
-        {trig = ";b", dscr = "Greek letter beta", snippetType = "autosnippet"},
-        fmt("\\beta", {}, {delimiters="<>"})
-    ),
-    ls.snippet(
-        {trig = ";t", dscr = "Greek letter theta", snippetType = "autosnippet"},
-        fmt("\\theta", {}, {delimiters="<>"})
-    ),
-    ls.snippet(
-        {trig = ";h", dscr = "Greek letter psi", snippetType = "autosnippet"},
-        fmt("\\psi", {}, {delimiters="<>"})
-    ),
-
+	ls.snippet(
+		{ trig = ";g", dscr = "Greek letter gamma", snippetType = "autosnippet" },
+		fmt("\\gamma", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";d", dscr = "Greek letter delta", snippetType = "autosnippet" },
+		fmt("\\delta", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";e", dscr = "Greek letter epsilon", snippetType = "autosnippet" },
+		fmt("\\epsilon", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";f", dscr = "Greek letter phi", snippetType = "autosnippet" },
+		fmt("\\phi", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";o", dscr = "Greek letter omega", snippetType = "autosnippet" },
+		fmt("\\omega", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";r", dscr = "Greek letter rho", snippetType = "autosnippet" },
+		fmt("\\rho", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";t", dscr = "Greek letter tau", snippetType = "autosnippet" },
+		fmt("\\tau", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";n", dscr = "Greek letter nu", snippetType = "autosnippet" },
+		fmt("\\nu", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";m", dscr = "Greek letter mu", snippetType = "autosnippet" },
+		fmt("\\mu", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";b", dscr = "Greek letter beta", snippetType = "autosnippet" },
+		fmt("\\beta", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";t", dscr = "Greek letter theta", snippetType = "autosnippet" },
+		fmt("\\theta", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";h", dscr = "Greek letter psi", snippetType = "autosnippet" },
+		fmt("\\psi", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";p", dscr = "Greek letter pi", snippetType = "autosnippet" },
+		fmt("\\pi", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";/", dscr = "Division", snippetType = "autosnippet" },
+		fmt("\\frac{<>}{<>}<>", { i(1), i(2), i(0) }, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet({ trig = ".,", dscr = "Backslash", snippetType = "autosnippet" }, fmt("\\", {}, { delimiters = "<>" })),
 }

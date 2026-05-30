@@ -12,5 +12,8 @@
 
 # Write subtitle file
 --embed-subs
-# --write-auto-sub
---sub-langs "en.*"
+--write-auto-sub
+# --sub-langs "en.*"
+
+--embed-thumbnail
+--convert-thumbnails jpg

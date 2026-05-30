@@ -26,10 +26,13 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "*" },
 	group = augroup,
 	callback = function()
-		pcall(vim.treesitter.start)
+		if vim.bo.filetype ~= "tex" then
+			pcall(vim.treesitter.start)
+		end
 	end,
 })
 
+IGNORED_TS_PARSERS = {}
 -- Ask to install missing parsers
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "*" },
@@ -48,6 +51,9 @@ vim.api.nvim_create_autocmd("FileType", {
 		if (not ft) or installed[ft] or not available_to_install[ft] then
 			return
 		end
+		if IGNORED_TS_PARSERS[ft] then
+			return
+		end
 		local cmdheight = vim.o.cmdheight
 		if cmdheight < 1 then
 			vim.o.cmdheight = 1
@@ -55,6 +61,8 @@ vim.api.nvim_create_autocmd("FileType", {
 		local user_response = vim.fn.input("Install Treesitter parser for " .. ft .. "? [y/N]:")
 		if user_response == "y" then
 			require("nvim-treesitter").install(ft):wait(10)
+		else
+			IGNORED_TS_PARSERS[ft] = true
 		end
 		vim.opt_local.cmdheight = cmdheight
 	end,

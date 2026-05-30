@@ -102,9 +102,16 @@ require("plugin-conf.gitsigns")
 vim.pack.add({
 	"https://github.com/OXY2DEV/markview.nvim",
 	"https://github.com/chomosuke/typst-preview.nvim",
+	-- "https://github.com/qwjyh/tinymist-clientfeatures.nvim",
+	-- "https://github.com/PartyWumpus/typst-concealer",
 })
 require("plugin-conf.markview")
-require("typst-preview").setup()
+-- require("typst-concealer").setup({})
+require("typst-preview").setup({
+	debug = true,
+	extra_args = { "--partial-rendering=true" },
+	open_cmd = "qutebrowser %s --qt-wrapper PyQt6 -l critical",
+})
 
 vim.pack.add({
 	"https://github.com/mikavilpas/yazi.nvim",
@@ -137,6 +144,7 @@ require("ultimate-autopair").setup({
 vim.cmd("packadd nvim.undotree")
 vim.keymap.set("n", "<leader>u", ":Undotree<CR>", { desc = "Toggle Undotree" })
 -- vim.cmd("packadd termdebug")
+-- vim.cmd("packadd spellfile")
 
 vim.pack.add({
 	"https://github.com/lervag/vimtex",
@@ -154,3 +162,5 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
 })
 require("plugin-conf.treesitter")
+
+require("plugin-conf.my-floating")

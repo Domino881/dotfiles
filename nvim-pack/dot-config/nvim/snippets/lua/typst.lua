@@ -57,11 +57,6 @@ return {
 		{ condition = in_mathzone }
 	),
 	ls.snippet(
-		{ trig = "cal", snippetType = "autosnippet" },
-		fmt([[cal(<>)<>]], { i(1), i(0) }, { delimiters = "<>" }),
-		{ condition = in_mathzone }
-	),
-	ls.snippet(
 		{ trig = "dv", snippetType = "autosnippet" },
 		fmt([[dv(<>)<>]], { i(1), i(0) }, { delimiters = "<>" }),
 		{ condition = in_mathzone }
@@ -78,15 +73,60 @@ return {
 		end, {}),
 		{ condition = in_mathzone }
 	),
-	ls.snippet(
-		{ trig = "par", desc = "Partial", snippetType = "autosnippet" },
-		t("partial"),
-		{ condition = in_mathzone }
-	),
+	-- ls.snippet(
+	-- 	{ trig = "par", desc = "Partial", snippetType = "autosnippet" },
+	-- 	t("partial"),
+	-- 	{ condition = in_mathzone }
+	-- ),
 	ls.snippet(
 		{ trig = "(%a+)(%d)", desc = "Subscript index", regTrig = true, snippetType = "autosnippet" },
 		f(function(_, snip)
 			return snip.captures[1] .. "_" .. snip.captures[2]
+		end, {}),
+		{ condition = in_mathzone }
+	),
+	ls.snippet(
+		{ trig = "lamdba", desc = "Lambda misspelling", snippetType = "autosnippet" },
+		t("lambda"),
+		{ condition = in_mathzone }
+	),
+	ls.snippet(
+		{ trig = "#figure", dscr = "The Figure function" },
+		fmt(
+			[[
+	             #figure()[
+	               <>
+	             ]
+	         ]],
+			-- The insert node is placed in the <> angle brackets
+			{ i(0) },
+			{ delimiters = "<>" }
+		)
+	),
+	ls.snippet(
+		{ trig = "^\\s*-.*\\n", trigEngine = "vim", desc = "Next item", snippetType = "autosnippet" },
+		t("- "),
+		{}
+	),
+	ls.snippet(
+		{ trig = "LQP", dscr = "Lilaq plot inside figure", snippetType = "autosnippet" },
+		fmt(
+			[[
+ #figure({
+     lq.diagram(
+         lq.plot(<>),
+     )
+ })
+	         ]],
+			-- The insert node is placed in the <> angle brackets
+			{ i(0) },
+			{ delimiters = "<>" }
+		)
+	),
+	ls.snippet(
+		{ trig = "(%a+)inv", desc = "Inverse", regTrig = true, snippetType = "autosnippet" },
+		f(function(_, snip)
+			return snip.captures[1] .. "^(-1)"
 		end, {}),
 		{ condition = in_mathzone }
 	),

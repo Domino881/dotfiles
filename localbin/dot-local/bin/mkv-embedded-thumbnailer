@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# Extracts embedded cover art from MKV (e.g. from yt-dlp --embed-thumbnail)
+# Falls back to frame grab if no embedded thumbnail is found.
+#
+# Args: %i (file:// URI)  %o (output path)  %s (size in px)
+
+INPUT_URI="$1"
+OUTPUT="$2"
+SIZE="${3:-256}"
+
+# Decode file:// URI → filesystem path (handles spaces & special chars)
+INPUT=$(python3 -c "
+import sys, urllib.parse
+print(urllib.parse.unquote(sys.argv[1].removeprefix('file://')))
+" "$INPUT_URI")
+
+TMPJPG=$(mktemp /tmp/thumb-XXXXXX.jpg)
+
+# --- Attempt 1: extract attached_pic stream (how yt-dlp embeds thumbnails) ---
+# -map 0:v        → all video streams
+# -map -0:V       → minus "real" video streams (capital V)
+# → leaves only attached picture streams
+if ffmpeg -v quiet -y -i "$INPUT" \
+       -map 0:v -map -0:V \
+       -frames:v 1 "$TMPJPG" 2>/dev/null \
+   && [ -s "$TMPJPG" ]; then
+    ffmpeg -v quiet -y -i "$TMPJPG" "$OUTPUT"
+    rm -f "$TMPJPG"
+    exit 0
+# --- Attempt 2: MKV file attachment (alternate embedding method) ---
+elif ffmpeg -v quiet -y -dump_attachment:t:0 "$TMPJPG" -i "$INPUT" 2>/dev/null \
+   && [ -s "$TMPJPG" ]; then
+    ffmpeg -v quiet -y -i "$TMPJPG" "$OUTPUT"
+    rm -f "$TMPJPG"
+    exit 0
+else
+    rm -f "$TMPJPG"
+    return 1
+fi
+
+
+# --- Fallback: grab a frame at 10% into the video ---
+# ffmpegthumbnailer -s "$SIZE" -i "~/Videos/YouTube/He's a smooth awperator (Counter-Strike 2).mkv" -o "$OUTPUT" -c png -f -t 10%
+# cp /home/dominik/Pictures/20250603_13h39m23s_grim.png $OUTPUT

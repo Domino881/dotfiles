@@ -1,13 +1,22 @@
 require("mason").setup()
 require("fidget").setup({
 	progress = {
-		poll_rate = 5,
+		poll_rate = 10,
 		suppress_on_insert = true, -- Suppress new messages while in insert mode
 		ignore_done_already = true, -- Ignore new tasks that are already complete
 		ignore_empty_message = false, -- Ignore new tasks that don't contain a message
 	},
 	notification = {
 		override_vim_notify = true,
+		view = {
+			line_margin = 2,
+		},
+		window = {
+			border = "none",
+			x_padding = 0,
+			align = "bottom",
+			tabstop = 2,
+		},
 	},
 })
 require("lazydev").setup()
@@ -63,7 +72,7 @@ vim.lsp.config("lua_ls", {
 -- })
 
 vim.lsp.config("texlab", {
-	filetypes = { "markdown", "tex" },
+	filetypes = { "markdown", "tex", "bib" },
 	settings = {
 		texlab = {
 			latexFormatter = "tex-fmt",
@@ -75,6 +84,11 @@ vim.lsp.config("texlab", {
 			forwardSearch = {
 				executable = "okular",
 				args = { "--unique", "file:%p#src:%l%f" },
+			},
+			diagnostics = {
+				ignoredPatterns = {
+					"Unused label",
+				},
 			},
 		},
 	},
@@ -113,6 +127,24 @@ vim.lsp.enable("julials")
 --     }
 -- }
 
+vim.lsp.config("harper_ls", {
+	filetypes = { "typst", "tex", "markdown", "text" },
+	settings = {
+		["harper-ls"] = {
+			userDictPath = vim.fn.stdpath("data") .. "/site/spell/en.utf-8.add",
+			linters = {
+				LongSentences = false,
+			},
+			dialect = "British",
+		},
+	},
+})
+
+vim.lsp.config("bibtex-tidy", {
+	filetypes = { "tex", "bib" },
+	cmd = { "bibtex-tidy" },
+})
+
 vim.api.nvim_create_autocmd("LspDetach", {
 	group = vim.api.nvim_create_augroup("lsp-detach", { clear = true }),
 	callback = function()
@@ -147,7 +179,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 vim.api.nvim_create_autocmd("BufWritePre", {
 	group = vim.api.nvim_create_augroup("lsp-format-on-write", { clear = true }),
-	pattern = { "*.typ", "*.lua" },
+	pattern = { "*.typ", "*.lua", "*.py" },
 	callback = function(_)
 		vim.lsp.buf.format({
 			timeout_ms = 500,

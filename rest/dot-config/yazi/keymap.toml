@@ -1,0 +1,34 @@
+[mgr]
+append_keymap = [
+  { on = "!", run = "shell --block zsh" },
+]
+
+[tasks]
+append_keymap = [
+  { on = "q", run = "close", desc = "Close task manager" },
+]
+
+[spot]
+append_keymap = [
+  { on = "q", run = "close", desc = "Close the spot" },
+]
+
+[pick]
+append_keymap = [
+  { on = "q", run = "close", desc = "Cancel pick" },
+]
+
+[input]
+prepend_keymap = [
+  { on = "<Esc>", run = "close", desc = "Cancel input" },
+]
+
+[confirm]
+append_keymap = [
+  { on = "q", run = "close", desc = "Cancel the confirm" },
+]
+
+[help]
+append_keymap = [
+  { on = "q", run = "escape", desc = "Clear the filter, or hide the help" },
+]

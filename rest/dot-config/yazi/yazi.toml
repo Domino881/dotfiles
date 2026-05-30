@@ -1,19 +1,56 @@
+[preview]
+max_height = 1500
+max_width = 1500
+image_quality = 50
+image_delay = 100
+
 [plugin]
 prepend_preloaders = [
-	{ mime = "image/{svg}", run = "magick" },
+  { mime = "image/{svg}", run = "magick" },
 ]
 prepend_previewers = [
-	{ mime = "image/{svg}", run = "magick" },
-	{ url = "*.{tex,typ}", run = "code" },
+  { mime = "image/{svg}", run = "magick" },
+  { url = "*.{tex,typ,toml}", run = "code" },
 ]
 
 [open]
-append_rules = [
-    { name = "*.pdf", use = "open" },
-	{ name = "*", use = "openwith" }
+rules = [
+  # Folder
+  { url = "*/", use = ["edit", "open", "reveal"] },
+  # Text
+  { mime = "text/*", use = ["edit", "openwith", "reveal"] },
+  # Image
+  { mime = "image/*", use = ["open", "openwith", "reveal"] },
+  # Media
+  { mime = "{audio,video}/*", use = ["play", "openwith", "reveal"] },
+  # Code
+  { mime = "application/{json,ndjson,javascript,wine-extension-ini}", use = [
+    "edit",
+    "openwith",
+    "reveal"
+  ] },
+  # Archive
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = [
+    "extract",
+    "openwith",
+    "reveal"
+  ] },
+  # PDF document
+  { mime = "application/pdf", use = ["open", "openwith", "reveal"] },
+  # Document source (e.g. LaTeX)
+  { mime = "application/postscript", use = ["edit", "openwith", "reveal"] },
+  # Empty file
+  { mime = "inode/empty", use = ["edit", "openwith", "reveal"] },
+  # Virtual filesystem
+  { mime = "vfs/{absent,stale}", use = "download" },
+  # Fallback
+  { url = "*", use = ["openwith", "open", "reveal"] },
 ]
 
 [opener]
 openwith = [
-	{ desc="Open With", run = 'read yazi_opener && "$yazi_opener" "$@"', block=true, orphan = true, for = "unix" },
+  { desc = "Open With", run = 'echo -n "Open with: " && read yazi_opener && "$yazi_opener" "$@"', block = true, orphan = true, for = "unix" },
+]
+open = [
+  { run = "xdg-open %s1", desc = "Open with system default", for = "linux" },
 ]

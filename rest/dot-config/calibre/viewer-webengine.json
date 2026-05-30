@@ -2,27 +2,78 @@
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
       "height": 896,
-      "width": 1440,
+      "width": 720,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
       "height": 896,
-      "width": 1440,
+      "width": 720,
       "x": 0,
       "y": 0
     },
-    "maximized": true,
+    "maximized": false,
     "normal_geometry": {
-      "height": 960,
-      "width": 1440,
+      "height": 896,
+      "width": 720,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZ8AAAN/AAAAAAAAAAAAAAWfAAADvwAAAAACAAAABaAAAAAAAAAAAAAABZ8AAAN/"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAs8AAAN/AAAAAAAAAAAAAALPAAADfwAAAAAAAAAABaAAAAAAAAAAAAAAAs8AAAN/"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "eDP-1-0x0893",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 960,
+        "width": 1440
+      },
+      "virtual_geometry": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-viewer_image_popup_geometry": {
+    "frame_geometry": {
+      "height": 960,
+      "width": 1440,
+      "x": 175,
+      "y": 374
+    },
+    "full_screened": true,
+    "geometry": {
+      "height": 960,
+      "width": 1440,
+      "x": 175,
+      "y": 374
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 132,
+      "width": 1071,
+      "x": 175,
+      "y": 374
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAACvAAABdgAABk4AAAU1AAAArwAAAXYAAATdAAAB+QAAAAAABAAABaAAAACvAAABdgAABk4AAAU1"
     },
     "screen": {
       "depth": 32,
@@ -52,11 +103,11 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEHAAADgPwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAADgAAAAJoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAsgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACjAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAASIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAHAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAPoA////AAAEkwAAA4AAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEHAAADgPwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawAAAAAAAAADgAAAAJoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAsgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACjAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAASIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAHAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAPoA////AAAC0AAAA4AAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "session_data": {
-    "base_font_size": 26,
+    "base_font_size": 24,
     "columns_per_screen": {
       "landscape": 1,
       "portrait": 1
@@ -95,6 +146,75 @@
       "remember_window_geometry": true
     },
     "standalone_recently_opened": [
+      {
+        "key": "/home/dominik/Library/Calibre/Unknown/Luxor Temple and the Cult of the Royal Ka (122)/Luxor Temple and the Cult of the Royal Ka - Unknown.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Unknown/Luxor Temple and the Cult of the Royal Ka (122)/Luxor Temple and the Cult of the Royal Ka - Unknown.epub",
+        "timestamp": "2026-04-24T18:26:31.580Z",
+        "title": "Luxor Temple and the Cult of the Royal Ka"
+      },
+      {
+        "authors": [
+          "Volker Ziemann"
+        ],
+        "key": "/home/dominik/Library/Calibre/Volker Ziemann/Physics and Finance (118)/Physics and Finance - Volker Ziemann.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Volker Ziemann/Physics and Finance (118)/Physics and Finance - Volker Ziemann.epub",
+        "timestamp": "2026-04-18T13:02:24.637Z",
+        "title": "Physics and Finance"
+      },
+      {
+        "authors": [
+          "James P. Allen"
+        ],
+        "key": "/home/dominik/Library/Calibre/James P. Allen/Reading a Pyramid (114)/Reading a Pyramid - James P. Allen.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/James P. Allen/Reading a Pyramid (114)/Reading a Pyramid - James P. Allen.epub",
+        "timestamp": "2026-04-15T09:07:25.901Z",
+        "title": "Reading a Pyramid"
+      },
+      {
+        "authors": [
+          "François-Henri Désérable"
+        ],
+        "key": "/home/dominik/Library/Calibre/Francois-Henri Deserable/Podroz do Iranu (117)/Podroz do Iranu - Francois-Henri Deserable.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Francois-Henri Deserable/Podroz do Iranu (117)/Podroz do Iranu - Francois-Henri Deserable.epub",
+        "timestamp": "2026-04-13T16:20:07.814Z",
+        "title": "Podróż do Iranu"
+      },
+      {
+        "authors": [
+          "Veronica Roth"
+        ],
+        "key": "/home/dominik/Library/Calibre/Veronica Roth/Wierna (116)/Wierna - Veronica Roth.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Veronica Roth/Wierna (116)/Wierna - Veronica Roth.epub",
+        "timestamp": "2026-04-10T14:13:48.961Z",
+        "title": "Wierna"
+      },
+      {
+        "authors": [
+          "James P. Allen"
+        ],
+        "key": "/home/dominik/Library/Calibre/James P. Allen/Reading a Pyramid-PL (115)/Reading a Pyramid-PL - James P. Allen.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/James P. Allen/Reading a Pyramid-PL (115)/Reading a Pyramid-PL - James P. Allen.epub",
+        "timestamp": "2026-04-10T13:00:15.046Z",
+        "title": "Reading a Pyramid-PL"
+      },
+      {
+        "authors": [
+          "James P. Allen"
+        ],
+        "key": "/home/dominik/Library/Calibre/James P. Allen/Reading a Pyramid (112)/Reading a Pyramid - James P. Allen.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/James P. Allen/Reading a Pyramid (112)/Reading a Pyramid - James P. Allen.epub",
+        "timestamp": "2026-04-10T11:53:25.541Z",
+        "title": "Reading a Pyramid"
+      },
+      {
+        "authors": [
+          "Agata Christie"
+        ],
+        "key": "/home/dominik/Library/Calibre/Agatha Christie/Morderstwo na polu golfowym (101)/Morderstwo na polu golfowym - Agatha Christie.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Agatha Christie/Morderstwo na polu golfowym (101)/Morderstwo na polu golfowym - Agatha Christie.epub",
+        "timestamp": "2026-04-10T11:46:35.313Z",
+        "title": "Morderstwo na polu golfowym"
+      },
       {
         "authors": [
           "Emily Teeter"
@@ -247,78 +367,6 @@
         "pathtoebook": "/tmp/calibre-k7mzv9o1/7027yl2r_view_device_book.epub",
         "timestamp": "2025-06-08T19:47:22.373Z",
         "title": "Niezgodna"
-      },
-      {
-        "authors": [
-          "Suzanne Collins"
-        ],
-        "key": "/home/dominik/Library/Calibre/Suzanne Collins/Igrzyska. Wschod slonca w dniu dozynek (89)/Igrzyska. Wschod slonca w dniu dozynek - Suzanne Collins.epub",
-        "pathtoebook": "/home/dominik/Library/Calibre/Suzanne Collins/Igrzyska. Wschod slonca w dniu dozynek (89)/Igrzyska. Wschod slonca w dniu dozynek - Suzanne Collins.epub",
-        "timestamp": "2025-06-08T19:38:55.629Z",
-        "title": "Igrzyska. Wschód słońca w dniu dożynek"
-      },
-      {
-        "authors": [
-          "Brandon Sanderson"
-        ],
-        "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (88)/Wind and Truth - Brandon Sanderson.epub",
-        "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (88)/Wind and Truth - Brandon Sanderson.epub",
-        "timestamp": "2025-05-30T09:41:45.526Z",
-        "title": "Wind and Truth"
-      },
-      {
-        "authors": [
-          "Brandon Sanderson"
-        ],
-        "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (42)/Wind and Truth - Brandon Sanderson.epub",
-        "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (42)/Wind and Truth - Brandon Sanderson.epub",
-        "timestamp": "2025-05-29T13:48:24.579Z",
-        "title": "Wind and Truth"
-      },
-      {
-        "authors": [
-          "Brandon Sanderson"
-        ],
-        "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Z mgly zrodzony (87)/Z mgly zrodzony - Brandon Sanderson.epub",
-        "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Z mgly zrodzony (87)/Z mgly zrodzony - Brandon Sanderson.epub",
-        "timestamp": "2025-05-28T10:37:58.568Z",
-        "title": "Z mgły zrodzony"
-      },
-      {
-        "authors": [
-          "Brandon Sanderson"
-        ],
-        "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Bohater wiekow (81)/Bohater wiekow - Brandon Sanderson.epub",
-        "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Bohater wiekow (81)/Bohater wiekow - Brandon Sanderson.epub",
-        "timestamp": "2025-05-28T10:36:50.537Z",
-        "title": "Bohater wieków"
-      },
-      {
-        "authors": [
-          "Brandon Sanderson"
-        ],
-        "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Slowa Swiatlosci (82)/Slowa Swiatlosci - Brandon Sanderson.epub",
-        "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Slowa Swiatlosci (82)/Slowa Swiatlosci - Brandon Sanderson.epub",
-        "timestamp": "2025-05-28T08:59:56.800Z",
-        "title": "Słowa Światłości"
-      },
-      {
-        "authors": [
-          "Brandon Sanderson"
-        ],
-        "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Droga Krolow (83)/Droga Krolow - Brandon Sanderson.epub",
-        "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Droga Krolow (83)/Droga Krolow - Brandon Sanderson.epub",
-        "timestamp": "2025-05-28T08:59:44.116Z",
-        "title": "Droga Królów"
-      },
-      {
-        "authors": [
-          "Brandon Sanderson"
-        ],
-        "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Bohater Wiekow (81)/Bohater Wiekow - Brandon Sanderson.epub",
-        "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Bohater Wiekow (81)/Bohater Wiekow - Brandon Sanderson.epub",
-        "timestamp": "2025-05-28T08:59:26.211Z",
-        "title": "Bohater Wieków"
       }
     ]
   }

@@ -1,11 +1,33 @@
-local function typst_in_code()
+local function match_parent(node, parent_type)
+	while node do
+		if node:type() == parent_type then
+			return true
+		end
+		node = node:parent()
+	end
+	return false
+end
+
+local function typst_show_menu()
 	local success, node = pcall(vim.treesitter.get_node)
 	if success then
-		while node do
-			if node:type() == "code" then
+		return match_parent(node, "code") or match_parent(node, "ref")
+	end
+	return false
+end
+
+local function latex_show_menu()
+	local success, node = pcall(vim.treesitter.get_node)
+	local active_nodes = {
+		generic_command = true,
+		inline_formula = true,
+		math_environment = true,
+	}
+	if success then
+		for n, _ in pairs(active_nodes) do
+			if match_parent(node, n) then
 				return true
 			end
-			node = node:parent()
 		end
 	end
 	return false
@@ -13,13 +35,13 @@ end
 
 require("blink.cmp").setup({
 	keymap = {
-		-- preset = "default",
+		preset = "none",
 		["<C-space>"] = {
 			"show",
 			"show_documentation",
 			"hide_documentation",
 		},
-		["<C-y>"] = { "select_and_accept" },
+		["<C-y>"] = { "show_and_insert", "select_and_accept" },
 
 		["<C-p>"] = { "select_prev", "fallback_to_mappings" },
 		["<C-n>"] = { "select_next", "fallback_to_mappings" },
@@ -31,8 +53,16 @@ require("blink.cmp").setup({
 		["<C-h>"] = { "snippet_backward", "fallback" },
 
 		["<C-k>"] = { "show_signature", "hide_signature", "fallback" },
+
+		["<Tab>"] = false,
 	},
 	signature = { enabled = true },
+	cmdline = {
+		keymap = {
+			-- recommended, as the default keymap will only show and select the next item
+			["<Tab>"] = { "show", "accept" },
+		},
+	},
 
 	appearance = {
 		-- use_nvim_cmp_as_default = true,
@@ -44,12 +74,15 @@ require("blink.cmp").setup({
 		-- 'prefix' will fuzzy match on the text before the cursor
 		-- 'full' will fuzzy match on the text before _and_ after the cursor
 		keyword = { range = "full" },
+
 		menu = {
 			auto_show = function(ctx, item)
 				if vim.bo.filetype == "markdown" then
 					return false
 				elseif vim.bo.filetype == "typst" then
-					return typst_in_code()
+					return typst_show_menu()
+				elseif vim.bo.filetype == "tex" then
+					return latex_show_menu()
 				end
 				return true
 			end,

@@ -3,11 +3,10 @@ vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
+vim.keymap.set("n", "<C-;>", "<C-w>p")
 
 -- don't lose copied text on paste
 -- vim.keymap.set("v", "p", [["_dP]])
-
--- changing tabs
 vim.keymap.set("n", "t", "gt")
 vim.keymap.set("n", "T", "gT")
 
@@ -40,8 +39,17 @@ vim.keymap.set("c", "<C-k>", "<C-Right>")
 vim.keymap.set("c", "<C-a>", "<Home>")
 
 vim.keymap.set("n", "<C-w><CR>", ":85vsp<CR><C-w>w:term<CR>i")
--- vim.keymap.set("t", "<C-\\>", "<C-\\><C-n>")
 vim.keymap.set("t", "<C-[>", "<C-\\><C-n>")
+vim.keymap.set("t", "<C-;>", "<C-\\><C-n><C-w>p")
+
+vim.keymap.set("n", "z==", "1z=")
+
+vim.keymap.set("n", "]e", function()
+	vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR })
+end, { desc = "Jump to next error in the current buffer" })
+vim.keymap.set("n", "]e", function()
+	vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR })
+end, { desc = "Jump to previous error in the current buffer" })
 
 vim.api.nvim_create_augroup("typst", { clear = true })
 vim.api.nvim_create_autocmd({ "Filetype" }, {

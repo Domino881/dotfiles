@@ -6,7 +6,7 @@
   "choose_tweak_fmt": true,
   "css-editor-state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAAAAAAAnwAAAGCAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAD9AAAAAAAAAzEAAAIfAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAA=="
   },
   "custom_colors_for_color_dialog": [
     [
@@ -108,11 +108,62 @@
   ],
   "find-widget-state": {
     "case_sensitive": true,
-    "direction": "up",
+    "direction": "down",
     "dot_all": false,
-    "mode": "regex",
+    "mode": "normal",
     "where": "text",
     "wrap": true
+  },
+  "geometry-of-choose-file-name-geometry": {
+    "frame_geometry": {
+      "height": 128,
+      "width": 296,
+      "x": 242,
+      "y": 196
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 128,
+      "width": 296,
+      "x": 242,
+      "y": 196
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 128,
+      "width": 296,
+      "x": 242,
+      "y": 196
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAADyAAAAxAAAAhkAAAFDAAAA8gAAAMQAAAIZAAABQwAAAAAAAAAABaAAAADyAAAAxAAAAhkAAAFD"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "eDP-1-0x0893",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 960,
+        "width": 1440
+      },
+      "virtual_geometry": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      }
+    }
   },
   "geometry-of-diff-dialog-geometry": {
     "frame_geometry": {
@@ -216,37 +267,37 @@
       }
     }
   },
-  "geometry-of-main_window_geometry": {
+  "geometry-of-insert-image-dialog-geometry": {
     "frame_geometry": {
-      "height": 1003,
-      "width": 1600,
-      "x": 326,
-      "y": 21
+      "height": 600,
+      "width": 800,
+      "x": 0,
+      "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 1003,
-      "width": 1600,
-      "x": 326,
-      "y": 21
+      "height": 600,
+      "width": 800,
+      "x": 0,
+      "y": 0
     },
-    "maximized": true,
+    "maximized": false,
     "normal_geometry": {
-      "height": 1003,
-      "width": 1600,
-      "x": 326,
-      "y": 21
+      "height": 600,
+      "width": 800,
+      "x": 0,
+      "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAFGAAAAFQAAB4UAAAP/AAABRgAAABUAAAeFAAAD/wAAAAACAAAABkAAAAFGAAAAFQAAB4UAAAP/"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAx8AAAJXAAAAAAAAAAAAAAMfAAACVwAAAAAAAAAABaAAAAAAAAAAAAAAAx8AAAJX"
     },
     "screen": {
       "depth": 32,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       },
@@ -256,12 +307,114 @@
       "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-insert-tag-geometry": {
+    "frame_geometry": {
+      "height": 128,
+      "width": 351,
+      "x": 535,
+      "y": 344
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 128,
+      "width": 351,
+      "x": 535,
+      "y": 344
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 128,
+      "width": 351,
+      "x": 535,
+      "y": 344
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAIXAAABWAAAA3UAAAHXAAACFwAAAVgAAAN1AAAB1wAAAAAAAAAABaAAAAIXAAABWAAAA3UAAAHX"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "eDP-1-0x0893",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 960,
+        "width": 1440
+      },
+      "virtual_geometry": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-main_window_geometry": {
+    "frame_geometry": {
+      "height": 896,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 896,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "maximized": true,
+    "normal_geometry": {
+      "height": 896,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZ8AAAN/AAAAAAAAAAAAAAWfAAADfwAAAAACAAAABaAAAAAAAAAAAAAABZ8AAAN/"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 960,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "BOE",
+      "model": "eDP-1-0x0893",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 960,
+        "width": 1440
+      },
+      "virtual_geometry": {
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -422,35 +575,35 @@
   },
   "geometry-of-toc_editor_window_geom": {
     "frame_geometry": {
-      "height": 1003,
-      "width": 1600,
+      "height": 896,
+      "width": 1440,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 1003,
-      "width": 1600,
+      "height": 896,
+      "width": 1440,
       "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1003,
-      "width": 1600,
+      "height": 960,
+      "width": 1440,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABj8AAAPqAAAAAAAAAAAAAAY/AAAD6gAAAAACAAAABkAAAAAAAAAAAAAABj8AAAPq"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZ8AAAN/AAAAAAAAAAAAAAWfAAADvwAAAAACAAAABaAAAAAAAAAAAAAABZ8AAAN/"
     },
     "screen": {
       "depth": 32,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       },
@@ -460,12 +613,12 @@
       "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1067,
-        "width": 1600
+        "height": 960,
+        "width": 1440
       },
       "virtual_geometry": {
-        "height": 1067,
-        "width": 1600,
+        "height": 960,
+        "width": 1440,
         "x": 0,
         "y": 0
       }
@@ -473,11 +626,11 @@
   },
   "html-editor-state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAAAAAAAnwAAAGCAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAAAAAB4AaAB0AG0AbABfAGYAbwByAG0AYQB0AF8AYgBhAHIBAAABv/////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAD9AAAAAAAAAzEAAAIiAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAAAAAB4AaAB0AG0AbABfAGYAbwByAG0AYQB0AF8AYgBhAHIBAAABv/////8AAAAAAAAAAA=="
   },
   "image-editor-state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAAAAAAA4gAAAMSAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAACAAZQBkAGkAdAAtAGEAYwB0AGkAbwBuAHMALQBiAGEAcgEAAABS/////wAAAAAAAAAAAAAAHABpAG0AYQBnAGUAXwBpAG4AZgBvAF8AYgBhAHIBAAABNv////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAD9AAAAAAAAAzEAAAIRAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAACAAZQBkAGkAdAAtAGEAYwB0AGkAbwBuAHMALQBiAGEAcgEAAABS/////wAAAAAAAAAAAAAAHABpAG0AYQBnAGUAXwBpAG4AZgBvAF8AYgBhAHIBAAABNv////8AAAAAAAAAAA=="
   },
   "insert_tag_mru": [
     "p",
@@ -496,7 +649,7 @@
   ],
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAI8AAABy/wCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAgEAAAHLAAAAYgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAGIA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAJ0A////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAJwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAo0A////AAAAAQAAAXwAAAHL/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAACAQAAAcsAAABmAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABiAP///wAAAAIAAAZAAAABtfwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAQAAAAAAAAZAAAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA9AP///wAAAnwAAAHLAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAADAAAACaPwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAPkAAAJoAAAAYgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAGIA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAJ0A////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAJwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAo0A////AAAAAQAAAaMAAAJo/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAA+QAAAmgAAABmAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABiAP///wAAAAIAAAWgAAAAzPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAQAAAAAAAAWgAAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA9AP///wAAAzEAAAJoAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "manage-fonts-splitter-state": {
     "__class__": "bytearray",
@@ -505,16 +658,16 @@
   "merge_identical_selectors": true,
   "merge_rules_with_identical_properties": false,
   "recent-books": [
+    "/home/dominik/Library/Calibre/Francois-Henri Deserable/Podroz do Iranu (117)/Podroz do Iranu - Francois-Henri Deserable.epub",
+    "/home/dominik/Library/Calibre/James P. Allen/Reading a Pyramid (PL) (115)/Reading a Pyramid (PL) - James P. Allen.epub",
+    "/home/dominik/Library/Calibre/James P. Allen/Reading a Pyramid-PL (115)/Reading a Pyramid-PL - James P. Allen.epub",
+    "/home/dominik/Library/Calibre/James P. Allen/Reading a Pyramid (114)/Reading a Pyramid - James P. Allen.epub",
+    "/home/dominik/Library/Calibre/James P. Allen/Reading a Pyramid (112)/Reading a Pyramid - James P. Allen.epub",
+    "/home/dominik/Library/Calibre/Agatha Christie/Morderstwo na polu golfowym (101)/Morderstwo na polu golfowym - Agatha Christie.epub",
+    "/home/dominik/Library/Calibre/Emily Teeter/Religion and Ritual in Ancient Egypt (110)/Religion and Ritual in Ancient Egypt - Emily Teeter.epub",
     "/home/dominik/Library/Calibre/Agata Christie/Morderstwo na polu golfowym (101)/Morderstwo na polu golfowym - Agata Christie.epub",
     "/home/dominik/Library/Calibre/Veronica Roth/Zbuntowana (104)/Zbuntowana - Veronica Roth.epub",
-    "/home/dominik/Library/Calibre/Ursula K. Le Guin/The Left Hand of Darkness (100)/The Left Hand of Darkness - Ursula K. Le Guin.epub",
-    "/home/dominik/Library/Calibre/Brandon Sanderson/Slowa Swiatlosci (82)/Slowa Swiatlosci - Brandon Sanderson.epub",
-    "/home/dominik/Library/Calibre/Brandon Sanderson/Studnia wstapienia (84)/Studnia wstapienia - Brandon Sanderson.epub",
-    "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (88)/Wind and Truth - Brandon Sanderson.epub",
-    "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (42)/Wind and Truth - Brandon Sanderson.kepub",
-    "/home/dominik/Library/Calibre/Brandon Sanderson/Wind and Truth (42)/Wind and Truth - Brandon Sanderson.epub",
-    "/home/dominik/Library/Calibre/Brandon Sanderson/Z mgly zrodzony (87)/Z mgly zrodzony - Brandon Sanderson.epub",
-    "/home/dominik/Library/Calibre/Brandon Sanderson/Bohater wiekow (81)/Bohater wiekow - Brandon Sanderson.epub"
+    "/home/dominik/Library/Calibre/Ursula K. Le Guin/The Left Hand of Darkness (100)/The Left Hand of Darkness - Ursula K. Le Guin.epub"
   ],
   "remove_unreferenced_sheets": true,
   "remove_unused_classes": true,
@@ -543,6 +696,6 @@
   "toc_from_headings_remove_duplicates": true,
   "xml-editor-state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAAAAAAAnwAAADlAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAD9AAAAAAAAAzEAAAIiAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAA=="
   }
 }

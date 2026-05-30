@@ -47,6 +47,7 @@ require("gruvbox").setup({
 		TreesitterContext = { bg = "#32302f", fg = "#7c6f64" },
 		TreesitterContextLineNumber = { bg = "#32302f", fg = "#7c6f64" },
 		TreesitterContextBottom = { underline = true, sp = "#7c6f64" },
+		DiagnosticVirtualTextHint = { fg = "#495b43" },
 	},
 })
 vim.cmd("colorscheme gruvbox")
