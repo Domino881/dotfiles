@@ -133,7 +133,7 @@ vim.pack.add({
 	"https://github.com/altermo/ultimate-autopair.nvim",
 })
 require("ultimate-autopair").setup({
-	cmap = false,
+	cmap = true,
 	{ "$", "$", ft = { "tex", "md", "typst" }, space = true, newline = true, fly = true },
 	{ "\\[", "\\]", ft = { "tex" } },
 	extensions = {
@@ -147,9 +147,12 @@ vim.keymap.set("n", "<leader>u", ":Undotree<CR>", { desc = "Toggle Undotree" })
 -- vim.cmd("packadd spellfile")
 
 vim.pack.add({
-	"https://github.com/lervag/vimtex",
+	-- "https://github.com/lervag/vimtex",
+	"https://github.com/let-def/texpresso.vim",
 })
-require("plugin-conf.vimtex")
+-- require("plugin-conf.vimtex")
+require("texpresso").theme = function() end
+vim.keymap.set("n", "<leader>tx", ":TeXpresso %<CR>", { desc = "Open TeXpresso preview" })
 
 vim.pack.add({
 	"https://github.com/folke/which-key.nvim",

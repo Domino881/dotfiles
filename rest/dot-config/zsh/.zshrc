@@ -113,7 +113,7 @@ fzf --version &> /dev/null || ( git clone --depth 1 https://github.com/junegunn/
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git,.npm/,.wine,.steam,node_modules,timeshift"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND --type=f"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git,.npm,node_modules,.steam,.wine,timeshift"
+export FZF_ALT_C_COMMAND="fd -I --type=d --hidden --strip-cwd-prefix --exclude .git,.npm,node_modules,.steam,.wine,timeshift"
 
 export FZF_ALT_C_OPTS="--preview 'tree -C {} -L 1'"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always -n --line-range :500 {}'"

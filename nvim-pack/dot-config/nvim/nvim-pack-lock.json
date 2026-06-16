@@ -61,6 +61,10 @@
       "rev": "2715e04bea3ec9244f15b421dc5b18c0fe326210",
       "src": "https://github.com/nvim-mini/mini.surround"
     },
+    "nvim-autopairs": {
+      "rev": "7b9923abad60b903ece7c52940e1321d39eccc79",
+      "src": "https://github.com/windwp/nvim-autopairs.git"
+    },
     "nvim-lspconfig": {
       "rev": "31026a13eefb20681124706a79fc1df6bf11ab27",
       "src": "https://github.com/neovim/nvim-lspconfig"
@@ -110,6 +114,10 @@
     "telescope.nvim": {
       "rev": "ec009610d5d259ec59a6edf0219ef3f7ee4732e5",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
+    },
+    "texpresso.vim": {
+      "rev": "5630dca6090787c446e72886812a1b6a5716c2fa",
+      "src": "https://github.com/let-def/texpresso.vim"
     },
     "tinymist-clientfeatures.nvim": {
       "rev": "382f467049163e63f21d5b30055574088ced6be1",

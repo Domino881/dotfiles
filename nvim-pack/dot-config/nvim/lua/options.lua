@@ -110,6 +110,13 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 		vim.opt_local.formatoptions:append("r")
 	end,
 })
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+	group = "user-writing",
+	pattern = "*.tex",
+	callback = function(_)
+		vim.keymap.set("i", ".,", "\\")
+	end,
+})
 -- vim.api.nvim_create_autocmd({ "InsertEnter" }, {
 -- 	group = "user-writing",
 -- 	pattern = { "*.tex", "*.md", "*.typ" },

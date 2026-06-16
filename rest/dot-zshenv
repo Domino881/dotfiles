@@ -18,7 +18,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH"
 # . "$HOME/.cargo/env"
 
-ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 # libreoffice styling
 export SAL_USE_VCLPLUGIN=qt6

@@ -2,7 +2,7 @@
 
 # BACKUPDIR="/run/user/1000/gvfs/smb-share:server=192.168.90.5,share=backup/Dominik/backup-dominiklaptop/$(date +%Y%m%d)"
 # umount /run/user/1000/gvfs/smb-share:server=192.168.90.5,share=backup
-sudo mount -t nfs 192.168.90.5:/VOL1/BACKUP /mnt/home-nas/BACKUP
+# sudo mount -t nfs 192.168.90.5:/VOL1/BACKUP /mnt/home-nas/BACKUP
 # BACKUPDIR="/mnt/home-nas/BACKUP/Dominik/backup-dominiklaptop/RSYNC_BACKUP"
 BACKUPDIR="/run/media/dominik/WD Elements/dominik-backup/dominik-rsync/"
 
@@ -26,4 +26,5 @@ rsync -rlDizu --partial --info=progress2\
     --exclude=".Wolfram"\
     --exclude="*venv"\
     --exclude=".julia"\
+    --exclude="Videos/Youtube"\
     "$HOME" "$BACKUPDIR"

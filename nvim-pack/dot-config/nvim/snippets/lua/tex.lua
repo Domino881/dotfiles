@@ -4,7 +4,9 @@ local t = ls.text_node
 local i = ls.insert_node
 local f = ls.function_node
 local d = ls.dynamic_node
+local c = ls.choice_node
 local r = ls.restore_node
+local events = require("luasnip.util.events")
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
@@ -16,7 +18,7 @@ local function title_to_label(args, parent, user_args)
 	title_text = string.gsub(title_text, "\\texorpdfstring{.+}{(.+)}", "%1")
 	-- Remove spaces
 	title_text = string.gsub(title_text, "[ ^\\_]", "")
-	title_text = string.gsub(title_text, "[{}&]", "")
+	title_text = string.gsub(title_text, "[{}&'$]", "")
 	return title_text
 end
 
@@ -185,7 +187,8 @@ return {
 		{ trig = "CHA", dscr = "A LaTeX chapter", snippetType = "autosnippet" },
 		fmt(
 			[[
-            \chapter{<>}\label{cha:<>} % {{{
+            \chapter{<>}
+            \label{cha:<>} % {{{
 
             <>
 
@@ -277,8 +280,55 @@ return {
 		fmt("\\pi", {}, { delimiters = "<>", cond = in_mathzone })
 	),
 	ls.snippet(
+		{ trig = ";s", dscr = "Greek letter sigma", snippetType = "autosnippet" },
+		fmt("\\sigma", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
+		{ trig = ";l", dscr = "Greek letter lambda", snippetType = "autosnippet" },
+		fmt("\\lambda", {}, { delimiters = "<>", cond = in_mathzone })
+	),
+	ls.snippet(
 		{ trig = ";/", dscr = "Division", snippetType = "autosnippet" },
 		fmt("\\frac{<>}{<>}<>", { i(1), i(2), i(0) }, { delimiters = "<>", cond = in_mathzone })
 	),
-	ls.snippet({ trig = ".,", dscr = "Backslash", snippetType = "autosnippet" }, fmt("\\", {}, { delimiters = "<>" })),
+	-- ls.snippet({ trig = ".,", dscr = "Backslash", snippetType = "autosnippet" }, fmt("\\", {}, { delimiters = "<>" })),
+	ls.snippet(
+		{ trig = "(%a+)dag", desc = "Dagger", regTrig = true, snippetType = "autosnippet" },
+		f(function(_, snip)
+			return snip.captures[1] .. "^\\dagger"
+		end, {}),
+		{ condition = in_mathzone }
+	),
+	ls.snippet(
+		{ trig = "\\left", dscr = "Left/Right", snippetType = "autosnippet" },
+		fmt("\\left<> <> \\right<> <>", {
+			i(1, "", {
+				node_callbacks = {
+					[1] = function()
+						local success, ult = pcall(require, "ultimate-autopair")
+						if success then
+							ult.disable()
+						end
+					end,
+					[events.leave] = function()
+						local success, ult = pcall(require, "ultimate-autopair")
+						if success then
+							ult.enable()
+						end
+					end,
+				},
+			}),
+			i(2),
+			f(function(args, _)
+				local right = {
+					["("] = ")",
+					["["] = "]",
+					["\\{"] = "\\}",
+					["<"] = ">",
+				}
+				return right[args[1][1]] or ""
+			end, { 1 }),
+			i(0),
+		}, { delimiters = "<>", cond = in_mathzone })
+	),
 }
