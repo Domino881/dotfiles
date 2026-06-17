@@ -1,3 +1,5 @@
+vim.lsp.log.set_level("error")
+
 require("mason").setup()
 require("fidget").setup({
 	progress = {
@@ -107,14 +109,15 @@ vim.lsp.config("texlab", {
 })
 
 vim.lsp.config("ltex_plus", {
-	filetypes = { "markdown", "tex", "bib" },
+	-- filetypes = { "markdown", "tex", "bib" },
+	filetypes = {},
 	settings = {
 		ltex = {
-			language = "en-GB",
-			dictionary = {
-				["en-GB"] = { vim.fn.stdpath("data") .. "/site/spell/en.utf-8.add" },
-				["en-US"] = { vim.fn.stdpath("data") .. "/site/spell/en.utf-8.add" },
-			},
+			-- language = "en-GB",
+			-- dictionary = {
+			-- 	["en-GB"] = { vim.fn.stdpath("data") .. "/site/spell/en.utf-8.add" },
+			-- 	["en-US"] = { vim.fn.stdpath("data") .. "/site/spell/en.utf-8.add" },
+			-- },
 		},
 	},
 })

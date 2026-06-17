@@ -1,0 +1,17 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Dominik K"
+            }
+        ],
+        "Name": "Darkly-custom2",
+        "Category": "",
+        "Description": "Darkly with slider/switch changes",
+        "EnabledByDefault": false,
+        "Id": "darkly-custom2",
+        "License": "LGPL",
+        "Version": "0.1.0"
+    },
+    "X-Plasma-API": "6.0"
+}
