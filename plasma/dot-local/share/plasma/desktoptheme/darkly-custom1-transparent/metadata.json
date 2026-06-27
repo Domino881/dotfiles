@@ -5,11 +5,11 @@
                 "Name": "Dominik K"
             }
         ],
-        "Name": "Darkly-custom2",
+        "Name": "Darkly-custom2-transparent",
         "Category": "",
         "Description": "Darkly with slider/switch changes",
         "EnabledByDefault": false,
-        "Id": "Darkly-custom2",
+        "Id": "Darkly-custom2-transparent",
         "License": "LGPL",
         "Version": "0.1.0"
     },

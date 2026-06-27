@@ -108,7 +108,7 @@ vim.pack.add({
 require("plugin-conf.markview")
 -- require("typst-concealer").setup({})
 require("typst-preview").setup({
-	debug = true,
+	debug = false,
 	extra_args = { "--partial-rendering=true" },
 	open_cmd = "qutebrowser %s --qt-wrapper PyQt6 -l critical",
 })
@@ -143,8 +143,6 @@ require("ultimate-autopair").setup({
 
 vim.cmd("packadd nvim.undotree")
 vim.keymap.set("n", "<leader>u", ":Undotree<CR>", { desc = "Toggle Undotree" })
--- vim.cmd("packadd termdebug")
--- vim.cmd("packadd spellfile")
 
 vim.pack.add({
 	"https://github.com/lervag/vimtex",

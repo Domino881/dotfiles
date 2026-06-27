@@ -12,14 +12,14 @@ require("fidget").setup({
 		override_vim_notify = true,
 		view = {
 			line_margin = 2,
-			reflow = "ellipsis",
+			reflow = false,
 		},
 		window = {
 			border = "none",
 			x_padding = 0,
 			align = "bottom",
 			tabstop = 2,
-			max_width = 0.3,
+			max_width = 0.4,
 			max_height = 10,
 		},
 	},
@@ -29,17 +29,14 @@ require("lazydev").setup()
 require("mason-lspconfig").setup({
 	automatic_installation = true,
 	ensure_installed = {
-		-- "lua_ls",
+		"lua_ls",
 		"ty",
 		"clangd",
 		"tinymist",
 	},
 	-- handlers = {
 	-- 	function(server_name)
-	-- 		if not disabled_servers[server_name] then
-	-- 			vim.notify("server_name")
-	-- 			vim.lsp.enable(server_name)
-	-- 		end
+	-- 		vim.lsp.enable(server_name)
 	-- 	end,
 	-- },
 })
@@ -91,8 +88,6 @@ vim.lsp.config("texlab", {
 				onSave = false,
 			},
 			forwardSearch = {
-				-- executable = "xdvik",
-				-- args = { "-sourceposition <%l*%f>" },
 				executable = "okular",
 				args = { "--unique", "file:%p#src:%l%f" },
 			},
@@ -109,15 +104,20 @@ vim.lsp.config("texlab", {
 })
 
 vim.lsp.config("ltex_plus", {
-	-- filetypes = { "markdown", "tex", "bib" },
-	filetypes = {},
+	filetypes = { "markdown", "tex", "bib" },
+	-- filetypes = {},
 	settings = {
 		ltex = {
-			-- language = "en-GB",
-			-- dictionary = {
-			-- 	["en-GB"] = { vim.fn.stdpath("data") .. "/site/spell/en.utf-8.add" },
-			-- 	["en-US"] = { vim.fn.stdpath("data") .. "/site/spell/en.utf-8.add" },
-			-- },
+			language = "en-GB",
+			dictionary = {
+				["en-GB"] = { vim.fn.stdpath("data") .. "/site/spell/en.utf-8.add" },
+				["en-US"] = { vim.fn.stdpath("data") .. "/site/spell/en.utf-8.add" },
+			},
+			disabledRules = {
+				["en-GB"] = {
+					"OXFORD_SPELLING_Z_NOT_S",
+				},
+			},
 		},
 	},
 })
@@ -125,11 +125,12 @@ vim.lsp.config("ltex_plus", {
 vim.lsp.config("tinymist", {
 	settings = {
 		exportPdf = "onSave",
-		rootPath = vim.fn.expand("$HOME"),
-		formatterMode = "typstyle",
 		formatterPrintWidth = 80,
 		formatterProseWrap = true,
 		formatterIndentSize = 4,
+		preview = {
+			background = { enabled = true },
+		},
 	},
 })
 

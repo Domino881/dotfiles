@@ -23,16 +23,19 @@
 font-family = JetBrains Mono Nerd Font
 font-size = 14
 
-background = 111111
-background-opacity = 0.9
+background-opacity = 1.0
+background-blur = true
 
-theme= /home/dominik/.cache/wal/colors-ghostty
+# theme= /home/dominik/.cache/wal/colors-ghostty
+theme = Builtin Pastel Dark
+palette = 0=#444444
+background = 111111
 
 window-padding-color = extend
 
 resize-overlay-position = top-right
 
-gtk-single-instance = true
+gtk-single-instance = false
 quit-after-last-window-closed = false
 
 shell-integration = zsh

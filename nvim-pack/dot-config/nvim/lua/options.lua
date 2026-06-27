@@ -64,6 +64,7 @@ vim.wo.foldnestmax = 1
 
 vim.o.laststatus = 3
 
+local sev = vim.diagnostic.severity
 vim.diagnostic.config({
 	severity_sort = true,
 	float = {
@@ -74,21 +75,16 @@ vim.diagnostic.config({
 	},
 	signs = {
 		text = {
-			[vim.diagnostic.severity.WARN] = "●",
-			[vim.diagnostic.severity.ERROR] = "●",
-			[vim.diagnostic.severity.INFO] = "●",
-			[vim.diagnostic.severity.HINT] = "",
+			[sev.WARN] = "●",
+			[sev.ERROR] = "●",
+			[sev.INFO] = "●",
+			[sev.HINT] = "",
 		},
 	},
 	virtual_text = {
+		severity = { min = sev.WARN, max = sev.ERROR },
 		virt_text_pos = "eol_right_align",
-		prefix = function(diag, _, _)
-			if diag.severity == vim.diagnostic.severity.HINT then
-				return ""
-			else
-				return "🬋"
-			end
-		end,
+		prefix = "🬋",
 	},
 })
 
@@ -179,3 +175,9 @@ vim.api.nvim_create_user_command("WolframToTypst", function(tab)
 end, { range = true })
 
 vim.api.nvim_create_user_command("RestartRestore", "mksession! /tmp/session.vim | restart source /tmp/session.vim", {})
+
+vim.api.nvim_create_user_command("LspLog", "e ~/.local/state/nvim/lsp.log", {})
+vim.api.nvim_create_user_command("Config", function()
+	vim.cmd("e ~/.config/nvim/init.lua")
+	vim.cmd("lcd %:h")
+end, {})
