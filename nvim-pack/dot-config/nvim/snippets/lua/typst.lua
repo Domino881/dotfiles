@@ -94,7 +94,7 @@ return {
 		{ trig = "#figure", dscr = "The Figure function" },
 		fmt(
 			[[
-	             #figure()[
+	             #figure(caption: [])[
 	               <>
 	             ]
 	         ]],

@@ -35,7 +35,7 @@ elif ffmpeg -v quiet -y -dump_attachment:t:0 "$TMPJPG" -i "$INPUT" 2>/dev/null \
     exit 0
 else
     rm -f "$TMPJPG"
-    return 1
+    exit 1
 fi
 
 

@@ -110,6 +110,7 @@ require("plugin-conf.markview")
 require("typst-preview").setup({
 	debug = false,
 	extra_args = { "--partial-rendering=true" },
+	dependencies_bin = { tinymist = "tinymist" },
 	open_cmd = "qutebrowser %s --qt-wrapper PyQt6 -l critical",
 })
 
@@ -165,3 +166,5 @@ vim.pack.add({
 require("plugin-conf.treesitter")
 
 require("plugin-conf.my-floating")
+
+require("plugin-conf.repl")

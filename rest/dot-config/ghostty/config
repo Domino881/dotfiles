@@ -35,7 +35,7 @@ window-padding-color = extend
 
 resize-overlay-position = top-right
 
-gtk-single-instance = false
+gtk-single-instance = true
 quit-after-last-window-closed = false
 
 shell-integration = zsh

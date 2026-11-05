@@ -38,7 +38,7 @@ vim.keymap.set("c", "<C-j>", "<C-Left>")
 vim.keymap.set("c", "<C-k>", "<C-Right>")
 vim.keymap.set("c", "<C-a>", "<Home>")
 
-vim.keymap.set("n", "<C-w><CR>", ":85vsp<CR><C-w>w:term<CR>i")
+vim.keymap.set("n", "<C-w><CR>", ":aboveleft 85vsp<CR><C-w>w:term<CR>i")
 vim.keymap.set("t", "<C-[>", "<C-\\><C-n>")
 vim.keymap.set("t", "<C-;>", "<C-\\><C-n><C-w>p")
 

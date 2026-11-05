@@ -137,7 +137,8 @@ vim.lsp.config("tinymist", {
 vim.lsp.enable("julials")
 
 vim.lsp.config("harper_ls", {
-	filetypes = { "typst", "markdown", "text" },
+	-- filetypes = { "typst", "markdown", "text" },
+	filetypes = {},
 	settings = {
 		["harper-ls"] = {
 			userDictPath = vim.fn.stdpath("data") .. "/site/spell/en.utf-8.add",

@@ -3,6 +3,8 @@ set -e
 
 echo "Resetting I2C controller and touchpad..."
 
+sudo modprobe -r i2c_hid_acpi && sudo modprobe i2c_hid_acpi
+
 # First unbind touchpad
 echo "i2c-GXTP7863:00" > /sys/bus/i2c/drivers/i2c_hid_acpi/unbind || true
 
@@ -19,7 +21,5 @@ sleep 2
 
 # Rebind touchpad
 echo "i2c-GXTP7863:00" > /sys/bus/i2c/drivers/i2c_hid_acpi/bind
-
-sudo modprobe -r i2c_hid_acpi && sudo modprobe i2c_hid_acpi
 
 notify-send "Reset complete"

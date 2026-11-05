@@ -2,11 +2,13 @@
 
 # BACKUPDIR="/run/user/1000/gvfs/smb-share:server=192.168.90.5,share=backup/Dominik/backup-dominiklaptop/$(date +%Y%m%d)"
 # umount /run/user/1000/gvfs/smb-share:server=192.168.90.5,share=backup
-# sudo mount -t nfs 192.168.90.5:/VOL1/BACKUP /mnt/home-nas/BACKUP
-# BACKUPDIR="/mnt/home-nas/BACKUP/Dominik/backup-dominiklaptop/RSYNC_BACKUP"
-BACKUPDIR="/run/media/dominik/WD Elements/dominik-backup/dominik-rsync/"
+sudo mount -t nfs 192.168.90.5:/VOL1/BACKUP /mnt/home-nas/BACKUP
 
-rsync -rlDizu --partial --info=progress2\
+BACKUP_DIR="$HOME/Documents"
+BACKUP_TARGET="/mnt/home-nas/BACKUP/Dominik/backup-dominiklaptop/RSYNC_BACKUP/dominik/Documents"
+# BACKUPDIR="/run/media/dominik/WD Elements/dominik-backup/dominik-rsync/"
+
+rsync -rDizu --safe-links --partial --info=all2,progress2\
     --exclude=".cache"\
     --exclude="*/cache"\
     --exclude="*/Cache"\
@@ -26,5 +28,6 @@ rsync -rlDizu --partial --info=progress2\
     --exclude=".Wolfram"\
     --exclude="*venv"\
     --exclude=".julia"\
-    --exclude="Videos/Youtube"\
-    "$HOME" "$BACKUPDIR"
+    --exclude="dominik/Videos/Youtube"\
+    --exclude=".config/heroic"\
+    "$BACKUP_DIR" "$BACKUP_TARGET"

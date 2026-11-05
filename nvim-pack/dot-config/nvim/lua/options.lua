@@ -59,6 +59,7 @@ vim.opt.conceallevel = 0
 vim.opt.concealcursor = "n"
 vim.opt.foldenable = true
 vim.opt.updatetime = 50
+vim.opt.splitright = true
 vim.wo.foldlevel = 999
 vim.wo.foldnestmax = 1
 
@@ -102,7 +103,7 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 		vim.opt_local.sidescrolloff = 0
 		vim.opt_local.sidescroll = 15
 		-- vim.opt_local.cmdheight = 0
-		vim.opt_local.comments:append({ "b:-", "b:*" })
+		-- vim.opt_local.comments:append({ "b:-", "b:*" })
 		vim.opt_local.formatoptions:append("r")
 	end,
 })

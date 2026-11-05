@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+/usr/bin/okular "$(kitten choose-files --mode files --file-filter mime:application/pdf:Documents)"
