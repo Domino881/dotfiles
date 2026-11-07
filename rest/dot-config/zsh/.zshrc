@@ -46,7 +46,7 @@ zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
 # Characters which, in addition to alphanumeric, belong to words
-export WORDCHARS="*?_~&!#$%^"
+export WORDCHARS="*?_~&!#$%^|-"
 
 # History
 HISTSIZE=50000

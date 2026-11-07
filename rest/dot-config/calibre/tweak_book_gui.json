@@ -371,28 +371,28 @@
   },
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 896,
+      "height": 900,
       "width": 1440,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 896,
+      "height": 900,
       "width": 1440,
       "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 896,
+      "height": 900,
       "width": 1440,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZ8AAAN/AAAAAAAAAAAAAAWfAAADfwAAAAACAAAABaAAAAAAAAAAAAAABZ8AAAN/"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABZ8AAAODAAAAAAAAAAAAAAWfAAADgwAAAAACAAAABaAAAAAAAAAAAAAABZ8AAAOD"
     },
     "screen": {
       "depth": 32,
@@ -405,7 +405,7 @@
       },
       "index_in_screens_list": 0,
       "manufacturer": "BOE",
-      "model": "eDP-1-0x0893",
+      "model": "eDP-1",
       "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
@@ -626,7 +626,7 @@
   },
   "html-editor-state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAAAAAAAzEAAAIiAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAAAAAB4AaAB0AG0AbABfAGYAbwByAG0AYQB0AF8AYgBhAHIBAAABv/////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAD9AAAAAAAAAzEAAAImAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAAAAAB4AaAB0AG0AbABfAGYAbwByAG0AYQB0AF8AYgBhAHIBAAABv/////8AAAAAAAAAAA=="
   },
   "image-editor-state": {
     "__class__": "bytearray",
@@ -649,7 +649,7 @@
   ],
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAADAAAACaPwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAPkAAAJoAAAAYgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAGIA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAJ0A////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAJwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAo0A////AAAAAQAAAaMAAAJo/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAA+QAAAmgAAABmAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABiAP///wAAAAIAAAWgAAAAzPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAQAAAAAAAAWgAAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA9AP///wAAAzEAAAJoAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAADAAAACbPwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAPkAAAJsAAAAYgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawgAAAAA/////wAAAGIA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawgAAAAA/////wAAAJ0A////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawgAAAAA/////wAAAJwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawgAAAAA/////wAAAo0A////AAAAAQAAAaMAAAJs/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAA+QAAAmwAAABmAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsIAAAAAP////8AAABiAP///wAAAAIAAAWgAAAAzPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAQAAAAAAAAWgAAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsIAAAAAP////8AAAA9AP///wAAAzEAAAJsAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "manage-fonts-splitter-state": {
     "__class__": "bytearray",
@@ -658,6 +658,7 @@
   "merge_identical_selectors": true,
   "merge_rules_with_identical_properties": false,
   "recent-books": [
+    "/home/dominik/Documents/pdf-editing/k2pdf/blumenhagen.epub",
     "/home/dominik/Library/Calibre/Francois-Henri Deserable/Podroz do Iranu (117)/Podroz do Iranu - Francois-Henri Deserable.epub",
     "/home/dominik/Library/Calibre/James P. Allen/Reading a Pyramid (PL) (115)/Reading a Pyramid (PL) - James P. Allen.epub",
     "/home/dominik/Library/Calibre/James P. Allen/Reading a Pyramid-PL (115)/Reading a Pyramid-PL - James P. Allen.epub",
@@ -666,8 +667,7 @@
     "/home/dominik/Library/Calibre/Agatha Christie/Morderstwo na polu golfowym (101)/Morderstwo na polu golfowym - Agatha Christie.epub",
     "/home/dominik/Library/Calibre/Emily Teeter/Religion and Ritual in Ancient Egypt (110)/Religion and Ritual in Ancient Egypt - Emily Teeter.epub",
     "/home/dominik/Library/Calibre/Agata Christie/Morderstwo na polu golfowym (101)/Morderstwo na polu golfowym - Agata Christie.epub",
-    "/home/dominik/Library/Calibre/Veronica Roth/Zbuntowana (104)/Zbuntowana - Veronica Roth.epub",
-    "/home/dominik/Library/Calibre/Ursula K. Le Guin/The Left Hand of Darkness (100)/The Left Hand of Darkness - Ursula K. Le Guin.epub"
+    "/home/dominik/Library/Calibre/Veronica Roth/Zbuntowana (104)/Zbuntowana - Veronica Roth.epub"
   ],
   "remove_unreferenced_sheets": true,
   "remove_unused_classes": true,

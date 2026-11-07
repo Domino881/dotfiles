@@ -1,28 +1,28 @@
 {
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 896,
-      "width": 720,
+      "height": 690,
+      "width": 533,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 896,
-      "width": 720,
+      "height": 690,
+      "width": 533,
       "x": 0,
       "y": 0
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 896,
-      "width": 720,
+      "height": 690,
+      "width": 533,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAs8AAAN/AAAAAAAAAAAAAALPAAADfwAAAAAAAAAABaAAAAAAAAAAAAAAAs8AAAN/"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAhQAAAKxAAAAAAAAAAAAAAIUAAACsQAAAAAAAAAABaAAAAAAAAAAAAAAAhQAAAKx"
     },
     "screen": {
       "depth": 32,
@@ -35,7 +35,7 @@
       },
       "index_in_screens_list": 0,
       "manufacturer": "BOE",
-      "model": "eDP-1-0x0893",
+      "model": "eDP-1",
       "name": "eDP-1",
       "serial": "",
       "size_in_logical_pixels": {
@@ -103,11 +103,11 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEHAAADgPwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawAAAAAAAAADgAAAAJoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAsgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACjAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAASIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAHAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAPoA////AAAC0AAAA4AAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEHAAACsvwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawgAAAAAAAACsgAAAJoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAsgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAADJAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAASIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAHAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAPoA////AAACFQAAArIAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "session_data": {
-    "base_font_size": 24,
+    "base_font_size": 14,
     "columns_per_screen": {
       "landscape": 1,
       "portrait": 1
@@ -146,6 +146,39 @@
       "remember_window_geometry": true
     },
     "standalone_recently_opened": [
+      {
+        "authors": [
+          "Ralph Blumenhagen, Erik Plauschinn"
+        ],
+        "key": "/home/dominik/Documents/pdf-editing/k2pdf/blumenhagen.epub",
+        "pathtoebook": "/home/dominik/Documents/pdf-editing/k2pdf/blumenhagen.epub",
+        "timestamp": "2026-10-28T12:32:06.927Z",
+        "title": "Introduction to Conformal Field Theory: With Applications to String Theory (Lecture Notes in Physics)"
+      },
+      {
+        "authors": [
+          "Ralph Blumenhagen, Erik Plauschinn"
+        ],
+        "key": "/home/dominik/Library/Calibre/Ralph Blumenhagen, Erik Plauschinn/Introduction to Conformal Field Theory_ With Applications to String Theory (Lecture Notes in Ph (130)/Introduction to Conformal Field Theory_ Wi - Ralph Blumenhagen, Erik Plauschinn.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Ralph Blumenhagen, Erik Plauschinn/Introduction to Conformal Field Theory_ With Applications to String Theory (Lecture Notes in Ph (130)/Introduction to Conformal Field Theory_ Wi - Ralph Blumenhagen, Erik Plauschinn.epub",
+        "timestamp": "2026-10-28T12:31:40.801Z",
+        "title": "Introduction to Conformal Field Theory: With Applications to String Theory (Lecture Notes in Physics)"
+      },
+      {
+        "authors": [
+          "Ralph Blumenhagen, Erik Plauschinn"
+        ],
+        "key": "/home/dominik/Library/Calibre/Ralph Blumenhagen, Erik Plauschinn/Introduction to Conformal Field Theory_ With Applications to String Theory (Lecture Notes in Ph (129)/Introduction to Conformal Field Theory_ Wi - Ralph Blumenhagen, Erik Plauschinn.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Ralph Blumenhagen, Erik Plauschinn/Introduction to Conformal Field Theory_ With Applications to String Theory (Lecture Notes in Ph (129)/Introduction to Conformal Field Theory_ Wi - Ralph Blumenhagen, Erik Plauschinn.epub",
+        "timestamp": "2026-10-28T11:59:28.685Z",
+        "title": "Introduction to Conformal Field Theory: With Applications to String Theory (Lecture Notes in Physics)"
+      },
+      {
+        "key": "/home/dominik/Library/Calibre/Unknown/String Theory University of Cambridge Part III Mathematical Tripos (128)/String Theory University of Cambridge Part - Unknown.epub",
+        "pathtoebook": "/home/dominik/Library/Calibre/Unknown/String Theory University of Cambridge Part III Mathematical Tripos (128)/String Theory University of Cambridge Part - Unknown.epub",
+        "timestamp": "2026-10-24T19:00:40.375Z",
+        "title": "String Theory University of Cambridge Part III Mathematical Tripos"
+      },
       {
         "key": "/home/dominik/Library/Calibre/Unknown/Luxor Temple and the Cult of the Royal Ka (122)/Luxor Temple and the Cult of the Royal Ka - Unknown.epub",
         "pathtoebook": "/home/dominik/Library/Calibre/Unknown/Luxor Temple and the Cult of the Royal Ka (122)/Luxor Temple and the Cult of the Royal Ka - Unknown.epub",
@@ -331,42 +364,6 @@
         "pathtoebook": "/home/dominik/Library/Calibre/Olga Tokarczuk/Ksiegi Jakubowe (91)/Ksiegi Jakubowe - Olga Tokarczuk.epub",
         "timestamp": "2025-12-03T16:20:37.537Z",
         "title": "Księgi Jakubowe"
-      },
-      {
-        "authors": [
-          "Kazuo Ishiguro"
-        ],
-        "key": "/home/dominik/Library/Calibre/Kazuo Ishiguro/Pogrzebany olbrzym (93)/Pogrzebany olbrzym - Kazuo Ishiguro.epub",
-        "pathtoebook": "/home/dominik/Library/Calibre/Kazuo Ishiguro/Pogrzebany olbrzym (93)/Pogrzebany olbrzym - Kazuo Ishiguro.epub",
-        "timestamp": "2025-10-25T19:06:09.515Z",
-        "title": "Pogrzebany olbrzym"
-      },
-      {
-        "authors": [
-          "Andrzej Sapkowski"
-        ],
-        "key": "/home/dominik/Library/Calibre/Andrzej Sapkowski/Czas pogardy (15)/Czas pogardy - Andrzej Sapkowski.epub",
-        "pathtoebook": "/home/dominik/Library/Calibre/Andrzej Sapkowski/Czas pogardy (15)/Czas pogardy - Andrzej Sapkowski.epub",
-        "timestamp": "2025-07-26T20:42:15.248Z",
-        "title": "Czas pogardy"
-      },
-      {
-        "authors": [
-          "Brandon Sanderson"
-        ],
-        "key": "/home/dominik/Library/Calibre/Brandon Sanderson/Studnia wstapienia (84)/Studnia wstapienia - Brandon Sanderson.epub",
-        "pathtoebook": "/home/dominik/Library/Calibre/Brandon Sanderson/Studnia wstapienia (84)/Studnia wstapienia - Brandon Sanderson.epub",
-        "timestamp": "2025-06-23T08:20:41.421Z",
-        "title": "Studnia wstąpienia"
-      },
-      {
-        "authors": [
-          "Veronica Roth"
-        ],
-        "key": "/tmp/calibre-k7mzv9o1/7027yl2r_view_device_book.epub",
-        "pathtoebook": "/tmp/calibre-k7mzv9o1/7027yl2r_view_device_book.epub",
-        "timestamp": "2025-06-08T19:47:22.373Z",
-        "title": "Niezgodna"
       }
     ]
   }

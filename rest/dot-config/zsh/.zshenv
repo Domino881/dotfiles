@@ -23,6 +23,7 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 # libreoffice styling
 export SAL_USE_VCLPLUGIN=qt6
 
+export LESS="--use-color --chop-long-lines --RAW-CONTROL-CHARS --ignore-case --quit-on-intr --incsearch --search-options=W"
 # Colorscheme sync with wallpaper
 # Import colorscheme from 'wal' asynchronously
 # (cat ~/.cache/wal/sequences &)

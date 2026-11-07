@@ -1,8 +1,8 @@
 {
   "about_get_books_msg_again": false,
-  "add books dialog dir": "/home/dominik/Documents/testing/ocr",
+  "add books dialog dir": "/home/dominik/Documents/pdf-editing/k2pdf",
   "add books dialog dir-last-used-filter-spec-all-files": false,
-  "add formats dialog": "/home/dominik/Downloads",
+  "add formats dialog": "/home/dominik/Documents/testing/make-outline",
   "add formats dialog-last-used-filter-spec-all-files": false,
   "catalogs_to_be_synced": {
     "__class__": "set",
@@ -14,20 +14,20 @@
   "notified-version-updates": {
     "__class__": "set",
     "__value__": [
+      "9.2",
+      "8.11",
+      "8.10",
       "8.9",
       "8.12",
-      "8.8",
-      "8.7",
-      "8.5",
-      "8.16",
-      "8.11",
       "9.7",
-      "8.10",
-      "9.2"
+      "8.7",
+      "8.16",
+      "8.5",
+      "8.8"
     ]
   },
   "s_r_search_mode": 0,
-  "save to disk dialog": "/home/dominik/Downloads",
+  "save to disk dialog": "/home/dominik/Downloads/",
   "sort_history": [
     [
       "timestamp",
