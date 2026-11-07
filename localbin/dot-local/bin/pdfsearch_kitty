@@ -1,0 +1,3 @@
+#!/bin/bash
+
+kitty --class "pdfsearch" --directory "$HOME" "$HOME/.local/bin/pdfsearch_1"

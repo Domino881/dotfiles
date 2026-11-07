@@ -1,0 +1,115 @@
+#!/bin/bash
+
+CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}"
+CACHE_FILE="$CACHE_DIR/pdf_search_index.tsv"
+
+# Dependency check
+for cmd in fzf pdfinfo pdftoppm kitty nproc xdg-open awk; do
+    if ! command -v "$cmd" &> /dev/null; then
+        echo "Error: '$cmd' is not installed."
+        echo "Please install missing dependencies: sudo pacman -S fzf poppler kitty xdg-utils coreutils awk"
+        exit 1
+    fi
+done
+
+mkdir -p "$CACHE_DIR"
+
+generate_index() {
+    # -r prevents xargs from running if the input is empty
+    xargs -0 -r -P "$(nproc)" bash -c '
+    for file in "$@"; do
+        [ ! -f "$file" ] && continue
+        
+        # Extract metadata and clean up spaces
+        meta=$(pdfinfo "$file" 2>/dev/null | tr "\n\t" "  " | tr -s " " 2>/dev/null)
+        
+        # Create a display version of the path replacing $HOME with ~
+        display_file="${file/#$HOME/\~}"
+        
+        # Print 3 columns: AbsolutePath \t DisplayPath \t Metadata
+        printf "%s\t%s\t%s\n" "$file" "$display_file" "$meta"
+    done
+    ' _ 2>/dev/null
+}
+
+# The asynchronous sync function
+CURRENT_LIST="$CACHE_DIR/current.pdfsearch_$$.txt"
+TMP_NEW="$CACHE_DIR/new.pdfsearch_$$.tsv"
+touch "$TMP_NEW"
+
+update_cache_in_background() {
+    local tmp_valid="$CACHE_DIR/valid.pdfsearch_$$.tsv"
+
+    # 1. Grab a fresh list of ALL PDFs currently on disk
+    find "$HOME" -type d -name ".*" -prune -o -type f -iname "*.pdf" -print > "$CURRENT_LIST" 2>/dev/null
+
+    # 2. Handle Deletions: Keep only cache entries that still exist in our current list
+    # awk reads the valid paths into memory, then filters the cache file instantly.
+    awk -F'\t' 'FNR==NR { disk[$0]=1; next } $1 in disk' "$CURRENT_LIST" "$CACHE_FILE" > "$tmp_valid"
+
+    # 3. Handle Additions/Moves: Find PDFs on disk that are NOT in the cache
+    # Then generate metadata only for those missing files.
+    > "$TMP_NEW"
+    awk -F'\t' 'FNR==NR { cache[$1]=1; next } !($0 in cache)' "$tmp_valid" "$CURRENT_LIST" > "${CURRENT_LIST}.missing"
+    
+    if [[ -s "${CURRENT_LIST}.missing" ]]; then
+        cat "${CURRENT_LIST}.missing" | tr '\n' '\0' | generate_index > "$TMP_NEW"
+    fi
+
+    # 4. Merge and atomically replace the old cache
+    cat "$TMP_NEW" "$tmp_valid" > "${CACHE_FILE}.merged"
+    mv "${CACHE_FILE}.merged" "$CACHE_FILE"
+
+    # Cleanup temp files
+    rm -f "$CURRENT_LIST" "${CURRENT_LIST}.missing" "$tmp_valid"
+}
+
+# --- Main Execution Flow ---
+
+if [[ ! -f "$CACHE_FILE" ]]; then
+    # First run MUST be synchronous to build the initial index
+    echo "Building initial PDF index in $HOME (this may take a moment)..."
+    find "$HOME" -type d -name ".*" -prune -o -type f -iname "*.pdf" -print0 | \
+        generate_index > "$CACHE_FILE"
+else
+    # Subsequent runs: Launch the sync silently in the background
+    update_cache_in_background &
+    BG_UPDATE_PID=$!
+    
+    # Detach the background job so the terminal doesn't print a "Done" message when it finishes
+    disown 2>/dev/null
+fi
+
+# Instantly pipe the current cache into fzf
+# tail --quiet --lines=+0 -f --pid="$BG_UPDATE_PID" "$CACHE_FILE" "$TMP_NEW"
+selected=$(
+    tail --quiet --lines=+0 -f --pid="$BG_UPDATE_PID" "$CACHE_FILE" "$TMP_NEW" 2>/dev/null | \
+    fzf --delimiter="\t" \
+        --with-nth="2" \
+        --prompt="Search PDFs> " \
+        --preview='pdftoppm -singlefile -jpeg -f 1 -l 1 {1} 2>/dev/null | kitty +kitten icat --clear --transfer-mode=memory --stdin=yes --place=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}@${FZF_PREVIEW_LEFT}x${FZF_PREVIEW_TOP}' \
+        --preview-window=right:30% \
+        --margin 1,0% \
+        --gap \
+        --freeze-right=1 \
+        --wrap=word \
+        --ellipsis=… \
+        --info=default
+)
+
+rm -f "$TMP_NEW"
+
+if [[ -n "$selected" ]]; then
+    filepath=$(printf "%s" "$selected" | awk -F'\t' '{print $1}')
+
+    # Because the background sync might not have finished removing a recently deleted file yet,
+    # we verify existence before trying to open it.
+    if [[ ! -f "$filepath" ]]; then
+        echo "Error: File no longer exists ($filepath)."
+        exit 1
+    fi
+
+    echo "Opening: $filepath"
+    xdg-open "$filepath" &>/dev/null && disown 2>/dev/null
+fi
+

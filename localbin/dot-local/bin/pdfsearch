@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Dependency check
+for cmd in fzf pdfinfo pdftoppm kitty nproc xdg-open; do
+    if ! command -v "$cmd" &> /dev/null; then
+        echo "Error: '$cmd' is not installed."
+        echo "Please install missing dependencies: sudo pacman -S fzf poppler kitty xdg-utils coreutils"
+        exit 1
+    fi
+done
+
+echo "Indexing PDFs in $HOME (this may take a moment)..."
+
+selected=$(
+    find "$HOME" -type d -name ".*" -prune -o -type f -iname "*.pdf" -print0 | \
+        xargs -0 -P "$(nproc)" bash -c '
+    for file in "$@"; do
+        # Extract metadata and clean up spaces
+        meta=$(pdfinfo "$file" 2>/dev/null | tr "\n\t" "  " | tr -s " " 2>/dev/null)
+
+            # Create a display version of the path replacing $HOME with ~
+            display_file="${file/#$HOME/\~}"
+            # display_file=$(basename "$file")
+
+            path=$(dirname "$file")/
+            path="${path/#$HOME/\~}"
+
+            # Print 3 columns: AbsolutePath \t DisplayPath \t Metadata
+            printf "%s\t%s\t%s\n" "$file" "$display_file" "$meta"
+        done
+        ' _ 2>/dev/null | \
+        fzf --delimiter="\t" \
+        --with-nth="{2}" \
+        --prompt="Search PDFs> " \
+        --preview='pdftoppm -singlefile -jpeg -f 1 -l 1 {1} 2>/dev/null | kitty +kitten icat --clear --transfer-mode=memory --stdin=yes --place=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}@${FZF_PREVIEW_LEFT}x${FZF_PREVIEW_TOP}' \
+        --preview-window=right:30% \
+        --margin 20%,0% \
+        --gap \
+        --freeze-right=1 \
+        --wrap=word \
+        --ellipsis=… \
+        --info=default
+)
+
+# Extract ONLY the first hidden column (the absolute path)
+if [[ -n "$selected" ]]; then
+    filepath=$(printf "%s" "$selected" | awk -F'\t' '{print $1}')
+
+    echo "Opening: $filepath"
+    kde-open "$filepath" &>/dev/null &
+fi
