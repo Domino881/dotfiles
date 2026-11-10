@@ -108,8 +108,7 @@ vim.pack.add({
 require("plugin-conf.markview")
 -- require("typst-concealer").setup({})
 require("typst-preview").setup({
-	debug = false,
-	extra_args = { "--partial-rendering=true" },
+	debug = true,
 	dependencies_bin = { tinymist = "tinymist" },
 	open_cmd = "qutebrowser %s --qt-wrapper PyQt6 -l critical",
 })
